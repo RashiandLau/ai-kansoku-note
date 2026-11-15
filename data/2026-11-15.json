@@ -1,66 +1,66 @@
 {
- "date": "2026-11-15",
- "articles": [
-  {
-   "id": "hn-34de9d80d814",
-   "category": "oss",
-   "headline": "Vaibhaav-Tiwari、DeepSeek V3を190行の純粋なJAXで実装",
-   "summary": "Vaibhaav-Tiwariが、DeepSeek V3のアーキテクチャを190行の純粋なJAXで実装したコードを公開した。作者によると、パブリックドメインの推理小説を使い、MacBook Airでゼロから事前学習したアーキテクチャのデモである。FlaxやEquinox、PyTorchは使わず、モデルの各部を関数で記述している。"
-  },
-  {
-   "id": "claudecode-b7d63e8799e5",
-   "category": "claude-code",
-   "headline": "Claude Code 2.1.325、zstd圧縮応答のセキュリティ問題を修正",
-   "summary": "Claude Code 2.1.325は、zstd圧縮応答のデコード処理に関するセキュリティ問題を修正した。異常終了後に再開したセッションで直近のターンが失われる問題にも対処した。多くのサードパーティ製ゲートウェイとFoundryで、コンテキストを圧縮せず毎ターン長さの上限エラーで停止する問題も修正した。",
-   "impact": "作業ディレクトリが削除された場合、シェルコマンドはメッセージを表示して停止し、再実行できる。"
-  },
-  {
-   "id": "claudecode-26b5704a9574",
-   "category": "claude-code",
-   "headline": "Claude Code 2.1.323、JavaScriptでツールを呼び出す実験的なCode Modeを追加",
-   "summary": "Claude Code 2.1.323に、JavaScriptでツールを呼び出す実験的なCode Modeがオプトイン機能として加わった。plugin.jsonでClaude Codeの対応バージョン範囲を指定でき、範囲外のプラグインはインストール、更新、読み込みの対象外となる。",
-   "impact": "claude plugin validateはプラグインのTypeScriptフックを型検査し、指摘があれば警告し、--strict指定時は失敗する。"
-  },
-  {
-   "id": "codex-a0c08c461d82",
-   "category": "codex",
-   "headline": "Codex 0.169.0、未信頼ディレクトリではexec時にプロジェクト設定とMCPを無効化",
-   "summary": "Codex 0.169.0は、未信頼ディレクトリでのcodex execが、--sandbox workspace-write指定時もプロジェクト設定とMCPサーバを無効に保つよう修正した。オプトインのターミナルワークスペースは複数のサイドチャットタブに対応し、再起動後に保存済みのローカルサイドチャットを開けるようになった。",
-   "impact": "codex execまたはcodex reviewで--trustを指定すると、プロジェクトへの信頼を明示的に保存できる。"
-  },
-  {
-   "id": "japan-72b26624d0f7",
-   "category": "japan",
-   "headline": "【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」",
-   "summary": "Microsoft 365の障害に伴い、ChatGPTとClaudeのMicrosoft 365コネクタにも不具合が生じた。日本時間11月14日に両社はコネクタの復旧を報告し、Microsoftは原因をネットワーク容量増強時の問題と説明した。Anthropicは、一部ユーザー向けの復旧作業が続くため、時折エラーや遅延が発生する可能性があるとしている。"
-  },
-  {
-   "id": "japan-6da3451cbd87",
-   "category": "japan",
-   "headline": "NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生",
-   "summary": "ITmediaは、NVIDIA共同創業者のジェンスン・フアン氏が11月12日にCEOと取締役を辞任し、CFOのコレット・クレス氏が暫定CEOに任命されたと報じた。記事では、10代にDenny'sで皿洗いや接客をしていたフアン氏が、1984年にOregon State Universityを卒業するまでの歩みも振り返っている。"
-  }
- ],
- "ranking": [
-  {
-   "id": "trending-301f2d14985e",
-   "summary": "GoogleChromeのModern Web Guidanceを作成し、調整や評価を行うコードと文書を収めたリポジトリである。Webの専門知識やブラウザ互換性情報をコーディングエージェントに渡すスキルを、Google Chrome、Microsoft Edge、Mozilla Firefox、MDNのチームがコミュニティとともに管理している。"
-  },
-  {
-   "id": "trending-c489e6fb5feb",
-   "summary": "Alibaba GroupのOpen Code Reviewは、同社の社内ツールを起源とするAIコードレビューCLIである。Gitの差分やファイル全体を対象に、設定したLLMでレビューし、行単位の構造化されたコメントを生成する。"
-  },
-  {
-   "id": "trending-379642deb53f",
-   "summary": "ChromeDevToolsのchrome-devtools-mcpは、コーディングエージェントが実行中のChromeを操作し、デバッグや性能分析を行うためのMCPサーバとCLIである。公式サポート対象はGoogle ChromeとChrome for Testingに限られる。"
-  },
-  {
-   "id": "trending-f9da1acd54ca",
-   "summary": "tradermontyが公開する、個人投資家向けのClaude Codeスキル集である。市場分析やリスク管理、取引計画や記録の作成を支援するもので、売買シグナルの提供や収益を保証するサービスではない。"
-  },
-  {
-   "id": "trending-d148e3d2c284",
-   "summary": "dream-numのUniverは、製品にOfficeの編集や計算、共同作業、ファイル処理を組み込むSDKである。SheetsとDocsの編集機能などはApache-2.0で提供され、商用プラグインやServer SDKなどには別のライセンスが適用される。"
-  }
- ]
+  "date": "2026-11-15",
+  "articles": [
+    {
+      "id": "hn-34de9d80d814",
+      "category": "oss",
+      "headline": "Vaibhaav-Tiwari、DeepSeek V3を190行の純粋なJAXで実装",
+      "summary": "Vaibhaav-Tiwariが、DeepSeek V3のアーキテクチャを190行の純粋なJAXで実装したコードを公開した。作者によると、パブリックドメインの推理小説を使い、MacBook Airでゼロから事前学習したアーキテクチャのデモである。FlaxやEquinox、PyTorchは使わず、モデルの各部を関数で記述している。"
+    },
+    {
+      "id": "claudecode-b7d63e8799e5",
+      "category": "claude-code",
+      "headline": "Claude Code 2.1.325、zstd圧縮応答のセキュリティ問題を修正",
+      "summary": "Claude Code 2.1.325は、zstd圧縮応答のデコード処理に関するセキュリティ問題を修正した。異常終了後に再開したセッションで直近のターンが失われる問題にも対処した。多くのサードパーティ製ゲートウェイとFoundryで、コンテキストを圧縮せず毎ターン長さの上限エラーで停止する問題も修正した。",
+      "impact": "作業ディレクトリが削除された場合、シェルコマンドはメッセージを表示して停止し、再実行できる。"
+    },
+    {
+      "id": "claudecode-26b5704a9574",
+      "category": "claude-code",
+      "headline": "Claude Code 2.1.323、JavaScriptでツールを呼び出す実験的なCode Modeを追加",
+      "summary": "Claude Code 2.1.323に、JavaScriptでツールを呼び出す実験的なCode Modeがオプトイン機能として加わった。plugin.jsonでClaude Codeの対応バージョン範囲を指定でき、範囲外のプラグインはインストール、更新、読み込みの対象外となる。",
+      "impact": "claude plugin validateはプラグインのTypeScriptフックを型検査し、指摘があれば警告し、--strict指定時は失敗する。"
+    },
+    {
+      "id": "codex-a0c08c461d82",
+      "category": "codex",
+      "headline": "Codex 0.169.0、未信頼ディレクトリではexec時にプロジェクト設定とMCPを無効化",
+      "summary": "Codex 0.169.0は、未信頼ディレクトリでのcodex execが、--sandbox workspace-write指定時もプロジェクト設定とMCPサーバを無効に保つよう修正した。オプトインのターミナルワークスペースは複数のサイドチャットタブに対応し、再起動後に保存済みのローカルサイドチャットを開けるようになった。",
+      "impact": "codex execまたはcodex reviewで--trustを指定すると、プロジェクトへの信頼を明示的に保存できる。"
+    },
+    {
+      "id": "japan-72b26624d0f7",
+      "category": "japan",
+      "headline": "【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」",
+      "summary": "Microsoft 365の障害に伴い、ChatGPTとClaudeのMicrosoft 365コネクタにも不具合が生じた。日本時間11月14日に両社はコネクタの復旧を報告し、Microsoftは原因をネットワーク容量増強時の問題と説明した。Anthropicは、一部ユーザー向けの復旧作業が続くため、時折エラーや遅延が発生する可能性があるとしている。"
+    },
+    {
+      "id": "japan-6da3451cbd87",
+      "category": "japan",
+      "headline": "NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生",
+      "summary": "ITmediaは、NVIDIA共同創業者のジェンスン・フアン氏が11月12日にCEOと取締役を辞任し、CFOのコレット・クレス氏が暫定CEOに任命されたと報じた。記事では、10代にDenny'sで皿洗いや接客をしていたフアン氏が、1984年にOregon State Universityを卒業するまでの歩みも振り返っている。"
+    }
+  ],
+  "ranking": [
+    {
+      "id": "trending-301f2d14985e",
+      "summary": "GoogleChromeのModern Web Guidanceを作成し、調整や評価を行うコードと文書を収めたリポジトリである。Webの専門知識やブラウザ互換性情報をコーディングエージェントに渡すスキルを、Google Chrome、Microsoft Edge、Mozilla Firefox、MDNのチームがコミュニティとともに管理している。"
+    },
+    {
+      "id": "trending-c489e6fb5feb",
+      "summary": "Alibaba GroupのOpen Code Reviewは、同社の社内ツールを起源とするAIコードレビューCLIである。Gitの差分やファイル全体を対象に、設定したLLMでレビューし、行単位の構造化されたコメントを生成する。"
+    },
+    {
+      "id": "trending-379642deb53f",
+      "summary": "ChromeDevToolsのchrome-devtools-mcpは、コーディングエージェントが実行中のChromeを操作し、デバッグや性能分析を行うためのMCPサーバとCLIである。公式サポート対象はGoogle ChromeとChrome for Testingに限られる。"
+    },
+    {
+      "id": "trending-f9da1acd54ca",
+      "summary": "tradermontyが公開する、個人投資家向けのClaude Codeスキル集である。市場分析やリスク管理、取引計画や記録の作成を支援するもので、売買シグナルの提供や収益を保証するサービスではない。"
+    },
+    {
+      "id": "trending-d148e3d2c284",
+      "summary": "dream-numのUniverは、製品にOfficeの編集や計算、共同作業、ファイル処理を組み込むSDKである。SheetsとDocsの編集機能などはApache-2.0で提供され、商用プラグインやServer SDKなどには別のライセンスが適用される。"
+    }
+  ]
 }

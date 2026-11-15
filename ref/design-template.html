@@ -1,0 +1,253 @@
+<title>AI観測ノート</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: 日本のニュースアプリ型（Yahoo!ニュース・日経・ITmedia を参照）。ロゴ→カテゴリタブ（固定）→写真付きトップ→カテゴリ見出し＋サムネイル一覧→急上昇ランキング */
+:root{
+  --bg:#ffffff; --fg:#222222; --sub:#757575; --line:#e6e6e6; --soft:#f4f4f4; --red:#e3211b; --bar:#111111; --barfg:#ffffff;
+  --f:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI",Meiryo,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141414; --fg:#ececec; --sub:#a0a0a0; --line:#2c2c2c; --soft:#1f1f1f; --red:#ff4b42; --bar:#000000; --barfg:#ffffff; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141414; --fg:#ececec; --sub:#a0a0a0; --line:#2c2c2c; --soft:#1f1f1f; --red:#ff4b42; --bar:#000000; --barfg:#ffffff; color-scheme:dark}
+
+body{background:var(--bg);color:var(--fg);font-family:var(--f);font-size:16px;line-height:1.6;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bar)}
+.g{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:720px;margin:0 auto}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+img{display:block;max-width:100%}
+
+/* ロゴ */
+.logo{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.logo h1{margin:0;font-size:1.45rem;font-weight:900;letter-spacing:.02em;line-height:1}
+.logo h1 span{color:var(--red)}
+.logo time{font-size:.78rem;color:var(--sub);font-weight:500;text-align:right;line-height:1.35}
+
+/* タブ */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bar)}
+.tabs .wrap{display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs .wrap::-webkit-scrollbar{display:none}
+.tabs a{color:var(--barfg);font-weight:700;font-size:.9rem;padding:11px 14px;white-space:nowrap;border-bottom:3px solid transparent;opacity:.85}
+.tabs a.on{border-bottom-color:var(--red);opacity:1}
+
+/* トップ */
+.top{padding-block:16px 4px}
+.top .pic{aspect-ratio:1.91/1;width:100%;object-fit:cover;background:var(--soft);border-radius:4px}
+.top h2{font-size:1.38rem;font-weight:900;line-height:1.45;margin:12px 0 6px;text-wrap:pretty}
+.top p{margin:0 0 8px;font-size:.95rem;color:var(--fg)}
+
+/* カテゴリ見出し */
+.sec{padding-top:26px}
+.sec>h2{font-size:1.2rem;font-weight:900;margin:0;padding-bottom:8px;border-bottom:1px solid var(--line);position:relative}
+.sec>h2::after{content:"";position:absolute;left:0;bottom:-1px;width:44px;height:3px;background:var(--red)}
+
+/* 一覧 */
+.item{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.item .th{width:112px;aspect-ratio:1.91/1;object-fit:cover;border-radius:4px;background:var(--soft)}
+.item h3{font-size:1.02rem;font-weight:700;line-height:1.5;margin:0 0 4px}
+.item p{margin:0 0 6px;font-size:.86rem;line-height:1.65;color:var(--sub)}
+.item .txt{min-width:0}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font-size:.74rem;color:var(--sub)}
+.meta .src{font-weight:700;color:var(--fg)}
+.badge{font-size:.68rem;font-weight:700;padding:0 6px;border-radius:3px;line-height:1.7}
+.badge.mine{color:var(--red);border:1px solid var(--red)}
+.badge.unv{color:var(--sub);border:1px solid var(--sub)}
+.impact{margin:4px 0 6px;font-size:.82rem;line-height:1.6;background:var(--soft);padding:6px 10px;border-left:3px solid var(--red)}
+
+/* 元投稿・議論リンク */
+.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.links a{font-size:.76rem;font-weight:700;line-height:1;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+.links a::after{content:" ↗";font-weight:400}
+.links a.d{color:var(--red);border-color:var(--red)}
+
+/* ランキング */
+.rank .item{grid-template-columns:28px minmax(0,1fr) 92px}
+.rank .item .th{width:92px}
+.rk{font-size:1.4rem;font-weight:900;line-height:1.2;color:var(--red);text-align:center}
+.rank .item:nth-child(n+4) .rk{color:var(--sub)}
+.star{font-weight:700;color:var(--fg)}
+.nothumb{width:92px;aspect-ratio:1.91/1;border-radius:4px;background:var(--soft);display:grid;place-items:center;font-size:.7rem;color:var(--sub);font-weight:700}
+
+/* 業界短信 */
+.brief{list-style:none;margin:0;padding:0}
+.brief li{padding:12px 0;border-bottom:1px solid var(--line)}
+.brief b{display:block;font-size:.98rem;line-height:1.5;margin-bottom:2px}
+.brief span{font-size:.84rem;color:var(--sub)}
+
+footer{padding-block:22px 40px;font-size:.74rem;color:var(--sub);line-height:1.7}
+footer p{margin:0 0 6px}
+</style>
+
+<div class="g"><div class="wrap logo">
+  <h1>AI<span>観測</span>ノート</h1>
+  <time datetime="2026-11-13">2026年11月13日（金）<br>見本</time>
+</div></div>
+
+<nav class="tabs" aria-label="カテゴリ"><div class="wrap g">
+  <a href="#top" class="on">総合</a><a href="#claude-code">Claude Code</a><a href="#codex">Codex</a><a href="#models">モデル</a><a href="#tools">ツール</a><a href="#oss">OSS</a><a href="#japan">国内</a><a href="#ranking">急上昇</a><a href="#industry">業界</a>
+</div></nav>
+
+<main class="g"><div class="wrap">
+
+<article class="top" id="top">
+  <a href="https://ipo.anthropic.com/us/"><img class="pic" src="__IMG_anthropic__" alt="Anthropic IPOページの画像"></a>
+  <h2><a href="https://ipo.anthropic.com/us/">Anthropic、ナスダック上場へ　銘柄コードは「ANT」</a></h2>
+  <p>Claudeを開発する米Anthropicが、新規株式公開（IPO）の計画を公表した。公開価格は米東部時間の18日に決め、19日に取引を始める予定。規制当局の承認が前提で、購入はSchwabやRobinhoodなど米国の証券会社を通じて申し込む。</p>
+  <div class="meta"><span class="src">Anthropic</span><span>公式発表</span><span>Hacker Newsで今日最多</span></div>
+  <div class="links"><a href="https://ipo.anthropic.com/us/">元投稿</a><a class="d" href="https://news.ycombinator.com/item?id=50465829">議論 HN 916件</a></div>
+</article>
+
+<section class="sec" id="claude-code"><h2>Claude Code</h2>
+  <article class="item"><div class="txt">
+    <h3><a href="https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md">Claude Code 2.1.323、ツールをまとめて実行する「Code Mode」を試験導入</a></h3>
+    <p>Claudeがツールを1回ずつ呼ぶ代わりにJavaScriptを書き、複数のツール呼び出しを一度に実行する。オプトイン方式。プラグインが対応バージョンの範囲を宣言できるようになり、長時間動くHookはハートビートを送るようになった。</p>
+    <div class="meta"><span class="src">Claude Code CHANGELOG</span><span>2.1.323</span></div>
+    <div class="links"><a href="https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md">元投稿</a></div>
+  </div><img class="th" src="__IMG_claudecode__" alt=""></article>
+  <article class="item"><div class="txt">
+    <h3><a href="https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md">Claude Code 2.1.321、既定モデルがFable 5.2に</a></h3>
+    <p>既定のFableモデルが5.2になり、コンテキストは100万トークン。Fable 5.1を選んでいた設定は自動で移行する。2.1.322ではVertex AIの高速モードに対応した。</p>
+    <div class="meta"><span class="src">Claude Code CHANGELOG</span><span>2.1.321〜322</span></div>
+    <div class="links"><a href="https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md">元投稿</a></div>
+  </div><img class="th" src="__IMG_claudecode__" alt=""></article>
+</section>
+
+<section class="sec" id="codex"><h2>Codex</h2>
+  <article class="item"><div class="txt">
+    <h3><a href="https://github.com/openai/codex/releases">Codex 0.169.0、未信頼ディレクトリではexec時にプロジェクト設定とMCPを無効化</a></h3>
+    <p>信頼済みでないディレクトリでcodex execを動かすと、プロジェクト設定とMCPサーバーを読み込まない。計画を承認して新しいセッションで実装に移る際は、計画の全文を引き継ぐようになった。</p>
+    <p class="impact">codex execで自動化している場合、設定が効かなくなったら --trust を付ける</p>
+    <div class="meta"><span class="src">openai/codex Releases</span><span>0.169.0</span><span class="badge mine">自分の環境に影響</span></div>
+    <div class="links"><a href="https://github.com/openai/codex/releases">元投稿</a></div>
+  </div><img class="th" src="__IMG_codex__" alt=""></article>
+  <article class="item"><div class="txt">
+    <h3><a href="https://github.com/openai/codex-security">OpenAI、脆弱性の検出から修正まで行う「Codex Security」を公開</a></h3>
+    <p>リポジトリやGitの差分をスキャンし、見つけた脆弱性を検証して修正パッチを作る。CLI（cs scan .）、TypeScript SDK、GitHub Action、Codexプラグインで使える。CIで使う場合はAPIキーが必要。</p>
+    <div class="meta"><span class="src">OpenAI（GitHub）</span><span>13日に643スター</span></div>
+    <div class="links"><a href="https://github.com/openai/codex-security">元投稿</a></div>
+  </div><img class="th" src="__IMG_codexsec__" alt=""></article>
+</section>
+
+<section class="sec" id="models"><h2>モデル</h2>
+  <article class="item"><div class="txt">
+    <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/">Google、Gemini 4 Hydrogenを発表　コーディングとエージェント向けの高速モデル</a></h3>
+    <p>入出力とも最大100万トークン。料金は100万トークンあたり入力1.5ドル、出力7.5ドル。推論レベルにxhighを追加した。Antigravityには上位のCarbonと作業途中で切り替えるOrchestratorが入り、Googleによると使用量を平均24%減らした。</p>
+    <div class="meta"><span class="src">Google公式ブログ</span><span>11月12日</span></div>
+    <div class="links"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/">元投稿</a><a class="d" href="https://news.ycombinator.com/item?id=50471431">議論 HN 352件</a></div>
+  </div><img class="th" src="__IMG_gemini__" alt=""></article>
+  <article class="item"><div class="txt">
+    <h3><a href="https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer">Edge0、ノートPCで動くとする145Bモデルを公開</a></h3>
+    <p>145Bのうち1回の推論で使うのは約10B。ピークメモリは約29GBで、MacBook ProやRTX搭載PCを想定している。ベンチマークは自社評価で、ライセンスは発表記事に書かれていない。</p>
+    <div class="meta"><span class="src">Edge0ブログ</span><span>11月12日</span></div>
+    <div class="links"><a href="https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer">元投稿</a><a class="d" href="https://news.ycombinator.com/item?id=50475713">議論 HN 105件</a></div>
+  </div><img class="th" src="__IMG_edge0__" alt=""></article>
+</section>
+
+<section class="sec" id="tools"><h2>ツール</h2>
+  <article class="item"><div class="txt">
+    <h3><a href="https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news011.html">NotebookLMに公式APIが登場　WebページやYouTube動画の取り込みを自動化でき、MCPでAIエージェントからも使える</a></h3>
+    <p>個人アカウントで使えるREST APIとMCPサーバーが、公開プレビューとして出た。記事では、今できることとまだできないこと、使う前の条件を整理している。</p>
+    <div class="meta"><span class="src">@IT</span><span>11月11日</span></div>
+    <div class="links"><a href="https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news011.html">元投稿</a></div>
+  </div><img class="th" src="__IMG_notebooklm__" alt=""></article>
+  <article class="item"><div class="txt">
+    <h3><a href="https://developer.apple.com/foundation-models-framework/">Apple Foundation Models、ClaudeやGeminiも同じSwift APIで呼び出し可能に</a></h3>
+    <p>オンデバイスモデルに加え、サーバーモデルを同じAPIで扱える。画像入力、評価フレームワーク、fm CLIも加わった。WWDC26で発表された内容で、13日にHNで再び話題になった。</p>
+    <div class="meta"><span class="src">Apple Developer</span></div>
+    <div class="links"><a href="https://developer.apple.com/foundation-models-framework/">元投稿</a><a class="d" href="https://news.ycombinator.com/item?id=50474361">議論 HN 36件</a></div>
+  </div><img class="th" src="__IMG_apple__" alt=""></article>
+</section>
+
+<section class="sec" id="oss"><h2>OSS</h2>
+  <article class="item"><div class="txt">
+    <h3><a href="https://github.com/meta/astryx">Meta、エージェント対応のデザインシステム「Astryx」を公開</a></h3>
+    <p>React向けのコンポーネントを150以上収録。ドキュメントとCLIを人とAIエージェントの両方が使う前提で作っていて、エージェントはCLIでコンポーネントの仕様やテンプレートを引ける。</p>
+    <div class="meta"><span class="src">meta/astryx</span><span>GitHub急上昇1位・13日に1,830スター</span></div>
+    <div class="links"><a href="https://github.com/meta/astryx">元投稿</a></div>
+  </div><img class="th" src="__IMG_astryx__" alt=""></article>
+  <article class="item"><div class="txt">
+    <h3><a href="https://github.com/hyperionaidev/smolmaxxing/">メモリ1GBのTVボックスでLLMを動かす「smolmaxxing」</a></h3>
+    <p>llama.cppをベースに、1〜2ビット量子化、あまり使われない語彙の削除、MoEの重みをストレージから順に読む工夫を組み合わせた。TVボックスでQwen3.5-2Bが毎秒7.7トークン、2013年のiPad Airでも16Bモデルが動いた。</p>
+    <div class="meta"><span class="src">個人開発</span></div>
+    <div class="links"><a href="https://github.com/hyperionaidev/smolmaxxing/">元投稿</a><a class="d" href="https://news.ycombinator.com/item?id=50468888">議論 HN 180件</a></div>
+  </div><img class="th" src="__IMG_smol__" alt=""></article>
+  <article class="item"><div class="txt">
+    <h3><a href="https://github.com/Parcha-ai/agentrun">AgentRun、Claude CodeやCodexの実行から学習を蓄積するOSS</a></h3>
+    <p>実行が終わるとエージェントにメモやスキル、ワークフローの案を出させ、採点を通ったものだけをgitに保存する。次の実行はその状態から始まる。Apache-2.0。</p>
+    <div class="meta"><span class="src">Parcha-ai/agentrun</span></div>
+    <div class="links"><a href="https://github.com/Parcha-ai/agentrun">元投稿</a><a class="d" href="https://news.ycombinator.com/item?id=50471650">議論 HN 40件</a></div>
+  </div><img class="th" src="__IMG_agentrun__" alt=""></article>
+</section>
+
+<section class="sec" id="japan"><h2>国内</h2>
+  <article class="item"><div class="txt">
+    <h3><a href="https://www.itmedia.co.jp/aiplus/article/2611/13/2000003172/">「AI処理、データ非保持が守られず」――Notionが委託先の問題指摘、漏えいの恐れ巡り</a></h3>
+    <p>Notion AIのチャット記録が漏えいした恐れがある件で、Notion Labsは、法人向けプランでZDR（ゼロデータ保持）を使うユーザーも漏えいした可能性があると明らかにした。</p>
+    <div class="meta"><span class="src">ITmedia AI+</span><span>11月13日 10:22</span></div>
+    <div class="links"><a href="https://www.itmedia.co.jp/aiplus/article/2611/13/2000003172/">元投稿</a></div>
+  </div><img class="th" src="__IMG_notion__" alt=""></article>
+  <article class="item"><div class="txt">
+    <h3><a href="https://atmarkit.itmedia.co.jp/ait/articles/2611/13/news036.html">AIエージェントを「追えない、止められない」　約半数が経験する“暴走”、浮上する3つの盲点</a></h3>
+    <p>Salt Securityの調査で、約半数の組織がAIエージェントの意図しない行動を確認していた。一方で、想定外の行動を自動で止められている組織は少ない。</p>
+    <div class="meta"><span class="src">@IT</span><span>11月13日</span></div>
+    <div class="links"><a href="https://atmarkit.itmedia.co.jp/ait/articles/2611/13/news036.html">元投稿</a></div>
+  </div><img class="th" src="__IMG_agentstop__" alt=""></article>
+</section>
+
+<section class="sec rank" id="ranking"><h2>GitHub急上昇（AI関連）</h2>
+  <article class="item"><span class="rk">1</span><div class="txt">
+    <h3><a href="https://github.com/meta/astryx">meta/astryx</a></h3>
+    <p>Metaのエージェント対応デザインシステム。React向けコンポーネント150以上と、エージェントが仕様を引けるCLIがセット。</p>
+    <div class="meta"><span class="star">+1,830</span><span>スター（13日）</span><span>TypeScript</span></div>
+  </div><img class="th" src="__IMG_astryx__" alt=""></article>
+  <article class="item"><span class="rk">2</span><div class="txt">
+    <h3><a href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills</a></h3>
+    <p>Addy Osmani氏らによる、AIコーディングエージェント向けのスキル25本。仕様駆動開発、TDD、コードレビュー、セキュリティなどを収録。Claude CodeとCodexにプラグインとして入れられる。MIT。</p>
+    <div class="meta"><span class="star">+816</span><span>スター（13日）</span><span>累計11.7万</span></div>
+  </div><img class="th" src="__IMG_agentskills__" alt=""></article>
+  <article class="item"><span class="rk">3</span><div class="txt">
+    <h3><a href="https://github.com/GoogleChrome/modern-web-guidance-src">GoogleChrome/modern-web-guidance-src</a></h3>
+    <p>Chrome、Edge、Firefox、MDNの各チームによる、エージェント向けのWeb開発ガイド。250のWeb機能と203のユースケースを収録し、古い書き方を避けさせる。</p>
+    <div class="meta"><span class="star">+739</span><span>スター（13日）</span><span class="badge mine">導入済み</span></div>
+  </div><img class="th" src="__IMG_mwg__" alt=""></article>
+  <article class="item"><span class="rk">4</span><div class="txt">
+    <h3><a href="https://github.com/openai/codex-security">openai/codex-security</a></h3>
+    <p>OpenAIの脆弱性スキャナー。検出、検証、修正パッチの作成までを行う（Codexの項を参照）。</p>
+    <div class="meta"><span class="star">+643</span><span>スター（13日）</span></div>
+  </div><img class="th" src="__IMG_codexsec__" alt=""></article>
+  <article class="item"><span class="rk">5</span><div class="txt">
+    <h3><a href="https://github.com/QwenLM/qwen-code">QwenLM/qwen-code</a></h3>
+    <p>ターミナルで動くOSSのAIコーディングエージェント。Gemini CLIのフォークから独自に発展した。サブエージェント、MCP、プランモードなどClaude Codeと共通の機能を持ち、複数のモデル提供元に対応する。</p>
+    <div class="meta"><span class="star">+151</span><span>スター（13日）</span><span>Apache-2.0</span></div>
+  </div><span class="nothumb">Qwen Code</span></article>
+</section>
+
+<section class="sec" id="industry"><h2>業界</h2>
+  <ul class="brief">
+    <li><b>NVIDIAのジェンスン・フアンCEOが辞任、議会で証言を求められる</b><span>CNNが報道。暫定CEOにはCFOのコレット・クレス氏が就いたと報じられている。</span><div class="links"><a href="https://edition.cnn.com/2026/11/11/business/live-news/nvidia-jensen-huang-investigation-fallout">元投稿</a></div></li>
+    <li><b>OpenAI、セキュリティ製品を発表</b><span>The Registerが報道。製品名はDaybreak Red Teamなどとされる。</span><div class="links"><a href="https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500">元投稿</a></div></li>
+    <li><b>Claude Managed Agentsのセルフホスト版がプライベートベータに</b><span>ClaudeDevsのX投稿より。<span class="badge unv">元投稿未確認</span></span></li>
+  </ul>
+  <p class="meta" style="margin-top:8px">出典：<a href="https://theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-13-2026" style="text-decoration:underline">The Neuron（11月13日のまとめ）</a></p>
+</section>
+
+<footer>
+  <p>掲載ルール：Claude CodeとCodexはCHANGELOGとリリースを全件掲載。トップはHacker NewsでAI関連の最多ポイントの記事。モデル・ツール・OSSは各社の公式発表、HN一面、GitHub日次急上昇から。国内はITmedia AI+と@ITの記事。業界はまとめ記事経由で、元記事を確認していないものには印を付けた。</p>
+  <p>画像は各リンク先の紹介画像。数値は11月13日の取得時点。</p>
+</footer>
+
+</div></main>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tabs a'));
+  var ids=tabs.map(function(a){return a.getAttribute('href').slice(1)});
+  function mark(){var y=window.scrollY+120,cur=ids[0];ids.forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top+window.scrollY<=y)cur=id});
+    tabs.forEach(function(a){var on=a.getAttribute('href')==='#'+cur;a.classList.toggle('on',on);if(on&&a.scrollIntoView&&a.parentNode.scrollWidth>a.parentNode.clientWidth){var p=a.parentNode;p.scrollLeft=a.offsetLeft-16}})}
+  window.addEventListener('scroll',mark,{passive:true});mark();
+})();
+</script>

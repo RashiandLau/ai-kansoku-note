@@ -1,0 +1,239 @@
+{
+  "date": "2026-11-15",
+  "generatedAt": "2026-11-15T09:05:04.750Z",
+  "top": "hn-34de9d80d814",
+  "selected": [
+    "hn-34de9d80d814",
+    "claudecode-b7d63e8799e5",
+    "claudecode-26b5704a9574",
+    "codex-a0c08c461d82",
+    "japan-72b26624d0f7",
+    "japan-6da3451cbd87",
+    "trending-301f2d14985e",
+    "trending-c489e6fb5feb",
+    "trending-379642deb53f",
+    "trending-f9da1acd54ca",
+    "trending-d148e3d2c284"
+  ],
+  "items": {
+    "hn-34de9d80d814": {
+      "id": "hn-34de9d80d814",
+      "kind": "hn",
+      "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+      "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+      "source": "Hacker News",
+      "published": "2026-11-14T15:04:15.000Z",
+      "metrics": {
+        "points": 228,
+        "num_comments": 21
+      },
+      "image": "https://opengraph.githubassets.com/04c70d1236c97d1bdbe6c2e5e4df59d26bb5c5ec17f26456cd08118302ff3371/Vaibhaav-Tiwari/deepseek-v3-jax",
+      "ogTitle": "GitHub - Vaibhaav-Tiwari/deepseek-v3-jax: DeepSeek V3 (MLA, DeepSeekMoE, aux-loss-free balancing, MTP) in 190 lines of pure JAX, trained on a MacBook Air. Write-up: vaibhaav.in/writing/deepseek-v3-jax",
+      "ogDescription": "DeepSeek V3 (MLA, DeepSeekMoE, aux-loss-free balancing, MTP) in 190 lines of pure JAX, trained on a MacBook Air. Write-up: vaibhaav.in/writing/deepseek-v3-jax - Vaibhaav-Tiwari/deepseek-v3-jax",
+      "excerpt": "The architecture from the DeepSeek-V3 technical report in 190 lines of pure JAX , pretrained from scratch on a MacBook Air on public-domain detective fiction. No Flax, no Equinox, no PyTorch. Params are plain dicts of arrays and every part of the model is a function you can read top to bottom in deepseek_v3.py . Read the write-up: DeepSeek V3 in 190 lines of pure JAX , with diagrams, the code explained piece by piece, and the results. One run of the default config on a MacBook Air M5 (24 GB): With balancing on and off, validation loss at step 2000 was the same (3.921 vs 3.923). The bias evens out the experts without costing anything, which is the paper's claim. Its own words, from the prompt \"The fog came in off the\": The fog came in off the bay, and the great trees were spreading and the stars were shining. This is an architecture demo, not a strong language model. See the write-up for what worked, what didn't, and what's missing. The v1.0 release has the exact checkpoint and data from the published run. After installing (step 1): The checkpoint is a Python pickle, which can run code when loaded. Only load checkpoints from sources you trust. You need an Apple Silicon Mac, Python 3.12 and uv . The published run used 24 GB of memory. No Mac? See Running on CPU . Every version in requirements.txt is pinned. jax-metal 0.1.1 only works with jax==0.4.34 , so don't upgrade JAX. In smoke_metal.py , \"grad through 2-axis contraction\" fails on jax-metal 0.1.1. That's expected, and the ",
+      "objectID": "50497589",
+      "points": 228,
+      "num_comments": 21,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50497589",
+        "count": 21,
+        "points": 228
+      }
+    },
+    "claudecode-b7d63e8799e5": {
+      "id": "claudecode-b7d63e8799e5",
+      "kind": "claudecode",
+      "title": "Claude Code 2.1.325",
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+      "source": "Claude Code",
+      "published": "2026-11-15T09:05:04.750Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/441a582f67dd35fb131d7e9a9964e1e81e78cf09f3e157781688b67d1df38448/anthropics/claude-code",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "2.1.325",
+      "sectionText": "- Fixed a security issue in how zstd-compressed responses are decoded\n- Added a spinner tip in VS Code and similar integrated terminals about re-running a notebook cell, shown once Claude has read or edited a Jupyter notebook\n- Added a line under the error shown when your organization's policy blocks a request, saying how to continue: run `/rewind` and change the message, or run `/clear`\n- Added a note for Claude when a sandboxed `git checkout`, `git stash` or autostash pull cannot update protected files such as those in `.claude`\n- Fixed `/security-review` and skills' inline git commands stopping with an error in worktrees of bare repositories, `--separate-git-dir` checkouts and Android `repo` checkouts\n- Fixed subagents with their own model being moved to the plan-mode model when the model setting is `opusplan` or `haiku`\n- Fixed subagents on a different model sizing file reads and MCP results with the main session's model\n- Fixed sessions on many third-party gateways and Foundry stopping with a context length error on every turn instead of compacting\n- Fixed recent turns sometimes going missing from a resumed session after Claude Code stopped without a clean exit\n- Fixed shell commands running in the launch directory after the working directory was deleted; the command now fails with a message and can be re-issued\n- Fixed an approved plan edit being lost when the `plansDirectory` folder can't take it: the plan is now saved in the default plans folder, and a warning says where and why\n- Fixed a saved `sonnet[1m]` model setting being rewritten on a new install to a model id the API rejects\n- Fixed focus view hiding the reply to your prompt when a scheduled task replied after it\n- Fixed the prompt sometimes missing from a background subagent's view when fullscreen is off\n- Fixed long options in lists and permission prompts being partly overwritten when they wrap, and first-run screens losing lines on narrow terminals\n- Fixed startup warnings about permission rules and the \"N MCP servers need authentication\" notice being recorded as seen when they were scrolled out of view\n- Fixed the welcome header showing control characters or splitting across lines when an agent's name or the working folder contains them or a line break\n- Fixed the red error shown when Claude tries a command only you can run: a dim line now says it runs only when you type it at the prompt\n- Fixed `/stats` showing an Active days total that was one day too high\n- Fixed `/insights` saying a report was ready when no session qualified for analysis, and writing two values into its HTML report without escaping them\n- Fixed `/voice` saying voice mode changed when managed settings, `--settings`, or the project's `.claude/settings.json` or `.claude/settings.local.json` kept it as it was; it now says what holds it\n- Fixed the IDE welcome dialog showing Cmd+Esc for Quick Launch on Windows and Linux\n- Fixed Slack app tips showing when your organization's policy denies cloud sessions\n- Fixed"
+    },
+    "claudecode-26b5704a9574": {
+      "id": "claudecode-26b5704a9574",
+      "kind": "claudecode",
+      "title": "Claude Code 2.1.323",
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+      "source": "Claude Code",
+      "published": "2026-11-15T09:05:04.750Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/441a582f67dd35fb131d7e9a9964e1e81e78cf09f3e157781688b67d1df38448/anthropics/claude-code",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "2.1.323",
+      "sectionText": "- Added Code Mode, an experimental opt-in in which Claude writes JavaScript to call its tools; see https://code.claude.com/docs/en/code-mode to turn it on, or to turn it off for an organization\n- Added `engines[\"claude-code\"]` to `plugin.json`: plugins outside their stated Claude Code version range are not installed, updated or loaded, and install and update pick the newest version that fits\n- Added type checking of a plugin's TypeScript hooks module to `claude plugin validate`; each finding is a warning, and `--strict` fails on it\n- Added to `claude plugin validate` the `$` nouns a mod's `engine.create` hook adds, withholds or replaces\n- Added support for `CLAUDE_CODE_AUTO_MODE_MODEL` in managed settings for Claude Desktop sessions on third-party providers (takes effect once Claude Desktop includes this version)\n- Added an options menu (stop, switch to usage credits, upgrade) when a model needs usage credits that are turned off or used up\n- Added a progress heartbeat every 30 seconds while hooks run long in `claude -p` and SDK sessions, so a host such as Claude Desktop won't end the turn as hung (once it includes this version)\n- Added `.docx` support to Artifact tool asset uploads\n- Added a `/diff to close` hint to the diff panel, and the keys that focus and close a panel to the `?` shortcut guide\n- Added a start-up warning for Bash allow rules with a `*` in a variable's value, such as `Bash(PORT=* npm run dev)`\n- Added a warning when a plugin's language server can't start, naming the server and what to check\n- Added a one-time startup notice naming `CLAUDE_CODE_PERFORCE_MODE` when Perforce settings are found and the mode is off\n- Added `CLAUDE_CODE_DISABLE_AGENT_PROGRESS_SUMMARIES` (available since 2.1.318): set it to `1` to turn off subagent progress summaries and the requests that write them (anthropics/claude-code#86879)\n- Added `CLAUDE_CODE_RESUME_HINT_COMMAND`, which a program that starts Claude Code can set to have the exit hint name its own resume command\n- Added `unsetOptionCount` to the `claude plugin install --json` result: how many `userConfig` options are not yet set\n- Added `isPromptCovered` to the props a mod's pane is drawn with, telling it when a dialog or a field above the prompt covers the prompt\n- Fixed running `/compact` again, or after a command such as `/context`, summarizing away a message that Claude had not answered yet\n- Fixed a resumed session joining your next message to an old interrupted message that was not resumed\n- Fixed a memory spike at the next prompt after Claude changed a very large file\n- Fixed a setting saved in a running session undoing a hand edit made to `settings.json` moments earlier; a settings file you delete during a session now stays deleted\n- Fixed `claude plugin` commands and `claude mcp list` signing you out of a Console profile when they ended while the token was being renewed\n- Fixed Edit and Bash running out of memory on certain `/proc` files, and Edit hanging or running out of memory on de"
+    },
+    "codex-a0c08c461d82": {
+      "id": "codex-a0c08c461d82",
+      "kind": "codex",
+      "title": "Codex 0.169.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+      "source": "Codex",
+      "published": "2026-11-13T08:37:05.000Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/3c06069e1c364933afbc5327e388f6f4a042f79c54717f3b472594c007a4cc19/openai/codex",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "0.169.0",
+      "body": "## New Features\n\n- The opt-in terminal workspace supports multiple side-chat tabs. Switch between them with the keyboard or mouse, and reopen saved local side chats after restarting Codex. (#59784, #60152, #60181)\n- Search older tasks from the agent command center by name, prompt preview, or working directory. (#60286)\n- Turn on **Collapse turn details** in the full-screen transcript to fold completed activity beneath each prompt while keeping answers visible and tool output searchable. (#60554, #60555, #60556, #60557)\n- Add or edit custom model providers from the terminal. With custom gateway onboarding enabled, you can create a provider during sign-in and use a device code for supported gateways over SSH or without a local browser. (#59779, #60009, #60186, #60486, #60662)\n- Press `Ctrl+S` in the terminal report editor to save a diagnostic ZIP locally, even when uploads are disabled. (#60542)\n- With the opt-in Cloud connection on macOS and Linux, send images, choose a model and reasoning effort, and archive or restore Cloud conversations from the terminal. (#59828, #60061, #60635, #60651)\n\n## Bug Fixes\n\n- `codex exec` keeps project configuration and MCP servers disabled in untrusted directories, even with `--sandbox workspace-write`. Use `--trust` with `codex exec` or `codex review` to explicitly save project trust. (#60041)\n- **Yes, clear context and implement** now hands the full approved plan to the fresh session and keeps the current session open if the handoff fails. (#60763)\n- Fixed Windows sandbox handling for quoted `cmd.exe` paths and for PowerShell sessions whose working directory has an unreadable parent. (#60624, #60647)\n- Pasted images on macOS retain their intended orientation and use native PNG or JPEG clipboard data when available. (#60455)\n- The terminal no longer stays busy waiting for MCP servers that a shared app server did not report. (#60280, #60622)\n- Interrupted turns now close cleanly, and delayed aborts or file approval cancellations no longer interrupt a later turn. (#59910, #60700)\n\n## Documentation\n\n- Updated the `openai-docs` skill to focus on Codex and ChatGPT Work questions and first-time API setup, with dedicated guidance for configuring Codex across a team. (#59944, #59949)\n- Documented how app-server clients can list models or authorize a gateway for a configured provider without changing the default provider. (#59776, #59819)\n\n## Chores\n\n- Updated bundled SQLite to 3.54 to pick up write-ahead log fixes. (#60432)\n- Plugin marketplace upgrades can reuse Git objects already on disk, reducing repeat downloads. (#60528)\n\n## Changelog\n\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.168.0...rust-v0.169.0\n\n- #59739 Add a sidebar chooser and floating workspace shortcut panels @fcoury-oai\n- #59743 Forward explicit cyber access programs with header authentication @jamy-OAI\n- #59745 Repair legacy Windows sandbox bin permissions for SYSTEM @zm-oai\n- #59746 Add typed Cloud user-message submission receipts @"
+    },
+    "japan-72b26624d0f7": {
+      "id": "japan-72b26624d0f7",
+      "kind": "japan",
+      "title": "【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/13/2000003164/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-14T11:35:45.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/13/2000003164/10012056/2048",
+      "ogTitle": "【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」",
+      "ogDescription": "「Microsoft 365」の複数サービスで障害が発生しており、OpenAIの「ChatGPT」とAnthropicの「Claude」のMicrosoft 365コネクタも正常に動作していないと両社が報告している。（1/2 ページ）",
+      "excerpt": "日本時間の2026年11月13日午前8時55分現在、「Microsoft Outlook」や「Microsoft Teams」「Microsoft 365 Copilot」など「Microsoft 365」の複数サービスで障害が発生しており、接続しにくい、もしくは接続できない状態となっている。 この影響で、米OpenAIの「ChatGPT」と米Anthropicの「Claude」のMicrosoft 365コネクタも正常に動作していないと両社が報告している。Anthropicは「メール、カレンダー、検索ツールのほとんどのリクエストで動作しない」とし、「Claude for Outlook」も影響を受けているという。 Microsoftは現在、影響を受けたサーバの一部を順次復旧させており、安定した状態を維持しているという。また、代替経路でトラフィックを接続することで、一部地域では限定的な復旧が見られるとし、今後他地域への対策も予定しているとした。 日本時間の14日午前1時40分、Microsoftは「サービス全般で復旧が進み安定してきている」と報告した。原因はサイバー攻撃やAIとは無関係の、ネットワーク容量増強時に生じた問題だとして、詳細は調査が完了次第公表するとした。根本原因には対処済みで「一部の顧客・地域向けの復旧を進めている」と説明している。 これに伴い、Anthropicは同日午前6時49分、OpenAIは午前9時18分にMicrosoft 365コネクタの復旧を報告した。なお、Microsoftが現在も一部ユーザー向けの復旧作業を進めていることから、Anthropicは今後も「時折エラーや遅延が発生する可能性がある」としている。 Copyright &copy; ITmedia, Inc. All Rights Reserved. ITmedia AI＋に関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれません。 国内外の業界動向、AIやクラウドなどの最新技術、キャリア情報など今知りたい情報をまとめてお届けします。 再学習なしで正答率6倍 マサチューセッツ工科大学が実証した「AIがAIを直接直す」新手法 JR九州の非IT部門がGeminiでPythonアプリを内製開発 2～3カ月で完成させた方法 総務省が新しい無料オンライン講座「統計解析プログラミング」を1月に開講 Pythonでのデータ分析が4週間で学べる 「好機が来た」――なぜ今Sakana AIは、イチからAIモデルを作るのか “新たな一手”のねらいを聞いた AI「Muse」専用メアド開始、「日本で取れた」報告続々 メール送受信も任せられる NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生 AIエージェントを「追えない、止められない」 約半数が経験する“暴走”、浮上する3つの盲点 【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」 人手不足だからAIを使いたい、でも導入できる人がいない 中小企業“一人情シス”の葛藤 なぜAgodaは“異常に”安いのか？ 商務責任者が明かす「自腹値引き」と社内競争の正体",
+      "description": "「Microsoft 365」の複数サービスで障害が発生しており、OpenAIの「ChatGPT」とAnthropicの「Claude」のMicrosoft 365コネクタも正常に動作していないと両社が報告している。"
+    },
+    "japan-6da3451cbd87": {
+      "id": "japan-6da3451cbd87",
+      "kind": "japan",
+      "title": "NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生",
+      "url": "https://www.itmedia.co.jp/business/articles/2611/14/news008.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-13T22:30:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/business/articles/2611/14/cover_news008.jpg",
+      "ogTitle": "NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生",
+      "ogDescription": "ダイナーの一角から、AI時代の主役「NVIDIA」を生み出したジェンスン・フアン氏。“皿洗い”から億万長者へと至った半生を振り返る。",
+      "excerpt": "米NVIDIAを、道端のダイナーから世界的なAIブームの中心へと導いた、共同創業者のジェンスン・フアン氏（63歳）。同氏は11月12日、NVIDIAのCEOの職を辞し、33年間にわたる半導体メーカーの経営トップとしてのキャリアに幕を下ろした。 NVIDIAの取締役会によると、フアン氏は取締役の職も辞任した。取締役会は、最高財務責任者（CFO）のコレット・クレス氏を暫定CEOに任命し、正式なCEOについては社内外の候補者から検討すると発表した。 同社は、フアン氏が辞任した理由を明らかにしていない。辞任の発表は、中国のスパイ疑惑がある女性とフアン氏が不倫関係にあると報道があった数日後の出来事だった。さらに、フアン氏直属のNVIDIA上級幹部とも不倫関係にあったと報じられていた。 発表を受け、NVIDIAの株価は10％を超える下落を記録した。 フアン氏は、1963年2月17日に台湾で生まれた。父親の仕事の都合で家族ごとタイへ移住したため、幼少期はタイで過ごした。 両親はその後、米ワシントン州タコマに住む叔父のもとへ、9歳のフアン氏と兄を送った。2人は、ケンタッキー州の田舎にある私立学校「Oneida Baptist Institute」に入学。叔父は名門寄宿学校だと思い込んでいたが、実際には問題を抱えた青少年を対象とする宗教系の矯正学校だった。 フアン氏は、男子寮のトイレ掃除をさせられ、人種差別的ないじめにも耐えたと振り返っている。一方で、ケンタッキー州で過ごした日々について、懐かしそうに語ることもある。それから数十年後、同氏と妻は、同校に新しい寮と教室棟を建設するため200万ドル（約2億～3億円）を寄付した。 その後、両親もフアン氏のもとに合流し、家族はオレゴン州に定住した。フアン氏は2学年を飛び級し、早期に高校を卒業した後、Oregon State University（オレゴン州立大学）で電気工学を学び、1984年に卒業した。在学中、実験室のパートナーであるロリ・ミルズ氏と出会う。後に妻となる女性だ。2人の間には、スペンサーとマディソンという2人の子どもが生まれた。 10代のころ、フアン氏はダイナー「Denny's」（デニーズ）で皿洗い、テーブルの片付け、接客などを仕事にしていた。同氏は、この仕事によって内気な性格を克服し、勤勉に働くことの大切さを学んだと、たびたび語っている。 Copyright &copy; ITmedia, Inc. All Rights Reserved. 本記事は制作段階でChatGPT等の生成系AIサービスを利用していますが、文責は編集部に帰属します。 ITmedia ビジネスオンライン編集部が制作する日刊メールマガジンです メディア一覧 | 公式SNS | 広告案内 | お問い合わせ | プライバシーポリシー | RSS | 運営会社 | 採用情報 | 推奨環境",
+      "description": "ダイナーの一角から、AI時代の主役「NVIDIA」を生み出したジェンスン・フアン氏。“皿洗い”から億万長者へと至った半生を振り返る。"
+    },
+    "trending-301f2d14985e": {
+      "id": "trending-301f2d14985e",
+      "kind": "trending",
+      "title": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "source": "GitHub Trending",
+      "published": "2026-11-15T09:05:04.750Z",
+      "metrics": {
+        "stars": 6386,
+        "starsToday": 1231,
+        "language": "TypeScript"
+      },
+      "image": "https://opengraph.githubassets.com/986c29dbf87e1e0c3725aac4f945d0125356ab20dcbeb1b40fcf72d18f509ced/GoogleChrome/modern-web-guidance-src",
+      "ogTitle": "GitHub - GoogleChrome/modern-web-guidance-src: Keep your coding agent up to date with the latest web best practices",
+      "ogDescription": "Keep your coding agent up to date with the latest web best practices - GoogleChrome/modern-web-guidance-src",
+      "excerpt": "This repo is the source repository for GoogleChrome/modern-web-guidance and includes the code and documentation for authoring, calibrating, and evaluating its contents. Modern Web Guidance is a set of skills that embed web platform expertise, best practices, and browser compatibility data directly into your coding agents. It helps to steer your coding agents away from legacy patterns, and instead toward solutions that harness the power and capabilities of the modern web platform. See CONTRIBUTING.md and GOVERNANCE.md for how we work on the project and orientation of the codebase. Stewarded by the Google Chrome, Microsoft Edge, Mozilla Firefox, and MDN teams, alongside the web development community. Documentation · Eval Dashboard · Source Code · Report an Issue This command runs an interactive wizard to install Modern Web Guidance. See Alternative Installation Methods below. Coding agents often default to older patterns because LLM training data contains vast amounts of legacy code. This often leads them to generate bloated JavaScript for tasks that now have native, high-performance web platform solutions. Even if a model knows an API exists, it often lacks the density of real-world, modern implementation patterns required for production-ready code. Modern Web Guidance bridges this gap. Our skill's CLI returns targeted, expert-curated guidelines directly into your agent's context window, focusing on: We cover the past several years of the web platform's new features, all the w",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "language": "TypeScript"
+    },
+    "trending-c489e6fb5feb": {
+      "id": "trending-c489e6fb5feb",
+      "kind": "trending",
+      "title": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "source": "GitHub Trending",
+      "published": "2026-11-15T09:05:04.750Z",
+      "metrics": {
+        "stars": 51623,
+        "starsToday": 893,
+        "language": "Go"
+      },
+      "image": "https://repository-images.githubusercontent.com/1241960226/27bf01cb-17df-44d5-9b7b-bcf17c970c6d",
+      "ogTitle": "GitHub - alibaba/open-code-review: Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "ogDescription": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language rulese...",
+      "excerpt": "English | 简体中文 | 日本語 | 한국어 | Русский Open Code Review is an AI-powered code review CLI tool. It originated as Alibaba Group's internal official AI code review assistant — over the past two years, it has served tens of thousands of developers and identified millions of code defects. After thorough validation at massive scale, we incubated it into an open source project for the community. Simply configure a model endpoint to get started. It reads Git diffs, sends changed files to a configurable LLM via an agent with tool-use capabilities, and generates structured review comments with line-level precision. The agent can read full file contents, search the codebase, inspect other changed files for context, and produce deep reviews — not just surface-level diff feedback. Beyond diff review, ocr scan reviews entire files for auditing unfamiliar codebases or directories that have no meaningful diff. Visit the official website for more details. Compared to general-purpose agents (Claude Code), Open Code Review achieves significantly higher Precision and F1 with the same underlying model, while consuming only ~1/9 of the tokens and completing reviews faster. Note that its Recall is lower than general-purpose agents — a deliberate trade-off favoring precision over noise. A real-world code review benchmark built from 50 popular open-source repositories, 200 real Pull Requests, and 10 programming languages — cross-validated by 80+ senior engineers ( 1,505 annotated ground-truth issues). ",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go"
+    },
+    "trending-379642deb53f": {
+      "id": "trending-379642deb53f",
+      "kind": "trending",
+      "title": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "source": "GitHub Trending",
+      "published": "2026-11-15T09:05:04.750Z",
+      "metrics": {
+        "stars": 56517,
+        "starsToday": 664,
+        "language": "TypeScript"
+      },
+      "image": "https://opengraph.githubassets.com/9019d0f2d14c656cf625d622730576f17cf94e43e7dadeb845a22a0031157162/ChromeDevTools/chrome-devtools-mcp",
+      "ogTitle": "GitHub - ChromeDevTools/chrome-devtools-mcp: Chrome DevTools for coding agents",
+      "ogDescription": "Chrome DevTools for coding agents. Contribute to ChromeDevTools/chrome-devtools-mcp development by creating an account on GitHub.",
+      "excerpt": "Chrome DevTools for agents ( chrome-devtools-mcp ) lets your coding agent (such as Antigravity, Claude, Cursor or Copilot) control and inspect a live Chrome browser. It is available as a Model-Context-Protocol (MCP) server and as a CLI . Both give your AI coding assistant access to the full power of Chrome DevTools for reliable automation, in-depth debugging, and performance analysis. Tool reference | CLI | Skills | Changelog | Contributing | Troubleshooting | Design Principles chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect, debug, and modify any data in the browser or DevTools. Avoid sharing sensitive or personal information that you don't want to share with MCP clients. chrome-devtools-mcp officially supports Google Chrome and Chrome for Testing only. Other Chromium-based browsers may work, but this is not guaranteed, and you may encounter unexpected behavior. Use at your own discretion. We are committed to providing fixes and support for the latest version of Extended Stable Chrome . Performance tools may send trace URLs to the Google CrUX API to fetch real-user experience data. This helps provide a holistic performance picture by presenting field data alongside lab data. This data is collected by the Chrome User Experience Report (CrUX) . To disable this, run with the --no-performance-crux flag. Google collects usage statistics (such as tool invocation success rates, latency, and environment information) to improve ",
+      "description": "Chrome DevTools for coding agents",
+      "language": "TypeScript"
+    },
+    "trending-f9da1acd54ca": {
+      "id": "trending-f9da1acd54ca",
+      "kind": "trending",
+      "title": "tradermonty/claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "source": "GitHub Trending",
+      "published": "2026-11-15T09:05:04.750Z",
+      "metrics": {
+        "stars": 5060,
+        "starsToday": 553,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/41611745a31341ffc9c40ae3ff1960eb8391f1ca2bd1295280a55f66f5b2cb19/tradermonty/claude-trading-skills",
+      "ogTitle": "GitHub - tradermonty/claude-trading-skills: Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "ogDescription": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development. - tradermonty/claude-trading-skills",
+      "excerpt": "Claude Trading Skills started as a personal project to use AI to improve my own trading process. Claude Trading Skills is a Claude Skills-based trading workflow toolkit for time-constrained individual investors. It is designed for investors who use long-term investing, ETFs, and dividend stocks as their core, while using disciplined swing trading as a satellite strategy when market conditions are favorable. The goal is not to outsource buy/sell decisions to AI. The goal is to structure market review, risk management, trade planning, journaling, and continuous improvement. It is open source because the workflows, checklists, and review habits behind better trading decisions can improve through shared practice. This is not a signal service or a promise of profitability. It is a toolkit for traders who want to build a better decision process. The project follows a first for self, open for others stance: it is built first as a practical workflow the author uses, then shared openly for others who face similar constraints. 📖 Documentation site: https://tradermonty.github.io/claude-trading-skills/ Project vision: PROJECT_VISION.md 日本語版READMEは README.ja.md をご覧ください。 This repository is for educational, research, and process-improvement purposes only. It is not financial advice, investment advisory service, tax advice, legal advice, a signal service, or a broker execution platform. Trading and investing involve risk, including loss of principal. Past performance, backtests, screens, re",
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "language": "Python"
+    },
+    "trending-d148e3d2c284": {
+      "id": "trending-d148e3d2c284",
+      "kind": "trending",
+      "title": "dream-num/univer",
+      "url": "https://github.com/dream-num/univer",
+      "source": "GitHub Trending",
+      "published": "2026-11-15T09:05:04.750Z",
+      "metrics": {
+        "stars": 25137,
+        "starsToday": 495,
+        "language": "TypeScript"
+      },
+      "image": "https://repository-images.githubusercontent.com/543101941/e14b70fa-fc46-4249-8bd8-399630941326",
+      "ogTitle": "GitHub - dream-num/univer: Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "ogDescription": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core. ...",
+      "excerpt": "Start with open-source Sheets and Docs, then connect your own application or agent. 🚀 Quick start · 📚 Documentation · ⚖️ Feature comparison · 🌐 Website · 🎮 Showcase · 🔧 API Reference · 📝 Blog English · Français · Deutsch · Español · 简体中文 · 繁體中文 · 日本語 · 한국어 Univer is an Office SDK for building Office applications inside your own product. It provides Office editing, calculation, collaboration, and file processing for people and existing agents, using your data and permissions. The product family covers spreadsheets, documents, presentations, relational tables, canvases, and PDFs. Univer Office SDK has three parts: This repository provides the Web SDK's core architecture and engine implementations under Apache-2.0 : content models and snapshot formats, plugin and dependency management, the command system, formula and rendering engines, Facade APIs, UI foundation, and Sheets and Docs editing capabilities. Commercial Web SDK plugins, Server SDK, and commercial AI SDK extensions are distributed and licensed separately. Agents can use the same open-source APIs; your application supplies the model and tool orchestration. The quotation example demonstrates editing, calculation, and saving without an AI SDK dependency. Features are composed through plugins and presets; the quick start uses only the Sheets Core preset . Images use the corresponding drawing plugins. See the feature comparison for detailed open-source and commercial coverage. The demos below showcase the wider Unive",
+      "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "language": "TypeScript"
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "MiniMaxAI/MiniMax-H3-Image",
+      "pipeline_tag": "text-to-image",
+      "likes": 1137,
+      "downloads": 517948,
+      "createdAt": "2026-11-03T06:34:36.000Z",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    },
+    {
+      "id": "Comfy-Org/MiniMax-H3-Image",
+      "pipeline_tag": "text-to-image",
+      "likes": 391,
+      "downloads": 1615613,
+      "createdAt": "2026-11-08T20:37:23.000Z",
+      "url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image"
+    },
+    {
+      "id": "NousResearch/Arete-27B",
+      "pipeline_tag": "text-generation",
+      "likes": 602,
+      "downloads": 6191,
+      "createdAt": "2026-11-06T19:31:28.000Z",
+      "url": "https://huggingface.co/NousResearch/Arete-27B"
+    }
+  ],
+  "errors": []
+}

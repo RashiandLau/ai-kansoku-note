@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+<channel>
+<title>＠IT 全フォーラム 最新記事一覧</title>
+<link>https://atmarkit.itmedia.co.jp/</link>
+<description>＠IT 全フォーラム の最新記事一覧です。</description>
+<language>ja</language>
+<copyright>Copyright (c) 2026 ITmedia, Inc. All Rights Reserved.</copyright>
+<pubDate>Sun, 15 Nov 2026 16:55:00 +0900</pubDate>
+<item>
+<title>PHP重大脆弱性は「始まり」に過ぎない？　2年前の兆候が示す“次の危機”</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/15/news001.html</link>
+<description>PHPの重大な脆弱性「php2shell」は、実は2024年の段階で問題の兆候が見つかっていました。それでも修正は進まず、約2年後に重大な脅威として表面化しました。その背景にあったのは何でしょうか。AIが脆弱性を見つける速度を高める今、問題を修正できない組織は何を失うのでしょうか。</description>
+<pubDate>Sun, 15 Nov 2026 08:00:00 +0900</pubDate>
+</item>
+<item>
+<title>「PythonでもSQLでもない『最も使う言語』」「モバイル4社の5G速度・つながるエリアの違い」――技術の進化と変わらない課題</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/14/news005.html</link>
+<description>＠ITで公開された記事の中から、特に注目を集めた10本をランキング形式で紹介します。何が読者の関心を引いたのでしょうか。</description>
+<pubDate>Sat, 14 Nov 2026 08:00:00 +0900</pubDate>
+</item>
+<item>
+<title>無印良品「21年で役目終えたクレカ番号全桁放置」「初動対応で油断」　形だけの防御の末路【記者会見を読む】</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/14/news004.html</link>
+<description>無印良品の情報漏えい事案。記者会見で明らかになったのは「対策の甘さ」だ。2021年に用途を終えたクレジットカード番号が削除されず、システム内に残り続けていたことも分かった。なぜこのようなずさんな管理・対策が改善されていなかったのか。</description>
+<pubDate>Fri, 13 Nov 2026 17:21:00 +0900</pubDate>
+</item>
+<item>
+<title>8割が「ダウンタイムで顧客を失った」　障害は復旧しても信用は戻らないならどうする？</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/13/news083.html</link>
+<description>Splunkの調査では、システム停止による損失が収益だけでなく顧客や企業価値にも深刻な影響を与えている実態が浮き彫りになった。調査では81％が「ダウンタイムをきっかけに顧客を失った経験がある」と回答したという。</description>
+<pubDate>Fri, 13 Nov 2026 17:15:00 +0900</pubDate>
+</item>
+<item>
+<title>Microsoft 365障害、Outlookだけではない　DefenderやPurviewまで巻き込む広範囲の影響</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/13/news080.html</link>
+<description>Outlookが使えない。Teamsの予定表も動かない。それだけでは済まなかった。Microsoft 365で発生中の障害は、Copilotや業務アプリに加え、DefenderやPurviewといったセキュリティ・情報保護機能にも波及している。</description>
+<pubDate>Fri, 13 Nov 2026 17:10:00 +0900</pubDate>
+</item>
+<item>
+<title>徳丸氏やt-wada氏の講演も無料で“見放題”　「開発の実践知」が学べる動画・資料、約300件を一挙公開</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/13/news033.html</link>
+<description>新しい技術や開発手法を取り入れる際、参考になるのは実践者の経験や判断の過程だ。こうした知見を得るための手段として、国内外の専門家による講演動画や資料を集約したサービスが登場した。その中身とは。</description>
+<pubDate>Fri, 13 Nov 2026 12:45:00 +0900</pubDate>
+</item>
+<item>
+<title>「AI特化“ネオクラウド”の8割が消える」　553兆円の減損リスクが暴く、巨額AI投資の“不都合な真実”</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/13/news032.html</link>
+<description>Gartnerは、AIプロバイダーが現在のペースで設備投資を続けると、2030年末までに3.5兆ドルを超えるAIインフラへの支出が減損リスクにさらされる可能性があると予測した。</description>
+<pubDate>Fri, 13 Nov 2026 12:00:00 +0900</pubDate>
+</item>
+<item>
+<title>PR： AI時代の「時間との戦い」に挑むテクマトリックス　Palo Alto Networks製品を自社で使い倒した知見で販売パートナーを支援</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/13/news003.html</link>
+<description>AIを駆使した攻撃の自動化・高速化に、従来の枠組みの対策では追い付けなくなっている。2009年からPalo Alto Networks製品を扱うテクマトリックスは、自社で先行導入した製品の運用知見を武器に販売パートナーを支援する。日本企業の課題と、Platformizationを現実の対策に落とし込む支援について聞いた。</description>
+<pubDate>Fri, 13 Nov 2026 10:00:00 +0900</pubDate>
+</item>
+<item>
+<title>AIエージェントを「追えない、止められない」　約半数が経験する“暴走”、浮上する3つの盲点</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/13/news036.html</link>
+<description>APIセキュリティベンダーSalt Securityの調査では、約半数の組織がAIエージェントによる意図しない行動を確認していることが分かった。一方で組織は、AIエージェントの想定外の行動を自動的に止められていない。対策として何が求められるのか。</description>
+<pubDate>Fri, 13 Nov 2026 07:45:00 +0900</pubDate>
+</item>
+<item>
+<title>総務省が新しい無料オンライン講座「統計解析プログラミング」を1月に開講　Pythonでのデータ分析が4週間で学べる</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/13/news013.html</link>
+<description>総務省統計局が、Pythonで統計解析と主要な分析手法を学ぶ無料オンライン講座「“わかる・使える”統計解析プログラミング」を2027年1月12日に新規開講する。主成分分析、回帰分析、ランダムフォレストから需要予測の演習まで、4週間の中身と受講の条件を整理する。</description>
+<pubDate>Fri, 13 Nov 2026 05:00:00 +0900</pubDate>
+</item>
+<item>
+<title>生成AIだけがAIだと思い込む企業が直面するリスク</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/13/news002.html</link>
+<description>企業はAIによる具体的な成果を求められているが、真の価値を生み出す領域の見極めが難しくなっている。AIと生成AIを同一視すると、投資や導入の優先順位を誤り、重要な業務能力や変革の機会を逃す恐れがある。企業には両者の違いを理解し、それぞれの特性に応じた活用領域を見極めることが求められている。</description>
+<pubDate>Fri, 13 Nov 2026 05:00:00 +0900</pubDate>
+</item>
+<item>
+<title>デジタル庁、さくらインターネット、三重県　3つの事件に共通した“盲点”</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/12/news026.html</link>
+<description>デジタル庁のGSS、さくらインターネット、三重県。2026年に明らかになった3つのセキュリティ事案は、VPNの脆弱性、初期パスワード、私物USBと一見すると別々の問題に見えます。ところが、横並びで見ると意外な共通点がありました。</description>
+<pubDate>Thu, 12 Nov 2026 17:15:00 +0900</pubDate>
+</item>
+<item>
+<title>AI時代が不安なエンジニアに求められる「土台の強さ」　毎日AIを使う開発者ほどコードを“書く”力を再評価する理由</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/12/news028.html</link>
+<description>スーパーソフトウエアはITエンジニア1265人を対象とした、生成AIの普及に伴うキャリア不安や今後重要性が高まる能力についての調査結果を発表した。「コードを書く力以外の能力を身に付けなければ、今後のキャリアが不安になるかどうか」などを聞いている。</description>
+<pubDate>Thu, 12 Nov 2026 17:00:00 +0900</pubDate>
+</item>
+<item>
+<title>【無料・10分で完了】“古いから捨てる”は間違い？　情シスが知っておきたい「システムの5つの負債」診断</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/12/news019.html</link>
+<description>レガシーシステムの課題を解決する手段は、必ずしもモダナイゼーションだけではない。まずは自社システムの状態を把握し、選択肢を整理することが欠かせない。その判断材料を得られるという無料の診断サービスとは。</description>
+<pubDate>Thu, 12 Nov 2026 12:45:00 +0900</pubDate>
+</item>
+<item>
+<title>「AIエージェントに開発を任せ切れない」　“見えない実行コスト”が自律性を妨げる</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/12/news027.html</link>
+<description>開発者動向を調査するSlashDataは、AIエージェントの自律性と料金体系の関係を分析した結果を公開した。開発者がAIエージェントに任せる範囲を制限する要因として何が強く影響しているのか。</description>
+<pubDate>Thu, 12 Nov 2026 08:00:00 +0900</pubDate>
+</item>
+<item>
+<title>最大32万人の個人情報流出　SMBC系で漏れた「年収」「保証額」の重過ぎる意味</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/12/news022.html</link>
+<description>SMBCコンシューマーファイナンスの保証業務用システムが不正アクセスを受け、最大32万118人分の個人情報が外部に送信された。氏名や住所、運転免許証番号だけではなく、年収やローンの保証額まで含まれていた。金融機関との取引情報を知る攻撃者は、次に何を仕掛けてくるのか。</description>
+<pubDate>Thu, 12 Nov 2026 07:45:00 +0900</pubDate>
+</item>
+<item>
+<title>「APIを呼ぶのは、もう人間ではない」　進化するMCPとOpenAPIとの“新しい関係”</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/12/news004.html</link>
+<description>2026年7月の仕様改訂によって、「MCP」は既存のWeb技術との親和性を高めました。これが意味するのは、企業の既存のAPIをAIエージェントから利用するための仕組みが整いつつあるということです。AIエージェントが自らAPIを選び、呼び出す時代に、API設計の何を見直す必要があるのかを考えます。</description>
+<pubDate>Thu, 12 Nov 2026 05:00:00 +0900</pubDate>
+</item>
+<item>
+<title>漁師が副業でサイバー攻撃、AIで侵入コストは「1社25ドル」　激安化する脅威とどう戦うか？</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/12/news006.html</link>
+<description>海が荒れて漁に出られない日は、サイバー攻撃で稼ぐ。そんな犯罪者がいるという。AIによって攻撃のハードルは下がり、1社への侵入を試みるコストは25ドル程度との試算もある。脆弱性の発見も急増する中、企業は何を守り、何を捨てるべきなのか。安野貴博氏率いるチームみらいが開催した勉強会で、専門家らがAI時代の防御と法制度の課題を議論した。</description>
+<pubDate>Thu, 12 Nov 2026 05:00:00 +0900</pubDate>
+</item>
+<item>
+<title>「Google ドライブもランサムウェアに狙われている」　身代金を払わずに一括ファイル復元するには</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news037.html</link>
+<description>Googleは「Google ドライブ」のランサムウェア検知機能と一括ファイル復元機能の一般提供を開始したと発表した。</description>
+<pubDate>Wed, 11 Nov 2026 17:15:00 +0900</pubDate>
+</item>
+<item>
+<title>端末を開いたら即アウト？　CVSS 11.0の「致命的脆弱性」が笑える理由</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news036.html</link>
+<description>端末を開くだけで攻撃が成立し、CVSSスコアは満点超えの11.0。そんな「致命的脆弱性」を告発する特設サイトが登場した。ただし、これは端末の正常な機能を脆弱性に見立てたパロディーだ。背景にあるのは、脆弱性の命名や公表を巡る風潮への皮肉だ。</description>
+<pubDate>Wed, 11 Nov 2026 17:00:00 +0900</pubDate>
+</item>
+<item>
+<title>“脱マクロ”に反発も、「作業時間→Geminiで2分」　オートバックスはGoogle Workspaceにどう移行？</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news035.html</link>
+<description>オートバックスセブンが、「Google Workspace」や「Gemini」を活用した業務改革を進めている。しかし、長年使い慣れた表計算ソフトウェアやマクロからの移行には、現場から強い反発もあったという。同社はこうした課題にどう対応し、生成AIによる業務効率化につなげたのか。</description>
+<pubDate>Wed, 11 Nov 2026 12:45:00 +0900</pubDate>
+</item>
+<item>
+<title>「AIが得意なのはベテラン開発者の時短だった」　若手が採られない時代に積み上がる「人材負債」</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news033.html</link>
+<description>SlashDataは、AI開発ツールの投資対効果を開発者の経験年数別に分析した結果を公開した。反復作業に費やす時間が減ったと回答した開発者は、経験16年以上では62％だった一方、経験2年以下では42％にとどまった。</description>
+<pubDate>Wed, 11 Nov 2026 12:00:00 +0900</pubDate>
+</item>
+<item>
+<title>「“できる人”ばかり質問されがち」から脱却し、年4400時間削減――紀陽銀行の「社内知識」集約術とは</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news029.html</link>
+<description>マニュアルがあっても、必要な情報が見つからなければ社内の問い合わせは減らない。従業員が自力で疑問を解消できるようにするために、情報を見つける仕組みをどう見直せばよいのか。紀陽銀行の取り組みに学ぶ。</description>
+<pubDate>Wed, 11 Nov 2026 08:00:00 +0900</pubDate>
+</item>
+<item>
+<title>セガの220万件流出は氷山の一角　委託先侵害でメールアドレス8100万件が流出</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news034.html</link>
+<description>セガのメールマガジン配信先約220万件が外部流出した。原因は、配信業務を委託していたアララのシステムへの不正アクセスだ。だが、問題はセガだけでは終わらない。アララが公表した調査結果からは、メールアドレス8100万件が流出、最大約380社に影響が及ぶ可能性と、情報を持ち出された配信基盤が不審メールの送信にも悪用された実態が浮かび上がった。</description>
+<pubDate>Wed, 11 Nov 2026 07:45:00 +0900</pubDate>
+</item>
+<item>
+<title>NotebookLMに公式APIが登場　WebページやYouTube動画の取り込みを自動化でき、MCPでAIエージェントからも使える</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news011.html</link>
+<description>NotebookLM（現Gemini Notebook）に、個人アカウントで使える公式のREST APIとMCPサーバが公開プレビューとして登場した。今できること、まだできないこと、使う前の条件を整理し、筆者が手元で試した結果も添える。</description>
+<pubDate>Wed, 11 Nov 2026 05:00:00 +0900</pubDate>
+</item>
+<item>
+<title>Outlookのゼロデイ修正に注意。右クリックメニュー刷新や「クラウド再構築」など新機能を盛り込んだWindows 11「KB5132061」詳細</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news063.html</link>
+<description>Microsoftは2026年11月、Windows 11向けの月例更新プログラム「KB5132061」などの提供を開始した。今月は悪用が確認されたOutlookのゼロデイ脆弱性を含む多数の修正が行われている。また、エクスプローラーの右クリックメニュー刷新や、USBメモリ不要の「クラウド再構築」などの新機能が順次展開されるほか、長引いていたUSBオーディオの不具合もついに解消された。</description>
+<pubDate>Wed, 11 Nov 2026 05:00:00 +0900</pubDate>
+</item>
+<item>
+<title>「ソースコードに“Why”は書かれていない」　レガシーシステムの“闇の仕様”、何をどこまで復元する？</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news012.html</link>
+<description>AIによるコード解析だけでは、レガシーシステムの仕様を完全には復元できない。そこには人の知識や判断が欠かせない。仕様を復元する手順と、関係者の認識のずれがある中でどう仕様のレビューを進めればいいのかを解説する。</description>
+<pubDate>Wed, 11 Nov 2026 05:00:00 +0900</pubDate>
+</item>
+<item>
+<title>AI生成コードのレビューはなぜ難しいのか？　“全部読む”から脱却する新常識</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news016.html</link>
+<description>JetBrainsは、AI生成コードのレビューツールを構築するための概念的な枠組みの研究成果をブログ記事で紹介した。</description>
+<pubDate>Tue, 10 Nov 2026 17:30:00 +0900</pubDate>
+</item>
+<item>
+<title>「90日間ログ保持」はもう古い　VPNの脆弱性やActive Directoryを悪用するランサムウェアの実態と対策</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/10/news041.html</link>
+<description>Mandiantは年次レポート「M-Trends 2026」を発表した。2025年に実施した50万時間以上のインシデント調査では、サイバー犯罪の分業化と連携の進展により、初期アクセスから攻撃実行グループへの引き継ぎ時間が2022年の8時間超から2025年には22秒に短縮されたことが明らかになった。</description>
+<pubDate>Tue, 10 Nov 2026 17:15:00 +0900</pubDate>
+</item>
+<item>
+<title>「Wi-Fi 8を待つ必要はない」――Ciscoが解説、“Wi-Fi 7との違い”と企業導入の考え方</title>
+<link>https://atmarkit.itmedia.co.jp/ait/articles/2611/10/news017.html</link>
+<description>次世代の無線LAN規格「Wi-Fi 8」は、現行のWi-Fi 7から何が進化するのか。企業はWi-Fi 8の登場を待つべきなのか。CiscoがWi-Fi 8の技術的な特徴と、企業が無線LAN環境の更新を検討する際の判断について解説した。</description>
+<pubDate>Tue, 10 Nov 2026 17:00:00 +0900</pubDate>
+</item>
+</channel>
+</rss>

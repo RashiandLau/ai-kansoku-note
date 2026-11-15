@@ -1,0 +1,92 @@
+[
+ {
+  "tag_name": "rust-v0.169.0",
+  "name": "0.169.0",
+  "prerelease": false,
+  "draft": false,
+  "published_at": "2026-11-13T08:37:05Z",
+  "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+  "body": "## New Features\n\n- The opt-in terminal workspace supports multiple side-chat tabs. Switch between them with the keyboard or mouse, and reopen saved local side chats after restarting Codex. (#59784, #60152, #60181)\n- Search older tasks from the agent command center by name, prompt preview, or working directory. (#60286)\n- Turn on **Collapse turn details** in the full-screen transcript to fold completed activity beneath each prompt while keeping answers visible and tool output searchable. (#60554, #60555, #60556, #60557)\n- Add or edit custom model providers from the terminal. With custom gateway onboarding enabled, you can create a provider during sign-in and use a device code for supported gateways over SSH or without a local browser. (#59779, #60009, #60186, #60486, #60662)\n- Press `Ctrl+S` in the terminal report editor to save a diagnostic ZIP locally, even when uploads are disabled. (#60542)\n- With the opt-in Cloud connection on macOS and Linux, send images, choose a model and reasoning effort, and archive or restore Cloud conversations from the terminal. (#59828, #60061, #60635, #60651)\n\n## Bug Fixes\n\n- `codex exec` keeps project configuration and MCP servers disabled in untrusted directories, even with `--sandbox workspace-write`. Use `--trust` with `codex exec` or `codex review` to explicitly save project trust. (#60041)\n- **Yes, clear context and implement** now hands the full approved plan to the fresh session and keeps the current session open if the handoff fails. (#60763)\n- Fixed Windows sandbox handling for quoted `cmd.exe` paths and for PowerShell sessions whose working directory has an unreadable parent. (#60624, #60647)\n- Pasted images on macOS retain their intended orientation and use native PNG or JPEG clipboard data when available. (#60455)\n- The terminal no longer stays busy waiting for MCP servers that a shared app server did not report. (#60280, #60622)\n- Interrupted turns now close cleanly, and delayed aborts or file approval cancellations no longer interrupt a later turn. (#59910, #60700)\n\n## Documentation\n\n- Updated the `openai-docs` skill to focus on Codex and ChatGPT Work questions and first-time API setup, with dedicated guidance for configuring Codex across a team. (#59944, #59949)\n- Documented how app-server clients can list models or authorize a gateway for a configured provider without changing the default provider. (#59776, #59819)\n\n## Chores\n\n- Updated bundled SQLite to 3.54 to pick up write-ahead log fixes. (#60432)\n- Plugin marketplace upgrades can reuse Git objects already on disk, reducing repeat downloads. (#60528)\n\n## Changelog\n\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.168.0...rust-v0.169.0\n\n- #59739 Add a sidebar chooser and floating workspace shortcut panels @fcoury-oai\n- #59743 Forward explicit cyber access programs with header authentication @jamy-OAI\n- #59745 Repair legacy Windows sandbox bin permissions for SYSTEM @zm-oai\n- #59746 Add typed Cloud user-message submission receipts @bc-openai\n- #59749 Use runtime authentication for OpenAI MCP and app requests @cooper-oai\n- #59750 Stop Noise relay recovery on rejected executor credentials @richardopenai\n- #59752 Configure the Opus Bazel patch and isolate auth tests @bkotsopoulos\n- #59754 Enforce host-required cyber access programs per thread @jamy-OAI\n- #59759 Update WebSocket dependency forks @charliemarsh-oai\n- #59767 Add sidebar tabs and nonblocking side-chat creation @fcoury-oai\n- #59768 Stop prefetching plugin discovery at app-server startup @zamoshchin-openai\n- #59769 Reuse decoded WebSocket event kinds in telemetry @charliemarsh-oai\n- #59770 Add shared service-tier support for host-owned agents @rhan-oai\n- #59772 Remove the legacy sandbox policy constructor @ioanbudea-OAI\n- #59774 Remove the legacy Seatbelt command wrapper @ioanbudea-OAI\n- #59776 Allow selecting a configured provider in `model/list` @abhinav-oai\n- #59778 Expose acceptance metadata and code-cell links in rollout traces @tz-openai\n- #59779 Add"
+ },
+ {
+  "tag_name": "rust-v0.171.0-alpha.5",
+  "name": "0.171.0-alpha.5",
+  "prerelease": true,
+  "draft": false,
+  "published_at": "2026-11-14T01:20:37Z",
+  "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5",
+  "body": "Release 0.171.0-alpha.5\n\n"
+ },
+ {
+  "tag_name": "rust-v0.171.0-alpha.4",
+  "name": "0.171.0-alpha.4",
+  "prerelease": true,
+  "draft": false,
+  "published_at": "2026-11-13T18:52:02Z",
+  "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.4",
+  "body": "Release 0.171.0-alpha.4\n\n"
+ },
+ {
+  "tag_name": "rust-v0.171.0-alpha.2",
+  "name": "0.171.0-alpha.2",
+  "prerelease": true,
+  "draft": false,
+  "published_at": "2026-11-13T07:59:06Z",
+  "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.2",
+  "body": "Release 0.171.0-alpha.2\n\n"
+ },
+ {
+  "tag_name": "rust-v0.168.0",
+  "name": "0.168.0",
+  "prerelease": false,
+  "draft": false,
+  "published_at": "2026-11-13T03:54:29Z",
+  "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0",
+  "body": "## New Features\n\n- Browse model providers under Sessions → Model providers and choose the default for new chats. (#59541, #59722)\n- Enable `features.tui_workspace` to view a side conversation beside the main chat. Drag the divider to resize the panes or press `leader z` to zoom the focused pane. (#58992, #59527, #59595)\n- Attach recordings when using an audio-capable model. Codex skips confirmed rejected recordings on later turns and uses clip duration to keep more short recordings in context. (#59234, #59268)\n- Enable `features.image_generation_animation` to generate or edit animated GIFs with optional frame count and timing controls. (#59073)\n- Fullscreen Codex displays image previews and pets in tmux on Ghostty and Kitty with `allow-passthrough all`. (#59579, #59580)\n- Set `tui.notification_method = \"osc777\"` for terminal notifications. Approval notifications show longer command previews and distinguish terminal input from network access requests. (#59256)\n\n## Bug Fixes\n\n- Local TUI history and resume pickers filter newly created threads by the signed-in ChatGPT account. (#58918)\n- Open and resumed chats use their saved model provider after you change the default for new chats. (#59503)\n- The TUI renders replies interrupted by tool calls as a single Markdown message and restores reasoning summaries when replaying a conversation. (#59698, #59700)\n- Steering messages reach running turns when sent during the final transcript save or after switching back to a long-running chat. (#58877, #58998)\n- Fuzzy file search gives filename matches more weight so matching parent directories are less likely to crowd them out. (#59709)\n- Idle local MCP servers on Windows leave filesystem I/O available to the rest of Codex. (#59726)\n\n## Documentation\n\n- The app-server reference covers listing model providers, creating custom gateways, and updating gateway, Bedrock, and GCP settings. (#58845, #58876)\n\n## Chores\n\n- Codex warns when `features.multi_agent` is explicitly configured and points to `agents.enabled` for disabling subagent tools. (#59479)\n- Contributors can run Bazel CI jobs locally without BuildBuddy credentials. (#59055)\n\n## Changelog\n\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.167.0...rust-v0.168.0\n\n- #58766 Distinguish update handoffs in TUI startup telemetry @etraut-openai\n- #58767 Validate `/fork` before consuming the composer draft @etraut-openai\n- #58829 Accept agent follow-ups through native turn input delivery @won-openai\n- #58845 Add model provider discovery to the app server @alexsong-oai\n- #58876 Add model provider configuration writes to the app-server @alexsong-oai\n- #58877 Handle steers accepted during the final transcript flush @charliemarsh-oai\n- #58886 Preserve timestamp ties when paginating threads @jif-oai\n- #58890 Add a feature-gated account check for CLI thread resume @jif-oai\n- #58894 Support model catalog overrides for plugin guidance @goodman-oai\n- #58899 Add native patch support to direct Guardian review @swastik-oai\n- #58903 Support permission requests in direct Guardian review @swastik-oai\n- #58904 Add a standalone HTTP MCP server for the agent message board @jif-oai\n- #58908 Package the message board MCP connection as a plugin @jif-oai\n- #58909 Add an in-memory launcher for the message-board MCP server @jif-oai\n- #58918 Scope local history discovery to the current ChatGPT account @jif-oai\n- #58927 Fix live stream reflow at the allocated conversation width @fcoury-oai\n- #58931 Support direct Guardian review of patches invoked through exec_command @swastik-oai\n- #58933 Release message-board state before HTTP shutdown returns @jif-oai\n- #58935 Defer Guardian context trimming in elastic preparation @ioanbudea-OAI\n- #58936 Extract model-provider unit tests into separate files @ioanbudea-OAI\n- #58937 Verify queued network approval wakeups before polling again @seanh-oai\n- #58938 Skip attribution for direct MCP tool calls @victor-openai\n- #58939 Refine additional-context byte histogram bucket"
+ },
+ {
+  "tag_name": "rust-v0.171.0-alpha.1",
+  "name": "0.171.0-alpha.1",
+  "prerelease": true,
+  "draft": false,
+  "published_at": "2026-11-13T04:15:28Z",
+  "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.1",
+  "body": "Release 0.171.0-alpha.1\n\n"
+ },
+ {
+  "tag_name": "rust-v0.170.0-alpha.4",
+  "name": "0.170.0-alpha.4",
+  "prerelease": true,
+  "draft": false,
+  "published_at": "2026-11-12T22:59:08Z",
+  "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.170.0-alpha.4",
+  "body": "Release 0.170.0-alpha.4\n\n"
+ },
+ {
+  "tag_name": "rust-v0.170.0-alpha.3",
+  "name": "0.170.0-alpha.3",
+  "prerelease": true,
+  "draft": false,
+  "published_at": "2026-11-12T19:32:20Z",
+  "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.170.0-alpha.3",
+  "body": "Release 0.170.0-alpha.3\n\n"
+ },
+ {
+  "tag_name": "rust-v0.170.0-alpha.2",
+  "name": "0.170.0-alpha.2",
+  "prerelease": true,
+  "draft": false,
+  "published_at": "2026-11-12T01:30:28Z",
+  "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.170.0-alpha.2",
+  "body": "Release 0.170.0-alpha.2\n\n"
+ },
+ {
+  "tag_name": "rust-v0.167.2",
+  "name": "0.167.2",
+  "prerelease": false,
+  "draft": false,
+  "published_at": "2026-11-11T22:44:46Z",
+  "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.167.2",
+  "body": "## New Features\n\n- Codex now sends tool updates incrementally by default on Google Cloud Vertex AI. To opt out, set `incremental_tools_legacy_gcp = false` under `[features]` in `config.toml`. ([#60617](https://github.com/openai/codex/pull/60617), [#60848](https://github.com/openai/codex/pull/60848))\n\n## Changelog\n\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.167.1...rust-v0.167.2\n\n\n\n"
+ }
+]

@@ -1,0 +1,122 @@
+name: Validate and publish
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'data/**'
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'raw/**'
+      - 'scripts/**'
+      - '.github/workflows/publish.yml'
+  schedule:
+    # 07:30 JST: fallback when the daily PR has not triggered publication.
+    - cron: '30 22 * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      # Execute only the base revision's validator. The PR checkout supplies data,
+      # never executable scripts, dependencies, package hooks, or workflow code.
+      - name: Check out trusted base
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: trusted
+          persist-credentials: false
+      - name: Check out candidate data at the event head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: candidate
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check scope and validate the daily data
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
+          EXPECTED_BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          gh pr diff "$PR_NUMBER" --name-only > "$RUNNER_TEMP/changed-files.txt"
+          # The API can return a newer head. Compare its names with the immutable
+          # event diff, then pin the merge to the head whose data we validated.
+          git -C candidate diff --name-only "$EXPECTED_BASE...$EXPECTED_HEAD" > "$RUNNER_TEMP/event-changed-files.txt"
+          diff -u <(LC_ALL=C sort "$RUNNER_TEMP/changed-files.txt") <(LC_ALL=C sort "$RUNNER_TEMP/event-changed-files.txt")
+          node trusted/scripts/validate.mjs --changed-files < "$RUNNER_TEMP/changed-files.txt"
+          mapfile -t changed_files < "$RUNNER_TEMP/changed-files.txt"
+          if [[ ${#changed_files[@]} -ne 1 ]]; then
+            echo 'A daily writer PR must change exactly one data file.' >&2
+            exit 1
+          fi
+          if [[ ! -f "candidate/${changed_files[0]}" || -L "candidate/${changed_files[0]}" ]]; then
+            echo 'The daily data must be a regular JSON file.' >&2
+            exit 1
+          fi
+          # Raw facts must come from the trusted base. Scope validation above
+          # rejects any PR that changes raw, scripts, or other repository files.
+          mkdir -p candidate/raw
+          cp -R trusted/raw/. candidate/raw/
+          for changed_path in "${changed_files[@]}"; do
+            issue_date="${changed_path#data/}"
+            issue_date="${issue_date%.json}"
+            node trusted/scripts/validate.mjs "$issue_date" --root candidate
+          done
+      - name: Merge the validated head
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: gh pr merge "$PR_NUMBER" --squash --delete-branch --match-head-commit "$EXPECTED_HEAD"
+
+  deploy:
+    needs: check
+    if: ${{ always() && (github.event_name != 'pull_request' || needs.check.result == 'success') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # GITHUB_TOKEN merges do not start another push workflow. Deploy in this
+      # workflow, checking out main again after the merge has completed.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build the site
+        run: node scripts/build.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

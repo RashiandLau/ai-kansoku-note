@@ -28,6 +28,7 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     permissions:
+      actions: write
       contents: write
       pull-requests: write
     steps:
@@ -82,17 +83,21 @@ jobs:
             issue_date="${issue_date%.json}"
             node trusted/scripts/validate.mjs "$issue_date" --root candidate
           done
-      - name: Merge the validated head
+      - name: Merge the validated head and dispatch publication
+        shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
-        run: gh pr merge "$PR_NUMBER" --squash --delete-branch --match-head-commit "$EXPECTED_HEAD"
+        run: |
+          gh pr merge "$PR_NUMBER" --squash --delete-branch --match-head-commit "$EXPECTED_HEAD"
+          # GITHUB_TOKEN merges do not trigger push workflows. Dispatch a fresh
+          # run on main so Pages does not receive the PR merge ref.
+          gh workflow run publish.yml --ref main
 
   deploy:
-    needs: check
-    if: ${{ always() && (github.event_name != 'pull_request' || needs.check.result == 'success') }}
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -102,8 +107,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # GITHUB_TOKEN merges do not start another push workflow. Deploy in this
-      # workflow, checking out main again after the merge has completed.
+      # PR merges dispatch a separate workflow run on main for publication.
       - uses: actions/checkout@v4
         with:
           ref: main

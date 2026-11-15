@@ -2,7 +2,7 @@
 
 AI 関連の公式更新、ニュース、OSS の動きを集め、日本語の短い紙面を GitHub Pages に公開する。Node.js 22 以上の標準機能だけで動き、依存パッケージのインストールは不要。
 
-毎日 06:00 JST に GitHub Actions が素材を `raw/` へ収集する。06:30 JST に Dot から Codex の執筆タスクを開始し、`data/` の 1 ファイルだけを変更する PR を作る。PR の検証が成功すると自動で squash merge し、同じワークフローで公開する。07:30 JST の定期実行でも公開を試みる。GitHub Actions の定期実行には遅延があり得る。
+毎日 06:00 JST に GitHub Actions が素材を `raw/` へ収集する。06:30 JST に Dot から Codex の執筆タスクを開始し、`data/` の 1 ファイルだけを変更する PR を作る。PR の検証が成功すると自動で squash merge し、`main` を対象に `publish.yml` の新しい実行を起動して公開する。07:30 JST の定期実行でも公開を試みる。GitHub Actions の定期実行には遅延があり得る。
 
 文章は [AGENTS.md](AGENTS.md) の手順と [WRITING.md](WRITING.md) の規約に従う。公開ファイルは `site/` に生成され、Git には含めない。
 
@@ -49,4 +49,4 @@ AGENTS.md の手順で今日の紙面データを作成し、data/ の1ファイ
 通知は失敗した場合だけ行う。
 ```
 
-PR 検証では main 側の信頼済み validator と raw を使い、PR 側のプログラムを実行しない。変更は日付付き data 1 ファイルに限定し、検証したコミットに一致するときだけマージする。`GITHUB_TOKEN` によるマージは別の push ワークフローを起動しないため、その実行内で main を取り直して公開する。fork 由来の PR や権限制約がある環境では自動マージできない場合がある。
+PR 検証では main 側の信頼済み validator と raw を使い、PR 側のプログラムを実行しない。変更は日付付き data 1 ファイルに限定し、検証したコミットに一致するときだけマージする。`pull_request` イベントでは deploy ジョブを実行しない。`GITHUB_TOKEN` によるマージは別の push ワークフローを起動しないため、マージ成功後に `gh workflow run publish.yml --ref main` で `workflow_dispatch` の新しい実行を起動する。この起動には check ジョブの `actions: write` 権限を使い、Pages への公開は `main` を対象とする新しい実行が担当する。fork 由来の PR や権限制約がある環境では自動マージできない場合がある。

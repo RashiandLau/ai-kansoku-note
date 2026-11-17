@@ -1,0 +1,363 @@
+{
+  "date": "2026-11-17",
+  "generatedAt": "2026-11-17T03:15:59.573Z",
+  "top": "hn-d4515e27dcb7",
+  "selected": [
+    "hn-d4515e27dcb7",
+    "claudecode-7723e648e728",
+    "official-2d7a5d6b20ff",
+    "official-dd659f011024",
+    "official-dfc32ad66523",
+    "official-d91fd06de7b8",
+    "official-ff7833693fa2",
+    "official-9fe6d2ae73e5",
+    "japan-bf9a59d79017",
+    "japan-b1d5d1911de9",
+    "japan-d2c3c09e3516",
+    "japan-a73fc195e74e",
+    "japan-e28ac33c0b72",
+    "trending-d148e3d2c284",
+    "trending-f6c3adbf52c7",
+    "trending-c489e6fb5feb",
+    "trending-d17b0500bab0",
+    "trending-379642deb53f"
+  ],
+  "items": {
+    "hn-d4515e27dcb7": {
+      "id": "hn-d4515e27dcb7",
+      "kind": "hn",
+      "title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+      "source": "Hacker News",
+      "published": "2026-11-16T22:58:20.000Z",
+      "metrics": {
+        "points": 304,
+        "num_comments": 168
+      },
+      "image": "https://xusheng.dev/posts/windows-coding-agent-telemetry/agent-names.jpeg",
+      "ogTitle": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
+      "ogDescription": "Reverse engineering Windows 11's MissionControlAggregator reveals coding-agent and developer-tool usage bits in a diagnostic ETW report.",
+      "excerpt": "I recently asked AI to help me look through the latest Windows binaries for undocumented features and functionality. Among the leads it turned up, one list immediately caught my attention: coding agents such as codex.exe , claude.exe , copilot.exe , and cursor.exe , alongside familiar developer tools such as python.exe , dotnet.exe , gcc.exe , and code.exe . Why would a Windows system DLL need a list of coding agents and developer tools? The names were in MissionControlAggregator.dll . I asked the agent to follow the references and dig into what the DLL actually does. That led from a handful of string comparisons to a running Windows component that records which coding agents and developer tools have been used, saves that information locally, and reports it to Windows Diagnostics. And unless you have opted out of the &ldquo;optional&rdquo; diagnostic data (which is enabled by default), the data is uploaded to Microsoft. I shared the initial finding on X . This post includes more details about the investigation behind it. Opening the DLL in Binary Ninja made the first lead easy to see. These were explicit executable names embedded in a Windows component: Following the references showed that the names were used in comparisons. There are four CLI-agent slots checking copilot.exe , claude.exe , codex.exe , and agy.exe , with extensionless equivalents on the WSL route. Five desktop-agent slots check github.exe , claude.exe , codex.exe , cursor.exe , and antigravity.exe . Here is o",
+      "objectID": "50524736",
+      "points": 304,
+      "num_comments": 168,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50524736",
+        "count": 168,
+        "points": 304
+      }
+    },
+    "claudecode-7723e648e728": {
+      "id": "claudecode-7723e648e728",
+      "kind": "claudecode",
+      "title": "Claude Code 2.1.326",
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+      "source": "Claude Code",
+      "published": "2026-11-17T03:15:59.573Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/e9870fe4805746b1abb8704ad5601c0a892d30edb99d1604269fa178f1f5a2bc/anthropics/claude-code",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "2.1.326",
+      "sectionText": "- Added support for turning on Code Mode while agent teams are enabled; if you already turned it on, sessions with teams on now start in Code Mode\n- Added a startup warning when an `--allowedTools`, `--disallowedTools` or `--tools` value has an entry that doesn't look like a complete rule\n- Added a message explaining why MCP servers stop loading when an administrator adds `managed-mcp.json` during a session\n- Added a row to `/status` that says when your provider or an environment variable such as `DISABLE_TELEMETRY` turns features off\n- Added a note in `/plugin` and `claude plugin list` when a malformed `plugin.json` field such as `author` or `homepage` is ignored\n- Added Ctrl+O to show hidden startup notices\n- Added a hint in the empty prompt that says what to do after a request fails\n- Added an `esc to stop` footer hint in a subagent's view where Esc would stop it\n- Added `OTEL_RESOURCE_INCLUDE_HOST` to include `host.name` and `host.id` in OpenTelemetry resource attributes (off by default)\n- Added `overflowX=\"scroll\"` on a mod's `Box`, and `maxLines` and `wrap=\"clip\"` on its `Text`\n- Fixed `cp` of a file being refused when only its source was covered by an `Edit` deny rule\n- Fixed Bash commands that delete or overwrite files (`find -delete`, `cat a > b`, `sort -o`) being summed up in the transcript as a search or a read\n- Fixed a misleading \"Dangerous rm operation\" warning in the Bash permission prompt on some commands with no rm that Claude Code can't read reliably\n- Fixed background sessions losing the LLM gateway your shell exported after a crash, after a reopen from another folder, or when the background service lacks it: they now stop before any model request\n- Fixed the background service ending your own processes, such as an SSH login, when a process number on its list had been reused by another user's process\n- Fixed rules added in `/permissions` or at a main-conversation tool prompt, and `/add-dir` folders, looking saved when the settings file couldn't be written; the terminal now warns and names it\n- Fixed a failed MCP `headersHelper`, or one not run in an untrusted folder, making other sessions start without that server, for most servers with no stored OAuth refresh token\n- Fixed managed settings with certain key names stopping Claude Code from starting or affecting other managed files\n- Fixed settings files with values nested thousands of levels deep crashing Claude Code or applying only some of the time; values past 64 levels are now dropped with a warning\n- Fixed a settings file saved with an error mid-session being skipped silently; a warning now names the file\n- Fixed the subagent model set in managed settings not applying in Claude Desktop's Code tab; it now overrides your own, as in a terminal, unless those settings also pick a provider or gateway\n- Fixed sandboxed commands failing to start on Linux when the home or config directory is reached through a symlink into `/net` and sandbox settings deny reads of it\n- Fixed empty pl"
+    },
+    "official-2d7a5d6b20ff": {
+      "id": "official-2d7a5d6b20ff",
+      "kind": "official",
+      "title": "Broadening access to AI for scientists",
+      "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+      "source": "OpenAI",
+      "published": "2026-11-16T17:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models."
+    },
+    "official-dd659f011024": {
+      "id": "official-dd659f011024",
+      "kind": "official",
+      "title": "Strengthening the fight against online child sexual abuse with new tools and support",
+      "url": "https://openai.com/index/strengthening-online-child-safety",
+      "source": "OpenAI",
+      "published": "2026-11-16T17:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploitation and abuse."
+    },
+    "official-dfc32ad66523": {
+      "id": "official-dfc32ad66523",
+      "kind": "official",
+      "title": "New Ask Maps features to help with holiday travel and prep",
+      "url": "https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/",
+      "source": "Google AI",
+      "published": "2026-11-16T14:00:00.000Z",
+      "metrics": {},
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ask_Maps_November_herosocial.width-1300.png",
+      "ogTitle": "New Ask Maps features to help with holiday travel and prep",
+      "ogDescription": "Plan holiday road trips, get route tips, find local appointments, and search your saved lists with new Ask Maps features.",
+      "excerpt": "Build custom road trip itineraries, get route tips, find local appointments, and search your saved lists with new Ask Maps features. Your browser does not support the audio element. We are launching new Ask Maps features to help you plan holiday itineraries, find local appointments, and search your saved lists. These tools provide real-time route details, check business availability, and manage your schedule to simplify your seasonal travel and errands. You can start using these updates today on Android and iOS devices in the U.S. and across our global markets. We are launching new Ask Maps features to help you manage your holiday plans. You can now create detailed travel itineraries, find open appointments for services like pet care, and search your saved lists for places with immediate availability. These tools provide real-time updates on traffic, business hours, and parking to keep your trips moving. You can access these updates on your phone today as we expand these capabilities to more countries globally. The holidays are a busy time between shopping for gifts, planning travel, and celebrating with loved ones. To help you stay one step ahead this season, we’re launching new Ask Maps features that make it easy to create itineraries, find available appointments, and search your lists in a snap so you can enjoy stress-free festivities. Now you can build step-by-step trip itineraries and get helpful, real-time details about your route right when you pull up directions. Use ",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ask_Maps_November_herosocial.max-600x600.format-webp.webp\">Plan holiday road trips, get route tips, find local appointments, and search your saved lists with new Ask Maps features."
+    },
+    "official-d91fd06de7b8": {
+      "id": "official-d91fd06de7b8",
+      "kind": "official",
+      "title": "Science at the Frontier: How scientists use ChatGPT",
+      "url": "https://openai.com/index/science-at-the-frontier",
+      "source": "OpenAI",
+      "published": "2026-11-16T12:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery."
+    },
+    "official-ff7833693fa2": {
+      "id": "official-ff7833693fa2",
+      "kind": "official",
+      "title": "LVMH’s Media Division announces strategic partnership with OpenAI",
+      "url": "https://openai.com/index/lvmh-media-division-partnership",
+      "source": "OpenAI",
+      "published": "2026-11-16T09:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "LVMH’s Media Division and OpenAI announce a partnership to support journalism with AI and make its publications more accessible through ChatGPT."
+    },
+    "official-9fe6d2ae73e5": {
+      "id": "official-9fe6d2ae73e5",
+      "kind": "official",
+      "title": "Our first phase of embedded assessments",
+      "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+      "source": "OpenAI",
+      "published": "2026-11-16T08:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and Goodfire to independently evaluate model alignment, safeguards, and monitoring systems."
+    },
+    "japan-bf9a59d79017": {
+      "id": "japan-bf9a59d79017",
+      "kind": "japan",
+      "title": "規制の厳しい業界でAIエージェントをどう導入する？ MicrosoftとIBMが発表した基盤「3つの特徴」",
+      "url": "https://www.itmedia.co.jp/enterprise/articles/2611/17/news015.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-17T02:30:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/enterprise/articles/2611/17/cover_news015.jpg",
+      "ogTitle": "規制の厳しい業界でAIエージェントをどう導入する？ MicrosoftとIBMが発表した基盤「3つの特徴」",
+      "ogDescription": "AIエージェントの実証から本番運用へ――。IBMとMicrosoftは、6000種類超の構築済みエージェントやアセットをそろえた業界特化型の基盤「Imagine Enterprise」でこの移行を支援する。一から構築せず、既存システムも置き換えずに済むという仕組みとは。",
+      "excerpt": "AIエージェントの実証から本番運用へ――。IBMとMicrosoftは、6000種類超の構築済みエージェントやアセットをそろえた業界特化型の基盤「Imagine Enterprise」でこの移行を支援する。一から構築せず、既存システムも置き換えずに済むという仕組みとは。 この記事は 会員限定 です。会員登録すると全てご覧いただけます。 金融や保険など規制の厳しい業界では、AIエージェントを実証段階から本番運用へ移す際に、自社のデータや既存システムとの連携に加えて、統制の確保やコンプライアンスへの対応も求められる。 IBMとMicrosoftは2026年11月10日（現地時間）、企業が業界固有のプロセスを実行するAIエージェントを構築、実行、管理できるエージェントプラットフォーム「Imagine Enterprise」を発表した。両社は、それぞれの技術と専門知識を組み合わせ、企業のAI導入の加速を支援する。条件を満たす案件では、両社のエンジニアが顧客の現場で導入を支援する。 役割分担は次の通りだ。IBMはコンサルティング事業部門のIBM Consultingを介して、AI変革に関する専門知識と、同社のAI搭載デリバリープラットフォーム「IBM Consulting Advantage」上に構築した6000種類超のAIエージェントやアセットを提供する。Microsoftは、エージェントが企業全体で安全に動作するためのAI、データ、クラウド、セキュリティの基盤を担う。さらに、両社の現場担当エンジニアが、顧客が実証段階から本番環境へ移行するのを支援する。 IBMは、顧客が求めているのは作業を少し速くするだけのAIではなく、エージェント型のビジネスの構築だと説明する。 両社によると、Imagine Enterpriseは、組織が一から始めたり、既に利用しているプラットフォームを置き換えたりする必要がないよう設計されたという。それを支える3つの利点とは何か。 Imagine Enterpriseは、特に規制の厳しい業界の組織が、人間の専門知識とAIエージェントを組み合わせ、エージェントを自社独自のデータや日常業務のプロセスに接続できるよう支援することを目的とする。業界特有のAI導入を安全に進めるための制御機能や、動作状況を把握するための可観測性、AIのコンプライアンス対応を支援する機能を備え、組織がAIエージェントを適切に管理できるよう構築されている。 1つ目は、専門知識をすぐに活用できる点だ。導入初日から、事前に構築されたAIエージェントやアセット、業界に関する深い専門知識を利用できる。企業は、自社の業界向けに既に構築された機能を、自社固有のニーズに合わせてカスタマイズできる。 2つ目は、エンタープライズ環境への適合性だ。組織の既存のデータやプロセス、システム、技術環境と連携するよう設計されており、現状から始め、既存のリソースを基盤に、時間をかけて拡張できる。エンタープライズレベルのセキュリティ、ID管理、AIガバナンス、制御機能も組み込まれている。 3つ目は、企業の知識を人とAIエージェントの業務に生かす「インテリジェンス・マルチプライヤー」だ。IBM Consultingが6000種類超のAIエージェントの構築と運用で培った実践的な経験と、組織全体の企業知識やデータ、コンテキストを連携させるMicrosoftの技術を融合させる。これにより、人とエージェントがより豊富な企業知識や業務の文脈（コンテキスト）を踏まえて業務を遂行でき、既に持つ知識を両者の間で",
+      "description": "AIエージェントの実証から本番運用へ――。IBMとMicrosoftは、6000種類超の構築済みエージェントやアセットをそろえた業界特化型の基盤「Imagine Enterprise」でこの移行を支援する。一から構築せず、既存システムも置き換えずに済むという仕組みとは。"
+    },
+    "japan-b1d5d1911de9": {
+      "id": "japan-b1d5d1911de9",
+      "kind": "japan",
+      "title": "OpenAI、児童性的虐待コンテンツ（CSAM）検出ツールを公開 ChatGPTで探すと24時間アカウント停止の警告も",
+      "url": "https://www.itmedia.co.jp/news/article/2611/17/2000003254/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-17T01:45:02.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/news/article/ogp/2611/17/2000003254/10012301/2048",
+      "ogTitle": "OpenAI、児童性的虐待コンテンツ（CSAM）検出ツールを公開 ChatGPTで探すと24時間アカウント停止の警告も",
+      "ogDescription": "OpenAIは、児童性的虐待コンテンツ（CSAM）を検出するための新たな画像分類ツールを発表した。従来は検出が困難だった新規画像やAI生成画像も対象とし、審査を通過した組織へAPI経由で無償提供する。同時にChatGPT上でのCSAM検索行為に対し、アカウントを24時間停止する警告機能も導入した。",
+      "excerpt": "米OpenAIは11月16日（現地時間）、児童性的虐待コンテンツ（CSAM：Child Sexual Abuse Material）を検出する新たな画像分類ツールを発表した。生成AIで作成された画像や、これまで確認されていない画像も検出対象とする。審査を通過した組織に、OpenAI APIを通じて無償で提供する。 新ツール「OpenAI CSAM Image Classifier」は、画像に含まれる性的虐待の視覚的な特徴を分析し、CSAMである可能性をスコアで示す。既知の違法画像のハッシュ値と照合する従来の方法では見つけにくかった新規の画像やAI生成画像も対象とし、AI生成CSAMの可能性を示す専用のスコアも出力する。OpenAIは、AI生成CSAM専用の判定指標を備え、幅広い組織が利用できる分類ツールは初めてだとしている。 開発には米国の行方不明・被搾取児童センター（NCMEC）が協力し、学習や評価、設計に関わった。業界団体のTech Coalitionと非営利団体のROOSTも、ツールの提供に協力する。 OpenAIがユーザーのアップロード画像を対象に実施した評価では、既存の検出ツールとほぼ同数の虐待画像を検出し、レビュー対象として報告される画像の数を48％削減できると推定している。新ツールが示した画像に実際に虐待コンテンツが含まれる割合は、既存ツールの約2倍だったという。 先行導入したパートナー企業における試験結果も公表している。AIプラットフォームのfalでは、確信度の高い検出結果の72％を担当者が新規のCSAMと確認した。動画生成AIのinvideo AIでは、検出されたケースの4件に1件がアカウント停止につながった。SafetyKitによる、児童を性的に描写したイラストやアニメーションを対象とする評価では、検出率は90％で、合法的な成人向けコンテンツの誤検出率は1％未満だった。 一方、同時に公開したモデルカードによると、ChatGPT上の実際の通信を対象にした場合の適合率は、オフライン評価より大幅に低かった。例えば乳児が写った画像の検出率（再現率）は49.3％にとどまった。また、動画フレームでの検証はしていない。OpenAIは、スコア単体でCSAMと断定したり法的通報の根拠としたりするものではなく、最終的な判断は人間の審査担当者が行うよう推奨している。 OpenAIは同時に、ChatGPTで児童性的虐待コンテンツを探そうとする行為を抑止する警告機能も導入した。該当する行為を検出すると、AI生成かどうかにかかわらず、児童を性的に扱うコンテンツは有害で違法となる可能性があり、探すこと自体が利用規約違反に当たると警告する。対象の会話は削除し、アカウントを24時間停止する。警告画面からは、無料の専門的な支援窓口も案内する。違反を繰り返した場合は、制限期間の延長やアカウントの閉鎖、当局への通報につながる可能性があるという。 開発者向けには、CSAMの防止、検出、対応・通報に関するガイドラインを公開した。法執行機関の児童保護専門部署向けには、膨大なチャット履歴や法的手続きで入手した記録の確認作業を支援し、事案の関連性や時系列の整理を効率化するツールと研修を提供する。 OpenAIはこれまでも、ChatGPTの未成年ユーザー向けにペアレンタルコントロールや年齢予測機能を導入してきた。一方、米非営利団体Common Sense Mediaは10月、13～17歳向けの「ChatGPT for Teens」を「容認できないリスク」があると評価し、安全機能",
+      "description": "OpenAIは、児童性的虐待コンテンツ（CSAM）を検出するための新たな画像分類ツールを発表した。従来は検出が困難だった新規画像やAI生成画像も対象とし、審査を通過した組織へAPI経由で無償提供する。同時にChatGPT上でのCSAM検索行為に対し、アカウントを24時間停止する警告機能も導入した。"
+    },
+    "japan-d2c3c09e3516": {
+      "id": "japan-d2c3c09e3516",
+      "kind": "japan",
+      "title": "ジェンスン・フアン氏復帰を求める公開書簡に18万人以上が署名 現役従業員9000人に加えてイーロン・マスク氏らも賛同",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/17/2000003249/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-17T00:52:22.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/17/2000003249/10012286/2048",
+      "ogTitle": "ジェンスン・フアン氏復帰を求める公開書簡に18万人以上が署名 現役従業員9000人に加えてイーロン・マスク氏らも賛同",
+      "ogDescription": "NVIDIAの創業者、ジェンスン・フアン氏のCEOへの復帰を求める公開書簡に、18万人を超える署名が集まっている。（1/2 ページ）",
+      "excerpt": "米NVIDIAの創業者、ジェンスン・フアン氏のCEOへの復帰を求める公開書簡に、18万人を超える署名が集まっている。 「Stand with Jensen」 と名付けられたこのキャンペーンのWebサイトによると、9000人を超えるNVIDIAの現役従業員に加えて、米SpaceXAIのイーロン・マスクCEOや米Hugging Faceのジュリアン・ショーモンCEOなどテクノロジー業界の経営者らも署名している。 書簡はNVIDIAの取締役会に向けて、「第三者による調査が事実を確定させるまでの間」フアン氏をCEOに復帰させ、「フアン氏の解任がNVIDIAにとって最善の利益になると判断するか、説得力のある証拠を提示するまで」復帰を維持するよう求めている。また、調査の範囲や独立性、スケジュールの開示や、フアン氏に反論の機会を与えること、公的な説明をタイムリーに行うことなども要求している。 フアン氏は中国のスパイと疑われている女性を含む複数人との不倫行為が取り沙汰されたことを受け、11月12日（現地時間、以下同）にNVIDIAのCEOを辞任。暫定の後任はコレット・クレスCFOが務めている。 その後、15日には英Financial Timesなどが、フアン氏が復帰に向けてシリコンバレーの経営者らや米政府への働きかけを検討していると報じた一方、米CNBCなどは16日、NVIDIA取締役会が同氏の復帰を検討していないと関係筋が話したと報じている。 Copyright &copy; ITmedia, Inc. All Rights Reserved. ITmedia AI＋に関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれません。 国内外の業界動向、AIやクラウドなどの最新技術、キャリア情報など今知りたい情報をまとめてお届けします。 Googleの“人気AI講座”、先着1万人に無料提供 リスキリング推進団体 「Gemini 4 Hydrogen」とは 性能とユースケースまとめ Googleの「誰でも使える」最新モデル メルカリ、アプリ開発「2日→数十分」へ 直面したAI時代の“意外な課題”とは？ ジェンスン・フアン氏退任は「NVIDIAバブル崩壊」の序章か？ どうなる今後の半導体業界 AIモデリングもできる無償3D CAD「SolidCraft」を試してみた！ 総務省が新しい無料オンライン講座「統計解析プログラミング」を1月に開講 Pythonでのデータ分析が4週間で学べる アクセンチュアが説く「業務そのものの創り直し」とは？ AI活用が事業成果に結びつかない企業に向けた2つのポイント フリーランス市場、受注者の約8割がAIを利用 自発的に開示は1割弱、両者に意識差 IBMリサーチなど調査 AIによる誤った判断、責任を負うのは誰？ 「9割」をAIに委ねる時代に向け、IDCが提言 人手不足だからAIを使いたい、でも導入できる人がいない 中小企業“一人情シス”の葛藤",
+      "description": "NVIDIAの創業者、ジェンスン・フアン氏のCEOへの復帰を求める公開書簡に、18万人を超える署名が集まっている。"
+    },
+    "japan-a73fc195e74e": {
+      "id": "japan-a73fc195e74e",
+      "kind": "japan",
+      "title": "大手自動車メーカーの検図工数を90％削減 AIが図面の重要な変更点を判別",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2611/17/news014.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-17T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/mn/articles/2611/17/cover_news014.jpg",
+      "ogTitle": "大手自動車メーカーの検図工数を90％削減 AIが図面の重要な変更点を判別",
+      "ogDescription": "Liberty Dataは、生成AIを活用した図面関連業務の自動化サービス「Liberty図面AI」における新旧図面の差分抽出機能の導入事例を公開した。図面の内容や設計指示の意図を理解し、検図者が優先して確認すべき変更点を判別する機能で、大手自動車メーカーでは検図工数を90％削減したという。",
+      "excerpt": "Liberty Dataは、生成AIを活用した図面関連業務の自動化サービス「Liberty図面AI」における新旧図面の差分抽出機能の導入事例を公開した。図面の内容や設計指示の意図を理解し、検図者が優先して確認すべき変更点を判別する機能で、大手自動車メーカーでは検図工数を90％削減したという。 Curiositasが運営するLiberty Dataは2026年11月16日、生成AI（人工知能）を活用して図面関連業務を自動化／効率化するサービス「 Liberty図面AI［知識ベース化／検図／照査］ 」における「 2図面の差分抽出機能 」の導入事例を公開した。 同機能は、AIを用いて図面の形状や位置関係、設計指示の意図を理解した上で新旧図面を比較し、設計指示単位で「確認すべき重要な変更」と「軽微な変更や単なる平行移動」を判別するものだ。変更の種類ごとに色分けして表示することで、検図者が優先して確認すべき箇所を把握できるようにする。 テキストを抽出するOCR（光学文字認識）や、見た目の違いを機械的に検出する従来の図面比較とは異なり、設計指示の意図を考慮して変更内容を判別できるのが特長だ。 大手自動車メーカーの設計開発部門では、開発中の製品の図面を更新する際、新旧図面を比較する検図作業に熟練技術者が多くの工数を割いていた。効率化を目指して他社のOCR系ツールの図面比較機能を試験的に導入したものの、図面内の指示内容に変更がなくても、配置や表現を変えるだけで差分として検出されるなどの課題があった。本来確認する必要のない変更点まで抽出されるため、検図工数の削減効果は小さく、実導入には至らなかったという。 そこで、Liberty図面AIの2図面の差分抽出機能を導入した。設計指示単位で確認が必要な変更と不要な変更を判別し、変更の種類ごとに色分けして表示することで、検図者は重要な変更点の確認に集中できるようになった。これにより、新旧図面の比較検図にかかる工数を90％削減したとしている。 なお、Liberty図面AIは、図面の変更におけるミスや懸念点をAIが指摘する機能も備える。 大手プラントエンジニアリング企業のプラント建設プロジェクトでは、ベンダーから受け取るGA図面（一般配置図）や、顧客から受け取るP&ID（配管計装図）の多くが、文字を選択できない形式のPDFだった。また、プロジェクトや機器の種類ごとにベンダーが異なるため、図面のフォーマットも統一されていなかった。 そのため、図面の改訂に伴う差分チェックや、エンジニアによる朱書き修正がCADオペレーターによって正しく反映されているかの確認、P&IDにおける配管や計装信号線の関係の確認などを、人の目で行う必要があった。例えば、バルブ図面だけでも数百枚あり、それらが5～6回改訂されることから、検図に多くの工数を要していたという。加えて、見落としなどのヒューマンエラーも課題となっていた。 こうした課題に対し、2図面の差分抽出機能を含むLiberty図面AIを導入。この事例では、グラフネットワーク構造化技術を用いて図面内の文字や記号の位置情報を取得し、それらのつながりを基に図面の内容を理解して差分を判定する。これにより、図面のデータ形式やフォーマット、手書きの有無に左右されずに比較できるようになり、改訂のたびに数日を要していた検図工数を6時間程度に短縮したという。 さらに、差分抽出とは別の機能を用いて、その後の図面間の整合性確認などの作業も自動化し、全ての確認項目で100％の精度を達成したとしている。 Liberty D",
+      "description": "Liberty Dataは、生成AIを活用した図面関連業務の自動化サービス「Liberty図面AI」における新旧図面の差分抽出機能の導入事例を公開した。図面の内容や設計指示の意図を理解し、検図者が優先して確認すべき変更点を判別する機能で、大手自動車メーカーでは検図工数を90％削減したという。"
+    },
+    "japan-e28ac33c0b72": {
+      "id": "japan-e28ac33c0b72",
+      "kind": "japan",
+      "title": "クレディセゾンはなぜChatGPTでROI954％・年169時間削減を達成できたのか",
+      "url": "https://kn.itmedia.co.jp/kn/article/2611/17/2000003219/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-16T22:00:00.000Z",
+      "metrics": {},
+      "image": "https://kn.itmedia.co.jp/kn/article/ogp/2611/17/2000003219/10012189/2048",
+      "ogTitle": "クレディセゾンはなぜChatGPTでROI954％・年169時間削減を達成できたのか",
+      "ogDescription": "クレディセゾンは、わずか1カ月の検証を経てChatGPT Enterpriseの全社一斉導入に踏み切った。経営層の巻き込みと現場の工夫を両立させた、同社の実践的な推進アプローチとは。",
+      "excerpt": "クレディセゾンは、わずか1カ月の検証を経てChatGPT Enterpriseの全社一斉導入に踏み切った。経営層の巻き込みと現場の工夫を両立させた、同社の実践的な推進アプローチとは。 クレジットカード大手のクレディセゾンは生成AIサービス「ChatGPT Enterprise」を全従業員に導入している。2025年6月末から8月上旬に実施したパイロットテストが導入を後押しした。315人が参加し、投資対効果（ROI）は954％、参加者1人当たりの業務時間削減は月14時間に達した。こうした成果は「仕組み」と「人」の両面から生まれたという。 取り組みの起点は、同社の小野和俊氏（取締役 兼 専務執行役員CDO兼CTO）の「本気で使い倒してみないと分からない」という方針だった。OpenAIと実施したパイロットテストには希望者や事務局の指名者、社長を含む全役員、各部門の従業員が参加した。これは、国内従業員約3700人の10％弱に当たる。目標はROI500％と1人当たり月7.5時間の削減とした。 結果は先述の通りROI954％、1人当たり月14時間の業務時間削減を達成して、目標を大きく上回った。年間換算にすると、1人当たり約169時間を削減したことになる。 事後調査で管理職の75％、一般従業員の70％が「手放せない」と回答した。法務部門の約80％が「仕事上の能力向上」、システム部門の80％以上が「仕事の満足度向上」を評価した。 社内の推進事務局（CoE）はSlackに専用チャンネルを設け、成功例だけでなく失敗例も共有した。OpenAIは経営層研修や初心者用のハンズオンを実施して、業務に役立つノウハウを共有した。特に注目を集めたのが音声モードを使う「株主総会シミュレーションGPT」だ。総会を想定した対話練習に使われ、プロンプトの共有を求める声が相次いだという。 経営層の関与も導入を支えた。小野氏はクレディセゾンの水野克己氏（代表取締役 兼 社長執行役員COO）に、従業員に利用を促すだけでなくトップが自ら日常的に使い込む必要性を説いた。水野氏は企業調査用のカスタムGPTを自ら開発して業務に生かすようになったといい、こうしたトップダウンの取り組みと現場が用途を生み出すボトムアップの取り組みがかみ合い、パイロットテスト終了から1カ月で全社導入を決定した。 1つ目は、ショッピングモールなどのカード案内窓口が利用する「ショップ実績報告GPT」だ。終礼の音声を基に、担当者別の実績や議事録、翌日の引き継ぎ事項、注力点を自動で整理する。普段通りに終礼をするだけで記録や集計の負担を減らせるためAIに不慣れな従業員も扱いやすく、全店舗の従業員が利用している。 2つ目は、法人営業が利用する「企業調査GPT」だ。顧客の経営課題を分析して自社サービスの貢献余地を整理する。試しにクレディセゾンを調査してみると、自社で認識できていなかった課題を指摘したという。商談前のリサーチや分析の効率化を通して提案の質向上につなげている。 3つ目はインサイドセールスの「ホワイトリストロープレGPT」だ。AIが見込み客役となり、音声で対話しながら商談のやりとりを練習でき、練習後にはフィードバックも伝える。これまでは「熟練者の営業活動を止めずに若手従業員の営業機会をどう増やすか」が課題だったため、AIを使ったロープレによって本番前に実践的な場数を踏めることが評価されている。 クレディセゾンはAIによる変革を「Employee AX」「Customer AX」「Corporate AX」の3分野で構想する。Emp",
+      "description": "クレディセゾンは、わずか1カ月の検証を経てChatGPT Enterpriseの全社一斉導入に踏み切った。経営層の巻き込みと現場の工夫を両立させた、同社の実践的な推進アプローチとは。"
+    },
+    "trending-d148e3d2c284": {
+      "id": "trending-d148e3d2c284",
+      "kind": "trending",
+      "title": "dream-num/univer",
+      "url": "https://github.com/dream-num/univer",
+      "source": "GitHub Trending",
+      "published": "2026-11-17T03:15:59.573Z",
+      "metrics": {
+        "stars": 27891,
+        "starsToday": 1828,
+        "language": "TypeScript"
+      },
+      "image": "https://repository-images.githubusercontent.com/543101941/e14b70fa-fc46-4249-8bd8-399630941326",
+      "ogTitle": "GitHub - dream-num/univer: Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "ogDescription": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core. ...",
+      "excerpt": "Start with open-source Sheets and Docs, then connect your own application or agent. 🚀 Quick start · 💼 Workspace · 📚 Documentation · ⚖️ Feature comparison · 🌐 Website · 🎮 Showcase · 🔧 API Reference · 📝 Blog English · Français · Deutsch · Español · 简体中文 · 繁體中文 · 日本語 · 한국어 Univer is an Office SDK for building Office applications inside your own product. It provides Office editing, calculation, collaboration, and file processing for people and existing agents, using your data and permissions. The product family covers spreadsheets, documents, presentations, relational tables, canvases, and PDFs. Univer Office SDK has three parts: This repository provides the Web SDK's core architecture and engine implementations under Apache-2.0 : content models and snapshot formats, plugin and dependency management, the command system, formula and rendering engines, Facade APIs, UI foundation, and Sheets and Docs editing capabilities. Commercial Web SDK plugins, Server SDK, and commercial AI SDK extensions are distributed and licensed separately. Agents can use the same open-source APIs; your application supplies the model and tool orchestration. The quotation example demonstrates editing, calculation, and saving without an AI SDK dependency. Features are composed through plugins and presets; the quick start uses only the Sheets Core preset . Images use the corresponding drawing plugins. See the feature comparison for detailed open-source and commercial coverage. The demos below showcase ",
+      "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "language": "TypeScript"
+    },
+    "trending-f6c3adbf52c7": {
+      "id": "trending-f6c3adbf52c7",
+      "kind": "trending",
+      "title": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "source": "GitHub Trending",
+      "published": "2026-11-17T03:15:59.573Z",
+      "metrics": {
+        "stars": 7526,
+        "starsToday": 1094,
+        "language": "Python"
+      },
+      "image": "https://repository-images.githubusercontent.com/1229774092/93703d75-077c-4a14-b580-e2374741fe3d",
+      "ogTitle": "GitHub - elementalsouls/Claude-BugHunter: A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "ogDescription": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise ide...",
+      "excerpt": "A self-contained Claude skill bundle for bug hunting and external red-team work · 83 skills · 15 slash commands · 681 disclosed-report patterns (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by Sachin Sharma — Bug Hunting & GenAI Security Research. claude-bughunter is a drop-in skill bundle for the Claude Code skills system . Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. All triggered automatically by topic — describe what you're testing in plain English and the relevant skill loads. No invocation by name. Option A — install as a Claude Code plugin (recommended). From inside Claude Code: All 83 skills + 15 commands load namespaced under claude-bughunter: and update when you bump the plugin version — no files copied into ~/.claude/ . Option B — copy install (no plugin system / pin to a clone): Both copy the skills + commands into ~/.claude/ (macOS/Linux) or %USERPROFILE%\\.claude\\ (Windows) and wire the hunt engagement scaffolder. What each install path gives you: T",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python"
+    },
+    "trending-c489e6fb5feb": {
+      "id": "trending-c489e6fb5feb",
+      "kind": "trending",
+      "title": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "source": "GitHub Trending",
+      "published": "2026-11-17T03:15:59.573Z",
+      "metrics": {
+        "stars": 53042,
+        "starsToday": 951,
+        "language": "Go"
+      },
+      "image": "https://repository-images.githubusercontent.com/1241960226/27bf01cb-17df-44d5-9b7b-bcf17c970c6d",
+      "ogTitle": "GitHub - alibaba/open-code-review: Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "ogDescription": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language rulese...",
+      "excerpt": "English | 简体中文 | 日本語 | 한국어 | Русский Open Code Review is an AI-powered code review CLI tool. It originated as Alibaba Group's internal official AI code review assistant — over the past two years, it has served tens of thousands of developers and identified millions of code defects. After thorough validation at massive scale, we incubated it into an open source project for the community. Simply configure a model endpoint to get started. It reads Git diffs, sends changed files to a configurable LLM via an agent with tool-use capabilities, and generates structured review comments with line-level precision. The agent can read full file contents, search the codebase, inspect other changed files for context, and produce deep reviews — not just surface-level diff feedback. Beyond diff review, ocr scan reviews entire files for auditing unfamiliar codebases or directories that have no meaningful diff. Visit the official website for more details. Compared to general-purpose agents (Claude Code), Open Code Review achieves significantly higher Precision and F1 with the same underlying model, while consuming only ~1/9 of the tokens and completing reviews faster. Note that its Recall is lower than general-purpose agents — a deliberate trade-off favoring precision over noise. A real-world code review benchmark built from 50 popular open-source repositories, 200 real Pull Requests, and 10 programming languages — cross-validated by 80+ senior engineers ( 1,505 annotated ground-truth issues). ",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go"
+    },
+    "trending-d17b0500bab0": {
+      "id": "trending-d17b0500bab0",
+      "kind": "trending",
+      "title": "NVIDIA/SkillEvaluator",
+      "url": "https://github.com/NVIDIA/SkillEvaluator",
+      "source": "GitHub Trending",
+      "published": "2026-11-17T03:15:59.573Z",
+      "metrics": {
+        "stars": 2825,
+        "starsToday": 873,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/fb44018ba78ccc1ace47b2d830e48c1385d8013ead2cc3ada0d3091a4864a83b/NVIDIA/SkillEvaluator",
+      "ogTitle": "GitHub - NVIDIA/SkillEvaluator: Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "ogDescription": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how ...",
+      "excerpt": "📺 Livestream: Ask the Experts: Evaluating Agent Skills SkillEvaluator checks AI agent skills and plugins, and measures a skill's effect on task results: start with quality checks, then compare runs with and without a skill. Agent skills are folders of instructions and supporting files defined by the Agent Skills specification . SkillEvaluator is part of the NVIDIA Verified Skills pipeline . Check skills from your terminal, CI, or agent. Then check your skill, no key: Other tiers: installation guide . Our CI template checks every skill change. No evaluation code to maintain. Run this in your GitHub repository. It opens a setup PR: GitLab details: repository guide . Add the skill to Claude Code, Codex or another agent: Then ask: \"Is my skill any good?\" See the agent guide . No LLM inference · No model key · No agent run validate above runs it by default, as part of Tier 1. 🧪 Ready to go deeper? Try a live agent evaluation (Tier 3). Both use bundled text-analyzer . Install uv and Git, then get the example: uv provisions Python 3.13 and dependencies. No API key, scanner, GPU or Docker is needed. The example scores 88.8/100 (B) , exits 0 and saves reports/first-quality/skillevaluator-quality.json . The passing threshold defaults to 70. This checks static quality; publication evidence stays INCOMPLETE . Security needs scanners; agent impact needs live evaluation. Replace the example path with your skill directory. See the keyless walkthrough . Eligible NVIDIA Developer Program me",
+      "description": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "language": "Python"
+    },
+    "trending-379642deb53f": {
+      "id": "trending-379642deb53f",
+      "kind": "trending",
+      "title": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "source": "GitHub Trending",
+      "published": "2026-11-17T03:15:59.573Z",
+      "metrics": {
+        "stars": 57746,
+        "starsToday": 841,
+        "language": "TypeScript"
+      },
+      "image": "https://opengraph.githubassets.com/86605b168f3d9d5d26c9fe6a22cdd32fd4e0a28e939bdc785de2cfc90b5325c5/ChromeDevTools/chrome-devtools-mcp",
+      "ogTitle": "GitHub - ChromeDevTools/chrome-devtools-mcp: Chrome DevTools for coding agents",
+      "ogDescription": "Chrome DevTools for coding agents. Contribute to ChromeDevTools/chrome-devtools-mcp development by creating an account on GitHub.",
+      "excerpt": "Chrome DevTools for agents ( chrome-devtools-mcp ) lets your coding agent (such as Antigravity, Claude, Cursor or Copilot) control and inspect a live Chrome browser. It is available as a Model-Context-Protocol (MCP) server and as a CLI . Both give your AI coding assistant access to the full power of Chrome DevTools for reliable automation, in-depth debugging, and performance analysis. Tool reference | CLI | Skills | Changelog | Contributing | Troubleshooting | Design Principles chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect, debug, and modify any data in the browser or DevTools. Avoid sharing sensitive or personal information that you don't want to share with MCP clients. chrome-devtools-mcp officially supports Google Chrome and Chrome for Testing only. Other Chromium-based browsers may work, but this is not guaranteed, and you may encounter unexpected behavior. Use at your own discretion. We are committed to providing fixes and support for the latest version of Extended Stable Chrome . Performance tools may send trace URLs to the Google CrUX API to fetch real-user experience data. This helps provide a holistic performance picture by presenting field data alongside lab data. This data is collected by the Chrome User Experience Report (CrUX) . To disable this, run with the --no-performance-crux flag. Google collects usage statistics (such as tool invocation success rates, latency, and environment information) to improve ",
+      "description": "Chrome DevTools for coding agents",
+      "language": "TypeScript"
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "MiniMaxAI/MiniMax-H3-Image",
+      "pipeline_tag": "text-to-image",
+      "likes": 1326,
+      "downloads": 609130,
+      "createdAt": "2026-11-03T06:34:36.000Z",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    },
+    {
+      "id": "Comfy-Org/MiniMax-H3-Image",
+      "pipeline_tag": "text-to-image",
+      "likes": 494,
+      "downloads": 2294065,
+      "createdAt": "2026-11-08T20:37:23.000Z",
+      "url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image"
+    },
+    {
+      "id": "Zyphra/ZONOS3-Mini",
+      "pipeline_tag": "text-to-speech",
+      "likes": 477,
+      "downloads": 69946,
+      "createdAt": "2026-11-09T05:03:57.000Z",
+      "url": "https://huggingface.co/Zyphra/ZONOS3-Mini"
+    }
+  ],
+  "errors": [
+    {
+      "source": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/index/lvmh-media-division-partnership",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/index/science-at-the-frontier",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/index/strengthening-online-child-safety",
+      "message": "HTTP 403"
+    }
+  ]
+}

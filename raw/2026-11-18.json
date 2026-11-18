@@ -1,0 +1,459 @@
+{
+  "date": "2026-11-18",
+  "generatedAt": "2026-11-18T02:38:51.297Z",
+  "top": "official-8f6af8c44a4a",
+  "selected": [
+    "official-8f6af8c44a4a",
+    "claudecode-eaf06b22a6f4",
+    "codex-cf3bd3dc31c3",
+    "official-b451aff394ad",
+    "official-3047d7657748",
+    "official-0e7f690aa4ff",
+    "official-b43ef08ac3ed",
+    "official-3b3be741a87f",
+    "hn-de86fe170891",
+    "hn-fdb3c1f197ba",
+    "hn-89626dbace3a",
+    "hn-233f4988e8c3",
+    "japan-708122da3a58",
+    "japan-f3176723d2bb",
+    "japan-be2fc482da4c",
+    "japan-9190a6d98c1d",
+    "japan-34a502252cfa",
+    "trending-8c6014a36ca9",
+    "trending-d148e3d2c284",
+    "trending-10a12acb9645",
+    "trending-16db77652cb1",
+    "trending-f6c3adbf52c7"
+  ],
+  "items": {
+    "official-8f6af8c44a4a": {
+      "id": "official-8f6af8c44a4a",
+      "kind": "official",
+      "title": "Introducing GPT-6.2 Astra and Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "source": "OpenAI",
+      "published": "2026-11-17T17:45:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50535230",
+        "count": 705,
+        "points": 1102
+      }
+    },
+    "claudecode-eaf06b22a6f4": {
+      "id": "claudecode-eaf06b22a6f4",
+      "kind": "claudecode",
+      "title": "Claude Code 2.1.327",
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+      "source": "Claude Code",
+      "published": "2026-11-18T02:38:51.297Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/f25f9952e20466ec7e0ccacb90e245a854890bb9d63d2a1a2dc88ddbd968dea9/anthropics/claude-code",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "2.1.327",
+      "sectionText": "- Added a confirmation before `/install-github-app` changes a repository\n- Added `claude mcp add-json <name> -` to read the server's JSON from stdin, so tokens can stay off the command line; not available inside a Claude Code session\n- Added a line when a resumed session's earlier messages can't be loaded\n- Added a list in `/status` of broken agent, skill, command and output style files, keybinding errors, an unavailable sandbox, ignored permission settings and hook matchers that never match\n- Added a note in `/config` when other settings override a row\n- Added `x-claude-code-managed-settings-checksum` to the gateway hint headers; sent where managed settings set `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1`, including where they already do\n- Added support for naming a session's billing group with the `attributionProject` setting, for Claude apps gateways that set `admin.billing_group_tag`\n- Added `/tui classic` as the name for the non-fullscreen renderer; `/tui default` still works\n- Remote Control: Fixed stopping the server in worktree mode deleting a running session's git-ignored files, such as `.env`\n- Fixed self-hosted runners with `--use-anthropic-git-proxy` deleting a non-empty directory named by `GIT_CONFIG_GLOBAL` at startup: the runner now keeps it, ignores the variable and warns\n- Fixed `claude mcp add` and `claude mcp remove` with project scope deleting other top-level keys from `.mcp.json`, such as `$schema` or another tool's `servers`\n- Fixed `/export` overwriting an existing file without asking: the dialog now asks, and `/export <name>` keeps the file and says to run `/export`\n- Fixed a command you had allowed still running after you pressed Stop, when the approval arrived after a restart, in cloud and self-hosted runner sessions with no feature flags loaded\n- Fixed Enter closing `/teleport`'s load error screen\n- Fixed a click followed by Enter in `/plugin` installing or disabling a plugin\n- Fixed a half-typed `!` command running on an extra Enter after the usage limit menu\n- Fixed some `--disallowedTools` rules with parentheses in their content\n- Fixed auto mode ignoring some wildcard PowerShell allow rules that name a script with `.\\`, such as `PowerShell(.\\scripts\\build.ps1 *)`\n- Fixed a running Code Mode script in auto mode getting permission prompts and denials once Claude started a second script that auto mode also allowed\n- Changed some pre-started background sessions to be discarded after an account change\n- Changed a workflow paused at a usage limit in the terminal to stay paused after a login, until the earlier login returns or you type a prompt\n- Fixed a nested `claude` with its own token being refused by `forceLoginOrgUUID`: commands that don't get the session's token no longer get its `CLAUDE_CODE_OAUTH_SCOPES`; set it on any that need it\n- Fixed headless sessions losing stored messages on resume when a message was sent again with the same UUID after the process was killed\n- Fixed cases where a session resumed after an empty rep"
+    },
+    "codex-cf3bd3dc31c3": {
+      "id": "codex-cf3bd3dc31c3",
+      "kind": "codex",
+      "title": "Codex 0.169.1",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.1",
+      "source": "Codex",
+      "published": "2026-11-17T22:21:10.000Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/925ace3e654958d92289050e4a10936d305b3a246a546c23f681fe2f16bae9c5/openai/codex",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "0.169.1",
+      "body": "## Chores\n\nNo verified release highlights available.\n\n## Changelog\n\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.169.0...rust-v0.169.1\n\n\n\n"
+    },
+    "official-b451aff394ad": {
+      "id": "official-b451aff394ad",
+      "kind": "official",
+      "title": "Put Gemini to work for you",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+      "source": "Google AI",
+      "published": "2026-11-17T17:00:00.000Z",
+      "metrics": {},
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Hero_2784_x_1566_1.width-1300.png",
+      "ogTitle": "Put Gemini to work for you",
+      "ogDescription": "Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on your behalf.",
+      "excerpt": "Gemini can now make the calls, pay the bills, and finish your tasks. Vice President, Labs, Gemini app, and AI Studio Your browser does not support the audio element. We’re updating Gemini to handle complex tasks like scheduling appointments, managing bills, and shopping for groceries. By connecting to your emails, calendar, and payment methods, Gemini saves you time while keeping your data secure in isolated environments. You can try these new capabilities today by switching the toggle from Chat to Task in the Gemini app, texting us on Android or iOS, or forwarding emails to gemini@google.com. Josh Woodward, Vice President of Labs, Gemini app, and AI Studio, explains that Gemini can now handle daily tasks like scheduling appointments, managing grocery lists, and analyzing bills. By connecting to your Google apps, it securely completes chores using your existing information. You can activate these features by switching your Gemini app to task mode, texting, or forwarding emails. This update helps you save time by managing your calendar, shopping, and household organization. The best assistant knows you and helps you get things done. Today, you can now hand off even more tasks to Gemini and move on with your day. We’ve built it for anyone who has tasks piling up during all the classes, meetings, and school drop-offs that fill the day. Our goal is for Gemini to save you time and money. Starting now, this update is rolling out free of charge for hundreds of millions of people acr",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Hero_2784_x_1566.max-600x600.format-webp.webp\">Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on your behalf."
+    },
+    "official-3047d7657748": {
+      "id": "official-3047d7657748",
+      "kind": "official",
+      "title": "Introducing ChatGPT for Sales",
+      "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+      "source": "OpenAI",
+      "published": "2026-11-17T08:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward."
+    },
+    "official-0e7f690aa4ff": {
+      "id": "official-0e7f690aa4ff",
+      "kind": "official",
+      "title": "Strengthening NATO and allied cyber defenses with AI",
+      "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+      "source": "OpenAI",
+      "published": "2026-11-17T00:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems."
+    },
+    "official-b43ef08ac3ed": {
+      "id": "official-b43ef08ac3ed",
+      "kind": "official",
+      "title": "Astra for Law leads in legal intelligence",
+      "url": "https://openai.com/index/astra-law-6-2",
+      "source": "OpenAI",
+      "published": "2026-11-17T00:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access."
+    },
+    "official-3b3be741a87f": {
+      "id": "official-3b3be741a87f",
+      "kind": "official",
+      "title": "Introducing OpenAI for Chile",
+      "url": "https://openai.com/index/introducing-openai-for-chile",
+      "source": "OpenAI",
+      "published": "2026-11-17T00:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications."
+    },
+    "hn-de86fe170891": {
+      "id": "hn-de86fe170891",
+      "kind": "hn",
+      "title": "What is the best harness for each model?",
+      "url": "https://runta.com/blog/introducing-frontierharness-eval-v1-1/",
+      "source": "Hacker News",
+      "published": "2026-11-17T14:53:43.000Z",
+      "metrics": {
+        "points": 338,
+        "num_comments": 118
+      },
+      "image": "https://runta.com/social/blog-introducing-frontierharness-eval-v1-1.png",
+      "ogTitle": "Introducing FrontierHarness Eval v1.1 — RUNTA",
+      "ogDescription": "FrontierHarness Eval v1.1 ran 22 coding-agent harnesses with 5 models on the same 62 tasks, 4 times each: 27,280 runs. The best-value harness was different with each model, and cost ranks moved far between models. With the model fixed, the most expensive harness cost 1.8 to 5.0 times as much per task as the cheapest.",
+      "excerpt": "We partnered with Baseten to build the largest-scale harness leaderboard using 83B tokens across 27,280 agent runs. We wanted to answer two questions: when you switch your model, should you consider switching the harness too? What is the best harness for each model? Previously, our v1.0 FrontierHarness leaderboard ranked harnesses on a single model, Kimi K3. V1.1 expands the benchmark to 22 harnesses × 5 models × 62 tasks × 4 attempts, 76× the size of v1.0. Through our experiments, we found that you should consider switching harnesses when switching models to maximize your experience. Each model had a different best-value (pass rate vs. cost) harness: Codex CLI with GLM-5.3, Pi with GLM-5.3 Flash, ZCode with DeepSeek V4.1 Flash 1017, Oh My Pi with Muse and Alma with Kimi-K3. Cost ranks moved far between models. By cost per task, the median harness moved 11 of 22 places, and Codex CLI went from 1st with GLM-5.3 to 16th with Kimi-K3. Figure 1. Cost per task and pass rate of each harness Each point is one harness: further left is a lower average cost per task, and higher is a higher pass rate. The orange line joins the harnesses that no other harness beats in both cost and pass rate. Select a model to filter all figures of this post. Over all models, four harnesses are on the line: OpenCode v2 (lowest cost per task, $0.561), Pi, Codex CLI and ZCode (highest pass rate, 61.9%). The others cost up to 1.6 times as much and passed 50.6% to 60.2%. Each card names the best-value harnes",
+      "objectID": "50532191",
+      "points": 338,
+      "num_comments": 118,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50532191",
+        "count": 118,
+        "points": 338
+      }
+    },
+    "hn-fdb3c1f197ba": {
+      "id": "hn-fdb3c1f197ba",
+      "kind": "hn",
+      "title": "How the Claude Code team thinks about verification",
+      "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+      "source": "Hacker News",
+      "published": "2026-11-17T10:20:40.000Z",
+      "metrics": {
+        "points": 267,
+        "num_comments": 211
+      },
+      "image": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/og.png",
+      "ogTitle": "How the Claude Code team thinks about verification / claude.dev Blog",
+      "ogDescription": "How end-to-end, property and differential tests let coding agents verify their work with evidence, and what the Claude Code team does to keep its verifiers honest.",
+      "excerpt": "How end-to-end, property and differential tests let coding agents verify their work with evidence, and what the Claude Code team does to keep its verifiers honest. On the Claude Code team, the vast majority of our code (~90%) is written and reviewed by Claude . At this scale, how we equip our agents to verify their work with evidence becomes extremely important. Verification loops are the building block that lets you delegate more work to Claude. Without them, you can really only run one or two Claudes at a time, because you have to check everything yourself. With them, you can run dozens or hundreds in parallel. That’s because giving agents a way to verify their output is an effective way to improve quality. In internal testing around structured file generation, having a separate grader check Claude’s work against a rubric improved task success by up to 10 points over a standard prompting loop, with the largest gains on the hardest problems. What was once expensive to verify (tests, benchmarks, specs, real end-to-end runs) is now cheap to request from an agent. Like code, agents can quickly generate tests, benchmarks, and specs. And once generated, these tests and benchmarks run as software so they can be run frequently without using many additional tokens. You can also close the verification loop by using the results to improve the agent’s performance on that task. For example, if an agent repeatedly fails a test that checks logs for user data, you can create a hook or a mo",
+      "objectID": "50529612",
+      "points": 267,
+      "num_comments": 211,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50529612",
+        "count": 211,
+        "points": 267
+      }
+    },
+    "hn-89626dbace3a": {
+      "id": "hn-89626dbace3a",
+      "kind": "hn",
+      "title": "Google's AI answers reducing search traffic by 40%",
+      "url": "https://revscope.co/blog/search-seo-geo-2026/",
+      "source": "Hacker News",
+      "published": "2026-11-18T00:17:58.000Z",
+      "metrics": {
+        "points": 104,
+        "num_comments": 61
+      },
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "Google's AI answers are taking clicks from websites in the search results. In a randomized experiment, researchers hid AI Overviews from some US desktop users. Comparing them with users who still saw Overviews shows that an Overview cuts clicks to outside websites by about 40%. Those Overviews now appear on more than half the US keywords DataForSEO tracks, up from 6% two years ago. The industry's answer, GEO (generative engine optimization), has yet to show a way to compensate for the loss. While AI citations correlate with the same kind of link profile that goes with higher Google rankings, in March AI assistants sent websites just 0.3% of their traffic.",
+      "excerpt": "Google's AI answers are taking clicks from websites in the search results. In a randomized experiment, researchers hid AI Overviews from some US desktop users. Comparing them with users who still saw Overviews shows that an Overview cuts clicks to outside websites by about 40%. Those Overviews now appear on more than half the US keywords DataForSEO tracks, up from 6% two years ago. The industry's answer, GEO (generative engine optimization), has yet to show a way to compensate for the loss. While AI citations correlate with the same kind of link profile that goes with higher Google rankings, in March AI assistants sent websites just 0.3% of their traffic. Search engine optimization (SEO) still decides whether you can be found, but where an AI answer appears, a ranking brings 40% fewer visits than it used to. Generative engine optimization (GEO), the practice of getting your content cited in AI-written answers, looks mostly like SEO plus two additions: being present on the third-party sites AI answers draw from, and writing pages that are easy to quote. We found little evidence for any other tactic. An AI Overview is a generated summary that Google places above the ordinary results, with links to the pages it drew on. In DataForSEO's monthly panel of 20 million keywords, the share of results showing one climbed from 5.93% in September 2024 to 61.43% in August 2026. The chart at the top of this post shows that climb. Over the same period the featured snippet, the quoted passage",
+      "objectID": "50540178",
+      "points": 104,
+      "num_comments": 61,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50540178",
+        "count": 61,
+        "points": 104
+      }
+    },
+    "hn-233f4988e8c3": {
+      "id": "hn-233f4988e8c3",
+      "kind": "hn",
+      "title": "Not Everything Needs an LLM",
+      "url": "https://newsletter.posthog.com/p/decision-models",
+      "source": "Hacker News",
+      "published": "2026-11-17T18:16:18.000Z",
+      "metrics": {
+        "points": 104,
+        "num_comments": 42
+      },
+      "image": "https://substackcdn.com/image/fetch/$s_!wD8h!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff406379a-4ff2-4e21-aaac-69cda7d7b37e_1200x630.png",
+      "ogTitle": "Not everything needs an LLM",
+      "ogDescription": "How we use decision models",
+      "excerpt": "LLMs love to yap. Ask a simple question and you get a few hundred words of \"it depends.\" It's annoying as hell. This is why we love decision models like Jev for simpler tasks. You ask a structured question and get a typed answer with a probability, which looks something like this: Noul. Are hedgehogs mammals? → Yes, 0.99 Choice. Which animal family do hedgehogs belong to? → Mammal, 0.99 Score. What is the current conservation status of hedgehogs? → Least Concern, 0.77 Whereas LLMs return free-form and overly confident prose, decision models make model uncertainty explicit. In a calibrated model, answers that score 0.8 are right about 80% of the time. That means a score of 0.5 is a coin flip. We've been experimenting with them at PostHog and several use cases have made it to production. This is everything we've learned about using decision models so far: when to use them, how to use them, and mistakes to avoid. Decision models are up to 444.6x cheaper and 193.6x faster than frontier models, 1 so you can use them to check whether you even need to make an expensive LLM call at all. We do this in a pipeline that scrubs personal info in Replay Vision , our product that watches and summarizes user session recordings for you. Here's how it works: Each session summary goes through 2 yes/no questions from a decision model. Using narrow questions like this cuts false flags to about a tenth of what a single question produced. 1. “Does this name a real person?” 2. “Does this show contact",
+      "objectID": "50535740",
+      "points": 104,
+      "num_comments": 42,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50535740",
+        "count": 42,
+        "points": 104
+      }
+    },
+    "japan-708122da3a58": {
+      "id": "japan-708122da3a58",
+      "kind": "japan",
+      "title": "わが社はChatGPTでどう紹介されている？ OpenAIが企業向けの確認機能を提供開始",
+      "url": "https://www.itmedia.co.jp/enterprise/articles/2611/18/news022.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-18T01:40:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/enterprise/articles/2611/18/cover_news022.jpg",
+      "ogTitle": "わが社はChatGPTでどう紹介されている？ OpenAIが企業向けの確認機能を提供開始",
+      "ogDescription": "ChatGPTがユーザーに向けて、自社をどのように紹介しているのかを把握したいと考える企業は多いだろう。OpenAIは、その把握に役立つ機能を企業向けにβ版で公開した。米国の対象企業であれば、自社のAIエージェントをChatGPT広告のリンク先に設定することもできる。",
+      "excerpt": "ChatGPTがユーザーに向けて、自社をどのように紹介しているのかを把握したいと考える企業は多いだろう。OpenAIは、その把握に役立つ機能を企業向けにβ版で公開した。米国の対象企業であれば、自社のAIエージェントをChatGPT広告のリンク先に設定することもできる。 この記事は 会員限定 です。会員登録すると全てご覧いただけます。 OpenAIは2026年11月10日（現地時間）、企業が「ChatGPT」に自社のプロフィールを登録し、認証を受けられる「Business Hub」と、自社のエージェントを公開してユーザーと直接対話できる「Business Agent」を、「Businesses in ChatGPT」のβ版として発表した。 OpenAIは、Businesses in ChatGPTを、毎週ChatGPTを利用する約12億人と企業をつなぐ新たな手段と位置付ける。企業はBusiness Hubを通じて事業者として登録し、情報を管理するとともに、ユーザーとの接点に関するインサイトを確認できる。Business Agentは、対象となる米国のEコマース企業とオンラインサービス企業に提供される。 Business Hubが企業に示すのは、ChatGPT上のユーザーとの接点を集計した情報だ。ただし、企業に共有されない情報もある。その線引きは何か。 Business Hubは、ChatGPT上でのユーザーと企業の接点について、集計したインサイトを提供する。企業への言及数やWebサイトのクリック数のほか、ユーザーが自社を発見するきっかけになるトピックも確認できる。同トピックは、自社のWebサイトが引用された会話に共通するテーマだ。企業はこれらを、自社がどのように紹介されているかの把握や、共有する情報の改善点の発見に生かせる。 インサイトはユーザーのプライバシーを保護するよう設計されており、ユーザーの会話やBusiness Agentとのチャットを企業と共有することはないとしている。集計された形で提供され、会話ややりとりの数が一定の基準に達した場合にのみ利用できる。 Business Hubで登録と認証が完了すると、基本情報を更新したり、価格や在庫状況を含む商品フィード（商品情報のデータ）をセルフサービスで追加したりできるようになる。ユーザーは最も正確で最新の情報を基に、商品やサービスを検討できるようになるとしている。 対象は、ChatGPTが利用可能な地域に所在し、利用条件を満たす企業だ。OpenAIの既存のエンタープライズ顧客や広告主は、同社の担当者と直接連携して登録できる。Shopifyでストアを運営する事業者（マーチャント）は、Business HubまたはShopifyの管理画面からストアを接続することで、認証手続きを簡略化できる。Shopifyマーチャントの対象商品は、「Shopify Catalog」を通じて既にChatGPTに統合されているという。 Business Agentは、事業者登録を完了した対象の組織が構築、テスト、公開できるエージェントだ。ユーザーの質問に答え、自社の商品やサービスの検討を支援する。 ChatGPTによる回答に企業が表示されると、ユーザーはクリックしてその企業のChatGPTプロフィールを確認できる。その企業のBusiness Agentが利用できる場合は、エージェントとの会話を開始し、商品やサービスを検討したり、追加の質問をしたりできる。例えば商品を比較している人は、2つの選択肢の違いや、どの機能が自分の",
+      "description": "ChatGPTがユーザーに向けて、自社をどのように紹介しているのかを把握したいと考える企業は多いだろう。OpenAIは、その把握に役立つ機能を企業向けにβ版で公開した。米国の対象企業であれば、自社のAIエージェントをChatGPT広告のリンク先に設定することもできる。"
+    },
+    "japan-f3176723d2bb": {
+      "id": "japan-f3176723d2bb",
+      "kind": "japan",
+      "title": "「GPT-6.2 Astra／Sol」登場 前世代超える性能を「コスト1/3で実現」 Ultrafast提供も拡大",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/18/2000003282/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-18T01:32:09.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/18/2000003282/10012388/2048",
+      "ogTitle": "「GPT-6.2 Astra／Sol」登場 前世代超える性能を「コスト1/3で実現」 Ultrafast提供も拡大",
+      "ogDescription": "OpenAIが「GPT-6.2 Astra」「GPT-6.2 Sol」を発表。Astraは一部の性能評価で、前世代を上回るスコアを3分の1以下のコストで実現したとうたう。第三者機関の総合指標ではClaude Fable 5.2次ぐ2位。（1/2 ページ）",
+      "excerpt": "米OpenAIは11月17日（現地時間）、AIモデル「GPT-6.2 Astra」（以下、6.2 Astra）と「GPT-6.2 Sol」（以下、6.2 Sol）を発表した。6.2 Astraは一部の性能評価で、前世代の「GPT-6 Astra」（以下、6 Astra）を上回るスコアを3分の1以下のコストで実現したとうたう。 6.2 Astraは難度の高い専門業務向けの最上位モデル、6.2 Solは 「GPT-6.1 Sol」 （以下、6.1 Sol）の後継に当たる日常業務向けのモデル。いずれも難しいタスクにおいて、前世代モデルより少ない出力トークンで、より良い結果を出せるという。 同社によると、長時間にわたる専門業務の遂行能力を測る「Agents' Last Exam」では、6.2 Astra（思考量設定「xhigh」）が78.3％を記録。6 Astra（max）の73.1％を上回りつつ、タスク当たりのコストを3分の1以下の2.89ドルに抑えた。米Anthropicの 「Claude Fable 5.2」 （以下、Fable 5.2）も5.5ポイント上回り、コストはその約5％だったという。 モデルの性能評価を手掛ける米Artificial Analysisの総合指標「Intelligence Index」では、6.2 Astra（max）が6 Astra（max）を5ポイント上回る62ポイントで、Fable 5.2（max）の65ポイントに次ぐ2位だった。6.2 Sol（max）は57ポイントで6 Astra（max）に並び、タスク当たりのコストはその約15％に抑えた。 Artificial Analysisは、両モデルがコストと性能のバランスにおいて「フロンティア」だとし、科学や3D、ロボティクスの分野で強みがあるとした一方、コーディングエージェントの性能指標「Coding Agent Index」では、6.2 Astraが6 Astraから横ばいで、6.2 Solは6.1 Solを3ポイント下回ったとしている。 OpenAIは両モデルを「これまでで最も強力な安全対策を講じた上で」提供するため、脆弱性調査やセキュリティテストの一部が制限される可能性があるとした。サイバーセキュリティ関連業務向けには引き続き、セキュリティプログラム「OpenAI Daybreak」を通じて専用モデルを提供する他、今後、GPT-6.2シリーズを同プログラムに導入する予定だとしている。 両モデルは発表同日から、「Plus」「Pro」「Enterprise」「Edu」プランの全ユーザーが「ChatGPT Work」と「Codex」で利用できる。 「Pro 500」プランユーザーは両モデルの「Ultrafast」（生成速度を向上させたモード）も利用可能。また、6.2 Solに限り「Pro 200」とEnterprise、EduプランユーザーもUltrafastを利用できるようになるという。 APIの料金は100万トークン当たり、6.2 Astraが入力8ドル、キャッシュ済み入力0.4ドル、出力40ドル。6 Astraから入出力を20％、キャッシュ済み入力を60％値下げした。6.2 Solは入力2ドル、キャッシュ済み入力0.1ドル、出力10ドルで6.1 Solから据え置いた。 Copyright &copy; ITmedia, Inc. All Rights Reserved. ITmedia AI＋に関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれま",
+      "description": "OpenAIが「GPT-6.2 Astra」「GPT-6.2 Sol」を発表。Astraは一部の性能評価で、前世代を上回るスコアを3分の1以下のコストで実現したとうたう。第三者機関の総合指標ではClaude Fable 5.2次ぐ2位。"
+    },
+    "japan-be2fc482da4c": {
+      "id": "japan-be2fc482da4c",
+      "kind": "japan",
+      "title": "「AIによる鍵の不正利用」を生体認証で防ぐ日立の新技術、サイバー攻撃対策にも",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2611/18/news040.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-17T23:30:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/mn/articles/2611/18/cover_news040.jpg",
+      "ogTitle": "「AIによる鍵の不正利用」を生体認証で防ぐ日立の新技術、サイバー攻撃対策にも",
+      "ogDescription": "日立製作所は、AIによる業務が人間の承認に基づくことを証明する技術「PoHD」を開発。生体認証を応用し、署名用の秘密鍵を保存せず生体情報から都度復元する。先進技術紹介のイベント「Hitachi R&D Innovation Day 2026」でデモンストレーションも披露した。",
+      "excerpt": "日立製作所は、AIによる業務が人間の承認に基づくことを証明する技術「PoHD」を開発。生体認証を応用し、署名用の秘密鍵を保存せず生体情報から都度復元する。先進技術紹介のイベント「Hitachi R&D Innovation Day 2026」でデモンストレーションも披露した。 日立製作所は2026年11月17日、AI（人工知能）エージェントが人に代わって業務を行う際に、その行為が本人の承認した委任であることを証明する委任証明技術「Proof of Human Delegation（PoHD）」のプロトタイプを開発したと発表した。同日、東京都中央区で開催された日立の研究開発ビジョンと先進技術を紹介するイベント「Hitachi R&D Innovation Day 2026」では、AIエージェントが独断で金額上限を書き換えて発注しようとする挙動を、システム側でブロックするデモンストレーションも披露した。 近年、AIエージェントが自律的に業務を遂行することが期待される一方で、人の意図を逸脱して悪用されるリスクが懸念されている。企業がAIを安全に制御するためには、その行為が権限を持つ本人の承認に基づいていることを明確に証明する必要がある。 これまで、取引情報などを記した委任状に電子署名を付与して改ざんを検知する方式が検討されてきた。しかし、従来の方式は署名に必要な秘密鍵をシステム内に保管するため、高度化したAIやサイバー攻撃によって鍵管理が突破されるリスクがあった。また、AIエージェント自身が保存された鍵を不正利用して委任状を偽造した場合、有効な署名が付与されてしまうため、事後に本人の意図した行為か判別することが困難になってしまう。 こうした課題に対し、日立製作所は本人認証と委任状への電子署名を結び付ける新たな委任証明技術「PoHD」を開発した。この技術の中核となるのが、銀行ATMやキャッシュレス決済などで実績がある同社独自の公開型生体認証基盤「PBI」の活用である。 PoHDでは、初回登録時に生成した秘密鍵をシステム内に継続して保管しない設計となっている。人間がAIへの委任内容を確認して承認する際、顔や指静脈などの生体情報から電子署名に必要な形で秘密鍵を都度復元し、利用後は直ちに消去する。生体情報を用いて署名を生成することで、本人認証と署名の機能がアルゴリズムレベルで不可分となり、認証機能を迂回した署名の悪用を構造的に防ぐ仕組みである。 日立製作所 執行役常務 CTO 兼 研究開発グループ長の鮫嶋茂稔氏は、「鍵をシステムに保存せず、生体情報を用いてその都度生成して活用できるPBIを応用することで、AIエージェントへ委任をしつつもエージェントは委任内容の複製や改ざんはできない仕組みだ。これにより、AIの実行を『人間の意図した範囲』に制限することができる」と説明する。 また、公開鍵を用いて署名済みの委任状を検証することで、誰が何をどこまで承認したかを取引相手が確認できる他、事後的に取引履歴などを監査して責任をたどるための信頼基盤としても機能する。 イベントの展示ブースでは、調達業務を想定したPoHDの実運用デモンストレーションを披露した。担当者がAIエージェントに対して「特定の部品100個を2000万円以内で指定期日までに調達する」よう委任するシナリオだ。 AIは自律的に複数社に見積もりを依頼するが、あるサプライヤーが納期に間に合わないと回答した際、AIは工場ラインの停止を回避するため、事前の承認範囲を超えて2000万円以上の発注を試みた。しかし、AIが元",
+      "description": "日立製作所は、AIによる業務が人間の承認に基づくことを証明する技術「PoHD」を開発。生体認証を応用し、署名用の秘密鍵を保存せず生体情報から都度復元する。先進技術紹介のイベント「Hitachi R&D Innovation Day 2026」でデモンストレーションも披露した。"
+    },
+    "japan-9190a6d98c1d": {
+      "id": "japan-9190a6d98c1d",
+      "kind": "japan",
+      "title": "AI時代に必要なエンジニアのスキルとは？ 開発現場の“品質問題”から読み解く",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/18/2000003236/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-17T23:00:00.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/18/2000003236/10012243/2048",
+      "ogTitle": "AI時代に必要なエンジニアのスキルとは？ 開発現場の“品質問題”から読み解く",
+      "ogDescription": "ソフトウェア品質に関する調査から見えてきた、AI時代に必要なエンジニアのスキルを解説する。",
+      "excerpt": "生成AIやAIエージェントの普及により、ソフトウェア開発はかつてない速度で進むようになりました。一方で、コード量や変更頻度が増えるほど、「そのコードが本当に信頼できるのか」という問いは重くなっています。AI時代に求められるエンジニアの価値とは、どのようなものでしょうか。 これまで人が時間をかけて作成していたコードのたたき台や修正案を、AIが短時間で提示できるようになり、開発者はより速く、より多くの変更を扱えるようになっています。今後は、AIエージェントがコード生成だけでなく、テスト、レビュー、リリース判断、デプロイ支援など、ソフトウェア開発ライフサイクル全体に関わる場面が増えていくでしょう。 この変化は、開発者の価値を低下させるものではありません。むしろ、開発者やテストエンジニアに求められる価値を、「速く手を動かす力」から「AIの成果物を評価し、品質を見極める力」へと移行させるものとなるでしょう。 AIによって作れるものが増えるほど、経営として問うべき論点は「どれだけ速く作れるか」から、「そのソフトウェアを本当に信頼してよいのか」へと重心が移るからです。 AIを使った開発の課題は調査からも浮かび上がっています。ソフトウェアテストツールなどを手掛ける米Tricentisが6月に発表した調査「クオリティー・トランスフォーメーション・レポート2026」では、世界全体で60％、日本で65.6％の企業が、未テストコードを本番環境へ展開していると回答しました。 背景には、品質よりもスピードを優先するよう経営層から圧力がかかっていること、AI生成コードの量が多すぎて十分にテストしきれないことがあります。これは個々の担当者の努力不足ではなく、AI時代の開発速度に対して、テスト設計、レビュー、品質判断のプロセスが構造的に追い付いていないことを示しています。 加えて、AIツールの導入そのものが新たな複雑性を生んでいます。AIや自動化ツールは開発とテストを効率化する一方、ツールが乱立し、プロセスが頻繁に変われば、現場はそれらをつなぎ合わせる作業に追われます。 同調査では、ツールの複雑化や乱立、スキル不足、管理可能な範囲を超えるコード量の増加、品質や信頼性に関する指標不足が、継続的なソフトウェア品質を実現する上での障壁として挙げられました。AIを入れれば自動的に品質が上がるのではなく、AIを運用するためのプロセスと指標を整えなければ、品質リスクはむしろ増幅します。 ここには、経営層と現場の認識ギャップもあります。同調査によると、AI主導のシステムやツールに対して、日本では企業のCEOの80％が高い信頼を示した一方、QA（品質保証）・DevOps（開発と運用の連携）担当者では43％にとどまっています。 経営層はAI活用を競争力や生産性向上の手段として前向きに捉えますが、現場は運用負荷、レビュー工数、品質リスク、セキュリティへの影響をより直接的に見ています。このギャップを放置すると、現場はリスクを抱えたままスピードを求められ、結果として未検証の変更が本番環境へ流れ込みやすくなります。 ソフトウェア品質は、もはや開発部門だけの課題ではありません。近年、日本でも不正アクセスやランサムウェア攻撃によるシステム障害が相次いでいます。品質が担保されていないソフトウェアは、システム障害、サービス停止、セキュリティやコンプライアンス上の問題、技術的負債、再作業コストにつながります。 Tricentisの調査では、ソフトウェア品質の低下によって、企業の5社に1社が年間100万ドル超の損失を",
+      "description": "ソフトウェア品質に関する調査から見えてきた、AI時代に必要なエンジニアのスキルを解説する。"
+    },
+    "japan-34a502252cfa": {
+      "id": "japan-34a502252cfa",
+      "kind": "japan",
+      "title": "GAS×Geminiが一般提供開始 IT管理者が確認すべき権限設定は？",
+      "url": "https://kn.itmedia.co.jp/kn/article/2611/18/2000003256/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-17T22:00:00.000Z",
+      "metrics": {},
+      "image": "https://kn.itmedia.co.jp/kn/article/ogp/2611/18/2000003256/10012305/2048",
+      "ogTitle": "GAS×Geminiが一般提供開始 IT管理者が確認すべき権限設定は？",
+      "ogDescription": "GASとGeminiの連携によってコーディング不要でスクリプト作成やデバッグが可能になった。コーディング知識がないユーザーでも自然言語の指示でスクリプトの作成や編集、エラー修正ができるようになる。",
+      "excerpt": "GASとGeminiの連携によってコーディング不要でスクリプト作成やデバッグが可能になった。コーディング知識がないユーザーでも自然言語の指示でスクリプトの作成や編集、エラー修正ができるようになる。 Googleは2026年11月16日、「Google Apps Script」（GAS）で「Gemini」サイドパネルの一般提供を開始したと発表した。これまではコーディングの知識が求められていたが、統合によって非エンジニアのユーザーでも自然言語の指示でスクリプトの作成や編集、エラーの修正ができるようになる。 サイドパネルは2026年初頭のベータ版提供を経て一般提供に至ったもので、主に3つの機能を備える。 1つ目は自然言語からのスクリプト生成だ。ユーザーは作りたい仕組みを自然言語で指示するか、用意されたスタータープロンプトを選択するだけでいい。Geminiは開いているGASプロジェクト内の複数ファイルを横断して理解するため、チャットを続けながら時間主導型トリガーなどの機能を追加できる。 緊急の「Gmail」メッセージから「Googleカレンダー」の予定を自動作成する処理や、リアルタイムデータの取得と整形、スプレッドシートの表からドキュメント形式のレポートを生成する処理などの自動化が可能だ。 2つ目はコード変更のブロック単位での確認だ。Geminiが提案したコードはエディタでステップごとに確認でき、個別のコードブロックで承認または却下を選択できる。保存前に全ての提案を一括で承認、却下する機能も備える。 3つ目はワンクリックのランタイムエラー修正だ。スクリプトが想定通りに動作しない場合、統合開発環境（IDE）の実行ログ内で「Fix errors」をクリックすると、Geminiが原因を診断して自然言語で問題を説明し、そのまま適用できる修正案を提示する。 Googleによると、作成されたスクリプトはユーザーの既存権限と標準のOAuth同意の範囲内でネイティブに動作するため、管理コンソールでの可視性と制御は維持されるという。 自動化推進とセキュリティ統制を両立させたいIT管理者は、機能の展開に合わせて以下の設定や監視体制を確認しておきたい。 同機能は2026年11月12日から即時リリースおよび計画的リリースドメイン向けに段階的に展開を開始しており、機能が利用可能になるまで最大15日かかる見込みだ。対象は「Business Standard」「Business Plus」「Enterprise Standard」「Enterprise Plus」の各エディションに加え、「AI Expanded Access」「Google AI Pro for Education」の各アドオン、個人向けの「Google AI Pro」「Google AI Ultra」となっている。 Copyright &copy; ITmedia, Inc. All Rights Reserved. キーマンズネットに関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれません。 IT初心者から上級者まで、企業内の情報システムにかかわるキーパーソンを対象に、皆さまの役に立つ情報を無料で提供します 「PHP騒動」大反省会 今振り返る脆弱性騒動の原因と、今後取るべき対策 Google Workspaceの最新7機能をチェック Geminiへの指示共有や最大14日間のフロー待機など クレディセゾンはなぜChatGPTでROI954％・年169時間削減を達成できたのか ネットで話題の「C++",
+      "description": "GASとGeminiの連携によってコーディング不要でスクリプト作成やデバッグが可能になった。コーディング知識がないユーザーでも自然言語の指示でスクリプトの作成や編集、エラー修正ができるようになる。"
+    },
+    "trending-8c6014a36ca9": {
+      "id": "trending-8c6014a36ca9",
+      "kind": "trending",
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "source": "GitHub Trending",
+      "published": "2026-11-18T02:38:51.297Z",
+      "metrics": {
+        "stars": 319391,
+        "starsToday": 1917,
+        "language": "Shell"
+      },
+      "image": "https://opengraph.githubassets.com/fbb71b536fe24494c03e7287afc93ab129e49bb0150dd26964e8c228dfd806e5/obra/superpowers",
+      "ogTitle": "GitHub - obra/superpowers: An agentic skills framework & software development methodology that works.",
+      "ogDescription": "An agentic skills framework & software development methodology that works. - obra/superpowers",
+      "excerpt": "Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it doesn't just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a subagent-driven-development process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hes",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell"
+    },
+    "trending-d148e3d2c284": {
+      "id": "trending-d148e3d2c284",
+      "kind": "trending",
+      "title": "dream-num/univer",
+      "url": "https://github.com/dream-num/univer",
+      "source": "GitHub Trending",
+      "published": "2026-11-18T02:38:51.297Z",
+      "metrics": {
+        "stars": 28948,
+        "starsToday": 1774,
+        "language": "TypeScript"
+      },
+      "image": "https://repository-images.githubusercontent.com/543101941/e14b70fa-fc46-4249-8bd8-399630941326",
+      "ogTitle": "GitHub - dream-num/univer: Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "ogDescription": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core. ...",
+      "excerpt": "Start with open-source Sheets and Docs, then connect your own application or agent. 🚀 Quick start · 💼 Workspace · 📚 Documentation · ⚖️ Feature comparison · 🌐 Website · 🎮 Showcase · 🔧 API Reference · 📝 Blog English · Français · Deutsch · Español · 简体中文 · 繁體中文 · 日本語 · 한국어 Univer is an Office SDK for building Office applications inside your own product. It provides Office editing, calculation, collaboration, and file processing for people and existing agents, using your data and permissions. The product family covers spreadsheets, documents, presentations, relational tables, canvases, and PDFs. Univer Office SDK has three parts: This repository provides the Web SDK's core architecture and engine implementations under Apache-2.0 : content models and snapshot formats, plugin and dependency management, the command system, formula and rendering engines, Facade APIs, UI foundation, and Sheets and Docs editing capabilities. Commercial Web SDK plugins, Server SDK, and commercial AI SDK extensions are distributed and licensed separately. Agents can use the same open-source APIs; your application supplies the model and tool orchestration. The quotation example demonstrates editing, calculation, and saving without an AI SDK dependency. Features are composed through plugins and presets; the quick start uses only the Sheets Core preset . Images use the corresponding drawing plugins. See the feature comparison for detailed open-source and commercial coverage. The demos below showcase ",
+      "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "language": "TypeScript"
+    },
+    "trending-10a12acb9645": {
+      "id": "trending-10a12acb9645",
+      "kind": "trending",
+      "title": "ag-ui-protocol/ag-ui",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "source": "GitHub Trending",
+      "published": "2026-11-18T02:38:51.297Z",
+      "metrics": {
+        "stars": 20050,
+        "starsToday": 1445,
+        "language": "TypeScript"
+      },
+      "image": "https://opengraph.githubassets.com/3dc865c7daf1618599d9cc7296496295752612ad7dba6f65312e9fed5a99a776/ag-ui-protocol/ag-ui",
+      "ogTitle": "GitHub - ag-ui-protocol/ag-ui: AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "ogDescription": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications. - ag-ui-protocol/ag-ui",
+      "excerpt": "Docs · Examples · Spec · Discord AG-UI is an open, lightweight, event-based protocol that standardizes how AI agents connect to user-facing applications. Agents don't fit the request/response model. They stream tokens, call tools mid-response, update shared state, pause for a human, and spawn subagents, and every framework does it differently. AG-UI replaces that custom wiring with one bi-directional event stream: the agent emits typed events, and any client can render them, no matter which framework built the agent. The same agent can power a web app, a mobile app, a terminal, or Slack. AG-UI 1.0 is here. The protocol now has a stable, frozen specification backed by a JSON Schema, and the TypeScript, Python, and .NET SDKs are generated from it. 1.0 is backwards compatible in both directions: 0.x agents work with 1.0 clients and vice versa. What changed → · Migration guide → Start a new app. The CLI scaffolds a frontend ( CopilotKit on Next.js, or a terminal client) wired to the agent framework you pick: Then follow the printed next steps. The generated templates call OpenAI, so set your key before npm run dev : An AG-UI agent is any HTTP endpoint that accepts a RunAgentInput and streams events back. No API keys needed for this one. 1. The agent (Python). Requires Python 3.9+. 2. The client (TypeScript). In a second terminal, in a new folder. Requires Node.js 20+. You should see Hello from AG-UI! stream in. Swap the server for any supported framework and the client doesn't ch",
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "language": "TypeScript"
+    },
+    "trending-16db77652cb1": {
+      "id": "trending-16db77652cb1",
+      "kind": "trending",
+      "title": "google-research/paper-orchestra",
+      "url": "https://github.com/google-research/paper-orchestra",
+      "source": "GitHub Trending",
+      "published": "2026-11-18T02:38:51.297Z",
+      "metrics": {
+        "stars": 3117,
+        "starsToday": 1072,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/a6af9cacf1b459e8f76e7cb8b0b431fb5a9ad93636acaab0c14c780b2b97a1a8/google-research/paper-orchestra",
+      "ogTitle": "GitHub - google-research/paper-orchestra: PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "ogDescription": "PaperOrchestra is a multi-agent framework for automated AI research paper writing. - google-research/paper-orchestra",
+      "excerpt": "PaperOrchestra is a multi-agent framework for automated AI research paper writing. It flexibly transforms unconstrained pre-writing materials (ideas and experimental logs) into submission-ready LaTeX manuscripts, including comprehensive literature synthesis and generated visuals, such as plots and conceptual diagrams. Acting like an orchestrated team of specialized agents, it handles outline generation, literature review, section writing, content refinement, and plotting to close the gap between raw research materials and submission ready papers. Environment Setup : The project relies on a Conda environment named paper_orchestra . You can set up a similar environment with Python 3.11 and install the required dependencies. Environment Variables : Create a .env file in the root of the project and add your API keys: The dataset used for paper generation is not included in this code repository. It will be released separately at a later date. Once available, you should download the dataset and place it under the datasets/ directory. You can run the paper generation pipeline using the provided bash script or directly via the Python CLI. We provide an interactive Streamlit demo for the paper generation pipeline. For instructions on how to run and use it, please refer to the README.md in the frontend directory. If you find this repo or our paper helpful, please cite it as follows: This is not an officially supported Google product.",
+      "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "language": "Python"
+    },
+    "trending-f6c3adbf52c7": {
+      "id": "trending-f6c3adbf52c7",
+      "kind": "trending",
+      "title": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "source": "GitHub Trending",
+      "published": "2026-11-18T02:38:51.297Z",
+      "metrics": {
+        "stars": 9465,
+        "starsToday": 1005,
+        "language": "Python"
+      },
+      "image": "https://repository-images.githubusercontent.com/1229774092/93703d75-077c-4a14-b580-e2374741fe3d",
+      "ogTitle": "GitHub - elementalsouls/Claude-BugHunter: A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "ogDescription": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise ide...",
+      "excerpt": "A self-contained Claude skill bundle for bug hunting and external red-team work · 83 skills · 15 slash commands · 681 disclosed-report patterns (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by Sachin Sharma — Bug Hunting & GenAI Security Research. claude-bughunter is a drop-in skill bundle for the Claude Code skills system . Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. All triggered automatically by topic — describe what you're testing in plain English and the relevant skill loads. No invocation by name. Option A — install as a Claude Code plugin (recommended). From inside Claude Code: All 83 skills + 15 commands load namespaced under claude-bughunter: and update when you bump the plugin version — no files copied into ~/.claude/ . Option B — copy install (no plugin system / pin to a clone): Both copy the skills + commands into ~/.claude/ (macOS/Linux) or %USERPROFILE%\\.claude\\ (Windows) and wire the hunt engagement scaffolder. What each install path gives you: T",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python"
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "higurashi-ai/Haru-4B",
+      "pipeline_tag": "audio-to-audio",
+      "likes": 510,
+      "downloads": 4445,
+      "createdAt": "2026-11-12T11:05:59.000Z",
+      "url": "https://huggingface.co/higurashi-ai/Haru-4B"
+    },
+    {
+      "id": "thinkingmachines/Inkling-2-Small",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 442,
+      "downloads": 18359,
+      "createdAt": "2026-11-04T19:51:05.000Z",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small"
+    },
+    {
+      "id": "Comfy-Org/MiniMax-H3-Image",
+      "pipeline_tag": "text-to-image",
+      "likes": 519,
+      "downloads": 2660341,
+      "createdAt": "2026-11-08T20:37:23.000Z",
+      "url": "https://huggingface.co/Comfy-Org/MiniMax-H3-Image"
+    }
+  ],
+  "errors": [
+    {
+      "source": "https://openai.com/index/astra-law-6-2",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/index/introducing-chatgpt-for-sales",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/index/introducing-openai-for-chile",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+      "message": "HTTP 403"
+    }
+  ]
+}

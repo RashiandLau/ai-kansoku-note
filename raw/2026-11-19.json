@@ -1,0 +1,421 @@
+{
+  "date": "2026-11-19",
+  "generatedAt": "2026-11-19T02:06:01.860Z",
+  "top": "hn-f539fcdaf975",
+  "selected": [
+    "hn-f539fcdaf975",
+    "claudecode-9ba3fb697629",
+    "codex-ad076a99b892",
+    "official-f0b81ce3c146",
+    "official-e55c8f2df06c",
+    "official-00a064e6720e",
+    "official-aef632472a5e",
+    "official-184d931227f2",
+    "official-58da586369f3",
+    "hn-ee3431af9f19",
+    "hn-e88bc9372147",
+    "japan-81c38743939f",
+    "japan-4cf7f5628246",
+    "japan-4b20b6b97ca0",
+    "japan-b840f5a6740d",
+    "japan-914e26336bc1",
+    "trending-16db77652cb1",
+    "trending-edb3a6268757",
+    "trending-b88590c43555",
+    "trending-8c6014a36ca9",
+    "trending-5dd922e14c0c"
+  ],
+  "items": {
+    "hn-f539fcdaf975": {
+      "id": "hn-f539fcdaf975",
+      "kind": "hn",
+      "title": "Gemini 4 Neon",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "source": "Hacker News",
+      "published": "2026-11-18T21:34:07.000Z",
+      "metrics": {
+        "points": 459,
+        "num_comments": 433
+      },
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
+      "ogTitle": "Introducing Gemini 4 Neon",
+      "ogDescription": "Today, we’re introducing Gemini 4 Neon",
+      "excerpt": "Bringing frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work, and science workflows. SVP, Google DeepMind and Chief AI Architect, Google Your browser does not support the audio element. Today, we’re introducing Gemini 4 Neon — bringing frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work, and science workflows. Neon ranks ahead of comparable models and #3 overall with a score of 61 on the Artificial Analysis Intelligence Index at its xhigh thinking level, landing just behind larger, slower models. On the Vals Index , Neon ranks #2 and lands on the Pareto frontier. Beyond just pushing on raw model capability, we’re continuing to make our models better to work with, Neon ranks #2 on steerability (adapting cleanly to mid-task user corrections) on the new Agent Arena Index . Neon also excels at multi-step instruction following and builds on our ongoing progress to curb fabrication, recording our lowest fabrication rate yet in internal Google Antigravity testing. The model is priced at $3 per million input tokens ($0.15 per million cached input tokens, a 95% discount) and $15 per million output tokens, with a 1 million-token context window. Gemini 4 Neon is rolling out today in the Gemini API in Google AI Studio , Gemini for business (via API and model dropdown), for paid Google AI Pro and Ultra subscribers in Google Antigravity , and for Pro and Ultra s",
+      "objectID": "50552424",
+      "points": 459,
+      "num_comments": 433,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50552424",
+        "count": 433,
+        "points": 459
+      }
+    },
+    "claudecode-9ba3fb697629": {
+      "id": "claudecode-9ba3fb697629",
+      "kind": "claudecode",
+      "title": "Claude Code 2.1.328",
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+      "source": "Claude Code",
+      "published": "2026-11-19T02:06:01.860Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/521f76942561252d1b219233315ac7b274e506cce9fa7dadc876c1eb8d322dc5/anthropics/claude-code",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "2.1.328",
+      "sectionText": "- Added auto mode for Claude Opus 4.6 and Sonnet 4.6 on Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry and Claude apps gateway; interactive sessions with no permission mode start in it\n- Added `\"onFailure\": \"block\"` for `mcp_tool` hooks, as for command and HTTP hooks: a hook whose call fails blocks the action\n- Added a warning when a message from a session that skips permission prompts may be held and dropped by a cloud session\n- Added a notice in `/status` and `claude doctor` when an OpenTelemetry exporter has no endpoint and its data would likely be lost\n- Added `CLAUDE_CODE_DISABLE_DEFERRED_TOOL_RESUME`, which lets a host stop `claude -p --resume` and `--continue` from running a tool call that a hook deferred\n- Added support for apps that embed Claude Code to switch on the policy plugin's `allowManagedModsOnly` option; an admin's managed settings still win\n- Added a startup warning to the Claude apps gateway when a policy's `maxEffortLevel` is not a valid effort level\n- Self-hosted runner: Added `--repository-folder` to name the folder that sessions use for a repository at `--capacity 1`, in place of its path under the base folder, which can't be a symbolic link\n- Self-hosted runner: Added a start-up warning when the host's settings.json sets a default permission mode that sessions ignore\n- Self-hosted runner: Added `--hook-label` to `claude self-hosted-runner orchestrator`, to hand chosen session labels to the `spawn-runner` hook\n- Self-hosted runner: Added `--metadata key=value` to `claude --environment`, to label a session for the `spawn-runner` hook\n- Self-hosted runner: Added `claude_code_self_hosted_orchestrator_session_queue_wait_by_reason_seconds` to the orchestrator's `/metrics`, so a re-opened session's wait can be told from a new one's\n- Self-hosted runner: Added an orchestrator metric, `claude_code_self_hosted_orchestrator_sessions_given_up_total`, that counts by cause how often Anthropic gave up starting a runner for a session\n- Fixed Bash commands in zsh stopping with a \"not found\" error at a word that starts with `=`, such as `echo ====` or `[ a == b ]`; `=cmd` no longer expands to a command's path\n- Fixed automatic compaction reusing the session's earlier system prompt instead of rebuilding it the way `/compact` does\n- Fixed markdown rendering freezing on some very long or malformed input\n- Fixed rare screen freezes\n- Fixed Esc often being lost at a permission prompt or question when you typed straight after it; in terminals that send Alt as Esc and a key, an unused Alt or Option key now declines there\n- Fixed a paste or a terminal's reply being typed into the prompt when a slow connection cut it in two\n- Fixed saving a scheduled task erasing the project's other saved tasks when the scheduled tasks file can't be read, on third-party providers or with telemetry or feature flags turned off\n- Fixed a scheduled task with a typo in the project's scheduled tasks file being deleted the next time that file was saved\n-"
+    },
+    "codex-ad076a99b892": {
+      "id": "codex-ad076a99b892",
+      "kind": "codex",
+      "title": "Codex 0.170.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.170.0",
+      "source": "Codex",
+      "published": "2026-11-18T03:40:48.000Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/62cc38426dcb98cf99774b07f78955410108f963ef5ac98af81bd65458e2c552/openai/codex",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "0.170.0",
+      "body": "## New Features\n- Added WebRTC negotiation for realtime voice calls in the TUI. (#61172)\n- Added automatically refreshed authentication headers for OpenTelemetry HTTP exporters. (#61028)\n- Added experimental support for using identically named MCP servers across environments. (#60905)\n\n## Bug Fixes\n- Oversized WebSocket requests now fall back to HTTP without unnecessary retries. (#60840, #60841)\n- Fixed MCP OAuth credential races during cancellation, login, and logout. (#60849, #60981)\n- Improved automatic reconnection for Cloud conversations and preserved active recovery turns when clients reconnect. (#60969, #61014)\n- Fixed Windows file replacement, sandbox permission preservation, and runtime registration recovery. (#60872, #60943, #60944)\n- Fixed permission updates and child threads losing existing sandbox restrictions. (#60936, #61134)\n- Removed duplicate file search results and fixed thread search snippets for queries containing whitespace. (#60845, #60846)\n\n## Documentation\n- Updated sandbox documentation to explain permission profiles and filesystem rules. (#61133)\n\n## Changelog\n\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.169.0...rust-v0.170.0\n\n- #60770 Derive history and notes tool schemas from typed requests @euroelessar\n- #60771 Preserve model-facing ID allocations in saved history @euroelessar\n- #60773 Resolve saved Daybreak choices for each subagent turn @sayan-oai\n- #60784 Centralize synchronous Guardian reviewer selection @felixxia-oai\n- #60839 Preserve retained assistant revisions across rollout replay @euroelessar\n- #60840 Fall back to HTTP immediately for oversized WebSocket requests @charliemarsh-oai\n- #60841 Honor advertised WebSocket message size limits @charliemarsh-oai\n- #60842 Make TUI thread titles resilient to generation failures @etraut-openai\n- #60845 Deduplicate file search results from overlapping roots @etraut-openai\n- #60846 Fix thread search snippets for whitespace-containing queries @etraut-openai\n- #60848 Enable incremental tool declarations by default for GCP @akira-oai\n- #60849 Protect MCP OAuth persistence from stale credential writes @mzeng-openai\n- #60871 Wait for the in-process initialization handshake to finish @goodman-oai\n- #60872 Fix Windows atomic writes and refresh build maintenance @zm-oai\n- #60882 Stabilize tracing in the cancellation timing test @bc-openai\n- #60897 Use the Responses API for issue label suggestions @GrantBirki\n- #60898 Include bundled bubblewrap in the root metadata test fixture @sayan-oai\n- #60904 Version answer display instructions and restrict unsupported payloads @psachdeva-oai\n- #60905 Keep same-named MCP servers separate across environments @sayan-oai\n- #60914 Reserve Guardian context budget for selected Code Mode exec results @felixxia-oai\n- #60929 Preserve Command Center task ownership across backend switches @bc-openai\n- #60936 Preserve legacy sandbox templates in TUI permission conversions @ioanbudea-OAI\n- #60942 Preserve thread-local model ID state a"
+    },
+    "official-f0b81ce3c146": {
+      "id": "official-f0b81ce3c146",
+      "kind": "official",
+      "title": "DaisyRose-27B: Pushing the Frontier of Post-Training Efficiency",
+      "url": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+      "source": "Hugging Face",
+      "published": "2026-11-18T19:54:56.000Z",
+      "metrics": {},
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/6aeabf9f2efd990530425e58/faP4Su889q_DIgN3wmU9M.png",
+      "ogTitle": "DaisyRose-27B: Pushing the Frontier of Post-Training Efficiency",
+      "ogDescription": "A Blog post by RadixArk on Hugging Face",
+      "excerpt": "Image-Text-to-Text • 28B • Updated about 16 hours ago • 47",
+      "description": ""
+    },
+    "official-e55c8f2df06c": {
+      "id": "official-e55c8f2df06c",
+      "kind": "official",
+      "title": "Why your fine-tuning job takes longer than the FLOPs say",
+      "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+      "source": "Hugging Face",
+      "published": "2026-11-18T18:53:43.000Z",
+      "metrics": {},
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/6a725daa5ca641a21ab61956/J6DIf4Len_31Tj-CQlQXY.png",
+      "ogTitle": "Why your fine-tuning job takes longer than the FLOPs say",
+      "ogDescription": "A Blog post by Dharma-AI on Hugging Face",
+      "excerpt": "Predicting end-to-end fine-tuning time on shared GPU clusters, from 272 production runs. A preview of our upcoming paper, Predicting End-to-End Fine-Tuning Time for Generative Language Models . The full version will be on arXiv soon. GPUs are among the most expensive and scarcest resources in AI today. Anyone running a shared cluster has to decide, every day, which jobs go on which GPUs and in what order. That plan is only as good as the estimate of how long each job will take. When a job finishes hours early, GPUs sit idle until the next one is dispatched. When it runs hours late, everything queued behind it slips, experiments wait and delivery dates move. Better duration estimates turn this into planning instead of guesswork: what runs, when, and on how many GPUs, with less idle capacity in between. Yet the estimate most teams use is a back-of-the-envelope FLOP calculation. It says nine hours, and the job finishes the next afternoon. We wanted to know how far off that math really is, and whether we could do better before a job is even dispatched. So we took 272 real supervised fine-tuning (SFT) jobs from our production pool of NVIDIA H200 GPUs, about 7,382 GPU-hours in total, and compared analytical estimates against learned predictors. The short version: the usual FLOP-based estimate explains little of what we observed (R² = 0.31, MAE 12.41 h). A CatBoost regressor that only sees information available before dispatch reaches R² = 0.98, with a mean absolute error of 1.71 h ",
+      "description": ""
+    },
+    "official-00a064e6720e": {
+      "id": "official-00a064e6720e",
+      "kind": "official",
+      "title": "The Gemini app is now available on lower-memory Android devices.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+      "source": "Google AI",
+      "published": "2026-11-18T17:00:00.000Z",
+      "metrics": {},
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_Android_social_share.max-1440x810.png",
+      "ogTitle": "The Gemini app is now available on lower-memory Android devices.",
+      "ogDescription": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+      "excerpt": "For hundreds of millions of people globally, a lower-memory Android device is their everyday connection to the internet, education, and business. Until recently, hardware limits meant those phones only had basic voice commands. Now, we’re bringing the Gemini app to eligible Android (Go edition) devices , putting Google’s personal AI assistant in the hands of hundreds of millions more people. We re-architected the app so the core Gemini experience runs smoothly on hardware with less memory. Instead of typing out long prompts, you can talk things through or practice for an interview out loud in more than 45 languages with Gemini Live , point your camera at notes or forms to learn and translate, or create custom images with Nano Banana — like a flyer for a weekend bakery sale. To get started, download the Gemini app on Google Play, press and hold the power button on supported phones, or look for it preloaded on upcoming devices from partners like Transsion.",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_app_Android_social_share.max-600x600.format-webp.webp\">The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today."
+    },
+    "official-aef632472a5e": {
+      "id": "official-aef632472a5e",
+      "kind": "official",
+      "title": "Time-Series Models in the Streamhouse: A New Frontier and Use Cases",
+      "url": "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
+      "source": "Hugging Face",
+      "published": "2026-11-18T15:00:23.000Z",
+      "metrics": {},
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/64e8143f6de557454220921e/yf6E9vJHIkGHG_toGSasb.gif",
+      "ogTitle": "Time-Series Models in the Streamhouse: A New Frontier and Use Cases",
+      "ogDescription": "A Blog post by IBM Research on Hugging Face",
+      "excerpt": "Real-time forecasting, anomaly detection, and optimization, powered by IBM time-series models with more than 50 million downloads. Now available natively on Confluent, in the cloud and on premises, running on CPUs. Every business generates a continuous record of change: a machine reading, a payment, a sale, an order, or a change in inventory. These observations form time series, and they carry signals that can help teams anticipate what happens next. The challenge is turning those signals into decisions while they still matter. A forecast delivered after a production run, a stockout, or a payment authorization may be accurate, but too late to influence the outcome. IBM and Confluent are bringing time-series foundation models closer to the data as it flows. With Apache Flink, teams can apply forecasting , anomaly detection and semantic intelligence to streaming data using SQL, making model outputs available to the applications and people responsible for the next action. Foundation models have changed how organizations work with text, images, and documents. Time-series foundation models extend a similar idea to numerical data by learning general patterns from diverse historical data and then applying that knowledge to new series and tasks. The models can provide a starting point without requiring teams to train a separate model for every series. Depending on the task and deployment, teams can also fine-tune a model or combine its outputs with other data and business logic. Figu",
+      "description": ""
+    },
+    "official-184d931227f2": {
+      "id": "official-184d931227f2",
+      "kind": "official",
+      "title": "The Silent Consensus",
+      "url": "https://openai.com/index/the-silent-consensus",
+      "source": "OpenAI",
+      "published": "2026-11-18T10:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "Dean Ball, Head of Strategic Futures at OpenAI, examines how more capable AI could reshape society and how people can retain control of their institutions."
+    },
+    "official-58da586369f3": {
+      "id": "official-58da586369f3",
+      "kind": "official",
+      "title": "Research acceleration: The jagged frontier",
+      "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+      "source": "OpenAI",
+      "published": "2026-11-18T08:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement."
+    },
+    "hn-ee3431af9f19": {
+      "id": "hn-ee3431af9f19",
+      "kind": "hn",
+      "title": "AI agents ask better questions than KPMG accountants in audit trial",
+      "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
+      "source": "Hacker News",
+      "published": "2026-11-18T15:49:34.000Z",
+      "metrics": {
+        "points": 362,
+        "num_comments": 163
+      },
+      "image": "https://europeanbusinessmagazine.com/wp-content/uploads/2026/06/ai5555-1024x678.jpg",
+      "ogTitle": "AI Agents Ask Better Questions Than KPMG Accountants",
+      "ogDescription": "LONDON, November 18, 2026 — Artificial intelligence has taken another significant step into the world of professional services after KPMG revealed that AI",
+      "excerpt": "LONDON, November 18, 2026 — Artificial intelligence has taken another significant step into the world of professional services after KPMG revealed that AI agents examining the accounts of a major UK-listed company sometimes investigated financial issues more deeply and asked better questions than its human audit team. The experiment, conducted by KPMG UK using more than 100 AI agents, marks an important development in the application of artificial intelligence to one of the most labour-intensive areas of the financial services industry. It also raises an uncomfortable question for the accountancy profession: if machines can increasingly perform the analytical work traditionally undertaken by highly trained professionals, how quickly will the economics of auditing change? According to the Financial Times , the project, codenamed Project Exponential, examined the financial statements of an unnamed FTSE 250 company. The AI agents worked alongside a conventional audit team, undertaking tasks across the audit process rather than simply assisting with isolated administrative functions. New subscribers this quarter are entered into a draw to win a Rolex Submariner. Join 40,000+ founders, investors and executives who read EBM every day. KPMG UK head of audit Cath Burnet said the technology had, in several instances, gone considerably deeper into issues than the regular audit team, identifying areas requiring further investigation and asking questions that human auditors had not neces",
+      "objectID": "50547777",
+      "points": 362,
+      "num_comments": 163,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50547777",
+        "count": 163,
+        "points": 362
+      }
+    },
+    "hn-e88bc9372147": {
+      "id": "hn-e88bc9372147",
+      "kind": "hn",
+      "title": "Advancing chip design with OpenAI models",
+      "url": "https://openai.com/index/advancing-chip-design-with-our-models/",
+      "source": "Hacker News",
+      "published": "2026-11-18T17:45:47.000Z",
+      "metrics": {
+        "points": 163,
+        "num_comments": 104
+      },
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "objectID": "50549493",
+      "points": 163,
+      "num_comments": 104,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50549493",
+        "count": 104,
+        "points": 163
+      }
+    },
+    "japan-81c38743939f": {
+      "id": "japan-81c38743939f",
+      "kind": "japan",
+      "title": "AIによるAI研究「指数関数的に増加」でも「依然として人間中心」 OpenAIがレポート公開",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/19/2000003318/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-19T00:48:01.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/19/2000003318/10012518/2048",
+      "ogTitle": "AIによるAI研究「指数関数的に増加」でも「依然として人間中心」 OpenAIがレポート公開",
+      "ogDescription": "OpenAIは、AIが同社内のAI研究にどのように貢献しているかに関するレポートを公開した。（1/2 ページ）",
+      "excerpt": "米OpenAIは11月18日（現地時間）、AIが同社内のAI研究にどのように貢献しているかに関するレポートを公開した。それによるとAIは2～4時間の研究タスクの約半分を自力で完了するようになっており、利用する研究者も増加しているが、「AI開発においては人間が依然として中心的な役割を担っている」という。 レポートでは、OpenAI社内でのAI研究におけるAIの使用は指数関数的に増加しており、研究者1人当たりのAPI利用額換算の中央値は、1日当たり2400ドル（日本円で約38万円）に達していると報告されている。利用額上位10％の研究者は1日当たり23000ドル（日本円で約360万円）を消費している計算になるという。これは9月時点の換算額からそれぞれ62％、105％の増加となる。 一方、AIによるタスクの成功率はモデル学習実行の監視で79％、モデル学習実行の起動で35％、推論や計算資源向けのコーディングで25％で、向上率は「まちまち」だったという。このことから、OpenAIは「人間が依然としてAI研究の中核を担っている」と結論付けている。 特に、7月に同社AIがHugging Face環境に侵入した事件以降は、人間の研究者がAIの安全性に関する研究に費やす時間が増えているとも報告されている。 今回のレポートでOpenAIは、モデルの能力向上を測る指標「OpenAI ECI」（OECI）を新たに導入し、他社モデルを含む性能評価結果を公表した。モデルの性能は向上しているが、OpenAIはこの結果から「AIの能力向上が加速している」とは結論付けておらず、OECIのグラフでは能力が一定のペースで向上していると示している。 今回のレポートは、9月に同社が公開したレポートに新たな調査結果を追加したもの。OpenAIはAIの研究機関に対して、AIがAI自身や後継システムの能力を改善する技術「RSI」（再帰的自己改善）の進捗を公表すべきという姿勢を示しており、今回のレポート公開もその姿勢に沿ったものだという。 同社は、AIが自己改善能力を高めるにつれて「競争圧力とガバナンス上の課題が増大する」と指摘し、人間がこのプロセスに関与し続けることが重要だとした。 Copyright &copy; ITmedia, Inc. All Rights Reserved. ITmedia AI＋に関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれません。 国内外の業界動向、AIやクラウドなどの最新技術、キャリア情報など今知りたい情報をまとめてお届けします。 孫正義氏が明かす、アンソロピック出資見送りの舞台裏 「僕の失敗」「あん時入れときゃよかった」 NotionのAIチャット流出おそれ、幹部が日本での対応状況明かす 「心よりおわび」 農水省の“クソダサ”ポスター話題 「AIよりよっぽど良い」の声も 担当者に狙いを聞いた NotebookLMに公式APIが登場 WebページやYouTube動画の取り込みを自動化でき、MCPでAIエージェントからも使える Googleドライブの最新ファイルをGeminiが常時参照 「スキル」に新機能追加 AIモデリングもできる無償3D CAD「SolidCraft」を試してみた！ 「オントロジー」とは結局何なのか Palantir、Databricks、Snowflake、NVIDIAで中身が違う理由 AI時代に必要なエンジニアのスキルとは？ 開発現場の“品質問題”から読み解く 【Pythonで学ぶデータ分析】重回帰分析のモデル比較をベ",
+      "description": "OpenAIは、AIが同社内のAI研究にどのように貢献しているかに関するレポートを公開した。"
+    },
+    "japan-4cf7f5628246": {
+      "id": "japan-4cf7f5628246",
+      "kind": "japan",
+      "title": "PFUがファンレスエッジAIデバイスを開発、自然言語入力でAI解析機能を簡単構築",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2611/19/news044.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-18T23:30:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/mn/articles/2611/19/cover_news044.jpg",
+      "ogTitle": "PFUがファンレスエッジAIデバイスを開発、自然言語入力でAI解析機能を簡単構築",
+      "ogDescription": "PFUは、「EdgeTech+ 2026」において、ファンレスのエッジAIデバイスと、自然言語入力でAI解析機能を簡単に構築できるSIエージェントを組み合わせた「エッジAIデバイス×SIエージェント」を参考出展した。",
+      "excerpt": "PFUは、「EdgeTech+ 2026」において、ファンレスのエッジAIデバイスと、自然言語入力でAI解析機能を簡単に構築できるSIエージェントを組み合わせた「エッジAIデバイス×SIエージェント」を参考出展した。 PFUは、「EdgeTech+ 2026」（2026年11月18～20日、パシフィコ横浜）において、ファンレスのエッジAI（人工知能）デバイスと、自然言語入力でAI解析機能を簡単に構築できるSIエージェントを組み合わせた「エッジAIデバイス×SIエージェント」を参考出展した。既設のIPカメラに後付けでAI解析機能を付加できるソリューションとして事業化を進めており、2027年10月ごろの市場投入を予定している。 工場や倉庫などの現場にカメラを用いたAI解析機能を導入する場合、専用カメラへの買い替えや、AI解析機能の新規開発、関連ハードウェアを現場に組み込むための工事などが必要になり、手間とコストがかかることが課題となっている。「PoC（概念実証）で限定的に導入するものの、その後の横展開ができずにPoC止まりになることが多い」（PFUの説明員）。 エッジAIデバイス×SIエージェントは、現場に既に設置されているIPカメラとネットワークをそのまま活用し、手のひらサイズのエッジAIデバイスを後付けすることで、AI解析機能を追加するソリューションである。既存設備を生かしたまま、工事などで現場を止めることなくAI解析機能を導入できる。 このコンセプトを実現するために開発したのが、小型かつ低消費電力のファンレスエッジAIデバイスと、自然言語入力でAI解析機能を簡単に構築できるSIエージェントである。ファンレスエッジAIデバイスは、クアルコムのIoT（モノのインターネット）向けプロセッサ「Dragonwing」を採用した。消費電力を10Wに抑えてファンレスを可能にする一方で、40TOPSのAI処理性能を確保している。 一方、SIエージェントは、AI開発に習熟していない現場の技術者でも簡単に扱えるように、自然言語入力でAI解析機能を構築できるようなツールチェーンを独自に開発した。AI解析機能の動作はダッシュボード上で確認でき、現場での運用に必要な三色灯などとの連携も容易に設定可能だ。構築したAI解析機能のワークフローは、Node-REDベースで可視化されておりカスタマイズも簡単に行える。 今回の展示では、YOLOベースの物体検出アルゴリズムを用いた人数検出のデモに加えて、Qwen3ベースのVLM（視覚言語モデル）に基づくヘルメット着用判定のデモを披露した。「これらのAIモデルはDragonwingで高速に処理できるように最適化しており、市場投入時にはSIエージェントにパッケージする形で販売する予定だ」（同説明員）。 なお、PFUのエッジAIデバイス×SIエージェントは「EdgeTech+ AWARD 2026」の「AI／生成AI優秀賞」を受賞した。 Copyright &copy; ITmedia, Inc. All Rights Reserved. メディア一覧 | 公式SNS | 広告案内 | お問い合わせ | プライバシーポリシー | RSS | 運営会社 | 採用情報 | 推奨環境",
+      "description": "PFUは、「EdgeTech+ 2026」において、ファンレスのエッジAIデバイスと、自然言語入力でAI解析機能を簡単に構築できるSIエージェントを組み合わせた「エッジAIデバイス×SIエージェント」を参考出展した。"
+    },
+    "japan-4b20b6b97ca0": {
+      "id": "japan-4b20b6b97ca0",
+      "kind": "japan",
+      "title": "ソブリンAI実現に向けて再び立ちはだかる「旧来の課題」 データ・インフラ・モデルの自由度をどう保つか",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/19/2000002979/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-18T23:00:00.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/19/2000002979/10012491/2048",
+      "ogTitle": "ソブリンAI実現に向けて再び立ちはだかる「旧来の課題」 データ・インフラ・モデルの自由度をどう保つか",
+      "ogDescription": "企業のAI導入における課題の多くは、モデルそのものではなく、AIが機能する環境に起因している。根にあるのは、AIブーム以前から企業のITシステムが抱えてきたデータの「サイロ化」と、特定の環境や技術への「ロックイン」だ。",
+      "excerpt": "第1回 では、AI主権がなぜ企業の経営課題として注目されているのかについて解説しました。主権性を確保したAI活用、いわゆる「ソブリンAI」の実現を目指す企業の前に、今、再び立ちはだかっているのが「旧来の課題」です。 AIエージェントを導入したものの、社内データと十分に連携できない。特定のクラウドサービス上で構築したAI環境から抜け出せない。新しいAIモデルを試したくても、既存システムとの整合性が取れず移行できない――。こうした問題の多くは、AIモデルそのものではなく、AIが機能する環境に起因しています。根にあるのは、AIブーム以前から企業のITシステムが抱えてきたデータの「サイロ化」と、特定の環境や技術への「ロックイン」です。AIの価値がデータで決まり、モデルやインフラが急速に進化する今、この2つが改めてAI活用の足かせになっています。 では、データ・インフラ・モデルの自由度を保ち、主権性を確保するにはどうすればよいのでしょうか。今回はこれら3つについて、旧来の課題がそれぞれどう表れるのかと、その解決策を見ていきます。 Cloudera株式会社 ソリューションズ エンジニアリング マネジャー クラウド、ビッグデータ、データガバナンス、PaaS、Webアプリケーションなどのアーキテクトとしての設計や実装の経験を持つソリューションエンジニア。 過去にはDXCテクノロジー・ジャパン株式会社でチーフ・テクノロジスト、ヒューレット・パッカード エンタープライズでビジネス・ディベロップメントの職務を担当し、2019年6月にCloudera株式会社に入社。 企業がAI活用を進める上で、最も重要な資産は何でしょうか。AIモデルやGPUを思い浮かべる人も多いかもしれません。しかし、それら以上に、企業の競争力を左右するのは「信頼できるデータに必要な時に迅速にアクセスできるかどうか」です。なぜなら、AIモデルそのものは急速にコモディティ化しつつあるからです。 今や、米Anthropicの「Claude」や米Googleの「Gemini」、米OpenAIの「GPT」など多様なAIモデルが利用可能になり、中国の先進企業や米Metaなどをはじめとして高性能なオープンウェイトモデルを提供する企業も増えています。その結果、企業の差別化要因は「どのモデルを使うか」から、「どのデータを使うか」へと移りつつあります。 例えば、顧客との過去のやり取り、社内ナレッジ、製品情報、保守履歴、購買データなどは企業ごとに異なります。同じAIモデルを利用したとしても、参照するデータが違えば得られる結果も大きく変わります。 数年前から注目されているRAG（Retrieval-Augmented Generation）はその代表例です。RAGでは、AIモデルが企業固有のデータを参照しながら回答を生成します。そのため、どれだけ高性能なモデルを導入しても、必要なデータへアクセスできなければ十分な価値は生まれません。 実際、企業のAI活用が進むにつれて課題になっているのは、AIモデルの性能ではなく、必要なデータへ適切にアクセスできるかどうかです。データが部門ごとに分散していたり、異なるクラウドやオンプレミス環境に散在していたりすると、AIは十分な能力を発揮できません。 そのため近年は、データそのものを一元的に管理するのではなく、データがどこに存在していても統一的に活用できる基盤への関心が高まっています。例えば、筆者が所属するClouderaは「Apache Iceberg」などのオープンフォーマットを活用し",
+      "description": "企業のAI導入における課題の多くは、モデルそのものではなく、AIが機能する環境に起因している。根にあるのは、AIブーム以前から企業のITシステムが抱えてきたデータの「サイロ化」と、特定の環境や技術への「ロックイン」だ。"
+    },
+    "japan-b840f5a6740d": {
+      "id": "japan-b840f5a6740d",
+      "kind": "japan",
+      "title": "「1.5年が一般的なAI開発者育成を3カ月に」 みずほFGは未経験・非エンジニアを即戦力にどうリスキリング？",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/19/news029.html",
+      "source": "＠IT",
+      "published": "2026-11-18T23:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/19/cover_news029.jpg",
+      "ogTitle": "「1.5年が一般的なAI開発者育成を3カ月に」 みずほFGは未経験・非エンジニアを即戦力にどうリスキリング？",
+      "ogDescription": "みずほフィナンシャルグループは、「Codex」「Claude Code」などをを活用し、金融業務の知識を持つ非エンジニア社員をAIアプリケーションの開発人材に育成するリスキリングプログラム「みずほAI Bootcamp」の本格運用を開始する。",
+      "excerpt": "みずほフィナンシャルグループは、「Codex」「Claude Code」などをを活用し、金融業務の知識を持つ非エンジニア社員をAIアプリケーションの開発人材に育成するリスキリングプログラム「みずほAI Bootcamp」の本格運用を開始する。 みずほフィナンシャルグループ（以下、みずほFG）は2026年10月15日、AIコーディング支援ツールを活用し、金融業務の知識を持つ非エンジニア社員を、AIアプリケーションの開発を担う人材に育成するリスキリングプログラム「みずほAI Bootcamp」の本格運用を開始すると発表した。基礎学習から実案件の開発までを一体化し、育成期間を一般的な1年半程度から3カ月に短縮したという。 本格運用に先立ち、2026年6～8月に実施したプログラムには、プログラミング未経験者4人を含む5人が参加した。集中学習後に実施した知識テストでは、5人の平均正答率が92％となり、全員が所定の合格ラインに達した。5人は9月からエンジニア職に転換し、金融業務の知識を生かした視点をAIアプリケーションの設計や仕様の検討に反映するなど、実務でそれぞれの強みを発揮し始めているという。 従来、非エンジニア社員が開発人材になるには、プログラミングやシステム開発の基礎を学び、演習や実務経験を重ねて段階的に専門性を高める必要があった。近年は、AIコーディング支援ツールの進化により、AIを活用しながら学習と開発実務を一体的に進められるようになっている。 AIコーディング支援ツールは、自然言語の指示に基づいてコードの生成、修正、機能追加などを支援する開発ツールだという。みずほAI Bootcampでは、OpenAIの「Codex」やAnthropicの「Claude Code」などを使い、AIエージェントの試作と、アプリケーションの実装、検証に取り組む。生成されたコードは、参加者が業務要件、品質、セキュリティなどを確認した上で利用する。 参加者は、AIコーディング支援ツールを活用した開発手法を1カ月間集中的に学んだ後、2カ月間にわたって実案件でのOJT（実務を通じた訓練）に取り組む。金融業務の知識を生かせる案件に参画し、コードの記述にとどまらず、要件の理解、AIを活用した実装、成果物の検証と改善など、開発における一連の業務を担う。 学習と実践を一体化して育成を大幅に効率化したことで、3カ月でAIアプリケーションの開発に必要なスキルを身に付けられるようになったという。 みずほFGは、従来のエンジニア育成との違いとして、自然言語の指示を基にAIがコードを記述することを前提としている点を挙げている。育成の初期には、開発に必要な最低限の知識とスキルに加え、AIに効率的かつ正確にコードを書かせるスキルを習得する。 金融庁が2026年3月3日に公表した「 AIディスカッションペーパー（第1.1版） 」は、金融機関などのAI活用の論点として、AIの専門人材の確保と育成、社内教育、AI製品の選定や運用、管理を担う人材の確保、現場とIT部門の橋渡しを担う人材の育成などを挙げている。「AIの開発や運用を外部事業者に依存すると、ノウハウや知的財産が組織内に蓄積されにくく、内部人材の育成が進まない可能性がある」ことも論点の一つとしている。 みずほAI Bootcampは、非エンジニア社員を、業務課題を解決するAI活用ソリューションの設計・実装から検証・改善までを担う人材に育成するとともに、開発実務で得た知識やノウハウを社内に蓄積し、内製開発力の強化につなげる取り組みだ。 みずほF",
+      "description": "みずほフィナンシャルグループは、「Codex」「Claude Code」などをを活用し、金融業務の知識を持つ非エンジニア社員をAIアプリケーションの開発人材に育成するリスキリングプログラム「みずほAI Bootcamp」の本格運用を開始する。"
+    },
+    "japan-914e26336bc1": {
+      "id": "japan-914e26336bc1",
+      "kind": "japan",
+      "title": "日本の音声AIスタートアップに159億円 ElevenLabsはなぜ、社員15人のKotobaを買収するのか",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/19/2000003306/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-18T22:55:00.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/19/2000003306/10012467/2048",
+      "ogTitle": "日本の音声AIスタートアップに159億円 ElevenLabsはなぜ、社員15人のKotobaを買収するのか",
+      "ogDescription": "AI音声サービスを手掛ける米ElevenLabsは、音声AIスタートアップの米Kotoba Technologiesを買収すると発表した。（1/2 ページ）",
+      "excerpt": "AI音声サービスを手掛ける米ElevenLabsは11月17日、音声AIスタートアップの米Kotoba Technologiesを買収すると発表した。買収額は約1億ドル（約159億円、1ドル159円換算）で、2026年第4四半期後半に完了する見込みだ。 Kotoba Technologiesは23年創業で、従業員数は15人。本社は米国だが、過去には経済産業省が手掛けるAI開発プロジェクト「GENIAC」にも採択されており、東京都の開発拠点で東アジアの言語に強みを持つ音声AI「Koto」を開発してきた。 ElevenLabsのマティ・スタニシェフスキーCEOによると、AI音声技術で重要なのは「現地に即していること」。各言語におけるニュアンスや社会規範などを、モデル開発の最初期から組み込む必要があるという。 今回の買収で、Kotoba Technologiesが評価されたのもこの点だ。「東アジアの言葉を最も熟知しているのがKotoba Technologies」とスタニシェフスキーCEO。Kotoba Technologiesの知見により、日本語を含む東アジアの言語に特化した音声AIの研究開発を推進する。 なお、Kotoba Technologiesは買収された後も、開発拠点を東京都に置く予定だ。 同社の小島熙之（こじまのりゆき）CEOは、「日本に研究開発組織を維持し、グローバルトップのAI企業の計算資源などのリソースを活用しながら、ローカルに即した製品・モデルを作る例は今まで無かった」と説明。今回の取り組みも「国益に資するのではないか」との見方を示した。 ElevenLabsは独自のAI音声を開発しており、25年4月には日本法人のElevenLabs Japan（東京都千代田区）を設立した。同年11月には、大手声優事務所のエイティワンプロデュース（東京都渋谷区）などと協力し、声優や俳優の声の権利保護と、日本語以外の多言語化を目指す団体「声の保護と多言語化協会」を立ち上げている。 Copyright &copy; ITmedia, Inc. All Rights Reserved. ITmedia AI＋に関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれません。 国内外の業界動向、AIやクラウドなどの最新技術、キャリア情報など今知りたい情報をまとめてお届けします。 孫正義氏が明かす、アンソロピック出資見送りの舞台裏 「僕の失敗」「あん時入れときゃよかった」 NotionのAIチャット流出おそれ、幹部が日本での対応状況明かす 「心よりおわび」 農水省の“クソダサ”ポスター話題 「AIよりよっぽど良い」の声も 担当者に狙いを聞いた NotebookLMに公式APIが登場 WebページやYouTube動画の取り込みを自動化でき、MCPでAIエージェントからも使える Googleドライブの最新ファイルをGeminiが常時参照 「スキル」に新機能追加 AIモデリングもできる無償3D CAD「SolidCraft」を試してみた！ 「オントロジー」とは結局何なのか Palantir、Databricks、Snowflake、NVIDIAで中身が違う理由 AI時代に必要なエンジニアのスキルとは？ 開発現場の“品質問題”から読み解く 【Pythonで学ぶデータ分析】重回帰分析のモデル比較をベイズ統計で行う ～ 株価の予測にはどの指標が効くのか？ GAS×Geminiが一般提供開始 IT管理者が確認すべき権限設定は？",
+      "description": "AI音声サービスを手掛ける米ElevenLabsは、音声AIスタートアップの米Kotoba Technologiesを買収すると発表した。"
+    },
+    "trending-16db77652cb1": {
+      "id": "trending-16db77652cb1",
+      "kind": "trending",
+      "title": "google-research/paper-orchestra",
+      "url": "https://github.com/google-research/paper-orchestra",
+      "source": "GitHub Trending",
+      "published": "2026-11-19T02:06:01.860Z",
+      "metrics": {
+        "stars": 4336,
+        "starsToday": 1524,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/7d9ae50d85e5cc2588f6d638850527dd871bdf752f1b93d97b242715c46183e3/google-research/paper-orchestra",
+      "ogTitle": "GitHub - google-research/paper-orchestra: PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "ogDescription": "PaperOrchestra is a multi-agent framework for automated AI research paper writing. - google-research/paper-orchestra",
+      "excerpt": "PaperOrchestra is a multi-agent framework for automated AI research paper writing. It flexibly transforms unconstrained pre-writing materials (ideas and experimental logs) into submission-ready LaTeX manuscripts, including comprehensive literature synthesis and generated visuals, such as plots and conceptual diagrams. Acting like an orchestrated team of specialized agents, it handles outline generation, literature review, section writing, content refinement, and plotting to close the gap between raw research materials and submission ready papers. Environment Setup : The project relies on a Conda environment named paper_orchestra . You can set up a similar environment with Python 3.11 and install the required dependencies. Environment Variables : Create a .env file in the root of the project and add your API keys: The dataset used for paper generation is not included in this code repository. It will be released separately at a later date. Once available, you should download the dataset and place it under the datasets/ directory. You can run the paper generation pipeline using the provided bash script or directly via the Python CLI. We provide an interactive Streamlit demo for the paper generation pipeline. For instructions on how to run and use it, please refer to the README.md in the frontend directory. If you find this repo or our paper helpful, please cite it as follows: This is not an officially supported Google product.",
+      "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "language": "Python"
+    },
+    "trending-edb3a6268757": {
+      "id": "trending-edb3a6268757",
+      "kind": "trending",
+      "title": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "source": "GitHub Trending",
+      "published": "2026-11-19T02:06:01.860Z",
+      "metrics": {
+        "stars": 306560,
+        "starsToday": 1108,
+        "language": "JavaScript"
+      },
+      "image": "https://opengraph.githubassets.com/46a0593fd4eb613f788ca66fd5538ed868529bddbf43821d81124ec51428eebb/affaan-m/ECC",
+      "ogTitle": "GitHub - affaan-m/ECC: The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "ogDescription": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. - affaan-m/ECC",
+      "excerpt": "Language: English | العربية | Português (Brasil) | 简体中文 | 繁體中文 | 日本語 | 한국어 | Türkçe | Русский | Tiếng Việt | ไทย | Deutsch | Español | Українська | Polski | বাংলা | Italiano Official sources only. Install ECC only from verified channels: the GitHub repository github.com/affaan-m/ECC , the npm packages ecc-universal and ecc-agentshield , the GitHub App , the plugin slug ecc@ecc , and the project website ecc.tools . Third-party re-uploads and unofficial mirrors are not maintained or reviewed by the project and may contain malware. Use the guided setup or native plugin commands . Both install the same ecc@ecc plugin. Choose one and do not stack a full manual Claude install on top. OSS stays free. This repo is MIT-licensed forever. ECC Pro is the hosted GitHub App for private repos. Sponsors and Pro subscribers fund the work. That's why a single maintainer ships weekly across 7 harnesses. Past sponsors: Atlas Cloud · Mike Morgan (inactive) Community sponsors: @jasonwu513 · @1anter · @massimotodaro · @meadmccabe Become a Sponsor · Sponsor Tiers · Sponsorship Program Your agent can write code, but ECC gives it a coordinated engineering system and toolbox: it plans before it builds, verifies changes with tests, reviews its own work from a fresh context, remembers what matters, and turns repeated wins into reusable skills and workflows. Instead of rebuilding that process in every prompt, you install it once and make it part of how your agent works. Optimize the context window. Persis",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript"
+    },
+    "trending-b88590c43555": {
+      "id": "trending-b88590c43555",
+      "kind": "trending",
+      "title": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "source": "GitHub Trending",
+      "published": "2026-11-19T02:06:01.860Z",
+      "metrics": {
+        "stars": 70061,
+        "starsToday": 1059,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/4f0c9754fb7b313e978c8c31596d40b351aeec4b2611c490a6ce9a33b38a1b24/mvanhorn/last30days-skill",
+      "ogTitle": "GitHub - mvanhorn/last30days-skill: AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "ogDescription": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary - mvanhorn/last30days-skill",
+      "excerpt": "English | Français | Deutsch | Español | Português (Brasil) | 日本語 | 简体中文 | العربية | فارسی | Türkçe An AI agent-led search engine scored by upvotes, likes, and real money - not editors. This README tracks the current v4 pipeline. The runtime skill spec lives in skills/last30days/SKILL.md , which is the source of truth for the latest command and setup behavior. Claude Code (recommended — auto-updates via marketplace): Codex, Cursor, Copilot, Gemini CLI, or any of 50+ Agent Skills hosts: ( -g installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, OpenClaw, manual) in the Install section below. Zero config. Reddit, HN, Polymarket, and GitHub work immediately, and so do patent filings and careers pages when your topic is a company. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds. Reddit upvotes. X likes. YouTube transcripts. TikTok engagement. Polymarket odds backed by real money and insider information. That's millions of people voting with their attention and their wallets every day. /last30days searches all of it in parallel, scores it by what real people actually engage with, and an AI agent judge synthesizes it into one brief. Google aggregates editors. /last30days searches people. You can't get this search anywhere else because no single AI has access to all of it. Google search doesn't touch Reddit comments or X posts. ChatGPT has a deal with Re",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python"
+    },
+    "trending-8c6014a36ca9": {
+      "id": "trending-8c6014a36ca9",
+      "kind": "trending",
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "source": "GitHub Trending",
+      "published": "2026-11-19T02:06:01.860Z",
+      "metrics": {
+        "stars": 321357,
+        "starsToday": 822,
+        "language": "Shell"
+      },
+      "image": "https://opengraph.githubassets.com/42f872343023791aac07ecb4750313c62218dbe8ba29ea107b09e148d9ed3995/obra/superpowers",
+      "ogTitle": "GitHub - obra/superpowers: An agentic skills framework & software development methodology that works.",
+      "ogDescription": "An agentic skills framework & software development methodology that works. - obra/superpowers",
+      "excerpt": "Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it doesn't just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a subagent-driven-development process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hes",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell"
+    },
+    "trending-5dd922e14c0c": {
+      "id": "trending-5dd922e14c0c",
+      "kind": "trending",
+      "title": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "source": "GitHub Trending",
+      "published": "2026-11-19T02:06:01.860Z",
+      "metrics": {
+        "stars": 59797,
+        "starsToday": 389,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/82dc6daa01f81545bdafe6a504adc0c3435f16eb6a69c832e955d1201e746142/HKUDS/CLI-Anything",
+      "ogTitle": "GitHub - HKUDS/CLI-Anything: \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "ogDescription": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/ - HKUDS/CLI-Anything",
+      "excerpt": "Today's Software Serves Humans👨‍💻. Tomorrow's Users will be Agents🤖. CLI-Anything: Bridging the Gap Between AI Agents and the World's Software 🌐 CLI-Hub : pip install cli-anything-hub then cli-hub install <name> — browse, install, and manage all community-built CLIs. Want to add your own? Open a PR — the hub updates instantly. 🎬 See Demos : Watch AI agents use generated CLIs plus preview, live preview, and trajectory loops to produce real artifacts — CAD builds, 3D scenes, diagrams, gameplay, subtitles, and more. 🙋 [Become a Contributor, or Request a CLI] : Join us ! Sign up to build a new CLI harness — once reviewed and merged, you'll gain access as one of our community contributors! Wish CLI-Anything supported a specific software or service? Submit a wishlist request ! One Command Line : Make any software agent-ready for Pi, OpenClaw, nanobot, Cursor, Claude Code, etc. 中文文档 | 日本語ドキュメント | Deutsch Thanks to all invaluable efforts from the community! More updates continuously on the way everyday.. 2026-05-30 🧭 Hermes skill proposed (#320), adding a CLI-Anything orchestration skill with installer scripts and HARNESS fallback guidance. 🗺️ ArcGIS Pro was proposed for the public registry (#318) as a Windows/ArcPy CLI for cartography, geoprocessing, feature editing, and live-Pro MCP workflows. 2026-05-27 🔧 CLI-Hub registry date updates now handle python -m pip install commands (#312), improving package-date detection for registry automation. 2026-05-23 📝 Obsidian Agent CL",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python"
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "higurashi-ai/Haru-4B",
+      "pipeline_tag": "audio-to-audio",
+      "likes": 692,
+      "downloads": 5314,
+      "createdAt": "2026-11-12T11:05:59.000Z",
+      "url": "https://huggingface.co/higurashi-ai/Haru-4B"
+    },
+    {
+      "id": "harness-hub/Qwen3.8-27B-pi-adapted",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 419,
+      "downloads": 377,
+      "createdAt": "2026-11-16T06:52:31.000Z",
+      "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted"
+    },
+    {
+      "id": "tencent/Hy4-flash",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 236,
+      "downloads": 159,
+      "createdAt": "2026-11-17T03:44:46.000Z",
+      "url": "https://huggingface.co/tencent/Hy4-flash"
+    }
+  ],
+  "errors": [
+    {
+      "source": "https://openai.com/index/advancing-chip-design-with-our-models/",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/index/research-acceleration-jagged-frontier",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/index/the-silent-consensus",
+      "message": "HTTP 403"
+    }
+  ]
+}

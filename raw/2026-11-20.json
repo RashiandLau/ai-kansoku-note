@@ -1,0 +1,414 @@
+{
+  "date": "2026-11-20",
+  "generatedAt": "2026-11-20T01:55:59.571Z",
+  "top": "hn-15969c90ab8f",
+  "selected": [
+    "hn-15969c90ab8f",
+    "claudecode-8dbf662dfecc",
+    "codex-1e02ab9c34ce",
+    "official-1b3aafed7dd5",
+    "official-d47c74f9a7ce",
+    "official-9342dbf934e4",
+    "official-a890a236270c",
+    "official-17b7a2b39f09",
+    "official-82fe289fe466",
+    "hn-5fe21d2b4eca",
+    "hn-b9120f9f4938",
+    "japan-87ddc4d89f38",
+    "japan-7e796e2f530d",
+    "japan-7eaa262d1938",
+    "japan-940a496d129f",
+    "trending-8c6014a36ca9",
+    "trending-f6c3adbf52c7",
+    "trending-b88590c43555",
+    "trending-5dd922e14c0c",
+    "trending-e9dbf459bd01"
+  ],
+  "items": {
+    "hn-15969c90ab8f": {
+      "id": "hn-15969c90ab8f",
+      "kind": "hn",
+      "title": "Anthropic’s Nasdaq debut",
+      "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
+      "source": "Hacker News",
+      "published": "2026-11-19T17:02:40.000Z",
+      "metrics": {
+        "points": 910,
+        "num_comments": 1797
+      },
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "objectID": "50562754",
+      "points": 910,
+      "num_comments": 1797,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50562754",
+        "count": 1797,
+        "points": 910
+      }
+    },
+    "claudecode-8dbf662dfecc": {
+      "id": "claudecode-8dbf662dfecc",
+      "kind": "claudecode",
+      "title": "Claude Code 2.1.329",
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+      "source": "Claude Code",
+      "published": "2026-11-20T01:55:59.571Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/06120a4a3d2a0ac06db7e51b6cf262576a73c0560eaf5ebf2b2bb3c5c41fd983/anthropics/claude-code",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "2.1.329",
+      "sectionText": "- Added a trust dialog warning that says where a folder's hooks are declared\n- Added a warning in the conversation, in Claude Desktop and other non-interactive hosts, when hooks in managed settings fail to load\n- Added this session's scheduled tasks, `/loop` wakeups, the goal and this conversation's forks to `/tasks`; x stops one after asking\n- Added a \"Server message\" row to a server's page in `/mcp` that shows the JSON-RPC error message of a remote HTTP MCP server that refuses the connection\n- Added a \"Marketplace auto-update\" row to `/status` that names managed marketplaces that get no automatic updates, and why\n- Added support for turning on Code Mode while OpenTelemetry events and metrics are enabled; each tool call the code makes sends its events; tracing still keeps it off\n- Fixed `~/.claude.json` sometimes being reset to defaults when a network stall or file lock made it unreadable and cleared during a save\n- Fixed repeated sign-outs on macOS when Claude Code could read the Keychain but not save to it. That session now stops at expiry and says why, and other sessions stay signed in\n- Fixed `/terminal-setup` corrupting VS Code settings or keybindings files around block comments, and reporting success while losing the Shift+Enter binding where keybindings.json has an unclosed string\n- Fixed files accepted through the IDE diff being saved without their last newline, and losing their byte order mark (BOM) when an edit was accepted by saving the diff in VS Code\n- Fixed picking a cloud session in `/teleport` replacing your open conversation: the pick now starts a new session, as `/clear` does, and `/resume` brings the old one back\n- Fixed `/usage-credits` asking Pro and Max users to log in again after opening the browser, and the link disappearing after 8 seconds if the browser doesn't open and a task stops for usage credits\n- Fixed `/usage` saying usage credits are off when they had run out or reached the monthly limit, and `/model` not telling Pro and Max users when that limit blocks a model that runs on usage credits\n- Fixed the spend limit menu showing your spend as your monthly limit and wrapping its rows under the pointer in narrow windows\n- Fixed a status line script that prints without end freezing the prompt and using gigabytes of memory\n- Fixed an empty, frozen screen after approving managed settings while the --resume picker, the trust dialog or another set-up screen was waiting\n- Fixed choosing Default in `/model` replacing your saved model with your organization's default when the Default row already showed your saved model\n- Fixed an MCP server being signed in again after you cleared its authentication while a token refresh was running\n- Fixed background MCP tasks that stalled after a slow reconnect: Claude Code now reconnects most HTTP MCP servers by itself when one is left on an older protocol version\n- Fixed PDFs, images and `.docx`, `.xlsx` or `.pptx` files that MCP servers or websites send as `application/octet-stream` being "
+    },
+    "codex-1e02ab9c34ce": {
+      "id": "codex-1e02ab9c34ce",
+      "kind": "codex",
+      "title": "Codex 0.171.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
+      "source": "Codex",
+      "published": "2026-11-20T00:44:47.000Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/ee75c77025355f9681c5ad000c987950bb9b07bbc8323ab86d607bd4aa1e366b/openai/codex",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "0.171.0",
+      "body": "## New Features\n\n- Added GPT-6.2 Sol and Astra to model catalogs, with Sol as the default catalog selection. (#62106)\n- Enabled the TUI workspace by default, with searchable document previews, image previews, and subagent transcripts alongside the main conversation. (#61352, #61888, #61889, #61919, #62157)\n- Added configurable undo and redo shortcuts to the non-Vim prompt composer, including restoration of attachments and large pastes. (#61954)\n- Added `codex exec --remote <ADDR>` to start or resume noninteractive sessions on an existing app server. (#61707)\n- Added `/rc` and `/remote` to manage local remote control and display device pairing codes from the TUI. (#62121)\n- Added custom MCP status line selection and authoring through `/statusline` when `tui_extensions_statusline` is enabled. (#61979, #61988, #62037)\n\n## Bug Fixes\n\n- Preserved drafts, queued follow-ups, and interrupted input with their original threads when switching or resuming sessions. (#61216)\n- Kept permission profiles intact when changing working directories. (#61195)\n- Prevented late completion events from cancelling approvals for a newer turn. (#61801)\n- Preserved earlier edits in aggregate diffs when steering an active turn. (#61820)\n- Fixed scrolling that inserted stray characters, composer caret jumps, and redraws using stale terminal dimensions. (#62139, #62174, #62175)\n- Fixed enterprise MCP sign-in for identity providers that issue ID tokens without refresh tokens. (#62129)\n\n## Chores\n\n- Updated source builds and release tooling to Rust 1.99.1. (#61205)\n- Updated XML dependencies and removed obsolete security advisory exceptions. (#62068)\n\n## Changelog\n\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.170.0...rust-v0.171.0\n\n- #61178 Enable conversation-scoped speed selection for Cloud turns @bc-openai\n- #61180 Reclaim abandoned trusted Git repositories @etraut-openai\n- #61181 Fix pagination for unindexed threads sorted by ascending recency @etraut-openai\n- #61182 Support renaming cloud threads @bc-openai\n- #61183 Fix fork parent metadata in reconstructed TUI sessions @fcoury-oai\n- #61185 Defer Guardian context limits to request preparation @ioanbudea-OAI\n- #61186 Keep plan item IDs unique after completion @neerajrj-oai\n- #61187 Add authenticated GCS caching for Bazel CI and releases @dkovalenko-oai\n- #61194 Remove redundant legacy permission helpers @ioanbudea-OAI\n- #61195 Preserve permission profiles across working directory updates @ioanbudea-OAI\n- #61196 Clear inline image previews before history insertion can scroll them @dob-oai\n- #61197 Clarify remote message board and clock documentation @anp-oai\n- #61198 Add graceful agent-tree suspension and recovery @bryanashley\n- #61199 Align rollout trace replay with the same-binary contract @cassirer-openai\n- #61200 Unify TUI status content and layout caching in `StatusLine` @fcoury-oai\n- #61201 Clean up Rust error handling and OTLP test assertions @ioanbudea-OAI\n- #61205 Upgrade the Rust toolchain to 1.99."
+    },
+    "official-1b3aafed7dd5": {
+      "id": "official-1b3aafed7dd5",
+      "kind": "official",
+      "title": "Introducing Tool Retrieval in the Gemini API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+      "source": "Google AI",
+      "published": "2026-11-19T18:00:00.000Z",
+      "metrics": {},
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tool_retrieval_hero.width-1300.png",
+      "ogTitle": "Introducing Tool Retrieval in the Gemini API",
+      "ogDescription": "Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API.",
+      "excerpt": "Tool Retrieval is now in preview in the Gemini Interactions API. Load tool parameter schemas on demand instead of sending your full tool library in every prompt,designed to reduce input tokens and keep tool selection accurate as your agent scales. Research Scientist, Google DeepMind Your browser does not support the audio element. We are launching Tool Retrieval in the Gemini API to help your agents manage large tool libraries more efficiently. By loading parameter schemas only when needed, you reduce latency and input token costs for complex tasks. You can try this feature today in the Interactions API by adding a tool_search tool and setting defer_loading to true in your requests. We are introducing Tool Retrieval to help developers manage large collections of software tools more efficiently. Instead of loading every tool at once, your agent now keeps a library on standby and only pulls in the specific details it needs for a task. This reduces data usage, speeds up performance, and improves accuracy. You can start using this feature today with our latest Gemini models to build more capable and responsive applications. Today we're launching Tool Retrieval in the Gemini API, available in preview in the Interactions API . When an agent connects to dozens or even hundreds of tools, sending every full parameter schema on every request adds up fast. It inflates input token counts, adds latency, and lowers tool-selection accuracy as the candidate list grows. Tool Retrieval lets yo",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tool_retrieval_hero.max-600x600.format-webp.webp\">Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API."
+    },
+    "official-d47c74f9a7ce": {
+      "id": "official-d47c74f9a7ce",
+      "kind": "official",
+      "title": "Walter Isaacson on curiosity and creativity in the AI age.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+      "source": "Google AI",
+      "published": "2026-11-19T17:00:00.000Z",
+      "metrics": {},
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dialogues.max-1440x810.jpg",
+      "ogTitle": "Walter Isaacson on curiosity and creativity in the AI age.",
+      "ogDescription": "Walter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgment in the AI age. Watch the episode.",
+      "excerpt": "What do Leonardo da Vinci, Benjamin Franklin, and Ada Lovelace have to teach us about creativity in the age of AI? On our newest episode of Dialogues on Technology and Society, Kent Walker sits down with biographer and historian Walter Isaacson to talk about why history's biggest breakthroughs have always been a team sport. They look at why curiosity and human judgment matter more than ever when information is right in your pocket.",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dialogues.max-600x600.format-webp.webp\">Walter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgment in the AI age. Watch the episode."
+    },
+    "official-9342dbf934e4": {
+      "id": "official-9342dbf934e4",
+      "kind": "official",
+      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "source": "OpenAI",
+      "published": "2026-11-19T08:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast."
+    },
+    "official-a890a236270c": {
+      "id": "official-a890a236270c",
+      "kind": "official",
+      "title": "Deploying Daybreak Red",
+      "url": "https://openai.com/business/learn/deploying-daybreak-red",
+      "source": "OpenAI",
+      "published": "2026-11-19T00:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "Explore a reference architecture for supervised security investigations with Daybreak Red, including safety controls, setup, and monitoring."
+    },
+    "official-17b7a2b39f09": {
+      "id": "official-17b7a2b39f09",
+      "kind": "official",
+      "title": "See PR scans in action",
+      "url": "https://openai.com/business/learn/pr-scans-demo",
+      "source": "OpenAI",
+      "published": "2026-11-19T00:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow."
+    },
+    "official-82fe289fe466": {
+      "id": "official-82fe289fe466",
+      "kind": "official",
+      "title": "Explore the Codex Security Plugin",
+      "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+      "source": "OpenAI",
+      "published": "2026-11-19T00:00:00.000Z",
+      "metrics": {},
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "description": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording."
+    },
+    "hn-5fe21d2b4eca": {
+      "id": "hn-5fe21d2b4eca",
+      "kind": "hn",
+      "title": "Claude solves two open problems in the physics of black holes",
+      "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+      "source": "Hacker News",
+      "published": "2026-11-19T17:30:44.000Z",
+      "metrics": {
+        "points": 386,
+        "num_comments": 180
+      },
+      "image": "https://assets.claude.com/57a443b51d13727573b7c1290130d09c5f434b2c.jpg",
+      "ogTitle": "Claude Fable 5.2 solves two open problems in the physics of black holes",
+      "ogDescription": "Claude Fable 5.2 has solved two open problems in theoretical physics. Both concern black holes and the search for a theory of quantum gravity.",
+      "excerpt": "Modern physics rests on two frameworks: general relativity and quantum mechanics. General relativity describes very large things, like stars; quantum mechanics describes very small things, such as atoms. Both are astonishingly good at predicting how the universe behaves, but they’re mathematically incompatible. Finding a theory that unites them—“quantum gravity”—is one of the field’s biggest goals. Black holes are a natural testing ground, because they’re one of the few areas where both relativity and quantum mechanics matter—they pack immense mass into a very small space. One of the most useful tools for studying quantum gravity is called holographic duality . The real universe has three dimensions of space and one of time, which relativity combines into four-dimensional spacetime. But physicists studying quantum gravity often work with simpler model universes that they can understand in more detail. The basic idea of holographic duality is that some of these theoretical universes can be described in two ways: as a complete universe with gravity and spacetime, and in quantum terms, with no gravity at all, “written” on the universe’s outer boundary. Just as a real hologram encodes a 3D image on a 2D plane, the quantum model encodes all the information of the universe in one dimension fewer (a universe with four dimensions of space, for instance, can be fully described by a quantum theory with three). This lets physicists turn hard questions about gravity into questions about ",
+      "objectID": "50563148",
+      "points": 386,
+      "num_comments": 180,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50563148",
+        "count": 180,
+        "points": 386
+      }
+    },
+    "hn-b9120f9f4938": {
+      "id": "hn-b9120f9f4938",
+      "kind": "hn",
+      "title": "Pete warden on local AI, open models, voice interfaces, the future of hardware",
+      "url": "https://thedataexchange.media/pete-warden-moonshine/",
+      "source": "Hacker News",
+      "published": "2026-11-19T15:38:12.000Z",
+      "metrics": {
+        "points": 215,
+        "num_comments": 195
+      },
+      "image": "https://thedataexchange.media/wp-content/uploads/2026/11/pete-warden-local-ai.001.jpeg",
+      "ogTitle": "Why AI Wants to Be Local - The Data Exchange",
+      "ogDescription": "Pete Warden on Local AI, Open Models, Voice Interfaces, and the Future of Hardware. Subscribe: Apple • Spotify • Overcast &hellip; More",
+      "excerpt": "Subscribe: Apple • Spotify • Overcast • Pocket Casts • YouTube • AntennaPod • Podcast Addict • Amazon • RSS . Pete Warden , co-creator of Moonshine Voice and a longtime deep learning engineer, joins me to discuss why AI increasingly wants to run locally rather than in the cloud. We explore the rapid progress of open-weight models, what it takes to run AI on laptops and in browsers, and how low-latency speech models could make voice a more natural interface. We also discuss specialized versus end-to-end models, the economics of local AI, and emerging hardware approaches that could challenge today’s GPU-centric infrastructure. [This episode originally aired on Generative AI in the Real World , a podcast series I’m hosting for O’Reilly.] Subscribe to the Gradient Flow Newsletter Interview highlights – key sections from the video version: Support our work by subscribing to our newsletter📩 Below is a polished and edited transcript . Ben Lorica. All right. Today we have an old friend, Pete Warden of Useful Sensors, and their main website is actually at moonshine.ai. If you go to the website, you’ll see that they’re very much about voice on-device, and we will definitely talk to Pete about all things speech and all things edge computing. But I do want to take advantage of Pete being one of the OG deep learning engineers to get his sense of what’s going on these days. And with that, Pete, welcome back to the podcast. Pete Warden. Thanks for having me, Ben. Ben Lorica. All right. So ",
+      "objectID": "50561508",
+      "points": 215,
+      "num_comments": 195,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50561508",
+        "count": 195,
+        "points": 215
+      }
+    },
+    "japan-87ddc4d89f38": {
+      "id": "japan-87ddc4d89f38",
+      "kind": "japan",
+      "title": "ChatGPT「Plus」プラン一部ユーザーに「dots」解禁 「Business Standard」全ユーザーにも",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/20/2000003359/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-20T00:46:58.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/20/2000003359/10012666/2048",
+      "ogTitle": "ChatGPT「Plus」プラン一部ユーザーに「dots」解禁 「Business Standard」全ユーザーにも",
+      "ogDescription": "OpenAIは「ChatGPT」の「Plus」プランユーザーの一部向けに、同社の常時稼働型エージェント「dots」の提供を開始する。（1/2 ページ）",
+      "excerpt": "米OpenAIのプロダクト責任者ティボー・ソティオ氏（通称Tibo）は11月19日（現地時間）にXで、「ChatGPT」の「Plus」プランに加入する一部ユーザー向けに、同社の常時稼働型エージェント「dots」の提供を開始すると発表した。 dotsはOpenAIが9月に発表した常時稼働型のエージェント機能。ユーザーが設定した目標に応じて、クラウドやローカルのコンピュータを操作して自律的に稼働する。 発表当初は個人向けの「Pro」プラン（月額16800円から）と法人向け「Business Premium」「Enterprise」プランでのみ利用できたが、今回、個人向け「Plus」プラン（月額3000円）と法人向け「Business Standard」への展開が発表された形だ。 日本法人のOpenAI Japanによれば、 dotsの週間アクティブユーザー数は日本が「世界2位」で、同社の長﨑忠雄社長も業務で活用しているという 。 Copyright &copy; ITmedia, Inc. All Rights Reserved. ITmedia AI＋に関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれません。 国内外の業界動向、AIやクラウドなどの最新技術、キャリア情報など今知りたい情報をまとめてお届けします。 AIの精度が低くて使えない――JA共済連がたどり着いた「AIエージェントの育て方」 「GPT-6.1 Terra」は半額 それでもなぜ企業はAIモデルを選べないのか？ 孫正義氏が「墓石に刻んでほしい」と明かした言葉 流した涙、もう「時間との勝負」やり残したことは？ 孫正義氏が明かす、アンソロピック出資見送りの舞台裏 「僕の失敗」「あん時入れときゃよかった」 ファミマが「AIロボット」本格導入へ 飲料補充に活用、作業時間の約7割を削減 「オントロジー」とは結局何なのか Palantir、Databricks、Snowflake、NVIDIAで中身が違う理由 「GLM-5.3-Flash」「DeepSeek-V4.1-Flash-1017」が月3000リクエストまで無料 さくらのAI推論基盤で提供 NotionのAIチャット流出おそれ、幹部が日本での対応状況明かす 「心よりおわび」 農水省の“クソダサ”ポスター話題 「AIよりよっぽど良い」の声も 担当者に狙いを聞いた ちまたの“格安GPT”、中身は偽物？ 非公式APIのモデル偽装を調査した結果……",
+      "description": "OpenAIは「ChatGPT」の「Plus」プランユーザーの一部向けに、同社の常時稼働型エージェント「dots」の提供を開始する。"
+    },
+    "japan-7e796e2f530d": {
+      "id": "japan-7e796e2f530d",
+      "kind": "japan",
+      "title": "ベテランPMが辞めても失いたくない「暗黙知」を“生成AI面談”で残す 東京ガス系が実践したノウハウ継承術",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/20/news021.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-20T00:45:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/20/cover_news021.jpg",
+      "ogTitle": "ベテランPMが辞めても失いたくない「暗黙知」を“生成AI面談”で残す 東京ガス系が実践したノウハウ継承術",
+      "ogDescription": "熟練者が退職した後も、プロジェクト管理の経験や判断基準を組織に残すにはどうすればよいのか。東京ガスｉネットが実践した、暗黙知を組織の資産に変える実践手法と、具体的なシステム構成を整理する。",
+      "excerpt": "熟練者が退職した後も、プロジェクト管理の経験や判断基準を組織に残すにはどうすればよいのか。東京ガスｉネットが実践した、暗黙知を組織の資産に変える実践手法と、具体的なシステム構成を整理する。 この記事は会員限定です。 会員登録（無料） すると全てご覧いただけます。 東京ガスのグループ内のシステム構築や維持管理は、同社のIT子会社である東京ガスｉネットのプロジェクトマネジャー（以下、PM）が担っている。熟練PMの退職や人手不足が進み、若い世代も会社を離れることがある中で、熟練PMから引き継ぐべき「暗黙知」を継承しにくい状況にあった。 暗黙知は、熟練者の経験や思考プロセスなど個人に依存した知見を指す。人材不足や世代交代が進む中、その継承は企業にとって重要な経営課題になっている。東京ガスｉネットでは、プロジェクトマネジメントの品質を維持・向上させるために、暗黙知を抽出して次世代のPMに継承することが重要な課題となっていた。 熟練PMの暗黙知を組織の資産として継承し、人材育成に生かす仕組みの実現に向けて、東京ガスｉネットは生成AIとの面談を通じて、熟練PMの暗黙知を抽出・蓄積する仕組みを導入した。単なるチャットではない、生成AIによる「深掘り面談」を実現したという。それはどのようなものなのか。 東京ガスｉネットは熟練PMとの面談に、日立ソリューションズの「面談支援AIサービス」を導入した（図）。面談支援AIサービスは、AIが会話形式で質問して面談を進めるサービスだ。深掘り質問の検討と暗黙知の蓄積には、Allganizeの生成AI活用サービス「Alli LLM App Market」を、日立ソリューションズを通じて導入した。 Alli LLM App Marketは、社内文書やデータベースを検索して回答を生成する独自のRAG（検索拡張生成）と、業務別の生成AIアプリケーション、特定の業務を自律的に処理するAIエージェントを標準で備える。生成AIアプリケーションとAIエージェントは、ノーコードで業務に合わせてカスタマイズできる。 熟練PMとの面談の流れはこうだ。基本的には面談支援AIサービスが質問を出し、熟練PMが回答する。回答に暗黙知の手掛かりとなる部分があれば、Alli LLM App Marketが深掘りする質問を考えて、面談支援AIサービスを通じて熟練PMに投げ掛ける。Alli LLM App Marketは、質疑応答をテキスト化したものを読み込んで暗黙知を蓄積し、ナレッジベースを構築する。 東京ガスｉネットは、プロジェクトマネジメントの知識体系「PMBOK」（Project Management Body of Knowledge）の12個の原理・原則をベースに面談のシナリオを作成し、PMが遭遇し得る想定場面を質問に反映した。経験の浅いPMの作成したプロジェクト計画書をレビューする仕組みや、面談結果からPMのスキルをスコア化する仕組みも用意した。 今回の取り組みを進める際、東京ガスｉネットは複数のベンダーに相談したものの、生成AIで何ができるかを示すベンダーはあっても、暗黙知を集める「入り口」まで含めて提案したのは日立ソリューションズだけだったという。面談という暗黙知の収集方法に、幅広い用途への汎用（はんよう）性を感じたことも、日立ソリューションズからの提案を選ぶ後押しになった。 面談支援AIサービスを使った面談では、一般的には知見をなかなか話してもらえず、15～20分で終わることもあると日立ソリューションズは説明する。東京ガスｉネットでは、面談に協",
+      "description": "熟練者が退職した後も、プロジェクト管理の経験や判断基準を組織に残すにはどうすればよいのか。東京ガスｉネットが実践した、暗黙知を組織の資産に変える実践手法と、具体的なシステム構成を整理する。"
+    },
+    "japan-7eaa262d1938": {
+      "id": "japan-7eaa262d1938",
+      "kind": "japan",
+      "title": "ヒューマノイドからAIビジョンまで、三菱電機「Serendie Automation」の具体像",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2611/20/news045.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-20T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/mn/articles/2611/20/cover_news045.jpg",
+      "ogTitle": "ヒューマノイドからAIビジョンまで、三菱電機「Serendie Automation」の具体像",
+      "ogDescription": "三菱電機は、FA向けの新たな統合ソリューションブランドとして「Serendie Automation」を展開することを発表した。後編では「Serendie Automation」を体現する技術展示の内容を紹介する。",
+      "excerpt": "三菱電機は、FA向けの新たな統合ソリューションブランドとして「Serendie Automation」を展開することを発表した。後編では「Serendie Automation」を体現する技術展示の内容を紹介する。 三菱電機は2026年11月18日に「FA Serendie Days」を開催し、FA向けの新たな統合ソリューションブランドとして 「Serendie Automation（セレンディオートメーション）」 を展開することを発表した。 前編 で三菱電機 上席執行役員 FAシステム事業本部長の都築貴之氏の基調講演とインタビューの内容を紹介したが、後編ではFA Serendie Daysで披露されたSerendie Automationのコンセプトを体現する技術展示の内容を紹介する。 「FA Serendie Days」では三菱電機がユーザーやパートナーを招き、新たに発表した Serendie Automation のコンセプトを体現したソリューションや機器、サービスなどを紹介した。 特にヒューマノイドなどのフィジカルAIに関連する展示は注目を集めた。ヒューマノイドでは、画像を基に把持動作を生成し、AIと既存制御で一連の作業を実行する尾張旭工場での実証の様子を紹介した。Serendie Automationのモデル工場としてさまざまな実証を行う尾張旭工場では、ヒューマノイドに人作業の代替をさせる実証を2026年度からスタートしている。 ヒューマノイドそのものは三菱電機製ではないが「オープンな形でフィジカルAIによる自動化領域の拡大を実証している。制御技術との組み合わせや安全機能などは三菱電機のノウハウだが、ヒューマノイドについては外部製品を使用している。三菱電機でヒューマノイドをリリースする予定は今のところないので、さまざまなヒューマノイドの中から最適なものを選んで実証する」（担当者）としている。 CNC工作機械とヒューマノイドを連携させ、加工機へのテンディング作業などを自動的に行い、無人で連続加工を可能とするデモなども披露し、工場でのヒューマノイドの活用場面の確立に向けさまざまな実証を行っている様子を示した。 フィジカルAIを組み合わせる形で、ロボットによる自動化の新たな可能性を広げる仕組みとして紹介されたのがRobotics as a Service（RaaS）だ。RaaSはロボットを買い切りではなくサービスとして提供する仕組みだ。サービスとして提供するため、従来のように技術者が付きっ切りで調整しなくても、早く簡単にロボットによる作業ラインが立ち上がるようにする必要がある。そこで、制御プログラムなどもアプリとしてパッケージ化して提供することで、従来導入できなかった領域でもロボットによる自動化ができるようにする。 会場では、3つのカメラによる画像でロボットに精密な位置決め条件を設定しなくても自律補正するデモが紹介された。これはRaaSによる自律補正アプリケーションにより、事前に位置決めやビジョンの調整を高精度で行わなくてもリアルタイムでμm単位の位置補正を行えるようにしたものだ。自律補正アプリケーションはSDK（Software Development Kit）で提供する。「現在はルールベースで画像認識とリアルタイム補正を行っているが、フィジカルAIを活用することでより柔軟な仕組みが構築できる」（担当者）としている。 Copyright &copy; ITmedia, Inc. All Rights Reserved. メディア一覧 | 公",
+      "description": "三菱電機は、FA向けの新たな統合ソリューションブランドとして「Serendie Automation」を展開することを発表した。後編では「Serendie Automation」を体現する技術展示の内容を紹介する。"
+    },
+    "japan-940a496d129f": {
+      "id": "japan-940a496d129f",
+      "kind": "japan",
+      "title": "Mac版「Gemini」にユーザーの代わりにアプリを操作する「computer use」機能追加 まず米国で",
+      "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003356/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-19T23:41:04.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/news/article/ogp/2611/20/2000003356/10012653/2048",
+      "ogTitle": "Mac版「Gemini」にユーザーの代わりにアプリを操作する「computer use」機能追加 まず米国で",
+      "ogDescription": "Googleは、Mac版「Gemini」アプリにAIが画面を認識してアプリを自動操作する「computer use」機能を追加した。隔離されたバックグラウンドウィンドウで動作するため、ユーザーの作業を妨げずにファイルやWebをまたいだ複数手順の業務を代行できる。まずは米国の有料プラン加入者向けに英語版から提供を始める。",
+      "excerpt": "米Googleは11月19日（現地時間）、Mac版「Gemini」アプリにcomputer use機能を追加したと発表した。AIが画面を認識し、人に代わってクリックや文字入力でアプリを操作する機能で、まずは米国で提供を始める。 ユーザーが複数の手順を必要とする作業の内容をチャットで伝えると、Geminiがクリックや文字入力、メニュー操作、フォーム入力などを実行する。対象はMac内のファイル、デスクトップアプリ、Webで、これらをまたいだ作業も任せられる。作業は他のウィンドウから切り離されたバックグラウンドのウィンドウで行われ、チャット画面内にライブプレビューとして表示される。Geminiは画面やカーソルを占有しないため、ユーザーはその間も自分の作業を続けられる。 同社はYouTubeで、親がGeminiに依頼して、子供が描いた蝶のスケッチをBlenderを使ってアニメーション付きの3Dモデルに変換し、ARアプリでそれを動かす例を紹介している。 Googleはこの他、利用例として次のような作業を紹介した。 安全のため、Geminiが操作できるアプリをユーザーが選べるようになっている。作業の手順はすべてリアルタイムで確認でき、いつでも一時停止できる。重要な操作を実行する前には、ユーザーに承認を求める。 利用条件は、Apple Silicon搭載でmacOS Sequoia（15.0）以降のMacを使っていることと、18歳以上の個人向けGoogleアカウントで「Google AI Plus」「Google AI Pro」「Google AI Ultra」のいずれかに加入していることだ。提供は米国の英語版のみで、日本での提供時期は明らかにしていない。Mac版Geminiアプリは4月に提供が始まり、ショートカットで呼び出す機能や画面共有機能を備えている。 Googleはこれまで、computer use向けのAIモデル「Gemini 2.5 Computer Use」を2025年10月に 開発者向けに公開 していた。主にWebブラウザの操作向けに最適化されたモデルで、Gemini APIを通じて提供されている。今回は、AIがアプリを操作する機能を一般ユーザー向けのアプリに組み込んだ。 GoogleのAIエージェント機能としては、17日に日本を含む6カ国で 無料化を発表した「Tasks in Gemini」 もある。こちらは、ハードウェアで隔離されたクラウド上の仮想マシンで動く。GmailやGoogleカレンダーなどと連携し、時間のかかる作業や定期的な作業をバックグラウンドで代行する。一方computer useは、ユーザーのMacにインストールされたアプリやMac内のファイルを直接操作する点が異なる。 AIエージェントがMac上のユーザーデータにアクセスすることについては、Appleが10月に 対策を発表 している。macOSの「フルディスクアクセス」権限をアプリに与える際の制御を強化するというもので、Appleは「AIエージェントの能力と自律性が高まるにつれ、このレベルのアクセスに伴うリスクは大幅に増大する」と説明した。Googleは今回の発表で、computer useの動作にどのmacOS権限が必要かは明らかにしていない。 computer useは、他社も提供している。Anthropicは2024年10月、 開発者向けにAPIで提供を始めた 。2026年3月には、一般ユーザーも使えるMac版「Claude」アプリにリサーチプレビューとして搭載し、そ",
+      "description": "Googleは、Mac版「Gemini」アプリにAIが画面を認識してアプリを自動操作する「computer use」機能を追加した。隔離されたバックグラウンドウィンドウで動作するため、ユーザーの作業を妨げずにファイルやWebをまたいだ複数手順の業務を代行できる。まずは米国の有料プラン加入者向けに英語版から提供を始める。"
+    },
+    "trending-8c6014a36ca9": {
+      "id": "trending-8c6014a36ca9",
+      "kind": "trending",
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "source": "GitHub Trending",
+      "published": "2026-11-20T01:55:59.571Z",
+      "metrics": {
+        "stars": 322119,
+        "starsToday": 2028,
+        "language": "Shell"
+      },
+      "image": "https://opengraph.githubassets.com/d4d053e0a752e1ec2e80837c79caa2f6f4093f816f04477d914dbded76c699b9/obra/superpowers",
+      "ogTitle": "GitHub - obra/superpowers: An agentic skills framework & software development methodology that works.",
+      "ogDescription": "An agentic skills framework & software development methodology that works. - obra/superpowers",
+      "excerpt": "Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it doesn't just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a subagent-driven-development process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hes",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell"
+    },
+    "trending-f6c3adbf52c7": {
+      "id": "trending-f6c3adbf52c7",
+      "kind": "trending",
+      "title": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "source": "GitHub Trending",
+      "published": "2026-11-20T01:55:59.571Z",
+      "metrics": {
+        "stars": 12601,
+        "starsToday": 1349,
+        "language": "Python"
+      },
+      "image": "https://repository-images.githubusercontent.com/1229774092/93703d75-077c-4a14-b580-e2374741fe3d",
+      "ogTitle": "GitHub - elementalsouls/Claude-BugHunter: A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "ogDescription": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise ide...",
+      "excerpt": "A self-contained Claude skill bundle for bug hunting and external red-team work · 83 skills · 15 slash commands · 681 disclosed-report patterns (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by Sachin Sharma — Bug Hunting & GenAI Security Research. claude-bughunter is a drop-in skill bundle for the Claude Code skills system . Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. All triggered automatically by topic — describe what you're testing in plain English and the relevant skill loads. No invocation by name. Option A — install as a Claude Code plugin (recommended). From inside Claude Code: All 83 skills + 15 commands load namespaced under claude-bughunter: and update when you bump the plugin version — no files copied into ~/.claude/ . A HackerOne account is optional. The install asks for a HackerOne API username and token. They only let the HackerOne MCP read your private programs and your own reports; leave both blank if you don't need that. Every skill, command an",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python"
+    },
+    "trending-b88590c43555": {
+      "id": "trending-b88590c43555",
+      "kind": "trending",
+      "title": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "source": "GitHub Trending",
+      "published": "2026-11-20T01:55:59.571Z",
+      "metrics": {
+        "stars": 70827,
+        "starsToday": 954,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/cac68efefb89eb1ac52bbd72bd2d01b7d49e35348ef30f8ade48a313c5a8986e/mvanhorn/last30days-skill",
+      "ogTitle": "GitHub - mvanhorn/last30days-skill: AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "ogDescription": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary - mvanhorn/last30days-skill",
+      "excerpt": "English | Français | Deutsch | Español | Português (Brasil) | 日本語 | 简体中文 | العربية | فارسی | Türkçe An AI agent-led search engine scored by upvotes, likes, and real money - not editors. This README tracks the current v4 pipeline. The runtime skill spec lives in skills/last30days/SKILL.md , which is the source of truth for the latest command and setup behavior. Claude Code (recommended — auto-updates via marketplace): Codex, Cursor, Copilot, Gemini CLI, or any of 50+ Agent Skills hosts: ( -g installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, OpenClaw, manual) in the Install section below. Zero config. Reddit, HN, Polymarket, and GitHub work immediately, and so do patent filings and careers pages when your topic is a company. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds. Reddit upvotes. X likes. YouTube transcripts. TikTok engagement. Polymarket odds backed by real money and insider information. That's millions of people voting with their attention and their wallets every day. /last30days searches all of it in parallel, scores it by what real people actually engage with, and an AI agent judge synthesizes it into one brief. Google aggregates editors. /last30days searches people. You can't get this search anywhere else because no single AI has access to all of it. Google search doesn't touch Reddit comments or X posts. ChatGPT has a deal with Re",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python"
+    },
+    "trending-5dd922e14c0c": {
+      "id": "trending-5dd922e14c0c",
+      "kind": "trending",
+      "title": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "source": "GitHub Trending",
+      "published": "2026-11-20T01:55:59.571Z",
+      "metrics": {
+        "stars": 60600,
+        "starsToday": 898,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/eafea9d4e56b3ad3a3341de383d2602c649a4d3779b9432e28b3d4a721efe396/HKUDS/CLI-Anything",
+      "ogTitle": "GitHub - HKUDS/CLI-Anything: \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "ogDescription": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/ - HKUDS/CLI-Anything",
+      "excerpt": "Today's Software Serves Humans👨‍💻. Tomorrow's Users will be Agents🤖. CLI-Anything: Bridging the Gap Between AI Agents and the World's Software 🌐 CLI-Hub : pip install cli-anything-hub then cli-hub install <name> — browse, install, and manage all community-built CLIs. Want to add your own? Open a PR — the hub updates instantly. 🎬 See Demos : Watch AI agents use generated CLIs plus preview, live preview, and trajectory loops to produce real artifacts — CAD builds, 3D scenes, diagrams, gameplay, subtitles, and more. 🙋 [Become a Contributor, or Request a CLI] : Join us ! Sign up to build a new CLI harness — once reviewed and merged, you'll gain access as one of our community contributors! Wish CLI-Anything supported a specific software or service? Submit a wishlist request ! One Command Line : Make any software agent-ready for Pi, OpenClaw, nanobot, Cursor, Claude Code, etc. 中文文档 | 日本語ドキュメント | Deutsch Thanks to all invaluable efforts from the community! More updates continuously on the way everyday.. 2026-05-30 🧭 Hermes skill proposed (#320), adding a CLI-Anything orchestration skill with installer scripts and HARNESS fallback guidance. 🗺️ ArcGIS Pro was proposed for the public registry (#318) as a Windows/ArcPy CLI for cartography, geoprocessing, feature editing, and live-Pro MCP workflows. 2026-05-27 🔧 CLI-Hub registry date updates now handle python -m pip install commands (#312), improving package-date detection for registry automation. 2026-05-23 📝 Obsidian Agent CL",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python"
+    },
+    "trending-e9dbf459bd01": {
+      "id": "trending-e9dbf459bd01",
+      "kind": "trending",
+      "title": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "source": "GitHub Trending",
+      "published": "2026-11-20T01:55:59.571Z",
+      "metrics": {
+        "stars": 204285,
+        "starsToday": 825,
+        "language": "TypeScript"
+      },
+      "image": "https://repository-images.githubusercontent.com/787076358/f9616c09-3701-41ef-b5a6-fdf912ffb15b",
+      "ogTitle": "GitHub - firecrawl/firecrawl: Knowledge infrastructure to make your agents smarter. Search, scrape and 550+ data providers through one API.",
+      "ogDescription": "Knowledge infrastructure to make your agents smarter. Search, scrape and 550+ data providers through one API. - firecrawl/firecrawl",
+      "excerpt": "Knowledge infrastructure to make your agents smarter. 🔥 You can use Firecrawl three ways. This repo holds the code for Firecrawl Local and the self-hosted server, along with SDKs that work with all three. Pst. Hey, you, join our stargazers :) Firecrawl Local scrapes, crawls and maps from your own machine without a database, queue or container, and it reaches Firecrawl Cloud when your AI agents need search or Alexandria. It installs from crates.io. You need Rust and a C compiler, which on macOS means xcode-select --install and on Debian or Ubuntu means build-essential . If you don't have Rust, Firecrawl Cloud runs the same scrape with nothing to build and no signup. Scrape a page and print its markdown. Crawl a site and save one markdown file per page. Pages that need JavaScript render in the Chrome or Chromium already on your machine, and PDFs and Office documents are parsed locally too. Without a browser, static pages still work and a page that needed one comes back with a warning. init finds Claude Code, Claude Desktop, Cursor, Windsurf, Gemini CLI and Codex on your machine and adds Firecrawl Local to each one as an MCP server. It backs up every config file first, and the MCP server itself needs Node.js 22 or newer. Restart your AI tool afterwards. Its scrape, crawl, map and batch scrape tools run on your machine, and the other Firecrawl tools go to Firecrawl Cloud. serve answers the Firecrawl v2 API on port 3002, so code written for Firecrawl runs against it unchanged and",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and 550+ data providers through one API.",
+      "language": "TypeScript"
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "higurashi-ai/Haru-4B",
+      "pipeline_tag": "audio-to-audio",
+      "likes": 3646,
+      "downloads": 6266,
+      "createdAt": "2026-11-12T11:05:59.000Z",
+      "url": "https://huggingface.co/higurashi-ai/Haru-4B"
+    },
+    {
+      "id": "tencent/Hy4-flash",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 347,
+      "downloads": 2053,
+      "createdAt": "2026-11-17T03:44:46.000Z",
+      "url": "https://huggingface.co/tencent/Hy4-flash"
+    },
+    {
+      "id": "apple/FastFrames-L",
+      "pipeline_tag": "text-to-video",
+      "likes": 335,
+      "downloads": 0,
+      "createdAt": "2026-11-16T17:21:04.000Z",
+      "url": "https://huggingface.co/apple/FastFrames-L"
+    }
+  ],
+  "errors": [
+    {
+      "source": "https://openai.com/business/learn/codex-security-plugin-demo",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/business/learn/deploying-daybreak-red",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/business/learn/pr-scans-demo",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "message": "HTTP 403"
+    },
+    {
+      "source": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
+      "message": "HTTP 401"
+    }
+  ]
+}

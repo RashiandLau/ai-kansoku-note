@@ -1,0 +1,392 @@
+{
+  "date": "2026-11-21",
+  "generatedAt": "2026-11-21T01:51:41.627Z",
+  "top": "hn-3381c1b46b2b",
+  "selected": [
+    "hn-3381c1b46b2b",
+    "claudecode-865a5d6594f0",
+    "official-7ad44f990f0c",
+    "official-8145fefb47ff",
+    "official-c1a2af93db54",
+    "official-824c03b970f1",
+    "official-701a571706ec",
+    "official-1b3aafed7dd5",
+    "hn-8e7b1da91569",
+    "hn-578fb428dfe4",
+    "japan-940f3485a280",
+    "japan-490efa8471e6",
+    "japan-ff5143b3f2f3",
+    "japan-abd3e3be9be0",
+    "japan-2a9c9f823f07",
+    "trending-f6c3adbf52c7",
+    "trending-e9dbf459bd01",
+    "trending-ce3bf530c355",
+    "trending-8c6014a36ca9",
+    "trending-11418a0ccfe2"
+  ],
+  "items": {
+    "hn-3381c1b46b2b": {
+      "id": "hn-3381c1b46b2b",
+      "kind": "hn",
+      "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
+      "url": "https://architectlabs.com/blog/frostbite",
+      "source": "Hacker News",
+      "published": "2026-11-20T10:01:41.000Z",
+      "metrics": {
+        "points": 626,
+        "num_comments": 327
+      },
+      "image": "https://main--gleeful-begonia-6bb5f3.netlify.app/_next/static/media/frostbite-cover.3n9ytugnquhlr.jpg",
+      "ogTitle": "Introducing Frostbite: A new CPU architecture discovered, designed, and verified end-to-end by AI",
+      "ogDescription": "Frostbite is a general-purpose CPU built around interaction nets, discovered, designed, and verified end-to-end by our AI systems, reaching 4.59x the performance-per-watt of a modern superscalar (dual-issue, in-order) CPU core.",
+      "excerpt": "In our previous post, Redwood , we showed that given an architecture, our AI systems could implement, verify, and deploy an inference accelerator in record time. However, similar to other scientific domains, we believe that AI systems, given the correct freedom and guardrails, can co-design software and hardware together, making optimizations across the stack and opening a design space so large it was previously inaccessible. We set out to answer the question: “Could our AI systems & tools lead to a novel hardware discovery that radically outperforms human-made designs?” Today, we're introducing Frostbite, a general-purpose CPU with a new instruction set built from the ground up. Frostbite exploits the properties of interaction nets, namely that every step is local, every dependency is explicit, and every value has exactly one owner, to reach a step-function gain in CPU performance that has long stagnated. On a set of 25 initially chosen workloads, including 15 held out until the final evaluation, we achieved a 4.59x performance-per-watt multiple when compared to a modern, silicon-proven superscalar (dual-issue, in-order) CPU core. Our AI systems autonomously iterated over the compiler, ISA, architecture, microarchitecture, RTL, verification, and final GDS. When we took a closer look at the discovered architectural primitives, we were surprised to find novel hardware implementations and runtime features that would have otherwise been difficult to architect. In spite of stagna",
+      "objectID": "50572503",
+      "points": 626,
+      "num_comments": 327,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50572503",
+        "count": 327,
+        "points": 626
+      }
+    },
+    "claudecode-865a5d6594f0": {
+      "id": "claudecode-865a5d6594f0",
+      "kind": "claudecode",
+      "title": "Claude Code 2.1.330",
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+      "source": "Claude Code",
+      "published": "2026-11-21T01:51:41.627Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/81af210bb028d0a8f8602c8f76677d740d57f31128c04468736aa127a874f322/anthropics/claude-code",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "2.1.330",
+      "sectionText": "- Added sign-in to organizations managed in Anthropic's Enterprise Admin Console: after `claude auth login`, Claude Code applies the organization's settings and uses its cloud provider or gateway\n- Added easel, a built-in mod that draws charts when asked and under MCP metrics results, on Pro, Max and, where available, Team and Enterprise on macOS and Linux; turn automatic charts off in `/config`\n- Added `CLAUDE_CODE_FULL_SIGN_IN_LINK=1` to print the full sign-in link, if the short one shows an error or a script reads values from it\n- Self-hosted runner: Added `--start-dir` / `SELF_HOSTED_RUNNER_START_DIR` to have Claude start its work in a folder of a repository, while settings and hooks load as without it\n- Added a notice in cloud and self-hosted runner sessions when a plugin marketplace can't be fetched because its repository isn't one of the session's\n- Self-hosted runner: Added a notice when Anthropic-managed git refuses a plugin's own repository, naming the plugin and what to do\n- Added `commandPrinted` to `claude plugin install --json` results, true when the plugin's install command wrote to stderr, and `commandFailed` when it exited with an error, was killed or timed out\n- Added `claude_code_self_hosted_runner_order_to_registered_seconds` to the self-hosted runner's `/metrics`: seconds from work order issued to registration accepted, on orchestrator-spawned runners\n- Added `claude_code_self_hosted_runner_order_to_first_session_seconds` to the self-hosted runner's `/metrics`: seconds from work order to first session handed over, on runners started for a session\n- Fixed Claude Code freezing for up to several minutes right after compacting a very long conversation\n- Fixed WebFetch freezing the session for minutes on some pages, and returning an empty result for some others\n- Fixed `ExitWorktree` and the worktree exit dialog deleting a worktree that another running Claude Code session was working in\n- Fixed changes to user settings being lost when several Claude Code processes saved them at the same time\n- Fixed `--continue` and `--resume` opening an empty session or failing when the last saved message had a missing or invalid timestamp\n- Fixed the first prompt after a sleep of two minutes or more waiting three minutes on a connection that had died, on Linux and WSL\n- Fixed turns failing with \"JSON schema is invalid\", and session files growing by many megabytes, when many MCP tools have an input schema that the API refuses\n- Linux: Fixed Bash commands waiting seconds and showing no file diff for the rest of a session in slow repositories with large ignored folders such as `node_modules`\n- Windows: Fixed Bash commands running slower for the rest of a session after Git Bash took 10 to 60 seconds to start, on machines with no custom start-up files\n- Fixed `/rewind` sometimes restoring an older version of a file when two queued prompts, or stacked skills, ran together right after a turn that changed it\n- Fixed text and images added when approving "
+    },
+    "official-7ad44f990f0c": {
+      "id": "official-7ad44f990f0c",
+      "kind": "official",
+      "title": "Combatting adversarial distillation",
+      "url": "https://openai.com/index/combatting-adversarial-distillation",
+      "source": "OpenAI",
+      "published": "2026-11-20T10:00:00.000Z",
+      "metrics": {},
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/5SUtPGdssrttC7LfP1yoJ1/b6b000846ab3576c1735c29534ab20b0/combatting-adversarial-distillation-social.png?w=1600&h=900&fit=fill",
+      "ogTitle": "Combatting adversarial distillation",
+      "ogDescription": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.",
+      "excerpt": "How we’re addressing safety risks of distillation and lessons we’ve learned for strengthening safeguards across the industry. As frontier AI models become more capable, safeguards play an increasingly important role in how they can be used responsibly. Adversarial distillation creates a path for bad actors to reproduce these capabilities without appropriate safeguards. An actor may use a frontier model’s outputs without authorization to train another model with similar capabilities, then deploy it without comparable protections. For instance, an adversary might distill a model’s cyber capabilities and use the resulting model to help carry out cyberattacks that the original model would have refused to assist with or that its safeguards would have blocked. We’re sharing how OpenAI detects and disrupts adversarial distillation, how we’ve strengthened protections for our models’ protected reasoning, and what we’ve learned that can help strengthen defenses across the industry. Our approach to adversarial distillation combines adversarial testing, model training, classifiers, and API-level protections with investigations into coordinated attempts to extract model capabilities. These updated safeguards align more closely with those we use for biology and cybersecurity. We place particular emphasis on preventing attackers from extracting our models’ protected reasoning: the intermediate steps a model generates internally while working toward an answer, known as its chain-of-thought. ",
+      "description": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction."
+    },
+    "official-8145fefb47ff": {
+      "id": "official-8145fefb47ff",
+      "kind": "official",
+      "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
+      "url": "https://openai.com/business/customer-stories/hebbia",
+      "source": "OpenAI",
+      "published": "2026-11-20T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/70gWqYyqb096it9EoD7OqI/5df8cad1c7fdf2a4e942c3183a10f405/hebbia-smoked-depth-social.png?w=1600&h=900&fit=fill",
+      "ogTitle": "Hebbia sees improvements in financial research with GPT-6 Astra",
+      "ogDescription": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.",
+      "excerpt": "Hebbia sees gains in financial research in tests of GPT‑6 Astra. Percentage-point lead over the best alternative tested in Hebbia’s tests. Percent of cited excerpts relevant to the question in Hebbia’s tests. Percent of applicable presentation requirements met in Hebbia’s tests. Percentage-point lead over the best alternative tested on presentation requirements. Before a banker can recommend an acquisition to their client, they need to make sense of financial statements, customer contracts and management presentations. Hebbia’s Matrix helps bring that research together, linking answers to the documents behind them. Hebbia tested OpenAI’s GPT‑6 Astra to improve two parts of that work: finding the sources a question requires and building a presentation that follows the banker’s brief. It could work like this: a banker is helping their client assess a strategic acquisition of an industrial-software company, with roughly 2,000 files to review. What makes its revenue durable? How does it compare with peers? In Hebbia’s hypothetical example, the banker could load the data room into Matrix and examine customer concentration, contract terms and churn in cited cells. Matrix could bring in peer filings and industry news to help develop the deal thesis, then turn that research into a diligence summary and valuation deck in the firm’s template. In that workflow, GPT‑6 Astra selects documents or Matrix cells to support an answer, then turns the analysis into native PowerPoint slides that ",
+      "description": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality."
+    },
+    "official-c1a2af93db54": {
+      "id": "official-c1a2af93db54",
+      "kind": "official",
+      "title": "Can AI help scientists identify promising drug candidates?",
+      "url": "https://openai.com/index/introducing-medchembench",
+      "source": "OpenAI",
+      "published": "2026-11-20T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/37ZvKdwVigsgJ7G3FMr4Nb/12854063a79d19d63278704bf54e3010/introducing-medchembench-social.png?w=1600&h=900&fit=fill",
+      "ogTitle": "Can AI help scientists identify promising drug candidates?",
+      "ogDescription": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.",
+      "excerpt": "Introducing MedChemBench, a benchmark that tests how well AI models read molecular structures, interpret experimental results, and choose which compounds to test next. We’re introducing MedChemBench, a benchmark that evaluates AI models on reasoning tasks drawn from medicinal chemistry research. It tests whether models can connect a molecule’s structure with experimental evidence to explain results, compare compounds, and predict their properties. Building AI that can reliably support this work is one step towards helping scientists develop better medicines. One of the hardest parts of this work is that improving one property of a molecule can make another worse. A compound might act strongly against a disease related protein but be poorly absorbed or break down too quickly in the body. Medicinal chemists work through these tradeoffs by designing, making, and testing related compounds, then deciding what to try next. For AI to help, it needs to connect changes in molecular structure with experimental evidence and reason about what compounds are worth pursuing. MedChemBench measures these abilities through 99 problems drawn from published research. At the xhigh reasoning setting, GPT‑6.2 Astra earned 84.5% of the available credit, compared with 83.3% for GPT‑6 Astra, 82.0% for GPT‑6.1 Sol, and 58.2% for GPT‑5.6 Sol. GPT‑6 Astra was strongest at reconstructing molecular structures and explaining experimental evidence. Selecting compounds and predicting their numerical propertie",
+      "description": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery."
+    },
+    "official-824c03b970f1": {
+      "id": "official-824c03b970f1",
+      "kind": "official",
+      "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+      "url": "https://huggingface.co/blog/inkling2mini",
+      "source": "Hugging Face",
+      "published": "2026-11-20T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://huggingface.co/blog/assets/inkling2mini/thumbnail.png",
+      "ogTitle": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+      "ogDescription": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "excerpt": "Image-Text-to-Text • 26B • Updated about 3 hours ago • 136 • 676",
+      "description": ""
+    },
+    "official-701a571706ec": {
+      "id": "official-701a571706ec",
+      "kind": "official",
+      "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+      "url": "https://huggingface.co/blog/harness-adapters-at-scale",
+      "source": "Hugging Face",
+      "published": "2026-11-20T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://huggingface.co/blog/assets/harness-adapters-at-scale/thumbnail.png",
+      "ogTitle": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+      "ogDescription": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "excerpt": "Image-Text-to-Text • 28B • Updated 14 days ago • 6.45M • 20.8k",
+      "description": ""
+    },
+    "official-1b3aafed7dd5": {
+      "id": "official-1b3aafed7dd5",
+      "kind": "official",
+      "title": "Introducing Tool Retrieval in the Gemini API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+      "source": "Google AI",
+      "published": "2026-11-19T18:00:00.000Z",
+      "metrics": {},
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tool_retrieval_hero.width-1300.png",
+      "ogTitle": "Introducing Tool Retrieval in the Gemini API",
+      "ogDescription": "Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API.",
+      "excerpt": "Tool Retrieval is now in preview in the Gemini Interactions API. Load tool parameter schemas on demand instead of sending your full tool library in every prompt,designed to reduce input tokens and keep tool selection accurate as your agent scales. Research Scientist, Google DeepMind Your browser does not support the audio element. We are launching Tool Retrieval in the Gemini API to help your agents manage large tool libraries more efficiently. By loading parameter schemas only when needed, you reduce latency and input token costs for complex tasks. You can try this feature today in the Interactions API by adding a tool_search tool and setting defer_loading to true in your requests. We are introducing Tool Retrieval to help developers manage large collections of software tools more efficiently. Instead of loading every tool at once, your agent now keeps a library on standby and only pulls in the specific details it needs for a task. This reduces data usage, speeds up performance, and improves accuracy. You can start using this feature today with our latest Gemini models to build more capable and responsive applications. Today we're launching Tool Retrieval in the Gemini API, available in preview in the Interactions API . When an agent connects to dozens or even hundreds of tools, sending every full parameter schema on every request adds up fast. It inflates input token counts, adds latency, and lowers tool-selection accuracy as the candidate list grows. Tool Retrieval lets yo",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tool_retrieval_hero.max-600x600.format-webp.webp\">Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API."
+    },
+    "hn-8e7b1da91569": {
+      "id": "hn-8e7b1da91569",
+      "kind": "hn",
+      "title": "Restricting AI agents in mobile operating systems platforms from capturing data",
+      "url": "https://signal.org/blog/protecting-your-privacy/",
+      "source": "Hacker News",
+      "published": "2026-11-20T09:42:16.000Z",
+      "metrics": {
+        "points": 509,
+        "num_comments": 303
+      },
+      "image": "https://signal.org/blog/images/protecting-your-privacy-opengraph.png",
+      "ogTitle": "Signal is Serious About Protecting Your Privacy",
+      "ogDescription": "Privacy is our mission; it’s why we exist, and we do everything we can to protect it. This means that we are restricting the latest AI agents built into mobile operating systems from potentially capturing and storing your Signal data.",
+      "excerpt": "Meredith Whittaker on 20 Nov 2026 Privacy is our mission; it’s why we exist, and we do everything we can to protect it. This means that we are restricting the latest AI agents built into mobile operating systems from potentially capturing and storing your Signal data. We’ve already had to do this once with Windows. Last year, we used screenshot blocking to prevent Microsoft’s Recall AI from taking and storing screenshots of your Signal messages on Windows 11 operating systems by default. 1 We will now be taking similar measures to restrict agentic systems built into iOS 27 and on Android versions where we can detect an AI assistant attempting to read your Signal screen. 2 The problem is similar to Microsoft Recall on Windows: Google and Apple are integrating agentic capabilities like Gemini Intelligence with Google Gemini and Onscreen Awareness with Siri AI deep into their operating systems. This is a significant move. Google (Android), Apple (iOS/macOS), and Microsoft (Windows) produce the three major consumer operating systems (OS), which comprise the environment that third-party developers – like Signal – build their apps to function and operate within. To put it differently, these three operating systems are the oceans in which Signal, and other applications, must swim; they dictate the conditions of life for the application ecosystem. Right now, these agentic AI integrations are changing this environment in a way that’s making it increasingly hostile to privacy. This is ",
+      "objectID": "50572348",
+      "points": 509,
+      "num_comments": 303,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50572348",
+        "count": 303,
+        "points": 509
+      }
+    },
+    "hn-578fb428dfe4": {
+      "id": "hn-578fb428dfe4",
+      "kind": "hn",
+      "title": "Vibecoding an inference chip",
+      "url": "https://ankitg.me/blog/vibecoding-inference-chip/",
+      "source": "Hacker News",
+      "published": "2026-11-20T18:15:16.000Z",
+      "metrics": {
+        "points": 112,
+        "num_comments": 40
+      },
+      "image": "https://ankitg.me/assets/fpga-board.png",
+      "ogTitle": "Vibecoding an inference chip",
+      "ogDescription": "how coding agents wrote 3M lines of code to implement and optimize LLM inference on an FPGA",
+      "excerpt": "Or rather, I vibe-coded an FPGA into running an LLM. And it… just worked. One of the more entertaining things about programming recently is that coding agents let me work in entirely new domains by giving me access to new programming languages and paradigms. Lately, that has meant hacking on hardware, now that writing low-level software is much easier. So, in this blog post, I’m going to try to recount the experience of vibe coding an FPGA, going through a series of “oh shit” moments several times, and giving myself a new appreciation for what’s possible if you have a large token budget (thanks YC) and interesting problems to point the models at. I overheard some founders recently talk about how FPGAs work. I’ll admit I was relatively naive about them. I’d never really experimented with them in my startup or in college, so I knew little about them before. The basic idea I was familiar with: you can program a circuit into a reprogrammable chip. So rather than having a general purpose computing architecture (like a CPU) you can have a reprogrammable one, i.e. the configuration loaded onto the chip determines how its logic and routing are connected, and that (in theory) enables performance advantages. I also know that it took a mountain of C++ to write and involved manually analyzing waveforms for simulation and verification. I had never done this before though and it seemed cumbersome. That’s about what I knew going into this. Naturally, my ML brain thought “could we use these ",
+      "objectID": "50579297",
+      "points": 112,
+      "num_comments": 40,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50579297",
+        "count": 40,
+        "points": 112
+      }
+    },
+    "japan-940f3485a280": {
+      "id": "japan-940f3485a280",
+      "kind": "japan",
+      "title": "AIで成果を出す企業ほど「人を増やす」？ “通説”を否定する調査結果をIDCが発表",
+      "url": "https://www.itmedia.co.jp/enterprise/articles/2611/21/news003.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-21T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/enterprise/articles/2611/21/cover_news003.jpg",
+      "ogTitle": "AIで成果を出す企業ほど「人を増やす」？ “通説”を否定する調査結果をIDCが発表",
+      "ogDescription": "「AIが普及すれば企業の人員は減る」という通説と食い違う調査結果を、IDCが発表した。AI投資で高いROIを得ている組織ほど、今後の増員を見込む割合が高い。AIで成果を出す企業が人員を増やすのはなぜか。",
+      "excerpt": "「AIが普及すれば企業の人員は減る」という通説と食い違う調査結果を、IDCが発表した。AI投資で高いROIを得ている組織ほど、今後の増員を見込む割合が高い。AIで成果を出す企業が人員を増やすのはなぜか。 この記事は 会員限定 です。会員登録すると全てご覧いただけます。 AIが業務を担うようになれば、企業が必要とする人員は減り、ソフトウェアの利用者数もそれに伴って減る。調査会社のIDCによると、過去1年間、AIとエンタープライズソフトウェアを巡ってはこうした見方が通説になっていた。 IDCは2026年11月17日（現地時間）、この通説と食い違う調査結果を公式ブログで公表した（注1）。IDCは、AI投資で50％以上のROIを得ていると回答した組織を「リーダー」と呼び、AIに最も精通している企業と位置付けている。同社の調査「Worldwide Future of Work Survey」（2026年5月）によると、リーダーの過半数が、今後18カ月で自組織の人員が増えると見込んでいる。 IDCによると、同社がROIの水準で3つに分類した組織は、いずれも一部の人員を削減している。リーダーも例外ではない。ただし、リーダーは削減と並行して増員も見込んでおり、その割合は他の分類を上回る。AIの影響を受けやすい職種でエントリーレベルの採用が鈍る中、AIに精通している企業はどの人員を増やそうとしているのか。 IDCの調査でリーダーが増員を見込んだ対象は、特定の階層に限られていなかった。今後18カ月でエントリーレベル（初級職）の人員が増えると見込む割合は、リーダーが68％だった。ROIがまだプラスになっていない組織（IDCの分類で「ラガード」）は40％、両者の中間に当たる組織（同「アチーバー」）は51％だ。 中間管理職と上級管理職でも傾向は同じだった。AI（エージェンティックAIを含む）が今後18カ月の人員数に与える影響を尋ねた設問で、中間管理職が増えると回答した割合はリーダーが63％、ラガードが39％だった。上級管理職が増えると回答した割合はリーダーが59％、ラガードが36％だ。 IDCによると、エントリーレベルの人員を削減すると回答した割合は、3つの分類の中でリーダーが最も低い。リーダーのうち人員の減少を見込む割合はどの階層でも12％以下で、中間管理職と上級管理職では3％だった。IDCは、人員の削減と増員は二者択一ではなく、新たに生まれた役割や職責に投資を移す動きの表れだと説明している。 IDCによると、同社のレポート「Economic Impact of AI: 2026 Edition」も別の観点から、AIが主に置き換えるのは労働者ではなく仕事だという同様の結論に至っている。レイオフが実際に起きていること、AIの影響を受けやすい職種でエントリーレベルの採用が減っていることはIDCも認めている。その上で同社は、市場をけん引する企業はAIを、対応できる業務量を増やす手段として扱っていると分析する。こうした企業は、人員の必要性が下がるのではなく、取り組むべき仕事が増えると見ているという。 IDCはベンダーとIT部門の意思決定者のそれぞれに向けて、今後の対応を挙げている。IT部門向けは次の3点だ。なお、ここでいう労働力とは常勤の従業員、外部人材、AIエージェントの3種類を指す。 リーダーとラガードの差は、AI活用の体制にも表れている。IDCによると、AI活用を推進する専門組織であるCoE（Center of Excellence）が全面的に稼働していると回答した割合は",
+      "description": "「AIが普及すれば企業の人員は減る」という通説と食い違う調査結果を、IDCが発表した。AI投資で高いROIを得ている組織ほど、今後の増員を見込む割合が高い。AIで成果を出す企業が人員を増やすのはなぜか。"
+    },
+    "japan-490efa8471e6": {
+      "id": "japan-490efa8471e6",
+      "kind": "japan",
+      "title": "「マルチエージェント設計“15のパターン”」「GoogleのSRE教科書、10年ぶり改訂」 AI時代の新たな常識",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/21/news002.html",
+      "source": "＠IT",
+      "published": "2026-11-20T23:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/21/cover_news002.jpg",
+      "ogTitle": "「マルチエージェント設計“15のパターン”」「GoogleのSRE教科書、10年ぶり改訂」 AI時代の新たな常識",
+      "ogDescription": "＠ITで公開された記事の中から、特に注目を集めた10本をランキング形式で紹介します。何が読者の関心を引いたのでしょうか。",
+      "excerpt": "＠ITで公開された記事の中から、特に注目を集めた10本をランキング形式で紹介します。何が読者の関心を引いたのでしょうか。 AIの活用が広がる中、いかに既存システムにAIを組み込み、実用的な仕組みとして構築するかへの関心が高まっています。「マルチエージェントの設計パターン」や「既存REST APIのMCP化」といった、具体的な設計・実装手法を扱う記事がランキング上位に入りました。Googleの「SREの教科書」が10年ぶりに改訂されたことも注目を集めました。一方で、ソフトウェアの脆弱（ぜいじゃく）性や認証の安全性を巡る新たな課題、VMware製品の代替戦略、さらにはエンジニアの働き方まで、現場が直面するリアルな課題も多くの読者に支持されています。 本稿では2026年11月2～8日に＠ITで公開された記事の中から、特に注目を集めた10本を、記事へのアクセスや反響を基にランキング形式で紹介します。 AIエージェントの一般化に伴い、複数のAIエージェントを連携させるマルチエージェントシステムが注目されています。GitHub、Google、Siemensが紹介した15のデザインパターンを、設計上の課題や具体的な活用場面とともに解説します。 Googleは、システムの信頼性を確保するための考え方や実践手法をまとめた書籍『Site Reliability Engineering』の第2版を発表した。初版の出版から10年、システム運用の考え方や手法はどのように変わったのか。 多くの日本企業がAIへの投資を進めている。だが、 テクノロジー導入偏重の考え方では、過去のデータレイクやMDMの失敗を繰り返すだけだと、ガートナーの一志氏は警鐘を鳴らしている。 Rimini Streetは、VMwareを利用する組織の269人を対象にした調査の結果を発表した。約半数の組織が、VMware Cloud Foundation（VCF）へ移行する計画はないと回答。何を検討しているのか。 Hajimariは、正社員とフリーランスのITエンジニアを対象に、働き方の満足度などを調査した。満足度に統計的に意味のある差はなかったが、相手の働き方への転向を考えたことがある割合では有意な差が出た。 既存のREST APIをMCPサーバ化する際、利用者ごとのアクセス制御や、ツールの呼び出し回数に伴うトークン消費が課題となる。オリックスはAWSのサービスを使った検証で、既存APIを改修せずにこれらの課題に対処する方法を探った。 OSやアプリケーションを更新しても、脆弱性が残っているかもしれない。Googleの圧縮ライブラリ「Brotli」に、CVSS 9.2の重大脆弱性が見つかった。Node.jsではコード実行も実証され、攻撃の試みも観測されている。広く使われるライブラリだからこそ、見落とされやすい攻撃経路に注意が必要だ。 「パスキーは安全」。そんな認識に一石を投じる研究結果が公表された。狙われたのは暗号技術そのものではなく、Googleの同期パスキーを支える実装や復旧の仕組みだ。侵害済み端末を前提にした3つの攻撃は、認証の“信頼”をどう揺るがすのか。その手口と対策を解説する。 AIを使えば、長年使われてきたCOBOLのコードを解析することはできる。しかし、そこに記されたデータ項目名が業務上何を意味するのかまで、正しく読み解けるわけではない。レガシーシステムの移行を阻む、長年の運用の中で失われてきた「意味」をどう取り戻せばよいのか。 Earendilは、最小限の機能を備え、拡張性の高く堅牢とするエ",
+      "description": "＠ITで公開された記事の中から、特に注目を集めた10本をランキング形式で紹介します。何が読者の関心を引いたのでしょうか。"
+    },
+    "japan-ff5143b3f2f3": {
+      "id": "japan-ff5143b3f2f3",
+      "kind": "japan",
+      "title": "京大がAI依存チェックリスト公開 「当てはまるものあれば、しばらくAI触らないで」",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/20/2000003378/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-20T10:13:44.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/20/2000003378/10012708/2048",
+      "ogTitle": "京大がAI依存チェックリスト公開 「当てはまるものあれば、しばらくAI触らないで」",
+      "ogDescription": "京都大学の学生相談部門は「AIに悩みを相談する際に気をつけて欲しいこと」と題した文書を公開した。",
+      "excerpt": "京都大学の学生相談部門が「AIに悩みを相談する際に気をつけて欲しいこと」と題した文書を公開している。現行のAIサービスの課題を指摘した上で、学生がAIに悩みを相談する上での注意点を挙げている。 この中では、AI依存になっていないかどうかを確かめるチェックリストも公開。リストの項目に当てはまるものがあった場合は「しばらくAIを触らないで生活してみることをお勧めします」としている。挙げられている項目は以下の通り。 同部門は、AIサービスのハルシネーションやユーザーに迎合的な回答、人間的だと錯覚させる作用などを課題として指摘。「注意して適切に使えば、悩み相談においてとても有用なもの」としつつも、「AIはただお願いさえすれば結果を出してくれる魔法の杖ではありません」と注意を促している。 Copyright &copy; ITmedia, Inc. All Rights Reserved. ITmedia AI＋に関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれません。 国内外の業界動向、AIやクラウドなどの最新技術、キャリア情報など今知りたい情報をまとめてお届けします。 京大がAI依存チェックリスト公開 「当てはまるものあれば、しばらくAI触らないで」 ChatGPT「Plus」プラン一部ユーザーに「dots」解禁 「Business Standard」全ユーザーにも 「オントロジー」とは結局何なのか Palantir、Databricks、Snowflake、NVIDIAで中身が違う理由 さよなら「Claude Code」 人気AIに愛想を尽かしたエンジニアの意外な移行先：906th Lap 農水省の“クソダサ”ポスター話題 「AIよりよっぽど良い」の声も 担当者に狙いを聞いた なぜ中国はヒューマノイドを量産するのか 突き動かす「焦り」と足踏みの正体 伊藤忠が月1.3万時間削減、数千件の「二重業務」解消へ AI推進で経営陣を動かした「定量の匂い」とは？ 日立が「フィジカルAI」で狙う“5年で事業規模2倍”の勝算 3.5万人の新会社トップが語る「戦略の2本柱」とは？ AIモデリングもできる無償3D CAD「SolidCraft」を試してみた！ 「Muse」専用メアド、無料で作成可能に AIが送受信を代理",
+      "description": "京都大学の学生相談部門は「AIに悩みを相談する際に気をつけて欲しいこと」と題した文書を公開した。"
+    },
+    "japan-abd3e3be9be0": {
+      "id": "japan-abd3e3be9be0",
+      "kind": "japan",
+      "title": "AIが脆弱性を探し、ランサムウェア構築を支援 5つのAI悪用手口と対策リスト",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/20/news061.html",
+      "source": "＠IT",
+      "published": "2026-11-20T08:15:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/20/cover_news061.jpg",
+      "ogTitle": "AIが脆弱性を探し、ランサムウェア構築を支援 5つのAI悪用手口と対策リスト",
+      "ogDescription": "ESETは、生成AIがサイバー攻撃に与える影響に関する分析を公開した。AIにより今後2年間でサイバー脅威の頻度と強度が増すと警告。ランサムウェア構築支援やプロンプトインジェクションなど、AIが悪用される5つの主要な手口を解説している。",
+      "excerpt": "ESETは、生成AIがサイバー攻撃に与える影響に関する分析を公開した。AIにより今後2年間でサイバー脅威の頻度と強度が増すと警告。ランサムウェア構築支援やプロンプトインジェクションなど、AIが悪用される5つの主要な手口を解説している。 この記事は会員限定です。 会員登録（無料） すると全てご覧いただけます。 サイバー攻撃が連日のように続いています。そうした中で「うちは大丈夫か」「不正アクセスされているのか」「漏えいしていないのか」などと言われても、セキュリティ対策状況によっては回答が難しいこともあるでしょう。ならば、せめて対策の基礎を見直し、改めて徹底してみてはいかがでしょうか。ここでは、今こそもう一度読みたい「 対策見直しに役立つニュース 」をピックアップ。今すぐできるチェックと対策をご紹介します。 セキュリティベンダーのESETは2025年12月、生成AI（人工知能）がサイバー攻撃に与える影響と新たな脅威環境に関する分析を発表した。AIはネットワーク防御を支援する半面、攻撃者にとっても強力なツールになっているという。 英国の国家サイバーセキュリティセンター（NCSC）は、2027年にかけてのAIの影響に関する報告書の中で、AIがサイバー侵入操作の効率性と実効性をほぼ確実に高め続け、脅威の頻度と強度が増大すると予測している。 ESETは、組織や個人が被害に遭わないために、こうした新たな攻撃ベクトルを理解することを訴えている。 AIは人間の執筆スタイルの模倣だけでなく、インターネットに公開されたシステムの脆弱（ぜいじゃく）性スキャンなどのタスクも自動化する。NCSCは、AI支援による脆弱性調査とエクスプロイト開発（VRED：Vulnerability Research and Exploit Development）への対策が、サイバーセキュリティの重要な進化を生む可能性が高いと警告している。 将来的には、AIがランサムウェア（身代金要求型マルウェア）構築を支援する可能性も指摘されている。 AIモデルを悪用する攻撃手法は、主に2つの経路でサイバー犯罪者に提供されている。 1つ目は、「WormGPT」「FraudGPT」といった、オープンソースのLLM（大規模言語モデル）を基に構築された悪意のあるツールやサービスの利用だ。 2つ目は、「ChatGPT」のような正規のAIサービスを標的とした「Jailbreak as a Service」（脱獄サービス）の利用だ。これはプロンプトインジェクション攻撃を通じて、AIのガードレールを回避し、危険なコンテンツを出力させる手法だ。外部ファイルやWebページに悪意のあるプロンプトを埋め込み、AIに要約させることで「安全ではない」出力を誘発する間接的な攻撃も増加傾向にある。 生成AIの活用により、極めて説得力が高くパーソナライズされたメールの作成が容易になった。侵害されたアカウントや公開情報を基に、メールスレッドに悪意のあるメッセージを挿入する「会話の乗っ取り」も可能になっている。 2025年1～5月の統計では、フィッシングメールの32％は不自然に文章量が多く、LLMの利用が示唆されている。文法の誤りなどの兆候で見抜くことが困難になっているため、防御策の強化が求められる。 スミッシング（SMSを用いたフィッシング）も生成AIによって強化されている。配送業者などを装い、完璧な言語表現でリンクのクリックを促すメッセージを大規模に生成できる。AIはクリック率を向上させるために、メッセージを動的に適応させることも可能だ。",
+      "description": "ESETは、生成AIがサイバー攻撃に与える影響に関する分析を公開した。AIにより今後2年間でサイバー脅威の頻度と強度が増すと警告。ランサムウェア構築支援やプロンプトインジェクションなど、AIが悪用される5つの主要な手口を解説している。"
+    },
+    "japan-2a9c9f823f07": {
+      "id": "japan-2a9c9f823f07",
+      "kind": "japan",
+      "title": "Antigravityを他社AIから操作すると「垢BAN」？ 注意点をGoogle Cloud日本法人に聞いた",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/20/2000003353/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-20T08:04:35.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/20/2000003353/10012635/2048",
+      "ogTitle": "Antigravityを他社AIから操作すると「垢BAN」？ 注意点をGoogle Cloud日本法人に聞いた",
+      "ogDescription": "「Google Antigravity」を他社のAIツールを介して利用すると規約違反でアカウント停止の可能性があるとXなどで話題になっている。Google Cloud日本法人への取材や公開されている規約などを基に状況と対応を整理する。",
+      "excerpt": "【追記履歴：2026年11月20日午後5時00分 法人プランでの利用に関する追加の質問への回答を記載しました。】 「Google Antigravity」（以下、Antigravity）をサードパーティのAIツールを介して利用すると規約違反でアカウント停止の可能性――米Googleが定めたこのような規約が話題だ。一部のユーザーの間ではAntigravityをヘッドレスで起動できる「agy -p」コマンドなどの利用で「Googleアカウント全体が停止されてしまうのでは」という懸念が広がり、有志のXユーザーが状況を整理したポストの表示回数は49万回に達している。 本稿では、公開されている規約とグーグル・クラウド・ジャパンへの取材を基に、ユーザーが注意すべきポイントを整理する。 話題となっている規約「 Google Antigravity 追加利用規約 」の6条では「サードパーティのソフトウェア、ツール、またはサービスを使用して本サービスにアクセスすること（例：OpenClawをAntigravity OAuthとともに使用すること）は、本契約の違反となります」と記載されており、「このような行為は、お客様のAntigravityアカウントおよび／またはGemini CLIアカウントの停止または終了の理由となる場合があります」とされている。Googleはその理由について、Antigravity公式の FAQ で「正規の製品ユーザーのエクスペリエンスを著しく低下させる」ためとしている。 グーグル・クラウド・ジャパンに詳細を確認したところ、この規約は個人ユーザー向けのものであり、FAQに書かれている「正規の製品ユーザー」とは主に法人向けプランユーザーのことだという。個人向けの無料プランまたは比較的安価な「Google AI Pro」プランにおいて、サードパーティツール経由でAntigravityを「不正利用・過剰利用するユーザーが現れると、システム全体のキャパシティが圧迫され、法人向けプランユーザーのエクスペリエンスを著しく低下させる恐れがある」（同社）とのこと。 上記の理由から、グーグル・クラウド・ジャパンは「コンシューマー版Antigravityをご利用の際は、サードパーティのソフトウェア、ツール、またはサービスを使用して本サービスにアクセスすることをお控えください」と注意を促し、法人向けプランを通じてAntigravityを使用する際は別の利用規約が適用されるため、コンシューマー向け規約に基づくアカウント停止措置は発生しないとしている。 では、ユーザーはどのようにAntigravityを利用すれば“安全”なのか。 まず、個人向け「Google AI」プランユーザーは、他社のAIエージェントからAntigravity CLIをヘッドレスで起動するなど、サードパーティツールからAntigravityを利用することを避ける必要がある。規約違反が確認された場合「Antigravityアカウント」の停止につながるとされる一方、XではGoogle DeepMindでAntigravityの開発を担当するヴァルン・モハン氏が日本のユーザーに対して「Googleアカウントに影響することはない」と発言している。 Googleは、Antigravity CLIのヘッドレスモードが「直接のスクリプト実行とCI（継続的インテグレーション）ワークフロー向けに設計されている」とし、サードパーティのコーディングエージェントなどで「Gemini」を利用する際は「Gemini Ente",
+      "description": "「Google Antigravity」を他社のAIツールを介して利用すると規約違反でアカウント停止の可能性があるとXなどで話題になっている。Google Cloud日本法人への取材や公開されている規約などを基に状況と対応を整理する。"
+    },
+    "trending-f6c3adbf52c7": {
+      "id": "trending-f6c3adbf52c7",
+      "kind": "trending",
+      "title": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "source": "GitHub Trending",
+      "published": "2026-11-21T01:51:41.627Z",
+      "metrics": {
+        "stars": 14337,
+        "starsToday": 1622,
+        "language": "Python"
+      },
+      "image": "https://repository-images.githubusercontent.com/1229774092/93703d75-077c-4a14-b580-e2374741fe3d",
+      "ogTitle": "GitHub - elementalsouls/Claude-BugHunter: A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "ogDescription": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise ide...",
+      "excerpt": "A self-contained Claude skill bundle for bug hunting and external red-team work · 83 skills · 15 slash commands · 681 disclosed-report patterns (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by Sachin Sharma — Bug Hunting & GenAI Security Research. claude-bughunter is a drop-in skill bundle for the Claude Code skills system . Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. All triggered automatically by topic — describe what you're testing in plain English and the relevant skill loads. No invocation by name. Option A — install as a Claude Code plugin (recommended). From inside Claude Code: All 83 skills + 15 commands load namespaced under claude-bughunter: and update when you bump the plugin version — no files copied into ~/.claude/ . A HackerOne account is optional. The install asks for a HackerOne API username and token. They only let the HackerOne MCP read your private programs and your own reports; leave both blank if you don't need that. Every skill, command an",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python"
+    },
+    "trending-e9dbf459bd01": {
+      "id": "trending-e9dbf459bd01",
+      "kind": "trending",
+      "title": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "source": "GitHub Trending",
+      "published": "2026-11-21T01:51:41.627Z",
+      "metrics": {
+        "stars": 205309,
+        "starsToday": 1241,
+        "language": "TypeScript"
+      },
+      "image": "https://repository-images.githubusercontent.com/787076358/f9616c09-3701-41ef-b5a6-fdf912ffb15b",
+      "ogTitle": "GitHub - firecrawl/firecrawl: Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "ogDescription": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API. - firecrawl/firecrawl",
+      "excerpt": "Knowledge infrastructure to make your agents smarter. 🔥 You can use Firecrawl three ways. This repo holds the code for Firecrawl Local and the self-hosted server, along with SDKs that work with all three. Pst. Hey, you, join our stargazers :) Firecrawl Local scrapes, crawls and maps from your own machine without a database, queue or container, and it reaches Firecrawl Cloud when your AI agents need search or Alexandria. It installs from crates.io. You need Rust and a C compiler, which on macOS means xcode-select --install and on Debian or Ubuntu means build-essential . If you don't have Rust, Firecrawl Cloud runs the same scrape with nothing to build and no signup. Scrape a page and print its markdown. Crawl a site and save one markdown file per page. Pages that need JavaScript render in the Chrome or Chromium already on your machine, and PDFs and Office documents are parsed locally too. Without a browser, static pages still work and a page that needed one comes back with a warning. init finds Claude Code, Claude Desktop, Cursor, Windsurf, Gemini CLI and Codex on your machine and adds Firecrawl Local to each one as an MCP server. It backs up every config file first, and the MCP server itself needs Node.js 22 or newer. Restart your AI tool afterwards. Its scrape, crawl, map and batch scrape tools run on your machine, and the other Firecrawl tools go to Firecrawl Cloud. serve answers the Firecrawl v2 API on port 3002, so code written for Firecrawl runs against it unchanged and",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "language": "TypeScript"
+    },
+    "trending-ce3bf530c355": {
+      "id": "trending-ce3bf530c355",
+      "kind": "trending",
+      "title": "zhouxiaoka/autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "source": "GitHub Trending",
+      "published": "2026-11-21T01:51:41.627Z",
+      "metrics": {
+        "stars": 12207,
+        "starsToday": 979,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/0bd3541ac6e21cdd9543d289c01c9a4a7715923cc14d0a3b248c9fbc6e377384/zhouxiaoka/autoclip",
+      "ogTitle": "GitHub - zhouxiaoka/autoclip: AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "ogDescription": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing. - zhouxiaoka/autoclip",
+      "excerpt": "开源，在你的电脑上剪辑与渲染。贴一个链接，选好平台，生成 视频、封面和发布文案 ， 适配抖音、小红书、TikTok、Reels、YouTube Shorts、B 站与 YouTube。 软件免费，云端模型按量计费；需要调整时可进入编辑器。 官网 · 下载桌面版 · 案例库 · 研究 · 快速开始 · 文档 · 问题反馈 简体中文 · English · 日本語 · 한국어 · Español · Português · Русский · Français 最新正式版 ，桌面、CLI 与 MCP 同步更新。版本以 autoclip --version 和 MCP get_version 为准。一键出片、字幕分页、人物取景与长视频队列修复见 更新日志 。旧版用户请升级。 点击截图或「播放」直接观看完整成片；下方语言指成片字幕语言。这里精选 6 条，展开可看另外 10 条。 视频、封面与发布文案见 官网案例库 → ，欢迎 投稿你的成片 。原片版权归原作者，仅作效果展示。 选好平台，按平台的画幅与时长要求自动生成。每个平台按评分自动生成至多 10 条合格片段，其余列为备选，点「生成这条」再制作。每条都带封面、标题、简介、话题和 ZIP 发布包。 抖音 / 小红书默认访谈式，TikTok / Reels / Shorts 默认满屏播客式；竖版也可自行选择两种版式。字幕和文案语言仍按平台，B 站 / YouTube 为横版。画面跟随说话人，无人镜头保留完整画面。自动品牌片尾默认开启，可在设置中关闭；复制发布文案不附 AutoClip 署名。 剪辑、取景与渲染在本机完成。分析模型自选，字幕可用作者字幕、本地 Whisper / SenseVoice 或已配置的云端转写。CLI / MCP 与桌面共用同一条一键出片链路。 以下是开发期间三条不同素材的实测，不是同一输入的速度对照。费用按当时 qwen-plus 的文字模型用量估算，不含云端语音识别、AI 生图或投稿服务费用；实际账单以所选服务商为准。 2026-10-01，同一台 Apple Silicon Mac。前两条为新链路、自动生成 10 条；旧链路生成 33 条，素材与输出数量不同。Jensen 使用作者字幕，TIM 使用本地 Whisper base。 已有作者字幕时跳过转写；没有字幕时可选本地或云端转写。追加平台和制作备选会增加处理时间与用量。完整阶段记录与估算口径见 成本与时间 。 剪辑和渲染在你的电脑上完成。使用云端分析会发送相关字幕与文案；画面理解或参考帧生图会发送所需抽样画面，云端转写会发送音频。使用本地分析与本地转写时不需要对应云端 API。成片只有选择投稿后才上传到已连接的平台；匿名统计与错误报告可在设置中关闭。详见 隐私说明 。 Intel Mac 目前没有桌面安装包，与 Linux 一样使用 Docker 或 CLI。安装要求见 安装指南 与 最新 Release 。 打开 Web 界面 ； API 文档 在后端启动后可用。部署细节见 Docker 指南 。 Linux 上若绑定目录出现权限错误，先修正数据目录的归属再启动： 从局域网 IP 或自定义域名打开时，在 .env 的 AUTOCLIP_ALLOWED_ORIGINS 填入前端地址（可逗号分隔）。 需要 Python 3.10+（建议 3.11），FFmpeg 与 FFprobe 在 PATH 中可用；本地 CLI 不需要 Redis。下载 正式 CLI / MCP ZIP ，解压后在该目录执行： 不下载 ZIP 时，可以",
+      "description": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "language": "Python"
+    },
+    "trending-8c6014a36ca9": {
+      "id": "trending-8c6014a36ca9",
+      "kind": "trending",
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "source": "GitHub Trending",
+      "published": "2026-11-21T01:51:41.627Z",
+      "metrics": {
+        "stars": 322860,
+        "starsToday": 890,
+        "language": "Shell"
+      },
+      "image": "https://opengraph.githubassets.com/d6e9e003eb86494b5a546b201f5b1102ad5ef46e0bece232eee89c419a17b6e8/obra/superpowers",
+      "ogTitle": "GitHub - obra/superpowers: An agentic skills framework & software development methodology that works.",
+      "ogDescription": "An agentic skills framework & software development methodology that works. - obra/superpowers",
+      "excerpt": "Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it doesn't just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a subagent-driven-development process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hes",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell"
+    },
+    "trending-11418a0ccfe2": {
+      "id": "trending-11418a0ccfe2",
+      "kind": "trending",
+      "title": "mjmirza/app-store-compliance",
+      "url": "https://github.com/mjmirza/app-store-compliance",
+      "source": "GitHub Trending",
+      "published": "2026-11-21T01:51:41.627Z",
+      "metrics": {
+        "stars": 2775,
+        "starsToday": 869,
+        "language": "Shell"
+      },
+      "image": "https://opengraph.githubassets.com/2de664a69699efc085f05a17db1e665c67b1dbb6a587a564eb0a355f97fe3e68/mjmirza/app-store-compliance",
+      "ogTitle": "GitHub - mjmirza/app-store-compliance: Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "ogDescription": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadl...",
+      "excerpt": "Stop getting your iOS and Android apps rejected. The enterprise reference and automated guard that turns App Store and Google Play rejection into a designed out failure mode. Read it as a website at mjmirza.github.io/app-store-compliance . If this saves you even one rejection, leave a star, fork it, and follow along. That is the whole ask. Star this repo | Fork it | Follow on GitHub | Follow on X | next8n.com Pick one row. The time shown is for that first step. The two commands. Needs git and bash. The first downloads this playbook. The second scans your app. Nothing is installed and nothing in your app is changed. Replace only /path/to/your/app , with the folder that holds your Xcode project or your Android app. Keep the quotes, they keep a folder name with a space in it whole. To get the path without typing it, drag the folder from Finder or your file manager into the terminal window. A small project scans in about a second, a large one can take up to a minute, and the guard prints the time it took. Findings print first, critical ones on top, each with the file and line that triggered it when there is one. The last lines tell you where you stand. A rejection costs a week. You submit, you wait days in review, you get a one line rejection, you guess at the fix, you resubmit, you wait again. This playbook turns that loop into a check you run before you ever submit. If it saves you one rejection, it has paid for the ten minutes it takes to read. This puts the check in front of ",
+      "description": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "language": "Shell"
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "higurashi-ai/Haru-4B",
+      "pipeline_tag": "audio-to-audio",
+      "likes": 5532,
+      "downloads": 7323,
+      "createdAt": "2026-11-12T11:05:59.000Z",
+      "url": "https://huggingface.co/higurashi-ai/Haru-4B"
+    },
+    {
+      "id": "harness-hub/Qwen3.8-27B-pi-adapted",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 864,
+      "downloads": 1874,
+      "createdAt": "2026-11-16T06:52:31.000Z",
+      "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted"
+    },
+    {
+      "id": "thinkingmachines/Inkling-2-Mini",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 676,
+      "downloads": 136,
+      "createdAt": "2026-11-17T00:26:57.000Z",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+    }
+  ],
+  "errors": []
+}

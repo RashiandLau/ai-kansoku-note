@@ -1,0 +1,236 @@
+{
+  "date": "2026-11-22",
+  "generatedAt": "2026-11-22T00:45:37.554Z",
+  "top": "hn-06d2d06f2b70",
+  "selected": [
+    "hn-06d2d06f2b70",
+    "japan-4c3c98b70ba3",
+    "japan-5fd96f55b381",
+    "japan-8f34b6f5a9cd",
+    "japan-773523f9e12d",
+    "japan-940f3485a280",
+    "trending-f6c3adbf52c7",
+    "trending-e9dbf459bd01",
+    "trending-8c6014a36ca9",
+    "trending-5dd922e14c0c",
+    "trending-11418a0ccfe2"
+  ],
+  "items": {
+    "hn-06d2d06f2b70": {
+      "id": "hn-06d2d06f2b70",
+      "kind": "hn",
+      "title": "Pandex – Official European Law for AI Agents, over MCP",
+      "url": "https://www.pandex.io/",
+      "source": "Hacker News",
+      "published": "2026-11-21T20:47:41.000Z",
+      "metrics": {
+        "points": 20,
+        "num_comments": 4
+      },
+      "image": "https://www.pandex.io/opengraph-image?6367cd8c0b666bc6",
+      "ogTitle": "Pandex: Europe's law, in one API.",
+      "ogDescription": "Legislation and highest-court decisions of the EU, seven European countries and the European Court of Human Rights, from the institutions that publish them, in one API and MCP server built for search and AI.",
+      "excerpt": "Legislation and highest-court decisions of the EU and seven European countries, straight from the institutions that publish them, ready for search and AI agents. Works with the AI tools you already use. One API and one MCP server for every jurisdiction we hold. Cour de cassation, chambre sociale, 28 novembre 2018, n° 17-20.079 How long does a German employer have to dismiss without notice? Two weeks from learning of the facts that justify it. Ground every answer in real law, with citations. Connect over MCP or the API. Follow every change to the law across jurisdictions: each article with its past versions and the date each one took effect. One API and one schema across countries, instead of a scraper for every court. National legislation with its past versions and the decisions of the highest courts, institution by institution. We publish what we hold of each one, and what we do not. The decisions the court publishes only through Judilibre since 2020 (not in the DILA dumps) need a registered account there; the dumps run about two months behind. Chamber decisions of 1998 to 2009 are only on the court's site, which refuses clients that are not a browser. Still loading: 2,270 of about 20,321 documents held so far. About 27,700 older decisions have no text at Rechtspraak; the council's own site shows them behind a Cloudflare challenge. About 900 judgments of 1996 to 2009 on the archived parliament.uk pages, which our server cannot reach; earlier ones are not online at an officia",
+      "objectID": "50593481",
+      "points": 20,
+      "num_comments": 4,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50593481",
+        "count": 4,
+        "points": 20
+      }
+    },
+    "japan-4c3c98b70ba3": {
+      "id": "japan-4c3c98b70ba3",
+      "kind": "japan",
+      "title": "Anthropicの数学者、「Claude」と共同で「リーマン予想」を証明したと主張 Leanコミュニティが「正しい」と認定",
+      "url": "https://www.itmedia.co.jp/news/article/2611/22/2000003388/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-21T23:21:31.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/news/article/ogp/2611/22/2000003388/10012748/2048",
+      "ogTitle": "Anthropicの数学者、「Claude」と共同で「リーマン予想」を証明したと主張 Leanコミュニティが「正しい」と認定",
+      "ogDescription": "Anthropicの数学者レベント・アルポーゲ氏は、「Claude」と共同で未解決問題「リーマン予想」の証明を発見したと発表した。証明支援系「Lean」で記述された1700万行の形式証明を公開しており、Leanコミュニティは複数の検証を経て「証明は正しい」と認定する共同声明を出した。",
+      "excerpt": "米Anthropicに所属する数学者のレベント・アルポーゲ氏は11月20日（現地時間）、自身のWebサイトで 声明 を発表した。同社のAI「Claude」と共に、数学の未解決問題「リーマン予想」の証明を見つけたと考えているという。証明は証明支援系「Lean」で記述した形式証明として公開した。Leanの開発者や利用者のコミュニティは21日、この証明が正しいと認定する共同声明を出している。 リーマン予想とは、ドイツの数学者ベルンハルト・リーマンが1859年に提唱した予想だ。一見不規則に並ぶ素数の分布に深い規則性があることにつながるもので、「リーマンゼータ関数」の値がゼロになる点（自明でないゼロ点）がすべて1本の直線上にあると主張する。整数論で最も重要な未解決問題とされ、米クレイ数学研究所が100万ドルの懸賞金をかける「ミレニアム懸賞問題」の1つでもある。ミレニアム懸賞問題の中で、これまでに解決したのはポアンカレ予想だけだ。 アルポーゲ氏は声明で、今回の手法はリーマン予想を大きく拡張した「一般化リーマン予想」も解決すると説明した。Claudeとの作業については「ゴール目前で、Claudeは私をはるかに上回った」と表現している。声明にはClaudeがまとめたという作業の時系列も載っている。それによると、10月6日以降に証明の鍵となるアイデアが次々に見つかり、11月16日に一般化リーマン予想の証明に到達した。 一方、数学者が読んで確認できる形の論文はまだ公開していない。アルポーゲ氏によると、現時点の証明は非常に長いという。形式証明をもとに詳細な文書を生成することはできるが、試しに作ったところ25万ページを超え、読める代物ではなかったと語る。そのためLeanのコードだけを公開し、今後は内容を理解した上で、正式な論文にまとめる考えだ。 Leanは、証明の各ステップが論理的に正しいかをコンピュータで機械的にチェックできる仕組みだ。 米Scientific American によると、米マサチューセッツ工科大学（MIT）の数学者アンドリュー・サザーランド氏ら外部の研究者が、公開されたコードを独自にコンパイルし、エラーなく完了することを確認した。サザーランド氏は「何か怪しい点がある可能性はほぼゼロだ」と述べている。 さらに、Leanと、Leanの数学ライブラリ「Mathlib」のコミュニティは21日、アルポーゲ氏の証明が正しいと認定する 共同声明 を公開した。Leanの開発組織「Lean FRO」などが支持している。 声明によると、証明はLeanで1700万行に及ぶ。数十人がコンパイルを再現したほか、証明した定理が、Mathlibに収録されているリーマン予想の記述と一致することも、2つの独立したツールで確かめた。複数の独立したチェッカーでも証明を検査したという。確認には、英インペリアルカレッジロンドンの数学者ケビン・バザード氏が発表前の11月12日にブログで示した、Leanの証明を評価する4つの基準を使い、すべて満たしたとしている。ただし、証明の新しい考え方を数学者が理解し、説明していく作業はこれからだという。 AIとリーマン予想をめぐっては、Anthropicが8月にも、未公開のClaudeが関連する成果を出したと 発表 していた。ただしこれは、直線上にあるゼロ点の割合の下限を41.6％から67.2％に引き上げたもので、リーマン予想そのものの証明ではなかった。10月には米OpenAIが、社内AIによる数学の成果を 一括公開 した。その中には、リーマン予想を弱めた形",
+      "description": "Anthropicの数学者レベント・アルポーゲ氏は、「Claude」と共同で未解決問題「リーマン予想」の証明を発見したと発表した。証明支援系「Lean」で記述された1700万行の形式証明を公開しており、Leanコミュニティは複数の検証を経て「証明は正しい」と認定する共同声明を出した。"
+    },
+    "japan-5fd96f55b381": {
+      "id": "japan-5fd96f55b381",
+      "kind": "japan",
+      "title": "若手こそ「Linux」を学ぶべきなのはなぜ？ AI時代に「エンジニアとして生き残る方法」",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/22/news001.html",
+      "source": "＠IT",
+      "published": "2026-11-21T23:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/22/cover_news001.jpg",
+      "ogTitle": "若手こそ「Linux」を学ぶべきなのはなぜ？ AI時代に「エンジニアとして生き残る方法」",
+      "ogDescription": "AIの普及によって若手エンジニアの業務や“成長の前提”が変わりつつあります。企業から必要とされるエンジニアになるには、何を学べばよいのでしょうか。3つの調査から、そのヒントを探ります。",
+      "excerpt": "AIの普及によって若手エンジニアの業務や“成長の前提”が変わりつつあります。企業から必要とされるエンジニアになるには、何を学べばよいのでしょうか。3つの調査から、そのヒントを探ります。 この記事は会員限定です。 会員登録（無料） すると全てご覧いただけます。 エンジニアの仕事は、AIの進化によって大きく変わりつつあります。コードの生成やシステム設定の補助、エラーの原因調査など、これまで人が時間をかけて取り組んできた作業をAIに任せられるようになりました。経験の浅いエンジニアもAIを活用することで作業を効率化し、より多様な業務に取り組める可能性があります。 AIは既存業務の効率化に役立つ一方で、エンジニアにとっての成長機会を奪うとの見方があります。AIが生成したコードや設定の仕組みを理解しないまま使用することが常態化すれば、実務を通じて身に付けるべき知識や問題解決力が育ちにくくなります。エラーが発生しても、自力で原因を特定できなければ、システムの安定運用に影響を及ぼしかねません。 これからエンジニアを目指す人や、エンジニアとしてのキャリアを始めたばかりの人は、どのような知識や能力を身に付け、どう行動すればよいのでしょうか。複数の調査を基に、企業から選ばれ、成長し続けるエンジニアになるために必要なことを整理していきましょう。 実は特別なことではなく、ごく基本的な知識や、日々の業務への向き合い方が鍵を握っているようです。 AIの普及は、エンジニアに限らず、企業の採用方針全体に影響を及ぼし始めています。調査会社Gartnerが2025年第4四半期に、世界の企業の最高人事責任者（CHRO）110人を対象に実施した調査では、「自社の少なくとも1人の事業リーダーが、AIによる自動化を理由にエントリーレベルの職種の採用を停止した」との回答が22％ありました。割合としては多くはありませんが、世界ではAIによる業務の自動化を理由に、若手の採用を見直す企業が既に存在するのです。 企業では、これまで新人や若手が担当してきた、複雑度の比較的低い業務を中心に、AIによる自動化や補完が進んでいます。AIの導入後に人間に残る業務は、最も複雑度の低いものであっても、従来の若手向けの業務よりも複雑で、判断力を要するものに変わる可能性があるというのがGartnerの見方です。こうした業務に必要なスキルと、これまでのキャリア初期の人材が持つスキルとの間に、ミスマッチが生じていると同社は指摘します。 比較的簡単な業務から経験を積み、徐々に複雑な業務を任されることで成長する――。これが、これまでの企業における一般的な若手育成のプロセスでした。AIが複雑度の比較的低い業務を担うようになれば、こうした段階的な育成の在り方が通用しにくくなります。 若手の採用を停止することは、企業にとってもリスクを伴います。Gartnerは、若手を採用・育成して人材を確保する流れを断ち切った企業は、将来的に人材面で深刻な課題を抱えるリスクがあると指摘します。若手を自社で育てられなくなれば、必要な人材を経験者の採用によって確保する必要が生じます。経験豊富な人材の採用には、割高な報酬を支払わざるを得なくなる可能性があります。 比較的低リスクの実務を担う機会がなくなると、若手にとってはスキルや人的ネットワーク、自社固有の知見を築く機会も失われます。Gartnerは、AIを活用しながら複雑で判断力を要する役割を若手に担ってもらうなど、早い段階で付加価値の高い業務に貢献できるように、役割を再定義して育成すべきだと企業に提言",
+      "description": "AIの普及によって若手エンジニアの業務や“成長の前提”が変わりつつあります。企業から必要とされるエンジニアになるには、何を学べばよいのでしょうか。3つの調査から、そのヒントを探ります。"
+    },
+    "japan-8f34b6f5a9cd": {
+      "id": "japan-8f34b6f5a9cd",
+      "kind": "japan",
+      "title": "AIに必要なのは知識か、企業独自の判断基準か？ 管理職調査で見えたAI活用の盲点",
+      "url": "https://kn.itmedia.co.jp/kn/article/2611/22/2000003384/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-21T21:00:00.000Z",
+      "metrics": {},
+      "image": "https://kn.itmedia.co.jp/kn/article/ogp/2611/22/2000003384/10012726/2048",
+      "ogTitle": "AIに必要なのは知識か、企業独自の判断基準か？ 管理職調査で見えたAI活用の盲点",
+      "ogDescription": "管理職を対象とした勤務先でのAI活用に関する調査では、半数以上が利用されなくなったAIツールや用途があると回答した。背景には、企業独自の判断基準に関わる課題があるようだ。",
+      "excerpt": "管理職を対象とした勤務先でのAI活用に関する調査では、半数以上が利用されなくなったAIツールや用途があると回答した。背景には、企業独自の判断基準に関わる課題があるようだ。 企業でAIツールの活用を推進していても、期待した精度が得られなかったり、費用対効果を説明できなかったりして、十分に活用されないことがある。実際、従業員300人以上の企業でAIを業務利用する部門の管理職を対象とした調査では、所属部門で導入・利用したAIツールや用途のうち、現在ほとんど使われていないものがあると回答した人は56.5％に上った。利用されなくなった理由としては、「期待した精度が出なかった」と「費用対効果を説明できなかった」が各36.5％で最多だった。 調査は2026年9月1～4日、taiziiiが自社のインターネット調査として実施した。対象は従業員300人以上の企業に勤める課長クラス以上の管理職で、所属部門が業務でAIを利用すると回答した人だ。回答数は200人で、条件に該当した170人を有効回答とした。 所属部門で利用したAIツールや用途について、現在ほとんど使われていないものが「複数ある」と答えた人は73人で42.9％、「1つある」は23人で13.5％だった。両者を合わせると96人、56.5％に達する。一方、「ない」は56人で32.9％、「分からない」は18人で10.6％だった。 利用されなくなった理由を複数回答で尋ねた設問では、「期待した精度が出なかった」と「費用対効果を説明できなかった」が各35人、36.5％で同率首位となった。次いで「使い方が現場に浸透しなかった」が31人、32.3％だった。AIの性能や導入効果に対する評価に加え、現場での利用定着も課題だ。 その他、「自社の事情や判断基準を踏まえた回答にならなかった」と「入力や準備の手間が、もとの業務より重かった」が各27人で28.1％。「情報漏えいや社内規定の懸念があった」は25人で26.0％、「推進していた担当者が異動・退職した」は24人で25.0％、「結局、人の判断が必要な業務だった」は23人で24.0％だった。 こうした課題の背景には、AIツールそのものの性能だけでなく、企業固有の事情や業務上の判断基準をAIが十分に参照できていないことも考えられる。一般的な知識や情報を基に回答できても、自社独自のルールや過去の経験に基づく判断まで反映できなければ、実務での活用にはつながりにくい。 taiziiiは、こうした課題に対し、AIが業務で参照する自社の事情や判断基準を整理するためのサービス「SkillRelay」（スキルリレー）を提供している。ベテラン社員の判断基準を対話から引き出し、検証することで、次世代への継承を支援する判断継承AIプラットフォームだ。AIが人に代わって判断するのではなく、人が適切な判断を行うための基準を参照できる環境づくりを支援する。 Copyright &copy; ITmedia, Inc. All Rights Reserved. キーマンズネットに関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれません。 IT初心者から上級者まで、企業内の情報システムにかかわるキーパーソンを対象に、皆さまの役に立つ情報を無料で提供します さよなら「Claude Code」 人気AIに愛想を尽かしたエンジニアの意外な移行先：906th Lap 岩見沢市、再委託先から固定資産情報など最大1万筆超漏えい ゲーム経由でマルウェア「K2F」感染か 三井住友銀行で顧客情報最大1400万件が漏え",
+      "description": "管理職を対象とした勤務先でのAI活用に関する調査では、半数以上が利用されなくなったAIツールや用途があると回答した。背景には、企業独自の判断基準に関わる課題があるようだ。"
+    },
+    "japan-773523f9e12d": {
+      "id": "japan-773523f9e12d",
+      "kind": "japan",
+      "title": "企業はAIをどう選ぶようになった？ ChatGPT、Copilot、Geminiの勢力図",
+      "url": "https://kn.itmedia.co.jp/kn/article/2611/21/2000003385/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-21T05:22:15.000Z",
+      "metrics": {},
+      "image": "https://kn.itmedia.co.jp/kn/article/ogp/2611/21/2000003385/10012728/2048",
+      "ogTitle": "企業はAIをどう選ぶようになった？ ChatGPT、Copilot、Geminiの勢力図",
+      "ogDescription": "企業が業務で利用するAIサービスの顔ぶれが変わりつつある。従来のように個別のAIサービスを選ぶだけでなく、既存の業務環境に組み込まれたAIを利用する動きも広がっているようだ。",
+      "excerpt": "企業が業務で利用するAIサービスの顔ぶれが変わりつつある。従来のように個別のAIサービスを選ぶだけでなく、既存の業務環境に組み込まれたAIを利用する動きも広がっているようだ。 AI導入に関する新規相談を集計した調査では、2025年に66％だった「ChatGPT」の割合が2026年には28％に低下し、「Microsoft Copilot」と「Gemini」がそれぞれ35％で上回った。AI導入が停滞する理由では「使いこなせる人・推進役がいない」が34％で最多となった。ツールの選択肢が広がる中、導入を推進する人材や組織体制の整備が課題となっている。 生成AIの導入コンサルティングサービスなどを提供する、東京大学発のAIベンチャー企業AIworkerは、2025年5月～2026年11月上旬にかけて同社が受けたAI導入に関する新規相談のうち、録画と文字起こしの記録が残っている会議を調査した。各会議の冒頭15分を「Claude」で分類し、その結果をプログラムで集計した。なお、分類できなかった相談は、該当する項目の集計対象から除外とした。集計結果は同社に寄せられた相談に基づくもので、日本企業全体の傾向を示すものではない。 社内で利用しているAIサービスの名称が挙がった相談では、2025年はChatGPTが66％で最多だった。Geminiは20％、CopilotとClaudeは各13％だった。一方、2026年はCopilotとGeminiが各35％となり、ChatGPTの28％を上回った。Claudeも27％に増加しており、企業のAI選定に変化が見られる。 AIworkerは、この背景として、契約中の業務ソフトに付属するAIを全社に配布する企業が増えた可能性を指摘する。単独のAIサービスを新たに導入するだけでなく、既存の業務環境に組み込まれたAIを活用する動きが広がっているとみられる。 一方、AIツールの選択肢が広がる中、導入を推進する人材の確保が課題となっている。AI導入が停滞する理由では、「使いこなせる人・推進役がいない」が34％で最多だった。次いで「社内の理解・手続き」が30％、「予算・費用の根拠」が29％、「セキュリティ・情報漏えい」が24％、「効果や精度が読めない」が17％、「データ・社内システムの準備」が8％となった。いずれも複数回答で、導入の停滞理由について言及があった相談を対象としている。 実際の活用段階にも変化が見られる。「一部の人が個人で使う」は2025年の71％から2026年には57％に低下した。一方、「全社で導入したが活用が進まない」は9％から19％、「まだ使っていない」は11％から21％に増加した。「活用が進んでいる」は9％から4％に減少している。AIの利用範囲が広がる一方、組織全体で活用を進める難しさもうかがえる。 AI活用を進める人材の育成については、部署によって関心に違いが見られた。社内でAIを作れる人材を育てる内製化への関心は、DX推進・情報システム部門の相談で41％だったのに対し、経営者・役員の相談では13％にとどまった。ただし、同社は部署別の集計対象が少ないため、あくまで傾向として捉えるよう求めている。 こうした状況を踏まえ、AIworkerは全社導入後の活用を進める方法として、部署ごとに推進役を決め、AIを適用する業務を選定することを挙げている。 同社が公開した全14ページのレポートには、架空の管理部業務をAIで採点する実例も掲載した。業務の頻度や所要時間、手順、失敗した場合の影響を基準に分析し、63秒で採点表と試行候補と",
+      "description": "企業が業務で利用するAIサービスの顔ぶれが変わりつつある。従来のように個別のAIサービスを選ぶだけでなく、既存の業務環境に組み込まれたAIを利用する動きも広がっているようだ。"
+    },
+    "japan-940f3485a280": {
+      "id": "japan-940f3485a280",
+      "kind": "japan",
+      "title": "AIで成果を出す企業ほど「人を増やす」？ “通説”を否定する調査結果をIDCが発表",
+      "url": "https://www.itmedia.co.jp/enterprise/articles/2611/21/news003.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-21T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/enterprise/articles/2611/21/cover_news003.jpg",
+      "ogTitle": "AIで成果を出す企業ほど「人を増やす」？ “通説”を否定する調査結果をIDCが発表",
+      "ogDescription": "「AIが普及すれば企業の人員は減る」という通説と食い違う調査結果を、IDCが発表した。AI投資で高いROIを得ている組織ほど、今後の増員を見込む割合が高い。AIで成果を出す企業が人員を増やすのはなぜか。",
+      "excerpt": "「AIが普及すれば企業の人員は減る」という通説と食い違う調査結果を、IDCが発表した。AI投資で高いROIを得ている組織ほど、今後の増員を見込む割合が高い。AIで成果を出す企業が人員を増やすのはなぜか。 この記事は 会員限定 です。会員登録すると全てご覧いただけます。 AIが業務を担うようになれば、企業が必要とする人員は減り、ソフトウェアの利用者数もそれに伴って減る。調査会社のIDCによると、過去1年間、AIとエンタープライズソフトウェアを巡ってはこうした見方が通説になっていた。 IDCは2026年11月17日（現地時間）、この通説と食い違う調査結果を公式ブログで公表した（注1）。IDCは、AI投資で50％以上のROIを得ていると回答した組織を「リーダー」と呼び、AIに最も精通している企業と位置付けている。同社の調査「Worldwide Future of Work Survey」（2026年5月）によると、リーダーの過半数が、今後18カ月で自組織の人員が増えると見込んでいる。 IDCによると、同社がROIの水準で3つに分類した組織は、いずれも一部の人員を削減している。リーダーも例外ではない。ただし、リーダーは削減と並行して増員も見込んでおり、その割合は他の分類を上回る。AIの影響を受けやすい職種でエントリーレベルの採用が鈍る中、AIに精通している企業はどの人員を増やそうとしているのか。 IDCの調査でリーダーが増員を見込んだ対象は、特定の階層に限られていなかった。今後18カ月でエントリーレベル（初級職）の人員が増えると見込む割合は、リーダーが68％だった。ROIがまだプラスになっていない組織（IDCの分類で「ラガード」）は40％、両者の中間に当たる組織（同「アチーバー」）は51％だ。 中間管理職と上級管理職でも傾向は同じだった。AI（エージェンティックAIを含む）が今後18カ月の人員数に与える影響を尋ねた設問で、中間管理職が増えると回答した割合はリーダーが63％、ラガードが39％だった。上級管理職が増えると回答した割合はリーダーが59％、ラガードが36％だ。 IDCによると、エントリーレベルの人員を削減すると回答した割合は、3つの分類の中でリーダーが最も低い。リーダーのうち人員の減少を見込む割合はどの階層でも12％以下で、中間管理職と上級管理職では3％だった。IDCは、人員の削減と増員は二者択一ではなく、新たに生まれた役割や職責に投資を移す動きの表れだと説明している。 IDCによると、同社のレポート「Economic Impact of AI: 2026 Edition」も別の観点から、AIが主に置き換えるのは労働者ではなく仕事だという同様の結論に至っている。レイオフが実際に起きていること、AIの影響を受けやすい職種でエントリーレベルの採用が減っていることはIDCも認めている。その上で同社は、市場をけん引する企業はAIを、対応できる業務量を増やす手段として扱っていると分析する。こうした企業は、人員の必要性が下がるのではなく、取り組むべき仕事が増えると見ているという。 IDCはベンダーとIT部門の意思決定者のそれぞれに向けて、今後の対応を挙げている。IT部門向けは次の3点だ。なお、ここでいう労働力とは常勤の従業員、外部人材、AIエージェントの3種類を指す。 リーダーとラガードの差は、AI活用の体制にも表れている。IDCによると、AI活用を推進する専門組織であるCoE（Center of Excellence）が全面的に稼働していると回答した割合は",
+      "description": "「AIが普及すれば企業の人員は減る」という通説と食い違う調査結果を、IDCが発表した。AI投資で高いROIを得ている組織ほど、今後の増員を見込む割合が高い。AIで成果を出す企業が人員を増やすのはなぜか。"
+    },
+    "trending-f6c3adbf52c7": {
+      "id": "trending-f6c3adbf52c7",
+      "kind": "trending",
+      "title": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "source": "GitHub Trending",
+      "published": "2026-11-22T00:45:37.554Z",
+      "metrics": {
+        "stars": 16064,
+        "starsToday": 1803,
+        "language": "Python"
+      },
+      "image": "https://repository-images.githubusercontent.com/1229774092/93703d75-077c-4a14-b580-e2374741fe3d",
+      "ogTitle": "GitHub - elementalsouls/Claude-BugHunter: A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "ogDescription": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise ide...",
+      "excerpt": "A self-contained Claude skill bundle for bug hunting and external red-team work · 83 skills · 15 slash commands · 681 disclosed-report patterns (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by Sachin Sharma — Bug Hunting & GenAI Security Research. claude-bughunter is a drop-in skill bundle for the Claude Code skills system . Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. All triggered automatically by topic — describe what you're testing in plain English and the relevant skill loads. No invocation by name. Option A — install as a Claude Code plugin (recommended). From inside Claude Code: All 83 skills + 15 commands load namespaced under claude-bughunter: and update when you bump the plugin version — no files copied into ~/.claude/ . A HackerOne account is optional. The install asks for a HackerOne API username and token. They only let the HackerOne MCP read your private programs and your own reports; leave both blank if you don't need that. Every skill, command an",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python"
+    },
+    "trending-e9dbf459bd01": {
+      "id": "trending-e9dbf459bd01",
+      "kind": "trending",
+      "title": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "source": "GitHub Trending",
+      "published": "2026-11-22T00:45:37.554Z",
+      "metrics": {
+        "stars": 206201,
+        "starsToday": 1006,
+        "language": "TypeScript"
+      },
+      "image": "https://repository-images.githubusercontent.com/787076358/f9616c09-3701-41ef-b5a6-fdf912ffb15b",
+      "ogTitle": "GitHub - firecrawl/firecrawl: Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "ogDescription": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API. - firecrawl/firecrawl",
+      "excerpt": "Knowledge infrastructure to make your agents smarter. 🔥 You can use Firecrawl three ways. This repo holds the code for Firecrawl Local and the self-hosted server, along with SDKs that work with all three. Pst. Hey, you, join our stargazers :) Firecrawl Local scrapes, crawls and maps from your own machine without a database, queue or container, and it reaches Firecrawl Cloud when your AI agents need search or Alexandria. It installs from crates.io. You need Rust and a C compiler, which on macOS means xcode-select --install and on Debian or Ubuntu means build-essential . If you don't have Rust, Firecrawl Cloud runs the same scrape with nothing to build and no signup. Scrape a page and print its markdown. Crawl a site and save one markdown file per page. Pages that need JavaScript render in the Chrome or Chromium already on your machine, and PDFs and Office documents are parsed locally too. Without a browser, static pages still work and a page that needed one comes back with a warning. init finds Claude Code, Claude Desktop, Cursor, Windsurf, Gemini CLI and Codex on your machine and adds Firecrawl Local to each one as an MCP server. It backs up every config file first, and the MCP server itself needs Node.js 22 or newer. Restart your AI tool afterwards. Its scrape, crawl, map and batch scrape tools run on your machine, and the other Firecrawl tools go to Firecrawl Cloud. serve answers the Firecrawl v2 API on port 3002, so code written for Firecrawl runs against it unchanged and",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "language": "TypeScript"
+    },
+    "trending-8c6014a36ca9": {
+      "id": "trending-8c6014a36ca9",
+      "kind": "trending",
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "source": "GitHub Trending",
+      "published": "2026-11-22T00:45:37.554Z",
+      "metrics": {
+        "stars": 323728,
+        "starsToday": 883,
+        "language": "Shell"
+      },
+      "image": "https://opengraph.githubassets.com/8ee54470219af88812ed9716016baf1fdd3624bef0f8d73c55024334403d224a/obra/superpowers",
+      "ogTitle": "GitHub - obra/superpowers: An agentic skills framework & software development methodology that works.",
+      "ogDescription": "An agentic skills framework & software development methodology that works. - obra/superpowers",
+      "excerpt": "Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it doesn't just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a subagent-driven-development process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hes",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell"
+    },
+    "trending-5dd922e14c0c": {
+      "id": "trending-5dd922e14c0c",
+      "kind": "trending",
+      "title": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "source": "GitHub Trending",
+      "published": "2026-11-22T00:45:37.554Z",
+      "metrics": {
+        "stars": 62074,
+        "starsToday": 769,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/ee3b89f628b2128f975bb1b114785317e2addebac43aa28ad87c3c095c87d9b7/HKUDS/CLI-Anything",
+      "ogTitle": "GitHub - HKUDS/CLI-Anything: \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "ogDescription": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/ - HKUDS/CLI-Anything",
+      "excerpt": "Today's Software Serves Humans👨‍💻. Tomorrow's Users will be Agents🤖. CLI-Anything: Bridging the Gap Between AI Agents and the World's Software 🌐 CLI-Hub : pip install cli-anything-hub then cli-hub install <name> — browse, install, and manage all community-built CLIs. Want to add your own? Open a PR — the hub updates instantly. 🎬 See Demos : Watch AI agents use generated CLIs plus preview, live preview, and trajectory loops to produce real artifacts — CAD builds, 3D scenes, diagrams, gameplay, subtitles, and more. 🙋 [Become a Contributor, or Request a CLI] : Join us ! Sign up to build a new CLI harness — once reviewed and merged, you'll gain access as one of our community contributors! Wish CLI-Anything supported a specific software or service? Submit a wishlist request ! One Command Line : Make any software agent-ready for Pi, OpenClaw, nanobot, Cursor, Claude Code, etc. 中文文档 | 日本語ドキュメント | Deutsch Thanks to all invaluable efforts from the community! More updates continuously on the way everyday.. 2026-05-30 🧭 Hermes skill proposed (#320), adding a CLI-Anything orchestration skill with installer scripts and HARNESS fallback guidance. 🗺️ ArcGIS Pro was proposed for the public registry (#318) as a Windows/ArcPy CLI for cartography, geoprocessing, feature editing, and live-Pro MCP workflows. 2026-05-27 🔧 CLI-Hub registry date updates now handle python -m pip install commands (#312), improving package-date detection for registry automation. 2026-05-23 📝 Obsidian Agent CL",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python"
+    },
+    "trending-11418a0ccfe2": {
+      "id": "trending-11418a0ccfe2",
+      "kind": "trending",
+      "title": "mjmirza/app-store-compliance",
+      "url": "https://github.com/mjmirza/app-store-compliance",
+      "source": "GitHub Trending",
+      "published": "2026-11-22T00:45:37.554Z",
+      "metrics": {
+        "stars": 3400,
+        "starsToday": 720,
+        "language": "Shell"
+      },
+      "image": "https://opengraph.githubassets.com/5031c57407baeabdf8da595c718f3fac6d78446722bea8c3c73192d89a67743f/mjmirza/app-store-compliance",
+      "ogTitle": "GitHub - mjmirza/app-store-compliance: Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "ogDescription": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadl...",
+      "excerpt": "Catch App Store and Google Play rejection causes before the reviewer does. A reference and a pre-submission guard for iOS and Android apps that is plain about what a scan can prove and what still needs a person. It does not guarantee approval. Read it as a website at mjmirza.github.io/app-store-compliance . If this saves you even one rejection, leave a star, fork it, and follow along. That is the whole ask. Star this repo | Fork it | Follow on GitHub | Follow on X | next8n.com Pick one row. The time shown is for that first step. The two commands. Needs git and bash. The first downloads this playbook. The second scans your app. Nothing is installed and nothing in your app is changed. Replace only /path/to/your/app , with the folder that holds your Xcode project or your Android app. Keep the quotes, they keep a folder name with a space in it whole. To get the path without typing it, drag the folder from Finder or your file manager into the terminal window. A small project scans in about a second, a large one can take up to a minute, and the guard prints the time it took. Findings print first, critical ones on top, each with the file and line that triggered it when there is one. The last lines tell you where you stand. A rejection costs a week. You submit, you wait days in review, you get a one line rejection, you guess at the fix, you resubmit, you wait again. This playbook turns that loop into a check you run before you ever submit. If it saves you one rejection, it has paid f",
+      "description": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "language": "Shell"
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "thinkingmachines/Inkling-2-Mini",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 2832,
+      "downloads": 7944,
+      "createdAt": "2026-11-17T00:26:57.000Z",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+    },
+    {
+      "id": "unsloth/Inkling-2-Mini-GGUF",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 612,
+      "downloads": 238152,
+      "createdAt": "2026-11-20T13:09:48.000Z",
+      "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF"
+    },
+    {
+      "id": "tencent/Hy4-flash",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 542,
+      "downloads": 5588,
+      "createdAt": "2026-11-17T03:44:46.000Z",
+      "url": "https://huggingface.co/tencent/Hy4-flash"
+    }
+  ],
+  "errors": []
+}

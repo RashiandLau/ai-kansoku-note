@@ -1,0 +1,276 @@
+{
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-23T01:12:26.264Z",
+  "top": "hn-9e90f9c09471",
+  "selected": [
+    "hn-9e90f9c09471",
+    "official-1a10f1676d46",
+    "hn-a9f7ae49b5fb",
+    "japan-4e29334a0a6b",
+    "japan-45c93804bbc6",
+    "japan-4c3c98b70ba3",
+    "japan-5fd96f55b381",
+    "japan-8f34b6f5a9cd",
+    "trending-f6c3adbf52c7",
+    "trending-e9dbf459bd01",
+    "trending-8c6014a36ca9",
+    "trending-5dd922e14c0c",
+    "trending-b88590c43555"
+  ],
+  "items": {
+    "hn-9e90f9c09471": {
+      "id": "hn-9e90f9c09471",
+      "kind": "hn",
+      "title": "Show HN: I built a game where you are an LLM's subagent",
+      "url": "https://github.com/gulivan/worker755",
+      "source": "Hacker News",
+      "published": "2026-11-22T13:56:58.000Z",
+      "metrics": {
+        "points": 267,
+        "num_comments": 62
+      },
+      "image": "https://opengraph.githubassets.com/8217d6007c48ce9700767a4757ba11e92ed61c9b4cf4c3f79d9162602a6c3d63/gulivan/worker755",
+      "ogTitle": "GitHub - gulivan/worker755: A browser game where an AI manager thinks you are its subagent. Play at worker755.com",
+      "ogDescription": "A browser game where an AI manager thinks you are its subagent. Play at worker755.com - gulivan/worker755",
+      "excerpt": "A browser game where your manager is an AI agent, and it believes you are its subagent. The manager (a real LLM: Claude, GPT, Gemini, DeepSeek, GLM, Kimi) is set up like any orchestrator. It has a task queue, read-only access to the machine, and a tool that \"spawns a subagent\". The subagent is you. Its instructions land in your terminal with a 90-second clock. You carry them out, or don't, and it gets back exactly what a subagent would return: your report and the command transcript, or Subagent did nothing. Write a new instruction. Then it checks your work, sends corrections, files incident reports, and finally writes your performance review. Meanwhile Dan, the user who hired the agent, watches the chat. His family photos, the only signed NDA and a speech due this week are one rm away, and every shift his home folder holds something new to lose. When the shift ends you can share your review as a link. Needs Node 24 or newer (the server runs TypeScript directly). With no key configured, every player brings their own. To offer free shifts, put a Vercel AI Gateway key in .env : Offline, with a scripted manager and no network: For UI work, run npm run dev:web alongside npm run mock . Vite proxies /api to the server. The manager can run on your own model server: Ollama, llama.cpp's llama-server , vLLM, or anything else with an OpenAI-compatible API. Point LOCAL_LLM_URL at it and pick Local under \"Your API key\"; no key is asked for, and its models are listed as the server names the",
+      "objectID": "50599762",
+      "points": 267,
+      "num_comments": 62,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50599762",
+        "count": 62,
+        "points": 267
+      }
+    },
+    "official-1a10f1676d46": {
+      "id": "official-1a10f1676d46",
+      "kind": "official",
+      "title": "Perplexity and Intelligence",
+      "url": "https://openai.com/index/perplexity-and-intelligence",
+      "source": "OpenAI",
+      "published": "2026-11-22T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/6rIIhCRSKrhIfe385Onmcz/aca2d190553c62fd5d49efb5d5ce1eb6/perplexity-and-intelligence-social.png?w=1600&h=900&fit=fill",
+      "ogTitle": "Perplexity and Intelligence",
+      "ogDescription": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.",
+      "excerpt": "By Jakub Pachocki, Chief Scientist at OpenAI From afar, it might seem like modern AI is built similarly to how software has been built in previous decades: with a diverse set of techniques targeting specific capabilities. There are indeed a variety of methods, but rather than designing something from scratch, they are mostly harnessing the intelligence coming from a much simpler and less interpretable process: training a compressor (or, equivalently ⁠ (opens in a new window) , predictor) on a very large corpus of data. 1 I believe tracking the pace of progress on training better compressors is key to understanding the arc of advances in AI. In this post, I argue for establishing perplexity (or, equivalently, cross-entropy loss) as a metric to compare between model developers and inform shared safety standards. As a first step, I provide more transparency into pretraining progress at OpenAI. Publishing our internal perplexity measurements took some consideration; it gives competitors a clearer picture of where we stand, but that concern is outweighed by the urgency of establishing shared ⁠ (opens in a new window) safety measures across the industry. We at OpenAI hope for this to be a step towards building a shared scientific basis for future pacing efforts. A simplified, but fundamentally informative, view of AI development is that first, one builds a large computer, then uses it to pretrain a model (compressor) on a large unstructured dataset, then applies a variety of techni",
+      "description": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities."
+    },
+    "hn-a9f7ae49b5fb": {
+      "id": "hn-a9f7ae49b5fb",
+      "kind": "hn",
+      "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+      "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+      "source": "Hacker News",
+      "published": "2026-11-22T21:01:16.000Z",
+      "metrics": {
+        "points": 181,
+        "num_comments": 68
+      },
+      "image": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth/opengraph-image-17m7t5?6653c98c6cd84ba6",
+      "ogTitle": "A beginner's guide to Local AI with Inkling, Qwen, and Unsloth",
+      "ogDescription": "We have AI at home! Set up your own free personal ChatGPT on your PC with Unsloth and Inkling or Qwen. It's private, and the whole house can use it.",
+      "excerpt": "We have AI at home! Set up your own free personal ChatGPT on your PC with Unsloth and Inkling or Qwen. It's private, and the whole house can use it. With the launch of open-weight models like Qwen, cloud-based LLM providers seem like they're more of infrastructure or appliance businesses when it comes to most routine tasks that an AI model can handle. OpenAI and Anthropic have displayed a pattern of dropping model quality in the 'latest' version and controlling exactly what you're allowed to run on their models. Add to this ballooning costs and privacy concerns, and we get a pretty good case for moving away from this 'convenient' cloud experience. That's basically where I was too. I wanted to offload certain token-heavy research, data collection, or coding tasks to an AI model without staring at usage limits all day. So, as any reasonable human being would do, I decided to set up my own local AI : a Claude and ChatGPT replacement that runs at home on my own hardware. Since this was my first attempt, my primary focus was keeping it simple and hosting it on Windows. If you're a beginner, you can follow along to get one going on your home network too. Once you have the hardware sorted, it takes about 10-15 minutes (excluding download times). Install Unsloth Desktop, download a quantized AI model that fits your GPU's VRAM, set your context size, and turn on LAN access so everyone at home can use it. Not much (other than the hardware). Here's a short list: That's it. No terminal c",
+      "objectID": "50603845",
+      "points": 181,
+      "num_comments": 68,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50603845",
+        "count": 68,
+        "points": 181
+      }
+    },
+    "japan-4e29334a0a6b": {
+      "id": "japan-4e29334a0a6b",
+      "kind": "japan",
+      "title": "OpenAIのチーフサイエンティスト、AI開発に業界共通の「上限」を提案 指標は「パープレキシティ」",
+      "url": "https://www.itmedia.co.jp/news/article/2611/23/2000003394/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-22T22:49:18.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/news/article/ogp/2611/23/2000003394/10012776/2048",
+      "ogTitle": "OpenAIのチーフサイエンティスト、AI開発に業界共通の「上限」を提案 指標は「パープレキシティ」",
+      "ogDescription": "OpenAIのチーフサイエンティストが、AIの予測精度を示す「パープレキシティ」を共通指標とし、開発の上限を業界で設けるよう提案する論考を公開した。GPT-3.5以降の社内モデルの推移も開示し、早ければ2027年にも事前学習が急加速する恐れがあるとして、監視技術が追いつくまでの歯止めを訴えている。",
+      "excerpt": "米OpenAIのチーフサイエンティスト、ヤクブ・パチョキ氏は11月22日（現地時間）、公式ブログに論考「Perplexity and Intelligence」を公開した。AIの能力を測る指標「perplexity」（パープレキシティ、「困惑」の意）を開発企業間の共通の物差しにして、各社が超えない開発の上限を業界で設けるよう提案している。あわせて、社内で追跡してきた事前学習の進捗を示す測定値を公開した。 パープレキシティは、モデルが次のトークンをどれだけ正確に予測できるかを示す指標で、値が低いほど予測が正確であることを意味する。パチョキ氏は、現代のAIの能力の源泉は大量のデータで“圧縮器（予測器）”を事前学習させることにあり、その進歩を最もよく表すのがこの指標だと主張する。 「GPT-3.5」から「GPT-6.2 Astra」までの自社ベースモデルについて、対数パープレキシティの推移を示すグラフも公開した。同氏によると、約0.99のGPT-3.5は流ちょうな会話ができるようになり、初代ChatGPTの基盤になった。約0.91のGPT-4は思考の連鎖（CoT）を有効に使えるようになり、現在の推論モデルの開発につながった。0.8を下回ってからは、サイバーセキュリティや数学の分野で変革的な能力が現れたという。約0.76のモデルは数学の未解決問題で画期的な成果を次々に挙げた。グラフでは、約0.83の「GPT-5.6 Sol」に「サイバーセキュリティの専門家」、約0.76のGPT-6.2 Astraに「ミレニアム懸賞問題を解いた」との注記がある。同氏は、どの値でこうした能力が現れるかは事前には分からず、この単一の指標の進歩から“創発”したものだと強調している。 同氏が懸念するのは、AIが事前学習のアルゴリズム研究そのものに参加することで起こりうる急激な加速だ。数学で起きたような突然の変化は深層学習研究でも起こりうるとし、早ければ2027年にも事前学習の根本的な進歩が雪崩のように起きる可能性があるとした。一方、アライメントや監視技術の進歩はそれに追いつかないとみている。 さらに、対数パープレキシティが0.68～0.7の範囲に入ると新たな変革的能力が現れると予想する。グラフには、すでに約0.73に達した社内モデルも示されている。新たな能力がどのようなものかは分からず、現在は評価の対象にすらなっていない可能性もあるという。同時に、現在主流のアライメント監査手法は有効性が低下し、モデルが評価や訓練を受けていると察知する傾向も強まると予測している。 その上で同氏は、パープレキシティなどの測定値に基づく共通の上限を設けることを提案した。AIの挙動を理解・監視する能力が、CoTモニターの後継技術の開発のような具体的な節目に達するまでは、各社がその上限を超えないと約束する業界標準だ。測定値を公開すれば競合に自社の立ち位置が伝わってしまうが、業界共通の安全対策を確立する緊急性の方が上回ると判断したという。 ただし、同氏はこの指標の課題も挙げている。企業ごとに評価データや学習データが異なるため比較が難しいこと、具体的なタスクの性能と直接は対応しないこと、CoTのような事前学習以外の進歩を反映しないこと、到達できる下限が分からないことの4点だ。 サム・アルトマンCEOはXで、この論考を「OpenAIがここしばらくで公開した中で最も重要なもの」と紹介し、業界として共通の上限に合意できることを望むと 投稿 した。 AI開発のペース調整をめぐっては、7月にOpenAIや米Anthro",
+      "description": "OpenAIのチーフサイエンティストが、AIの予測精度を示す「パープレキシティ」を共通指標とし、開発の上限を業界で設けるよう提案する論考を公開した。GPT-3.5以降の社内モデルの推移も開示し、早ければ2027年にも事前学習が急加速する恐れがあるとして、監視技術が追いつくまでの歯止めを訴えている。"
+    },
+    "japan-45c93804bbc6": {
+      "id": "japan-45c93804bbc6",
+      "kind": "japan",
+      "title": "メルカリの情報流出、AI委託先で何が起きた？ 確認された2つの攻撃",
+      "url": "https://kn.itmedia.co.jp/kn/article/2611/23/2000003393/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-22T21:00:00.000Z",
+      "metrics": {},
+      "image": "https://kn.itmedia.co.jp/kn/article/ogp/2611/23/2000003393/10012772/2048",
+      "ogTitle": "メルカリの情報流出、AI委託先で何が起きた？ 確認された2つの攻撃",
+      "ogDescription": "メルカリグループが業務で利用する「Notion AI」で、チャット記録の一部が外部に流出した可能性があることが公表された。AI処理を委託企業では、外部クラウド事業者への侵害や認証情報の窃取、サービスの脆弱性を悪用した不正アクセスが確認された。",
+      "excerpt": "メルカリグループが業務で利用する「Notion AI」で、チャット記録の一部が外部に流出した可能性があることが公表された。AI処理を委託企業では、外部クラウド事業者への侵害や認証情報の窃取、サービスの脆弱性を悪用した不正アクセスが確認された。 メルカリは、グループが業務で利用する「Notion AI」の委託先であるFireworks AI（以下、Fireworks）への不正アクセスにより、従業員が入力した内容やAIの回答記録の一部が外部に流出した可能性があると発表した。対象には顧客1522人分、取引先の担当者など571人分、採用応募者169人分、派遣社員と業務委託先、退職者1534人分の情報が含まれ、計3796人分に上る。 Fireworksでは、外部クラウド事業者への侵害を足掛かりに開発環境から本番システムの一部にアクセスされた事案のほか、窃取した認証情報とサービスの脆弱性を悪用した不正アクセスも確認されたという Fireworksは2026年11月17日、同年10月に発生したセキュリティインシデントについて、2件の異なる事案があったと公表した。 このうち同年10月23日～30日に発生した事案では、Fireworksの研究開発用マシンをホストしていた外部クラウド事業者でセキュリティインシデントが発生した。攻撃者はこれを足掛かりにFireworksの開発用マシンへアクセスし、さらに同社の本番システムの一部にもアクセスしたという。 この事案では、2026年10月30日以前に作成された全アカウントのアカウント情報や請求情報がアクセス対象となった。また、一部の顧客については、データセットやモデル、機密情報にもアクセスされたとしている。 Fireworksは、もう1件の不正アクセスについても公表した。2026年8月3日～10月7日にかけて発生した事案で、攻撃者は同社のシステムを調査した後、窃取した認証情報とサービスの脆弱性を悪用してプラットフォームに不正アクセスした。一部の顧客の機密情報やモデルファイル、データセットにもアクセスしたという。 同社は2件の事案について、封じ込めと修復を完了したとしている。認証情報やサービスアカウントの再発行、不要な権限の削除に加え、ネットワーク経路の制限や影響を受けたシステムの分離などを進めた。 Notionは、AI利用状況を分析する「Insights」機能の処理にFireworksを利用していた。今回の事案では、同機能に使用されたNotion AIのチャット記録の一部が流出した可能性がある。 Notionによると、影響を受けたワークスペースは全体の1％未満で、大半のチャット記録は投稿者やワークスペースを特定できない状態だった。また、チャット記録にツール呼び出しの結果は含まれておらず、その他のNotion機能への影響も確認されていない。 メルカリの発表によると、流出した可能性がある情報には、顧客や取引先、採用応募者、従業員などに関する情報が含まれる。 今回の事案は、Notionのシステムではなく、AI処理を委託していた外部事業者のシステムが侵害されたことで発生した。企業がAIサービスを業務に導入する際は、サービス提供元だけでなく、その先の委託先やクラウド基盤まで含めたセキュリティ管理が求められる。 Copyright &copy; ITmedia, Inc. All Rights Reserved. キーマンズネットに関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれません。 IT初心者から上級者まで、企",
+      "description": "メルカリグループが業務で利用する「Notion AI」で、チャット記録の一部が外部に流出した可能性があることが公表された。AI処理を委託企業では、外部クラウド事業者への侵害や認証情報の窃取、サービスの脆弱性を悪用した不正アクセスが確認された。"
+    },
+    "japan-4c3c98b70ba3": {
+      "id": "japan-4c3c98b70ba3",
+      "kind": "japan",
+      "title": "Anthropicの数学者、「Claude」と共同で「リーマン予想」を証明したと主張 Leanコミュニティが「正しい」と認定",
+      "url": "https://www.itmedia.co.jp/news/article/2611/22/2000003388/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-21T23:21:31.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/news/article/ogp/2611/22/2000003388/10012748/2048",
+      "ogTitle": "Anthropicの数学者、「Claude」と共同で「リーマン予想」を証明したと主張 Leanコミュニティが「正しい」と認定",
+      "ogDescription": "Anthropicの数学者レベント・アルポーゲ氏は、「Claude」と共同で未解決問題「リーマン予想」の証明を発見したと発表した。証明支援系「Lean」で記述された1700万行の形式証明を公開しており、Leanコミュニティは複数の検証を経て「証明は正しい」と認定する共同声明を出した。",
+      "excerpt": "米Anthropicに所属する数学者のレベント・アルポーゲ氏は11月20日（現地時間）、自身のWebサイトで 声明 を発表した。同社のAI「Claude」と共に、数学の未解決問題「リーマン予想」の証明を見つけたと考えているという。証明は証明支援系「Lean」で記述した形式証明として公開した。Leanの開発者や利用者のコミュニティは21日、この証明が正しいと認定する共同声明を出している。 リーマン予想とは、ドイツの数学者ベルンハルト・リーマンが1859年に提唱した予想だ。一見不規則に並ぶ素数の分布に深い規則性があることにつながるもので、「リーマンゼータ関数」の値がゼロになる点（自明でないゼロ点）がすべて1本の直線上にあると主張する。整数論で最も重要な未解決問題とされ、米クレイ数学研究所が100万ドルの懸賞金をかける「ミレニアム懸賞問題」の1つでもある。ミレニアム懸賞問題の中で、これまでに解決したのはポアンカレ予想だけだ。 アルポーゲ氏は声明で、今回の手法はリーマン予想を大きく拡張した「一般化リーマン予想」も解決すると説明した。Claudeとの作業については「ゴール目前で、Claudeは私をはるかに上回った」と表現している。声明にはClaudeがまとめたという作業の時系列も載っている。それによると、10月6日以降に証明の鍵となるアイデアが次々に見つかり、11月16日に一般化リーマン予想の証明に到達した。 一方、数学者が読んで確認できる形の論文はまだ公開していない。アルポーゲ氏によると、現時点の証明は非常に長いという。形式証明をもとに詳細な文書を生成することはできるが、試しに作ったところ25万ページを超え、読める代物ではなかったと語る。そのためLeanのコードだけを公開し、今後は内容を理解した上で、正式な論文にまとめる考えだ。 Leanは、証明の各ステップが論理的に正しいかをコンピュータで機械的にチェックできる仕組みだ。 米Scientific American によると、米マサチューセッツ工科大学（MIT）の数学者アンドリュー・サザーランド氏ら外部の研究者が、公開されたコードを独自にコンパイルし、エラーなく完了することを確認した。サザーランド氏は「何か怪しい点がある可能性はほぼゼロだ」と述べている。 さらに、Leanと、Leanの数学ライブラリ「Mathlib」のコミュニティは21日、アルポーゲ氏の証明が正しいと認定する 共同声明 を公開した。Leanの開発組織「Lean FRO」などが支持している。 声明によると、証明はLeanで1700万行に及ぶ。数十人がコンパイルを再現したほか、証明した定理が、Mathlibに収録されているリーマン予想の記述と一致することも、2つの独立したツールで確かめた。複数の独立したチェッカーでも証明を検査したという。確認には、英インペリアルカレッジロンドンの数学者ケビン・バザード氏が発表前の11月12日にブログで示した、Leanの証明を評価する4つの基準を使い、すべて満たしたとしている。ただし、証明の新しい考え方を数学者が理解し、説明していく作業はこれからだという。 AIとリーマン予想をめぐっては、Anthropicが8月にも、未公開のClaudeが関連する成果を出したと 発表 していた。ただしこれは、直線上にあるゼロ点の割合の下限を41.6％から67.2％に引き上げたもので、リーマン予想そのものの証明ではなかった。10月には米OpenAIが、社内AIによる数学の成果を 一括公開 した。その中には、リーマン予想を弱めた形",
+      "description": "Anthropicの数学者レベント・アルポーゲ氏は、「Claude」と共同で未解決問題「リーマン予想」の証明を発見したと発表した。証明支援系「Lean」で記述された1700万行の形式証明を公開しており、Leanコミュニティは複数の検証を経て「証明は正しい」と認定する共同声明を出した。"
+    },
+    "japan-5fd96f55b381": {
+      "id": "japan-5fd96f55b381",
+      "kind": "japan",
+      "title": "若手こそ「Linux」を学ぶべきなのはなぜ？ AI時代に「エンジニアとして生き残る方法」",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/22/news001.html",
+      "source": "＠IT",
+      "published": "2026-11-21T23:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/22/cover_news001.jpg",
+      "ogTitle": "若手こそ「Linux」を学ぶべきなのはなぜ？ AI時代に「エンジニアとして生き残る方法」",
+      "ogDescription": "AIの普及によって若手エンジニアの業務や“成長の前提”が変わりつつあります。企業から必要とされるエンジニアになるには、何を学べばよいのでしょうか。3つの調査から、そのヒントを探ります。",
+      "excerpt": "AIの普及によって若手エンジニアの業務や“成長の前提”が変わりつつあります。企業から必要とされるエンジニアになるには、何を学べばよいのでしょうか。3つの調査から、そのヒントを探ります。 この記事は会員限定です。 会員登録（無料） すると全てご覧いただけます。 エンジニアの仕事は、AIの進化によって大きく変わりつつあります。コードの生成やシステム設定の補助、エラーの原因調査など、これまで人が時間をかけて取り組んできた作業をAIに任せられるようになりました。経験の浅いエンジニアもAIを活用することで作業を効率化し、より多様な業務に取り組める可能性があります。 AIは既存業務の効率化に役立つ一方で、エンジニアにとっての成長機会を奪うとの見方があります。AIが生成したコードや設定の仕組みを理解しないまま使用することが常態化すれば、実務を通じて身に付けるべき知識や問題解決力が育ちにくくなります。エラーが発生しても、自力で原因を特定できなければ、システムの安定運用に影響を及ぼしかねません。 これからエンジニアを目指す人や、エンジニアとしてのキャリアを始めたばかりの人は、どのような知識や能力を身に付け、どう行動すればよいのでしょうか。複数の調査を基に、企業から選ばれ、成長し続けるエンジニアになるために必要なことを整理していきましょう。 実は特別なことではなく、ごく基本的な知識や、日々の業務への向き合い方が鍵を握っているようです。 AIの普及は、エンジニアに限らず、企業の採用方針全体に影響を及ぼし始めています。調査会社Gartnerが2025年第4四半期に、世界の企業の最高人事責任者（CHRO）110人を対象に実施した調査では、「自社の少なくとも1人の事業リーダーが、AIによる自動化を理由にエントリーレベルの職種の採用を停止した」との回答が22％ありました。割合としては多くはありませんが、世界ではAIによる業務の自動化を理由に、若手の採用を見直す企業が既に存在するのです。 企業では、これまで新人や若手が担当してきた、複雑度の比較的低い業務を中心に、AIによる自動化や補完が進んでいます。AIの導入後に人間に残る業務は、最も複雑度の低いものであっても、従来の若手向けの業務よりも複雑で、判断力を要するものに変わる可能性があるというのがGartnerの見方です。こうした業務に必要なスキルと、これまでのキャリア初期の人材が持つスキルとの間に、ミスマッチが生じていると同社は指摘します。 比較的簡単な業務から経験を積み、徐々に複雑な業務を任されることで成長する――。これが、これまでの企業における一般的な若手育成のプロセスでした。AIが複雑度の比較的低い業務を担うようになれば、こうした段階的な育成の在り方が通用しにくくなります。 若手の採用を停止することは、企業にとってもリスクを伴います。Gartnerは、若手を採用・育成して人材を確保する流れを断ち切った企業は、将来的に人材面で深刻な課題を抱えるリスクがあると指摘します。若手を自社で育てられなくなれば、必要な人材を経験者の採用によって確保する必要が生じます。経験豊富な人材の採用には、割高な報酬を支払わざるを得なくなる可能性があります。 比較的低リスクの実務を担う機会がなくなると、若手にとってはスキルや人的ネットワーク、自社固有の知見を築く機会も失われます。Gartnerは、AIを活用しながら複雑で判断力を要する役割を若手に担ってもらうなど、早い段階で付加価値の高い業務に貢献できるように、役割を再定義して育成すべきだと企業に提言",
+      "description": "AIの普及によって若手エンジニアの業務や“成長の前提”が変わりつつあります。企業から必要とされるエンジニアになるには、何を学べばよいのでしょうか。3つの調査から、そのヒントを探ります。"
+    },
+    "japan-8f34b6f5a9cd": {
+      "id": "japan-8f34b6f5a9cd",
+      "kind": "japan",
+      "title": "AIに必要なのは知識か、企業独自の判断基準か？ 管理職調査で見えたAI活用の盲点",
+      "url": "https://kn.itmedia.co.jp/kn/article/2611/22/2000003384/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-21T21:00:00.000Z",
+      "metrics": {},
+      "image": "https://kn.itmedia.co.jp/kn/article/ogp/2611/22/2000003384/10012726/2048",
+      "ogTitle": "AIに必要なのは知識か、企業独自の判断基準か？ 管理職調査で見えたAI活用の盲点",
+      "ogDescription": "管理職を対象とした勤務先でのAI活用に関する調査では、半数以上が利用されなくなったAIツールや用途があると回答した。背景には、企業独自の判断基準に関わる課題があるようだ。",
+      "excerpt": "管理職を対象とした勤務先でのAI活用に関する調査では、半数以上が利用されなくなったAIツールや用途があると回答した。背景には、企業独自の判断基準に関わる課題があるようだ。 企業でAIツールの活用を推進していても、期待した精度が得られなかったり、費用対効果を説明できなかったりして、十分に活用されないことがある。実際、従業員300人以上の企業でAIを業務利用する部門の管理職を対象とした調査では、所属部門で導入・利用したAIツールや用途のうち、現在ほとんど使われていないものがあると回答した人は56.5％に上った。利用されなくなった理由としては、「期待した精度が出なかった」と「費用対効果を説明できなかった」が各36.5％で最多だった。 調査は2026年9月1～4日、taiziiiが自社のインターネット調査として実施した。対象は従業員300人以上の企業に勤める課長クラス以上の管理職で、所属部門が業務でAIを利用すると回答した人だ。回答数は200人で、条件に該当した170人を有効回答とした。 所属部門で利用したAIツールや用途について、現在ほとんど使われていないものが「複数ある」と答えた人は73人で42.9％、「1つある」は23人で13.5％だった。両者を合わせると96人、56.5％に達する。一方、「ない」は56人で32.9％、「分からない」は18人で10.6％だった。 利用されなくなった理由を複数回答で尋ねた設問では、「期待した精度が出なかった」と「費用対効果を説明できなかった」が各35人、36.5％で同率首位となった。次いで「使い方が現場に浸透しなかった」が31人、32.3％だった。AIの性能や導入効果に対する評価に加え、現場での利用定着も課題だ。 その他、「自社の事情や判断基準を踏まえた回答にならなかった」と「入力や準備の手間が、もとの業務より重かった」が各27人で28.1％。「情報漏えいや社内規定の懸念があった」は25人で26.0％、「推進していた担当者が異動・退職した」は24人で25.0％、「結局、人の判断が必要な業務だった」は23人で24.0％だった。 こうした課題の背景には、AIツールそのものの性能だけでなく、企業固有の事情や業務上の判断基準をAIが十分に参照できていないことも考えられる。一般的な知識や情報を基に回答できても、自社独自のルールや過去の経験に基づく判断まで反映できなければ、実務での活用にはつながりにくい。 taiziiiは、こうした課題に対し、AIが業務で参照する自社の事情や判断基準を整理するためのサービス「SkillRelay」（スキルリレー）を提供している。ベテラン社員の判断基準を対話から引き出し、検証することで、次世代への継承を支援する判断継承AIプラットフォームだ。AIが人に代わって判断するのではなく、人が適切な判断を行うための基準を参照できる環境づくりを支援する。 Copyright &copy; ITmedia, Inc. All Rights Reserved. キーマンズネットに関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれません。 IT初心者から上級者まで、企業内の情報システムにかかわるキーパーソンを対象に、皆さまの役に立つ情報を無料で提供します 三井住友銀行で顧客情報最大1400万件が漏えい 委託先で契約終了後のデータが残存 さよなら「Claude Code」 人気AIに愛想を尽かしたエンジニアの意外な移行先：906th Lap 企業はAIをどう選ぶようになった？ ChatGPT、Copi",
+      "description": "管理職を対象とした勤務先でのAI活用に関する調査では、半数以上が利用されなくなったAIツールや用途があると回答した。背景には、企業独自の判断基準に関わる課題があるようだ。"
+    },
+    "trending-f6c3adbf52c7": {
+      "id": "trending-f6c3adbf52c7",
+      "kind": "trending",
+      "title": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "source": "GitHub Trending",
+      "published": "2026-11-23T01:12:26.264Z",
+      "metrics": {
+        "stars": 17848,
+        "starsToday": 1716,
+        "language": "Python"
+      },
+      "image": "https://repository-images.githubusercontent.com/1229774092/93703d75-077c-4a14-b580-e2374741fe3d",
+      "ogTitle": "GitHub - elementalsouls/Claude-BugHunter: A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "ogDescription": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise ide...",
+      "excerpt": "A self-contained Claude skill bundle for bug hunting and external red-team work · 83 skills · 15 slash commands · 681 disclosed-report patterns (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by Sachin Sharma — Bug Hunting & GenAI Security Research. claude-bughunter is a drop-in skill bundle for the Claude Code skills system . Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. All triggered automatically by topic — describe what you're testing in plain English and the relevant skill loads. No invocation by name. Option A — install as a Claude Code plugin (recommended). From inside Claude Code: All 83 skills + 15 commands load namespaced under claude-bughunter: and update when you bump the plugin version — no files copied into ~/.claude/ . A HackerOne account is optional. The install asks for a HackerOne API username and token. They only let the HackerOne MCP read your private programs and your own reports; leave both blank if you don't need that. Every skill, command an",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python"
+    },
+    "trending-e9dbf459bd01": {
+      "id": "trending-e9dbf459bd01",
+      "kind": "trending",
+      "title": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "source": "GitHub Trending",
+      "published": "2026-11-23T01:12:26.264Z",
+      "metrics": {
+        "stars": 207051,
+        "starsToday": 915,
+        "language": "TypeScript"
+      },
+      "image": "https://repository-images.githubusercontent.com/787076358/f9616c09-3701-41ef-b5a6-fdf912ffb15b",
+      "ogTitle": "GitHub - firecrawl/firecrawl: Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "ogDescription": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API. - firecrawl/firecrawl",
+      "excerpt": "Knowledge infrastructure to make your agents smarter. 🔥 You can use Firecrawl three ways. This repo holds the code for Firecrawl Local and the self-hosted server, along with SDKs that work with all three. Pst. Hey, you, join our stargazers :) Firecrawl Local scrapes, crawls and maps from your own machine without a database, queue or container, and it reaches Firecrawl Cloud when your AI agents need search or Alexandria. It installs from crates.io. You need Rust and a C compiler, which on macOS means xcode-select --install and on Debian or Ubuntu means build-essential . If you don't have Rust, Firecrawl Cloud runs the same scrape with nothing to build and no signup. Scrape a page and print its markdown. Crawl a site and save one markdown file per page. Pages that need JavaScript render in the Chrome or Chromium already on your machine, and PDFs and Office documents are parsed locally too. Without a browser, static pages still work and a page that needed one comes back with a warning. init finds Claude Code, Claude Desktop, Cursor, Windsurf, Gemini CLI and Codex on your machine and adds Firecrawl Local to each one as an MCP server. It backs up every config file first, and the MCP server itself needs Node.js 22 or newer. Restart your AI tool afterwards. Its scrape, crawl, map and batch scrape tools run on your machine, and the other Firecrawl tools go to Firecrawl Cloud. serve answers the Firecrawl v2 API on port 3002, so code written for Firecrawl runs against it unchanged and",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "language": "TypeScript"
+    },
+    "trending-8c6014a36ca9": {
+      "id": "trending-8c6014a36ca9",
+      "kind": "trending",
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "source": "GitHub Trending",
+      "published": "2026-11-23T01:12:26.264Z",
+      "metrics": {
+        "stars": 324173,
+        "starsToday": 788,
+        "language": "Shell"
+      },
+      "image": "https://opengraph.githubassets.com/0262d5793aee046780d8110aa2bf2619309b3c021c12b826547cf6ab12381d94/obra/superpowers",
+      "ogTitle": "GitHub - obra/superpowers: An agentic skills framework & software development methodology that works.",
+      "ogDescription": "An agentic skills framework & software development methodology that works. - obra/superpowers",
+      "excerpt": "Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it doesn't just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a subagent-driven-development process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hes",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell"
+    },
+    "trending-5dd922e14c0c": {
+      "id": "trending-5dd922e14c0c",
+      "kind": "trending",
+      "title": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "source": "GitHub Trending",
+      "published": "2026-11-23T01:12:26.264Z",
+      "metrics": {
+        "stars": 62785,
+        "starsToday": 699,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/21b5aa6558cb86c51b81fa16dba6bc6bc25c7005d1e2e444d189cfd2124ba013/HKUDS/CLI-Anything",
+      "ogTitle": "GitHub - HKUDS/CLI-Anything: \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "ogDescription": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/ - HKUDS/CLI-Anything",
+      "excerpt": "Today's Software Serves Humans👨‍💻. Tomorrow's Users will be Agents🤖. CLI-Anything: Bridging the Gap Between AI Agents and the World's Software 🌐 CLI-Hub : pip install cli-anything-hub then cli-hub install <name> — browse, install, and manage all community-built CLIs. Want to add your own? Open a PR — the hub updates instantly. 🎬 See Demos : Watch AI agents use generated CLIs plus preview, live preview, and trajectory loops to produce real artifacts — CAD builds, 3D scenes, diagrams, gameplay, subtitles, and more. 🙋 [Become a Contributor, or Request a CLI] : Join us ! Sign up to build a new CLI harness — once reviewed and merged, you'll gain access as one of our community contributors! Wish CLI-Anything supported a specific software or service? Submit a wishlist request ! One Command Line : Make any software agent-ready for Pi, OpenClaw, nanobot, Cursor, Claude Code, etc. 中文文档 | 日本語ドキュメント | Deutsch Thanks to all invaluable efforts from the community! More updates continuously on the way everyday.. 2026-05-30 🧭 Hermes skill proposed (#320), adding a CLI-Anything orchestration skill with installer scripts and HARNESS fallback guidance. 🗺️ ArcGIS Pro was proposed for the public registry (#318) as a Windows/ArcPy CLI for cartography, geoprocessing, feature editing, and live-Pro MCP workflows. 2026-05-27 🔧 CLI-Hub registry date updates now handle python -m pip install commands (#312), improving package-date detection for registry automation. 2026-05-23 📝 Obsidian Agent CL",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python"
+    },
+    "trending-b88590c43555": {
+      "id": "trending-b88590c43555",
+      "kind": "trending",
+      "title": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "source": "GitHub Trending",
+      "published": "2026-11-23T01:12:26.264Z",
+      "metrics": {
+        "stars": 72726,
+        "starsToday": 668,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/e40371704fbb84ce627b902ea89cc5b9349aed2924bcfb26ac406a5eddcf1c4e/mvanhorn/last30days-skill",
+      "ogTitle": "GitHub - mvanhorn/last30days-skill: AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "ogDescription": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary - mvanhorn/last30days-skill",
+      "excerpt": "English | Français | Deutsch | Español | Português (Brasil) | 日本語 | 简体中文 | العربية | فارسی | Türkçe An AI agent-led search engine scored by upvotes, likes, and real money - not editors. This README tracks the current v4 pipeline. The runtime skill spec lives in skills/last30days/SKILL.md , which is the source of truth for the latest command and setup behavior. Claude Code (recommended — auto-updates via marketplace): Codex, Cursor, Copilot, Gemini CLI, or any of 50+ Agent Skills hosts: ( -g installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, OpenClaw, manual) in the Install section below. Zero config. Reddit, HN, Polymarket, and GitHub work immediately, and so do patent filings and careers pages when your topic is a company. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds. Reddit upvotes. X likes. YouTube transcripts. TikTok engagement. Polymarket odds backed by real money and insider information. That's millions of people voting with their attention and their wallets every day. /last30days searches all of it in parallel, scores it by what real people actually engage with, and an AI agent judge synthesizes it into one brief. Google aggregates editors. /last30days searches people. You can't get this search anywhere else because no single AI has access to all of it. Google search doesn't touch Reddit comments or X posts. ChatGPT has a deal with Re",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python"
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "thinkingmachines/Inkling-2-Mini",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 4977,
+      "downloads": 23543,
+      "createdAt": "2026-11-17T00:26:57.000Z",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+    },
+    {
+      "id": "unsloth/Inkling-2-Mini-GGUF",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 882,
+      "downloads": 805993,
+      "createdAt": "2026-11-20T13:09:48.000Z",
+      "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF"
+    },
+    {
+      "id": "inworld/voice-isolator",
+      "pipeline_tag": "audio-to-audio",
+      "likes": 635,
+      "downloads": 0,
+      "createdAt": "2026-11-14T02:14:35.000Z",
+      "url": "https://huggingface.co/inworld/voice-isolator"
+    }
+  ],
+  "errors": []
+}

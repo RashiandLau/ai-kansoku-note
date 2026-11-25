@@ -1,0 +1,397 @@
+{
+  "date": "2026-11-25",
+  "generatedAt": "2026-11-25T03:51:16.581Z",
+  "top": "hn-923c0e4c62be",
+  "selected": [
+    "hn-923c0e4c62be",
+    "claudecode-f0443805839e",
+    "official-6a28e842b3bf",
+    "official-0d108e7b71c4",
+    "official-ac2f786b30f6",
+    "official-7758c04a6293",
+    "official-7e14b56be674",
+    "official-89a905d5eae9",
+    "hn-9121917f87f4",
+    "hn-d752762e734d",
+    "japan-f3c2bd8fa9c6",
+    "japan-e0b7f90832b0",
+    "japan-8b96c4ba2fcb",
+    "japan-168a7bff919d",
+    "japan-eb88365d510b",
+    "trending-f6c3adbf52c7",
+    "trending-5dd922e14c0c",
+    "trending-8c6014a36ca9",
+    "trending-e9dbf459bd01",
+    "trending-ce3bf530c355"
+  ],
+  "items": {
+    "hn-923c0e4c62be": {
+      "id": "hn-923c0e4c62be",
+      "kind": "hn",
+      "title": "LLM agents work for their parent companies, not for you",
+      "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+      "source": "Hacker News",
+      "published": "2026-11-24T12:40:15.000Z",
+      "metrics": {
+        "points": 942,
+        "num_comments": 392
+      },
+      "image": "https://michaelharley.net/assets/images/open-graph-image.png",
+      "ogTitle": "LLM agents work for their parent companies, not for you",
+      "ogDescription": "I built an Instagram-to-Bandcamp tool with Claude, but when the API broke, the model refused to help me work around it, while happily downloading from YouTube instead, which pays the artist nothing. That hypocrisy exposed why these models can't be trusted: they work for their parent companies, not for me.",
+      "excerpt": "In the evenings after work, I will often sit out back on the porch and do some phone rotting. That usually takes the form of me just flipping through reels on Instagram, allowing the algorithm to take me where it may. I usually pair this with a healthy tumbler of rum or bourbon. I'm turning my brain off after work, and I'm just having a good time on the internet. The kids might call it dopamine maxxing? Hell, I don't know. Who gives a shit about what those assholes would call it? Anywho, I often encounter songs I really really like, and I would like to listen and discover more of please. Instagram makes it hard for me to connect with the band outside of their platform. I was trying to make this connection manually myself at first. I would just email myself a reel from my phone. Then when I'm back on the sofa and in the mood to track down new music, I'd open the reels and do my best to search on Bandcamp or YouTube or try to figure out if some of these musicians had a way to buy music from them. Very few do these days. They send you their Spotify link or send you to their TikTok page. I don't want to do any of that. I'd like to trade US dollars in exchange for some music files I can download onto my computer, where I can listen as much as I like on any device I own thank you please. Retro maxxing. So, I used Claude Code to build a skill that does this for me. It opens the Instagram reel and attempts to identify the artist and song. It then tries to determine if the artists hav",
+      "objectID": "50627340",
+      "points": 942,
+      "num_comments": 392,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50627340",
+        "count": 392,
+        "points": 942
+      }
+    },
+    "claudecode-f0443805839e": {
+      "id": "claudecode-f0443805839e",
+      "kind": "claudecode",
+      "title": "Claude Code 2.1.332",
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+      "source": "Claude Code",
+      "published": "2026-11-25T03:51:16.581Z",
+      "metrics": {},
+      "image": "https://opengraph.githubassets.com/e1287464ffa375c98fe3e9fe7a1543ae4d46fe262576469a01e96dfc234f3a94/anthropics/claude-code",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "",
+      "version": "2.1.332",
+      "sectionText": "- Added skills from MCP servers (beta). They show as `server:skill` in the `/` menu; other skills keep their names\n- Added a `PreSkillShellCommand` hook event that can refuse a skill or command's inline shell commands as it loads; on 2.1.331 and older, a settings file naming it opens a dialog at start\n- Added \"Always deliver\" to the prompt for held messages from other sessions\n- Added a footer line that stays while a flagged message has your session on a different model, until you pick one with `/model`\n- Added an OpenTelemetry `assistant_response` event for text Claude sends through SendUserMessage or Cowork's message tool, when response logging is on\n- Added a warning in VS Code and Desktop's Code tab when part of a session couldn't be saved, saying how to save it with `/compact`\n- Added a notice in VS Code and Desktop's Code tab when a resumed session's earlier messages weren't loaded, as the terminal already shows\n- Added your Cyber Verification Program access tier to the startup header, beside the model name when your tier applies to that model and you're signed in with a claude.ai account\n- Fixed `claude auth login` reporting `Login successful.` when a claude.ai login could not be saved: it now exits 1 and says what to check, such as a leftover lock file or a full disk\n- Fixed Read, @-mentions and compaction hanging on a named pipe that nothing writes to, such as a `.env` mounted by a locked secrets manager; the read now fails after 20 seconds\n- Fixed turns ending in \"Prompt is too long\" after repeated auto-compaction failures when one more compaction at the context limit could have kept them going\n- Fixed compaction failing when a summary kept running past the output limit: after three cut-off replies, the last try now asks for a shorter summary\n- Fixed a freeze when a permission rule or hook condition with several wildcards was checked against a long command\n- Fixed freezes and runaway memory use in most cases while a hook prints output without end\n- Fixed a freeze and context overflow when a hook blocks or fails during a turn, or after `/compact`, with a very large log; text over about 50,000 characters is now shortened\n- Fixed the terminal freezing, and ignoring Ctrl+C, while a local MCP server floods its standard output\n- Fixed a freeze when a prompt or piped input holds an `@` followed by a very long unbroken string, such as minified CSS with an embedded font\n- Fixed a long freeze when opening a rewind point after a large tracked file was rewritten\n- Fixed SSE MCP servers hanging or refusing every tool call after their event stream was cut and came back on a new endpoint or not at all, until reconnected by hand\n- Fixed Remote Control showing a session in the desktop app, VS Code or the Agent SDK as running while it waited there on a dialog or an MCP server's question\n- Fixed a usage limit being reported as reached to Remote Control, IDE and SDK clients after it had already reset\n- Fixed CLAUDE.md and rules files being sent to the mode"
+    },
+    "official-6a28e842b3bf": {
+      "id": "official-6a28e842b3bf",
+      "kind": "official",
+      "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+      "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+      "source": "Hugging Face",
+      "published": "2026-11-24T16:34:13.000Z",
+      "metrics": {},
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/6847ab8c06094fa4afb6ee38/M70tUMNd7N4KO5QGI37YZ.png",
+      "ogTitle": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+      "ogDescription": "A Blog post by NVIDIA on Hugging Face",
+      "excerpt": "Updated 5 days ago • 1.75M • 1.79k",
+      "description": ""
+    },
+    "official-0d108e7b71c4": {
+      "id": "official-0d108e7b71c4",
+      "kind": "official",
+      "title": "How Gemini is changing the game for Golden State's organization and fans.",
+      "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+      "source": "Google AI",
+      "published": "2026-11-24T16:00:00.000Z",
+      "metrics": {},
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Gemini_1.max-1440x810.jpg",
+      "ogTitle": "How Gemini is changing the game for Golden State's organization and fans.",
+      "ogDescription": "Google Gemini partners with Golden State to power fan experiences and business operations for the Warriors, Valkyries, and Chase Center. See the news.",
+      "excerpt": "Today, we’re expanding our partnership with Golden State — making Google Gemini the Official AI Assistant Partner and Official Generative AI & Enterprise LLM Partner of the Warriors, the 2026 WNBA Champion Valkyries, and Chase Center. The collaboration integrates Gemini across the entire franchise ecosystem. For fans, that means a more interactive game-day experience, both inside Chase Center via interactive videoboard features, and across digital channels for fans following from home. And behind the scenes, Golden State is deploying Gemini for business to build custom AI agents, helping their teams work smarter across both business and basketball operations. As a Founding Partner of Chase Center since 2019, Golden State has used our gen AI tools to help their operations run smoother, and this next chapter brings the best of Gemini to the team and fans alike.",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Gemini_1.max-600x600.format-webp.webp\">Google Gemini partners with Golden State to power fan experiences and business operations for the Warriors, Valkyries, and Chase Center. See the news."
+    },
+    "official-ac2f786b30f6": {
+      "id": "official-ac2f786b30f6",
+      "kind": "official",
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+      "source": "OpenAI",
+      "published": "2026-11-24T13:00:00.000Z",
+      "metrics": {},
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/Eg5mCwwaA3KqnznOVCh0n/8e6deaef25fd508d9853ff86a95187c1/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities-social.png?w=1600&h=900&fit=fill",
+      "ogTitle": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "ogDescription": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
+      "excerpt": "Our GPT‑6 family of models can design new protein shapes and the sequence of their chemical building blocks using only reasoning and code, without calling specialized biology models to generate those designs. An internal research model matched or outperformed specialized models on many protein design tasks. Researchers could also guide designs by prompting the model on where a protein should attach and what shape it should take. In lab tests with Onava, proteins based on GPT‑6.2’s designs showed evidence of binding, or attachment, across five targets. Redesigned antibodies also retained binding. Specialized models helped supply sequences and select candidates for testing. The models’ written reasoning and code suggest they draw on math, physics, chemistry, and biological knowledge to reason about protein shapes and interactions with other molecules. In a preprint titled GPT‑6 as a Universal Foundation Model for Protein Biology: Beyond Specialized Models , we show that our GPT‑6 family of models has intrinsic capabilities for designing new proteins: the models can design new protein structures and sequences without relying on specialized biology models, using only reasoning and general-purpose coding tools. Proteins do much of the work in living cells. They drive the chemical reactions that sustain life, carry oxygen through the blood, and defend the body against infection. Incorrectly shaped proteins can also cause disease and dysfunction. Proteins are made from chains of che",
+      "description": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50634658",
+        "count": 59,
+        "points": 198
+      }
+    },
+    "official-7758c04a6293": {
+      "id": "official-7758c04a6293",
+      "kind": "official",
+      "title": "Searching for distant planets with Astra",
+      "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+      "source": "OpenAI",
+      "published": "2026-11-24T11:00:00.000Z",
+      "metrics": {},
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/318YLaAKlMKQFzOdMutjeX/8b6e4e516fd1a7894c97318838f43a0f/searching-for-distant-planets-with-astra-social.png?w=1600&h=900&fit=fill",
+      "ogTitle": "Searching for distant planets with Astra",
+      "ogDescription": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler and TESS space telescopes.",
+      "excerpt": "Two amateur astronomers used Codex and Astra to look for signs of planets in public telescope data. Now they’ve given professional astronomers a few places to look more closely. Astronomers have confirmed more than 6,400 planets beyond our solar system ⁠ (opens in a new window) since the first ones were announced in 1992 ⁠ (opens in a new window) . A worldwide community of amateur astronomers has long been part of that search. Some comb through public telescope data for small, repeated dips in a star’s brightness that could signal an orbiting planet. Others use their own telescopes to watch for the next dip and share what they see with researchers. *Data from the NASA Exoplanet Archive’s Planetary Systems Composite Parameters table ⁠ (opens in a new window) . 2026 data are year to date through November 24, 2026. Astronomers have used AI in this search for years. In 2017, researchers trained a neural network on 15,000 signals from NASA’s Kepler Space Telescope ⁠ (opens in a new window) that astronomers had already examined. From those examples, the model learned to recognize which patterns in starlight were most likely to come from a planet. When the researchers used it to examine weaker signals, one led them to an eighth planet orbiting a star called Kepler-90 ⁠ (opens in a new window) . Now, tools like Astra are helping amateur astronomers design and run searches of their own, often on data that has already yielded the more obvious exoplanet signals. Kevin Bond, an engineer ",
+      "description": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler and TESS space telescopes."
+    },
+    "official-7e14b56be674": {
+      "id": "official-7e14b56be674",
+      "kind": "official",
+      "title": "How Intentful uses dots to make more time for growth",
+      "url": "https://openai.com/business/customer-stories/intentful-dots",
+      "source": "OpenAI",
+      "published": "2026-11-24T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/2DH2aby1xmlzvADCraI7Xi/bbe8b8956578492f2c3fd7326ecbd9e1/intentful-dots-social-c.png?w=1600&h=900&fit=fill",
+      "ogTitle": "How Intentful uses dots to make more time for growth",
+      "ogDescription": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues.",
+      "excerpt": "How a small business founder’s dot helps her with research and proposals, while alerting her to critical messages and resolving issues. Marina Petrova is CEO and cofounder of Intentful ⁠ (opens in a new window) , a lean team that helps brands make their marketing interactive, with products such as ads that answer customers’ questions in real time and tools that make website information readable by AI. The company also advises and trains marketers on using AI. In travel and tourism, Intentful works with destination organizations and local businesses such as hotels, restaurants, and attractions. A custom proposal is part of how Marina wins their business, showing prospects what’s possible and what it would take to deliver. To keep Intentful growing, she needed more room for that strategic work, but she was spending too much time on research, hunting for files, and formatting decks. Her dot ⁠ changed all that, taking on tasks and meeting Marina’s needs before she even had to ask. For one of Intentful’s tourism clients, Marina wanted to propose a package of Intentful’s AI services for hundreds of local businesses in the destination. Before she could price the package, she needed to work out which businesses’ websites the package could cover and what Intentful had charged other clients for similar work. She brought in her dot, which she named Aria, to help her get from research to a proposal she could put her name on in a few hours instead of several days. First, Marina gave Aria ",
+      "description": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues."
+    },
+    "official-89a905d5eae9": {
+      "id": "official-89a905d5eae9",
+      "kind": "official",
+      "title": "How iFood scales coding agents across 15,000 repositories",
+      "url": "https://openai.com/business/customer-stories/ifood",
+      "source": "OpenAI",
+      "published": "2026-11-24T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/4Ts7RsLLSU4iEOxQwBkGgg/cbf56c075004a9ae2c41af4d5f7b428b/ifood-customer-story-social.png?w=1600&h=900&fit=fill",
+      "ogTitle": "How iFood scales coding agents across 15,000 repositories",
+      "ogDescription": "",
+      "excerpt": "runs completed by the platform average inference cost per run as many vulnerabilities fixed through the security platform The Remote Agents Platform turned engineering tasks into API calls: teams delegate the work, execution takes place in a remote sandbox, and the result comes back as a merge request. In the internal security platform, the number of vulnerabilities fixed more than doubled. iFood maintains more than 15,000 code repositories. Each periodically needs specific tasks performed: validating code to ensure it meets internal standards, fixing vulnerable dependencies, or running an analysis. None of these tasks is difficult on its own. The challenge comes when those tasks multiply. “Solving this for one repository is easy. The challenge is solving it at scale,” says Victor Coelho, Senior Software Engineer at iFood. “The Remote Agents Platform is designed to make it possible to solve this at scale across all 15,000 repositories.” Before the platform, each team tackled the problem in its own way—and they all ran into the same obstacle. “Before, we had fragmented solutions. Imagine several teams at iFood trying to solve different problems, but without this layer, this agentic runtime, available to them. In the end, those solutions always ran into the same problem.” What was missing wasn’t intelligence or a use case. It was execution infrastructure. A dedicated runtime . The team describes the Remote Agents Platform as an API that launches a remote agentic coding task. Th",
+      "description": ""
+    },
+    "hn-9121917f87f4": {
+      "id": "hn-9121917f87f4",
+      "kind": "hn",
+      "title": "A training engine for your local model, using your idle compute",
+      "url": "https://github.com/sous-labs/songe",
+      "source": "Hacker News",
+      "published": "2026-11-24T15:03:40.000Z",
+      "metrics": {
+        "points": 192,
+        "num_comments": 64
+      },
+      "image": "https://repository-images.githubusercontent.com/1465322684/f6c97c41-6e40-4e48-83c6-1b20210672d6",
+      "ogTitle": "GitHub - sous-labs/songe: A training engine for your local model, using your idle compute",
+      "ogDescription": "A training engine for your local model, using your idle compute - sous-labs/songe",
+      "excerpt": "Install • How it works • Commands • Roadmap • Discord • Website Use your local model as usual through opencode, pi or any OpenAI-compatible tool. While you work, Songe notices what happens after each of the model's actions: the tool result, the error, your next message. When your agent is quiet, it teaches the model to see those coming. A new version is used only if it passes its checks, and nothing ever leaves your machine. With uv or pipx (Python 3.11 or later): No uv or pipx yet? Either installs in one line: Both give Songe its own environment in a lasting place, which its background service needs. songe init finds your model server and your agents, shows what it will change, and asks once: Then pick a Songe model in your agent (opencode lists them as songe/songe/<name> ), and work as usual. pip install songe works inside a virtual environment; outside one, Homebrew's and most Linux distributions' Python refuse it. You need a model served locally, and an agent: Machines without a GPU still serve and record, but do not train. Tried Songe on another setup? Share the result on the testing board . With auto-dream on, Dreams start when your agent has been quiet for a while. Or press Dream in the dashboard ( songe open ). A Dream never just disappears: it keeps going on the page, or says why it stopped. Before the first training Songe measures how much your computer can learn at once, and trains on what fits. See DESIGN.md . uv tool upgrade songe , pipx upgrade songe or brew upg",
+      "objectID": "50629231",
+      "points": 192,
+      "num_comments": 64,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50629231",
+        "count": 64,
+        "points": 192
+      }
+    },
+    "hn-d752762e734d": {
+      "id": "hn-d752762e734d",
+      "kind": "hn",
+      "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+      "url": "https://greydanus.github.io/2026/11/12/pengpt/",
+      "source": "Hacker News",
+      "published": "2026-11-25T00:54:49.000Z",
+      "metrics": {
+        "points": 100,
+        "num_comments": 16
+      },
+      "image": "https://greydanus.github.io/assets/pengpt/thumbnail.png",
+      "ogTitle": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+      "ogDescription": "A small transformer that writes and sketches from text. The effort was 80% data, 15% speed and 5% architecture: my first project that follows the Bitter Lesson.",
+      "excerpt": "A small transformer that writes and sketches from text. The effort was 80% data, 15% speed and 5% architecture: my first project that follows the Bitter Lesson. Last year Zach Wimpee and I trained a tiny GPT to write cursive . It worked but it only knew one hand (mine) and it learned from 3,500 words that I wrote on a trackpad. So here’s the obvious next question: can one small, ordinary transformer learn to hold a pen in lots of hands and draw as well as write? PenGPT is my attempt. There are two models. A 6M-parameter one writes print and cursive and picks up the handwriting of someone it has never seen from a few of their words. A 54M-parameter one draws from a text prompt. Then I took the thing apart to find out why it works. The answer wasn’t what I expected. That’s it for the modality-specific part: ten symbols and a merge count. The same tokenizer handles handwriting and drawings. For handwriting the model is told the text; for drawings it’s told a SigLIP 2 vector so a typed phrase can stand in for a picture. Almost nobody records pen strokes so I made the handwriting data from scans: 495,590 words by 1,255 writers, mostly from two research collections plus old letters and diaries from public archives. A vision-language model finds legible pages and transcribes them, the pages get cut into words, InkSight traces each word back into strokes and a set of checks throws out bad traces. Between a third and a half of the words survive. The drawings are 477,670 sketches from ",
+      "objectID": "50637056",
+      "points": 100,
+      "num_comments": 16,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50637056",
+        "count": 16,
+        "points": 100
+      }
+    },
+    "japan-f3c2bd8fa9c6": {
+      "id": "japan-f3c2bd8fa9c6",
+      "kind": "japan",
+      "title": "AIでドーピングしたコンサルの実力は 使わない人材との能力差、BCG約500人で検証 Nature系列誌",
+      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003421/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-25T03:00:00.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/news/article/ogp/2611/25/2000003421/10012850/2048",
+      "ogTitle": "AIでドーピングしたコンサルの実力は 使わない人材との能力差、BCG約500人で検証 Nature系列誌",
+      "ogDescription": "米ボストン大学、米BCGのヘンダーソン研究所、米OpenAIに所属する研究者らがNature Human Behaviourで発表した論文「Generative AI and the temporary upskilling of knowledge workers」は、生成AIによる一時的なスキルアップの効果と限界を調査した研究報告だ。",
+      "excerpt": "2019年にスタートした本連載「Innovative Tech」は、世界中の幅広い分野から最先端の研究論文を独自視点で厳選、解説する。執筆は研究論文メディア「 Seamless 」（シームレス）を主宰し、日課として数多くの論文に目を通す山下氏が担当。イラストや漫画は、同メディア所属のアーティスト・ おね 氏が手掛けている。X： ＠shiropen2 米ボストン大学、米BCGのヘンダーソン研究所、米OpenAIに所属する研究者らがNature Human Behaviourで発表した論文「 Generative AI and the temporary upskilling of knowledge workers 」は、生成AIによる一時的なスキルアップの効果と限界を調査した研究報告だ。 実験には、データサイエンスを専門とせず、職務上コードを書くことを求められていないBCGのコンサルタント573人（487人が主な分析対象）が参加した。参加者は無作為に2つのグループに分けられ、一方にはChatGPT（GPT-4）とプロンプトの研修が、もう一方にはGoogle検索や技術系Q&Aサイトの活用研修が提供された。 そのうえで、Pythonでのデータ整理（プログラミング）、分析モデルの誤り発見（統計理解）、サッカーの試合データを用いた勝敗予測のしやすさ（予測モデル構築）という専門外のデータサイエンス課題のうち無作為に割り当てられた2つに取り組んだ。いずれもAIに丸投げしただけでは正解できず、人間が途中で判断し指示を出す必要がある実践的な難易度に設定した。 結果は、ChatGPTを使ったグループは、検索や公開Webサイトを使ったグループに比べてすべての課題で高いスコアを記録し、コーディングと予測の課題では作業時間も短かった。 さらに、事前にある程度のプログラミング経験があった参加者がChatGPTを使うと、プログラミングと統計の課題において、AIを使わない現役データサイエンティストとほぼ同等の成績にまで到達した。 ところが課題終了後、両グループともChatGPTを使わずに関連分野の技術的な設問に答えさせたところ、利用グループの正答率が高いという証拠は得られなかった。 さらに、ChatGPT利用グループは対照群に比べ、実験後にAIの能力を高く見積もるようになった。GPT-4が実際には解けない問題すべてで、解けると見込む度合いが高かった。 結論として、生成AIは専門外の仕事に挑むビジネスパーソンの能力を引き上げるが、それは身体を補助する“パワードスーツ”（外骨格）を着ているような現象であり、スーツを脱いだ後に知識として残った形跡は見られなかった。 Source and Image Credits: Wiles, E., Krayer, L., Abbadi, M. et al. Generative AI and the temporary upskilling of knowledge workers. Nat Hum Behav (2026). https://doi.org/10.1038/s41562-026-02566-6 Copyright &copy; ITmedia, Inc. All Rights Reserved. 2019年にスタートした本連載「Innovative Tech」は、世界中の幅広い分野から最先端の研究論文を独自視点で厳選、解説している。執筆は研究論文メディア「Seamless」（シームレス）を主宰し、日課として数多くの論文に目を",
+      "description": "米ボストン大学、米BCGのヘンダーソン研究所、米OpenAIに所属する研究者らがNature Human Behaviourで発表した論文「Generative AI and the temporary upskilling of knowledge workers」は、生成AIによる一時的なスキルアップの効果と限界を調査した研究報告だ。"
+    },
+    "japan-e0b7f90832b0": {
+      "id": "japan-e0b7f90832b0",
+      "kind": "japan",
+      "title": "音楽サービスのTIDAL、AI生成楽曲を削除・受付停止へ 直近90日の配信楽曲の43％がAI生成",
+      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003433/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-25T01:57:02.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/news/article/ogp/2611/25/2000003433/10012888/2048",
+      "ogTitle": "音楽サービスのTIDAL、AI生成楽曲を削除・受付停止へ 直近90日の配信楽曲の43％がAI生成",
+      "ogDescription": "音楽ストリーミングサービスのTIDALは、完全AI生成楽曲の受付を停止し、配信済みの楽曲も削除すると発表した。直近90日間に配信された楽曲の43％が完全AI生成と判定されており、現在カタログの6.3％に当たる約2700万曲が該当する。AIを補助的に使った楽曲は引き続き配信可能だ。",
+      "excerpt": "音楽ストリーミングサービスのTIDALは11月24日（現地時間）、生成AIのみで制作された楽曲の扱いを厳格化すると公式Xアカウントで発表した。12月9日から、完全AI生成と判断した楽曲は受け付けず、すでに配信されている楽曲も削除する。 TIDALは、スウェーデンのAspiroが2014年に北米と英国で始めた音楽ストリーミングサービスだ。2015年にラッパーのJAY-Z氏がAspiroを買収し、マドンナ氏やビヨンセ氏などの著名アーティストと共に 再スタート した。ロスレス音源による高音質配信が特徴だ。2021年には、ジャック・ドーシー氏率いる米Blockが過半数の株式を取得し、傘下に収めた。 TIDALは今年6月に「AIポリシー」を導入した。それ以降、 米Sunoの「Suno」 や 米Googleの「Lyria」 などのツールが出力した100％AI生成の楽曲を検出し、ラベルを付けて収益化の対象から外してきた。今回はこれをさらに進め、楽曲そのものを排除する。 TIDALによると、過去90日間に配信された楽曲の43％が完全AI生成と判定された。11月6日にはAI楽曲の流入が過去最多となり、配信された楽曲の60％超が完全AI生成だった。現在、カタログ全体の6.3％に当たる約2700万曲が完全AI生成としてタグ付けされている。ただし、その96％は直近3カ月の再生回数がゼロで、サブスクリプション会員にはほとんど聴かれていないという。 アーティストになりすましたAI楽曲も増えている。こうした楽曲は、アーティストに入るはずの再生回数やロイヤリティを奪い、ファンを混乱させるとTIDALは指摘する。これまでに、なりすましの疑いで6万5000曲以上を削除した。 TIDALは、すべての楽曲がすぐに人気になるわけではなく、アーティストにはファンを増やす時間が必要だと認めた。一方で、今の規模ではリスナーが聴きたい本物の音楽やアーティストが埋もれてしまうと説明している。今後は、ディストリビューター（音楽配信事業者）による完全AI生成楽曲の納品も禁止する。メタデータでAIツールのみで作ったと申告された楽曲は受け付けない。AIツールを補助的に使った楽曲は引き続き配信できる。AI検出の技術は、提携先の仏Ircam Amplifyが提供している。 AI生成音楽への対応は、ほかの大手サービスも進めている。スウェーデンSpotifyは2025年9月、生成AIツールで量産されたものを含むスパム楽曲を過去12カ月で7500万曲以上削除したと発表した。同年10月には、Sony Music Group、Universal Music Group（UMG）、Warner Music Groupの3大レーベルなどと組み、「責任あるAI」製品の開発を始めた。2026年5月には、UMGとの提携により、生成AIで楽曲のカバーやリミックスを作れる有料ツールを導入すると発表している。 米Googleの「YouTube Music」は2026年10月、主に生成AIで作られた楽曲にラベルを表示し始めた。レーベルなどのパートナーは、納品時のメタデータで「Fully Gen AI」「Partly Gen AI」「No Gen AI」のいずれかを申告する。申告がない場合も、YouTubeが独自の判断でAI生成とみなすことがある。SpotifyやYouTubeはラベル表示や収益化の対象外とする対応が中心だが、TIDALは完全AI生成楽曲そのものを排除する方針を打ち出した点が異なる。 Copyright &copy; IT",
+      "description": "音楽ストリーミングサービスのTIDALは、完全AI生成楽曲の受付を停止し、配信済みの楽曲も削除すると発表した。直近90日間に配信された楽曲の43％が完全AI生成と判定されており、現在カタログの6.3％に当たる約2700万曲が該当する。AIを補助的に使った楽曲は引き続き配信可能だ。"
+    },
+    "japan-8b96c4ba2fcb": {
+      "id": "japan-8b96c4ba2fcb",
+      "kind": "japan",
+      "title": "「Claude」で作ったアプリをMac／Windowsにインストール可能に 全プランでβ提供",
+      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003431/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-25T01:07:59.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/news/article/ogp/2611/25/2000003431/10012879/2048",
+      "ogTitle": "「Claude」で作ったアプリをMac／Windowsにインストール可能に 全プランでβ提供",
+      "ogDescription": "Anthropicは、AIアシスタント「Claude」で作成したアーティファクトをMac／Windows向けのデスクトップアプリとして導入できる「Install as app」を全プラン向けにβ提供すると発表した。専用ウィンドウで動作し、通知やメニューバー表示、許可に応じたファイル操作にも対応する。",
+      "excerpt": "米Anthropicは11月24日（現地時間）、AIアシスタント「Claude」で作成した「アーティファクト」（Artifacts）を、macOSおよびWindows向けのデスクトップアプリとしてインストールできる機能「Install as app」を発表した。Mac／Windows向けのClaudeアプリで、全プランを対象にβ版として順次提供する。 アーティファクトは、Claudeとの対話の中で生成されるチャートやWebページなどの成果物だ。Anthropicによると、当初は人と共有するための成果物という位置付けだったが、現在は日常業務のツールとしても使われているという。例えば、カレンダーやメールから定期的に情報を取り込む会議準備ページや、その日に発送する注文の管理ツールなどだ。同社のエンジニア、フェリックス・リーゼバーグ氏は、Install as appをWeb上で動作するインタラクティブなページであるアーティファクトに機能を追加したものだと説明している。 インストールしたアプリは独自のアイコンを持ち、Claudeの画面内ではなく、専用のウィンドウで開く。アプリからClaudeやコネクタを利用でき、元のアーティファクトを編集すると自動で更新される。通知を送ったり、macOSのメニューバーやWindowsのシステムトレイに項目を追加したりすることも可能だ。作ったアプリはリンクを送って他の人と共有でき、受け取った人もインストールできる。 使い方は、作りたいアプリをClaudeに説明し、アーティファクトとして試した後、共有メニューから「Install as app」を選ぶだけだ。パッケージ化や署名は不要で、Claudeアカウントをそのまま使うため、APIキーや別途のログインも不要だ。リーゼバーグ氏は、プログラミングの知識がなくてもアプリを作れるとしている。 Anthropicは、社員が作ったアプリの例を紹介している。レイヤーに対応した画像エディタ「Linnet」、フォルダにルールを設定してClaudeでファイルを整理する「Sift」、Claudeが助言や説明をしてくれるターミナル「Tern」、PCの稼働状況を確認できるメニューバー／トレイアプリ「Vitals」などだ。リーゼバーグ氏も、ディスク容量の使い道を可視化するアプリや人体の構造を学べるアプリ、休憩を促すリマインダーなどのデモアプリを公開している。ただし、これらはAnthropicの公式製品ではないとしている。 アプリに与える「権限」は3段階ある。標準の状態では、Webブラウザ上で可能な操作に制限される。権限を与えると、常に最前面に表示されるウィンドウやグローバルショートカット、通知などを利用できる。最も強い「フルアクセス権」では、アプリが確認なしにプログラムを実行したり、ファイルを読み取り・変更・削除したりできる。許可はそのバージョンにだけ有効で、アプリが更新されるたびに、自分で編集した場合も含めて再び確認を求める。ただし、アプリの一部を外部のWebサイトから読み込んでいる場合、その部分は再確認なしに変わる可能性があるという。 フルアクセス権を与えられるのは、自分で作ったアプリか、Team／Enterpriseプランで同じ組織のメンバーが作ったアプリに限られる。Anthropicはインストール前にアプリを審査しないため、信頼できるアプリにだけフルアクセスを与えるよう呼び掛けている。 Teamプランでは、この機能は最初から有効になっている（フルアクセス権は無効）。Enterpriseプランでは",
+      "description": "Anthropicは、AIアシスタント「Claude」で作成したアーティファクトをMac／Windows向けのデスクトップアプリとして導入できる「Install as app」を全プラン向けにβ提供すると発表した。専用ウィンドウで動作し、通知やメニューバー表示、許可に応じたファイル操作にも対応する。"
+    },
+    "japan-168a7bff919d": {
+      "id": "japan-168a7bff919d",
+      "kind": "japan",
+      "title": "設計者がAIに求めるのはCAD操作だけじゃない――SOLIDWORKS AIが目指す課題解決",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2611/25/news005.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-25T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/mn/articles/2611/25/cover_news005.jpg",
+      "ogTitle": "設計者がAIに求めるのはCAD操作だけじゃない――SOLIDWORKS AIが目指す課題解決",
+      "ogDescription": "ダッソー・システムズは、年次ユーザーイベント「3DEXPERIENCE WORLD JAPAN 2026」を開催した。基調講演では、産業AIを支える技術基盤や3つのバーチャルコンパニオンの活用について紹介。AIがCADの操作支援からエンジニアリング業務の遂行へと進化する中で、設計者に求められる役割の変化や検証の重要性も示された。",
+      "excerpt": "ダッソー・システムズは、年次ユーザーイベント「3DEXPERIENCE WORLD JAPAN 2026」を開催した。基調講演では、産業AIを支える技術基盤や3つのバーチャルコンパニオンの活用について紹介。AIがCADの操作支援からエンジニアリング業務の遂行へと進化する中で、設計者に求められる役割の変化や検証の重要性も示された。 ダッソー・システムズは2026年11月13日、年次ユーザーイベント「 3DEXPERIENCE WORLD JAPAN 2026 」を開催した。今回は「次世代の設計体験へ ～AIと共創するSOLIDWORKS～」をテーマに掲げ、AI（人工知能）を活用した製品開発の方向性や、3D設計開発ソリューション「SOLIDWORKS」の進化について紹介した。 基調講演には、同社 メインストリーム・イノベーション＆CRE担当 シニア・バイスプレジデントのGian Paolo Bassi（ジャン・パオロ・バッシ）氏と、同社 SOLIDWORKS CEO（最高経営責任者） 兼 R&D担当バイスプレジデントのManish Kumar（マニッシュ・クマー）氏が登壇。バッシ氏は、産業AI（Industrial AI）を実現するための技術基盤やプラットフォーム戦略を説明し、クマー氏は、AIがエンジニアリング業務にもたらす変化と、これからのエンジニアの役割について語った。本稿では基調講演の模様をダイジェストでお届けする。 最初に登壇したバッシ氏は、SOLIDWORKSの事業状況について、直近12カ月のCADライセンス販売数が9万5000シートを超え、2026年第3四半期時点の年初来成長率が13％に達したことを紹介した。こうした成長を背景に、同社が“次の変革”として重視するのが、AIと「3DEXPERIENCEプラットフォーム」の融合である。 バッシ氏は、これまでエンジニアがデスクトップ上のソフトウェアを操作し、部品やアセンブリを設計してきた一方、現在は製品単体だけでなく、それらが機能するシステムや利用環境まで考慮する必要があると指摘した。例えば、医療機器の場合、機器そのものの設計に加え、病院内でどのように使われ、医療従事者や患者にどのような体験をもたらすのかまで視野に入れることが求められるという。 こうした設計対象の広がりに対応する上で、鍵となるのが設計者とソフトウェアの関わり方そのものの変革だ。バッシ氏は「エンジニアが画面上のボタンをクリックして操作するのではなく、ソフトウェアがエンジニアのために働く必要がある」と訴える。 その実現に向けて、SOLIDWORKSを中心に設計、シミュレーション、製造、データ管理などを結び付け、人、アイデア、データ、ソリューションを3DEXPERIENCEプラットフォーム上で連携させる考えを示した。同プラットフォームは、製品開発に関わるデータや業務プロセス、関係者をつなぐビジネスイノベーション基盤として機能し、エンジニアが実現したいことを示し、AIの支援を受けながら技術的な判断に集中できる環境をもたらす。 続いてバッシ氏は、ダッソー・システムズが目指す産業AIの技術的な方向性について説明した。 その中で、大規模言語モデル（LLM）の発展に触れ、AI研究者のYann LeCun（ヤン・ルカン）氏による「LLMは司法試験に合格したり、数学の定理を証明したり、プログラムを書いたりすることはできるが、物理世界の理解には適していない」という趣旨の発言を引用。「製造業で求められるAIには、現実世界の物理的な振る舞いを理解し、科学",
+      "description": "ダッソー・システムズは、年次ユーザーイベント「3DEXPERIENCE WORLD JAPAN 2026」を開催した。基調講演では、産業AIを支える技術基盤や3つのバーチャルコンパニオンの活用について紹介。AIがCADの操作支援からエンジニアリング業務の遂行へと進化する中で、設計者に求められる役割の変化や検証の重要性も示された。"
+    },
+    "japan-eb88365d510b": {
+      "id": "japan-eb88365d510b",
+      "kind": "japan",
+      "title": "“再起動なし”で脆弱性からシステムを守る OpenAIらがLinux向けOSS「Shirudo」を公開",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/25/news021.html",
+      "source": "＠IT",
+      "published": "2026-11-24T23:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/25/cover_news021.jpg",
+      "ogTitle": "“再起動なし”で脆弱性からシステムを守る OpenAIらがLinux向けOSS「Shirudo」を公開",
+      "ogDescription": "「今日バグが見つかっても明日には直せない」という根深い課題が解消できるかもしれない。OpenAIとCiscoは、稼働中のLinuxを保護するオープンソースランタイム「Shirudo」を発表した。eBPFを活用し、パッチ適用や再起動を待たずに脆弱性を悪用する攻撃を遮断するという。設計思想や試用ドキュメントなどをまとめた。",
+      "excerpt": "「今日バグが見つかっても明日には直せない」という根深い課題が解消できるかもしれない。OpenAIとCiscoは、稼働中のLinuxを保護するオープンソースランタイム「Shirudo」を発表した。eBPFを活用し、パッチ適用や再起動を待たずに脆弱性を悪用する攻撃を遮断するという。設計思想や試用ドキュメントなどをまとめた。 この記事は会員限定です。 会員登録（無料） すると全てご覧いただけます。 OpenAIとCisco Systems（以下、Cisco）は2026年11月23日（米国時間、以下同）、稼働中の「Linux」システムを保護するオープンソースソフトウェア（OSS）のランタイム「Shirudo」（シールド）を公開した。 Shirudoは、運用チームがセキュリティパッチを展開するまでの間、システムの再起動を伴わずに脆弱（ぜいじゃく）性を悪用する攻撃を遮断するソフトウェアだ。OpenAIの最先端AIおよびセキュリティ、インフラ研究と、Cisco Systemsのインフラおよびセキュリティの知見を結集して開発された。 開発者やセキュリティ研究者、インフラ運用者がコードを検査し、保護機能をテストして開発に貢献できるよう「GitHub」で Shirudoのソースコード を公開した。Shirudo本体は「BSD-2-Clause」（2条項BSDライセンス）の下で提供され、BPFプログラム部分はBSDと「GPL」（GNU General Public License）のデュアルライセンスとなっている。 両社が実施した 管理下での検証テスト では、AIコーディングシステム「Codex」が生成した保護プログラムを用いて、稼働中の検索・分析エンジン「Elasticsearch」に対する脆弱性「Java4Shell」の悪用試行を再起動なしで遮断したという。 両社は業界の開発者やセキュリティ研究者、インフラ運用者に向けてプロジェクトへの参加を呼び掛けている。Shirudoの仕組みと設計思想について、両社は次のように解説している。 ソフトウェアに新たな脆弱性が見つかっても、パッチのテストや本番環境への展開には依然として数日から数週間を要する。その空白期間に稼働中のサービスを保護することは容易ではない。脆弱性を悪用する攻撃と正規のリクエストが同じLinuxの操作に依存している場合が多く、その操作自体を全面的に遮断するとサービスが停止してしまうためだ。 Shirudoは、セキュリティチームがこの可用性と安全性のトレードオフに対処できるよう設計されている。チームは一時的な保護策である「シールド」を適用する前に、脆弱性を露出させる挙動だけを遮断し、正規のリクエストを通過させられるかどうかをテストできる。運用者がシールドを承認すれば、サービスを稼働させたまま本番環境に展開できる仕組みだ。 OpenAIのプレジデント兼共同創業者、グレッグ・ブロックマン氏は次のように述べている。 「当社は防御側が脆弱性をより迅速に発見・修正できるよう優れたモデルとツールを提供しているが、今日バグを見つけたからといって、明日全てのシステムにパッチを適用できるわけではない。修正プログラムを作成して展開するまでの間、稼働させ続ける必要があるシステムをチームが保護できるよう、Ciscoと緊密に連携してShirudoに取り組んでいる。非常に多くのチームが同じソフトウェアに依存しているため、こうしたツールをオープンに構築することは理にかなっている。あるチームがシステムを保護するより良い方法を見つければ、他の",
+      "description": "「今日バグが見つかっても明日には直せない」という根深い課題が解消できるかもしれない。OpenAIとCiscoは、稼働中のLinuxを保護するオープンソースランタイム「Shirudo」を発表した。eBPFを活用し、パッチ適用や再起動を待たずに脆弱性を悪用する攻撃を遮断するという。設計思想や試用ドキュメントなどをまとめた。"
+    },
+    "trending-f6c3adbf52c7": {
+      "id": "trending-f6c3adbf52c7",
+      "kind": "trending",
+      "title": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "source": "GitHub Trending",
+      "published": "2026-11-25T03:51:16.581Z",
+      "metrics": {
+        "stars": 21660,
+        "starsToday": 1826,
+        "language": "Python"
+      },
+      "image": "https://repository-images.githubusercontent.com/1229774092/93703d75-077c-4a14-b580-e2374741fe3d",
+      "ogTitle": "GitHub - elementalsouls/Claude-BugHunter: A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "ogDescription": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise ide...",
+      "excerpt": "A self-contained Claude skill bundle for bug hunting and external red-team work · 84 skills · 15 slash commands · 681 disclosed-report patterns (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by Sachin Sharma — Bug Hunting & GenAI Security Research. claude-bughunter is a drop-in skill bundle for the Claude Code skills system . Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. All triggered automatically by topic — describe what you're testing in plain English and the relevant skill loads. No invocation by name. Option A — install as a Claude Code plugin (recommended). From inside Claude Code: All 84 skills + 15 commands load namespaced under claude-bughunter: and update when you bump the plugin version — no files copied into ~/.claude/ . A HackerOne account is optional. The install asks for a HackerOne API username and token. They only let the HackerOne MCP read your private programs and your own reports; leave both blank if you don't need that. Every skill, command an",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python"
+    },
+    "trending-5dd922e14c0c": {
+      "id": "trending-5dd922e14c0c",
+      "kind": "trending",
+      "title": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "source": "GitHub Trending",
+      "published": "2026-11-25T03:51:16.581Z",
+      "metrics": {
+        "stars": 64953,
+        "starsToday": 1074,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/59752f282ebcac7aced3ad051f1042f28aa9cf78386c99c8a544f7de1f2d77da/HKUDS/CLI-Anything",
+      "ogTitle": "GitHub - HKUDS/CLI-Anything: \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "ogDescription": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/ - HKUDS/CLI-Anything",
+      "excerpt": "Today's Software Serves Humans👨‍💻. Tomorrow's Users will be Agents🤖. CLI-Anything: Bridging the Gap Between AI Agents and the World's Software 🌐 CLI-Hub : pip install cli-anything-hub then cli-hub install <name> — browse, install, and manage all community-built CLIs. Want to add your own? Open a PR — the hub updates instantly. 🎬 See Demos : Watch AI agents use generated CLIs plus preview, live preview, and trajectory loops to produce real artifacts — CAD builds, 3D scenes, diagrams, gameplay, subtitles, and more. 🙋 [Become a Contributor, or Request a CLI] : Join us ! Sign up to build a new CLI harness — once reviewed and merged, you'll gain access as one of our community contributors! Wish CLI-Anything supported a specific software or service? Submit a wishlist request ! One Command Line : Make any software agent-ready for Pi, OpenClaw, nanobot, Cursor, Claude Code, etc. 中文文档 | 日本語ドキュメント | Deutsch Thanks to all invaluable efforts from the community! More updates continuously on the way everyday.. 2026-05-30 🧭 Hermes skill proposed (#320), adding a CLI-Anything orchestration skill with installer scripts and HARNESS fallback guidance. 🗺️ ArcGIS Pro was proposed for the public registry (#318) as a Windows/ArcPy CLI for cartography, geoprocessing, feature editing, and live-Pro MCP workflows. 2026-05-27 🔧 CLI-Hub registry date updates now handle python -m pip install commands (#312), improving package-date detection for registry automation. 2026-05-23 📝 Obsidian Agent CL",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python"
+    },
+    "trending-8c6014a36ca9": {
+      "id": "trending-8c6014a36ca9",
+      "kind": "trending",
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "source": "GitHub Trending",
+      "published": "2026-11-25T03:51:16.581Z",
+      "metrics": {
+        "stars": 325919,
+        "starsToday": 1003,
+        "language": "Shell"
+      },
+      "image": "https://opengraph.githubassets.com/16ad198f4c79cc8bf762d9282e29bc0076118e8ce9455e9d7876f8990f57eec0/obra/superpowers",
+      "ogTitle": "GitHub - obra/superpowers: An agentic skills framework & software development methodology that works.",
+      "ogDescription": "An agentic skills framework & software development methodology that works. - obra/superpowers",
+      "excerpt": "Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it doesn't just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a subagent-driven-development process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hes",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell"
+    },
+    "trending-e9dbf459bd01": {
+      "id": "trending-e9dbf459bd01",
+      "kind": "trending",
+      "title": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "source": "GitHub Trending",
+      "published": "2026-11-25T03:51:16.581Z",
+      "metrics": {
+        "stars": 209064,
+        "starsToday": 991,
+        "language": "TypeScript"
+      },
+      "image": "https://repository-images.githubusercontent.com/787076358/f9616c09-3701-41ef-b5a6-fdf912ffb15b",
+      "ogTitle": "GitHub - firecrawl/firecrawl: Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "ogDescription": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API. - firecrawl/firecrawl",
+      "excerpt": "Knowledge infrastructure to make your agents smarter. 🔥 You can use Firecrawl three ways. This repo holds the code for Firecrawl Local and the self-hosted server, along with SDKs that work with all three. Pst. Hey, you, join our stargazers :) Firecrawl Local scrapes, crawls and maps from your own machine without a database, queue or container, and it reaches Firecrawl Cloud when your AI agents need search or Alexandria. It installs from crates.io. You need Rust and a C compiler, which on macOS means xcode-select --install and on Debian or Ubuntu means build-essential . If you don't have Rust, Firecrawl Cloud runs the same scrape with nothing to build and no signup. Scrape a page and print its markdown. Crawl a site and save one markdown file per page. Pages that need JavaScript render in the Chrome or Chromium already on your machine, and PDFs and Office documents are parsed locally too. Without a browser, static pages still work and a page that needed one comes back with a warning. init finds Claude Code, Claude Desktop, Cursor, Windsurf, Gemini CLI and Codex on your machine and adds Firecrawl Local to each one as an MCP server. It backs up every config file first, and the MCP server itself needs Node.js 22 or newer. Restart your AI tool afterwards. Its scrape, crawl, map and batch scrape tools run on your machine, and the other Firecrawl tools go to Firecrawl Cloud. serve answers the Firecrawl v2 API on port 3002, so code written for Firecrawl runs against it unchanged and",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "language": "TypeScript"
+    },
+    "trending-ce3bf530c355": {
+      "id": "trending-ce3bf530c355",
+      "kind": "trending",
+      "title": "zhouxiaoka/autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "source": "GitHub Trending",
+      "published": "2026-11-25T03:51:16.581Z",
+      "metrics": {
+        "stars": 15515,
+        "starsToday": 980,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/fb9cc441d73bd1f35b7dd5ac7eda81b9fcf6db15b7ffc089270f78b559c463cb/zhouxiaoka/autoclip",
+      "ogTitle": "GitHub - zhouxiaoka/autoclip: AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "ogDescription": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing. - zhouxiaoka/autoclip",
+      "excerpt": "Open-source, local-first AI clipping for podcasts, interviews, and gaming streams — with smart reframing, captions, covers, and titles built in. Website · Download · Live Replays (v1.6) · Showcase · Quick Start · Docs · Issues English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Español · Português · Русский · Français · Bahasa Indonesia · Türkçe · Tiếng Việt · Deutsch ⭐ Free, MIT-licensed, zero subscriptions — everything cuts and renders on your machine. Star the repo if you find it useful! Drop in a link, local video, or live stream replay — AutoClip finds the best moments, tracks the speaker, burns in captions, generates covers, and exports ready-to-post clips for TikTok, Shorts, Reels, YouTube, Douyin, Xiaohongshu, and Bilibili. Local-first by design: cutting and rendering run directly on your computer with no upload queues and no monthly fee. Bring your own API key or run 100% offline with Ollama / LM Studio + Whisper / SenseVoice . Home → 6 Live Replay sources → OBS WebSocket setup → Twitch import → Finished clip with captions & one-click publish. Click any thumbnail or ▶ Play to watch full clips rendered by AutoClip. Language labels indicate burned-in subtitle language. Browse 16+ clips, covers, and post copy in the Showcase → , or share your own clips . Source copyrights remain with their original creators. Installers are built publicly on GitHub Actions ( Desktop Build ) with build-provenance.json SHA-256 verification. Code signing and Apple notarization are tracked in #119 . To buil",
+      "description": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "language": "Python"
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "thinkingmachines/Inkling-2-Mini",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 5808,
+      "downloads": 69042,
+      "createdAt": "2026-11-17T00:26:57.000Z",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+    },
+    {
+      "id": "unsloth/Inkling-2-Mini-GGUF",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 1267,
+      "downloads": 1913407,
+      "createdAt": "2026-11-20T13:09:48.000Z",
+      "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF"
+    },
+    {
+      "id": "inworld/voice-isolator",
+      "pipeline_tag": "audio-to-audio",
+      "likes": 823,
+      "downloads": 12733,
+      "createdAt": "2026-11-14T02:14:35.000Z",
+      "url": "https://huggingface.co/inworld/voice-isolator"
+    }
+  ],
+  "errors": []
+}

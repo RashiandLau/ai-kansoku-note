@@ -179,9 +179,111 @@ test('rejects malformed raw/data without throwing', () => {
   for (const bad of [null, [], {}, { ...raw, selected: ['missing'] }]) assert.ok(validateData(bad, data).length);
 });
 
-test('changed-files accepts only literal dated data paths, including CRLF', () => {
-  assert.deepEqual(validateChangedFiles('data/2026-11-15.json\r\ndata/2026-11-14.json\r\n'), []);
+test('changed-files accepts both editions for exactly one date, including CRLF', () => {
+  assert.deepEqual(validateChangedFiles('data/2026-11-15.json\r\ndata/2026-11-15.en.json\r\n'), []);
   for (const bad of ['', 'scripts/build.mjs', 'data/../data/2026-11-15.json', 'data/2026-11-15.json.exe', ' data/2026-11-15.json', 'data/2026-11-15.json\n\nREADME.md']) {
     assert.ok(validateChangedFiles(bad).length, JSON.stringify(bad));
   }
+});
+
+function englishSample() {
+  const { raw, data: japaneseData } = sample();
+  const data = structuredClone(japaneseData);
+  for (const entry of data.articles) {
+    entry.headline = 'Developer updates how the tool loads settings';
+    entry.summary = 'The developer says the update changes how the tool loads its settings. The release notes describe the new behavior and its conditions.';
+    if (Object.hasOwn(entry, 'impact')) entry.impact = 'Users can check which settings apply to their environment.';
+  }
+  for (const entry of data.ranking) entry.summary = 'The repository provides tools for developers working with AI agents. Its documentation describes the available features and setup.';
+  return { raw, data, japaneseData };
+}
+
+const validateEnglish = ({ raw, data, japaneseData }) => validateData(raw, data, raw.date, { language: 'en', japaneseData });
+
+test('accepts English article and ranking summaries with matching Japanese IDs and categories', () => {
+  assert.deepEqual(validateEnglish(englishSample()), []);
+});
+
+test('English translates Japan source headlines instead of preserving Japanese titles', () => {
+  const input = englishSample();
+  input.raw.items['hn-c'] = { kind: 'japan', title: '国内企業、画像入力に対応するモデルを発表' };
+  input.data.articles[2].category = input.japaneseData.articles[2].category = 'japan';
+  input.data.articles[2].headline = 'Japanese company introduces a model with image input';
+  assert.deepEqual(validateEnglish(input), []);
+});
+
+for (const [label, mutate, diagnostic] of [
+  ['short headline', d => { d.articles[0].headline = 'A'.repeat(29); }, /30-110/],
+  ['long headline', d => { d.articles[0].headline = 'A'.repeat(111); }, /30-110/],
+  ['short summary', d => { d.articles[0].summary = 'A'.repeat(79); }, /80-600/],
+  ['long summary', d => { d.articles[0].summary = 'A'.repeat(601); }, /80-600/],
+  ['one sentence summary', d => { d.articles[0].summary = 'The developer describes the changes to settings and the conditions under which these settings apply.'; }, /2-3 sentences/],
+  ['four sentence summary', d => { d.articles[0].summary = 'The developer updates settings. The new behavior applies to local files. Users can review the release notes. The documentation lists the conditions.'; }, /2-3 sentences/],
+  ['short ranking summary', d => { d.ranking[0].summary = 'A'.repeat(79); }, /80-600/],
+  ['one sentence ranking summary', d => { d.ranking[0].summary = 'The repository provides development tools for people working on applications that use AI agents.'; }, /2-3 sentences/],
+  ['long impact', d => { d.articles[0].impact = 'A'.repeat(201); }, /0-200/],
+  ['different category', d => { d.articles[2].category = 'tools'; }, /categories must match/],
+  ['missing id', d => { d.articles.pop(); }, /IDs must match/],
+  ['different id', d => { d.articles[2].id = 'different'; }, /IDs must match/],
+  ['impact on other article', d => { d.articles[2].impact = 'A short impact.'; }, /Impact only allowed/],
+]) test(`English rejects ${label}`, () => {
+  const input = englishSample(); mutate(input.data);
+  assert.ok(validateEnglish(input).some(error => diagnostic.test(error)));
+});
+
+test('English comparison requires Japanese data', () => {
+  const input = englishSample(); delete input.japaneseData;
+  assert.ok(validateEnglish(input).some(error => /Japanese data required/.test(error)));
+});
+
+for (const word of ['revolutionary', 'game-changer', 'groundbreaking', 'seamless', 'delve', 'unleash', 'cutting-edge']) {
+  for (const field of ['headline', 'summary', 'impact']) test(`English rejects hype word ${word} in ${field}`, () => {
+    const input = englishSample(); input.data.articles[0][field] += ` ${word.toUpperCase()}`;
+    assert.ok(validateEnglish(input).some(error => /Hype word forbidden/.test(error)));
+  });
+}
+
+for (const value of ['https://example.com', 'ftp://example.com', 'www.example.com', '—', '🤖', '<b>HTML</b>', 'Show HN: Developer updates settings in the tool', 'Ask HN: Developer updates settings in the tool']) test(`English rejects prohibited text ${value}`, () => {
+  const input = englishSample(); input.data.articles[0].headline = value;
+  assert.ok(validateEnglish(input).length);
+});
+
+for (const headline of ['Claude Code 2.1.325 released', 'Claude Code 2.1.325 is released', 'Claude Code releases 2.1.325', 'Claude Code 2.1.325', 'Codex 0.169.0 is now available']) test(`English rejects release-only headline ${headline}`, () => {
+  const input = englishSample(); input.data.articles[0].headline = headline;
+  assert.ok(validateEnglish(input).some(error => /Release-only headline forbidden/.test(error)));
+});
+
+test('English accepts a release headline naming the main change and a 200-character impact', () => {
+  const input = englishSample();
+  input.data.articles[0].headline = 'Claude Code 2.1.325 fixes compressed response decoding';
+  input.data.articles[0].impact = 'A'.repeat(200);
+  assert.deepEqual(validateEnglish(input), []);
+});
+
+test('English accepts a concrete release change ending with a version number', () => {
+  const input = englishSample();
+  input.data.articles[0].headline = 'Claude Code 2.1.325 updates SQLite to 3.54';
+  assert.deepEqual(validateEnglish(input), []);
+});
+
+const issuePaths = 'data/2026-11-15.json\ndata/2026-11-15.en.json\n';
+const collectedPaths = `${issuePaths}raw/2026-11-15.json\nstate/seen.json\n`;
+
+test('writer scope accepts exactly both editions regardless of obsolete base raw options', () => {
+  for (const options of [undefined, { baseHasRaw: true }, { baseHasRaw: false }]) {
+    assert.deepEqual(validateChangedFiles(issuePaths, options), []);
+    assert.ok(validateChangedFiles(collectedPaths, options).some(error => /Disallowed changed path/.test(error)));
+  }
+});
+
+for (const paths of [
+  'data/2026-11-15.json\n', 'data/2026-11-15.en.json\n',
+  `${issuePaths}raw/2026-11-15.json\n`, `${issuePaths}state/seen.json\n`,
+  `${issuePaths}data/2026-11-16.json\ndata/2026-11-16.en.json\n`,
+  `${issuePaths}raw/2026-11-16.json\nstate/seen.json\n`,
+  `${issuePaths}data/2026-11-15.json\n`, `${issuePaths}scripts/collect.mjs\n`,
+  'data/2026-02-30.json\ndata/2026-02-30.en.json\n',
+  `${issuePaths}\n`, `${issuePaths}raw/../state/seen.json\n`,
+]) test(`writer scope rejects incomplete, mixed, duplicate or unexpected paths ${JSON.stringify(paths)}`, () => {
+  assert.ok(validateChangedFiles(paths).length);
 });

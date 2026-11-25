@@ -20,13 +20,18 @@ const article = (id, category = 'tools', extra = {}) => ({
   id, category, headline: `${id}の新機能を公開`,
   summary: '新しい機能が公開された。操作の手順を減らし、必要な情報を確認できる。利用条件と詳しい使い方は公式の発表記事で案内されている。', ...extra,
 });
+const englishArticle = (id, category = 'tools', extra = {}) => ({
+  id, category, headline: `${id} adds a tool for checking project settings`,
+  summary: 'The publisher says the new tool checks project settings before a task starts. Its announcement describes the available configuration options.', ...extra,
+});
 async function fixture(t, days) {
   const root = await mkdtemp(join(repo, '.test-build-'));
   t.after(() => rm(root, { recursive: true, force: true }));
   await Promise.all(['raw', 'data'].map(dir => mkdir(join(root, dir))));
-  for (const [raw, data] of days) {
+  for (const [raw, data, englishData] of days) {
     await writeFile(join(root, 'raw', `${raw.date}.json`), JSON.stringify(raw));
     if (data !== undefined) await writeFile(join(root, 'data', `${raw.date}.json`), typeof data === 'string' ? data : JSON.stringify(data));
+    if (englishData !== undefined) await writeFile(join(root, 'data', `${raw.date}.en.json`), typeof englishData === 'string' ? englishData : JSON.stringify(englishData));
   }
   return root;
 }
@@ -233,4 +238,106 @@ test('preserves original ranking positions after moving a repository to the top'
   assert.match(ranking, /class="rk">3<\/span>/);
   assert.doesNotMatch(ranking, /Raw rank-two/);
   assert.equal((html.match(/Raw rank-two/g) ?? []).length, 1);
+});
+
+test('builds both editions when no articles are available', async t => {
+  const out = await run(await fixture(t, []));
+  const html = await page(out, 'en/index.html');
+  assert.match(html, /<html lang="en">/);
+  assert.match(html, /No articles yet\./);
+  assert.match(html, /<title>AI Kansoku Note<\/title>/);
+  assert.match(html, /name="robots" content="noindex"/);
+  assert.match(html, /rel="manifest" href="\.\.\/manifest\.webmanifest"/);
+  assert.match(html, /class="language" href="\.\.\/index\.html" lang="ja"/);
+  assert.match(await page(out), /class="language" href="en\/index\.html" lang="en"/);
+  const archive = await page(out, 'en/archive.html');
+  assert.match(archive, /<h2>Archive<\/h2>/);
+  assert.match(archive, /class="language" href="\.\.\/archive\.html"/);
+});
+
+test('English copy keeps raw metadata and uses English UI, date, links and same-date language switches', async t => {
+  const raw = rawDay('2026-11-15', [
+    item('lead', 'hn', { discussion: { url: 'https://news.ycombinator.com/item?id=1', count: 21, points: 345 } }),
+    item('release', 'codex', { version: '0.123.0' }),
+    item('repo', 'trending', { metrics: { starsToday: 1234, language: 'JavaScript' } }),
+  ]);
+  raw.top = 'lead';
+  raw.hfmodels = [{ id: 'org/model', url: 'https://huggingface.co/org/model', likes: 12, downloads: 3456, createdAt: '2026-11-10T12:00:00Z' }];
+  const japanese = { date: raw.date, articles: [article('lead'), article('release', 'codex')], ranking: [{ id: 'repo', summary: '設定を確認して作業を支援するツール。複数の操作をまとめて実行できる。' }] };
+  const english = { date: raw.date, articles: [englishArticle('lead'), englishArticle('release', 'codex', { impact: 'Users can check configuration before starting a task.' })], ranking: [{ id: 'repo', summary: englishArticle('repo').summary }] };
+  const out = await run(await fixture(t, [[raw, japanese, english]]));
+  const html = await page(out, 'en/2026-11-15.html');
+  assert.match(html, /<html lang="en">/);
+  assert.match(html, /AI <span>Kansoku<\/span> Note/);
+  assert.match(html, /Sun, November 15, 2026/);
+  assert.match(html, /Generated: November 15, 2026 12:00 JST/);
+  assert.match(html, /HN 345 points/);
+  assert.match(html, /HN discussion \(21\)/);
+  assert.match(html, /1,234 stars on November 15/);
+  assert.match(html, /New models on Hugging Face/);
+  assert.match(html, /Likes 12/);
+  assert.match(html, /Downloads 3,456/);
+  assert.match(html, /Published November 10/);
+  assert.match(html, />Source<\/a>/);
+  assert.match(html, /class="impact">Users can check configuration/);
+  assert.match(html, /class="language" href="\.\.\/2026-11-15\.html"/);
+  assert.match(await page(out, '2026-11-15.html'), /class="language" href="en\/2026-11-15\.html"/);
+  assert.equal(html, await page(out, 'en/index.html'));
+  assert.equal((html.match(/lead adds a tool/g) ?? []).length, 1);
+  assert.doesNotMatch(html, /Only source headlines are shown/);
+  assert.doesNotMatch(html, /<section[^>]*>\s*<h[23]>通知/);
+});
+
+test('English edition uses all translated category labels with the existing design', () => {
+  const categories = ['claude-code', 'codex', 'models', 'tools', 'oss', 'japan', 'industry'];
+  const raw = rawDay('2026-11-15', categories.map(category => item(category)));
+  const data = { date: raw.date, articles: categories.map(category => englishArticle(category, category)), ranking: [] };
+  const html = renderDay(raw, data, { language: 'en' });
+  for (const label of ['Claude Code', 'Codex', 'Models', 'Tools', 'OSS', 'Japan', 'Industry']) assert.ok(html.includes(`<h2>${label}</h2>`));
+  assert.match(html, /aria-label="Categories"/);
+  assert.match(html, /max-width:720px/);
+  assert.match(html, /prefers-color-scheme: dark/);
+  assert.match(html, /<ul class="brief">/);
+});
+
+test('English fallback uses source headlines for missing, malformed or mismatched copy', async t => {
+  const raw = rawDay('2026-11-15', [item('source', 'official', { title: 'Show HN: Source headline without a summary' })]);
+  const japanese = { date: raw.date, articles: [article('source')], ranking: [] };
+  for (const english of [undefined, '{invalid json', { date: raw.date, articles: [englishArticle('source', 'models')], ranking: [] }]) {
+    const out = await run(await fixture(t, [[raw, japanese, english]]));
+    const html = await page(out, 'en/index.html');
+    assert.match(html, /Summaries are not ready yet\. Only source headlines are shown\./);
+    assert.match(html, />Source headline without a summary<\/a>/);
+    assert.doesNotMatch(html, /source adds a tool/);
+    assert.doesNotMatch(await page(out), new RegExp(fallback));
+  }
+});
+
+test('English archives list all raw dates newest first and latest English fallback is the index', async t => {
+  const older = rawDay('2026-11-13', [item('older')]);
+  const newer = rawDay('2026-11-15', [item('newer')]);
+  const out = await run(await fixture(t, [[older], [newer]]));
+  assert.match(await page(out, 'en/index.html'), /Raw newer/);
+  assert.match(await page(out, 'en/2026-11-13.html'), /Raw older/);
+  const archive = await page(out, 'en/archive.html');
+  assert.ok(archive.indexOf('2026-11-15.html') < archive.indexOf('2026-11-13.html'));
+  assert.match(archive, /Sun, November 15, 2026/);
+  assert.match(archive, /Fri, November 13, 2026/);
+});
+
+test('build emits a shared service worker and registers it on dated, index and archive pages in both editions', async t => {
+  const raw = rawDay('2026-11-15');
+  const out = await run(await fixture(t, [[raw]]));
+  const worker = await page(out, 'sw.js');
+  assert.match(worker, /showNotification/);
+  assert.match(worker, /notificationclick/);
+  for (const filename of ['index.html', 'archive.html', '2026-11-15.html', 'en/index.html', 'en/archive.html', 'en/2026-11-15.html']) {
+    const html = await page(out, filename);
+    assert.match(html, /serviceWorker\.register/);
+    assert.match(html, /name="robots" content="noindex"/);
+    assert.doesNotMatch(html, /<script[^>]+src=/);
+    const body = html.replace(/<script>[\s\S]*?<\/script>/g, '');
+    if (filename.startsWith('en/')) assert.doesNotMatch(body, /通知を受け取る|登録コード/);
+    else assert.match(body, /通知を受け取る/);
+  }
 });

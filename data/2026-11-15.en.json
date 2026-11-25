@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-15",
+  "articles": [
+    {
+      "id": "hn-34de9d80d814",
+      "category": "oss",
+      "headline": "Vaibhaav-Tiwari implements DeepSeek V3 in 190 lines of pure JAX",
+      "summary": "Vaibhaav-Tiwari has published a 190-line implementation of the DeepSeek V3 architecture in pure JAX. According to the author, the architecture demo was pretrained from scratch on a MacBook Air using public-domain detective fiction. It uses functions and arrays without Flax, Equinox or PyTorch."
+    },
+    {
+      "id": "claudecode-b7d63e8799e5",
+      "category": "claude-code",
+      "headline": "Claude Code 2.1.325 fixes a security issue in zstd response decoding",
+      "summary": "Claude Code's changelog says version 2.1.325 fixes a security issue in decoding zstd-compressed responses. It also fixes recent turns going missing after an unclean exit and resumed session. Another fix addresses sessions on many third-party gateways and Foundry stopping at context limits instead of compacting.",
+      "impact": "If the working directory has been deleted, shell commands now stop with a message and can be issued again."
+    },
+    {
+      "id": "claudecode-26b5704a9574",
+      "category": "claude-code",
+      "headline": "Claude Code 2.1.323 adds experimental Code Mode for JavaScript tool calls",
+      "summary": "Claude Code's changelog says version 2.1.323 adds experimental, opt-in Code Mode, which uses JavaScript to call tools. Plugins can specify a supported Claude Code version range in plugin.json; versions outside that range are excluded from installation, updates and loading.",
+      "impact": "claude plugin validate now type-checks TypeScript hooks, warns about findings and fails on them when --strict is set."
+    },
+    {
+      "id": "codex-a0c08c461d82",
+      "category": "codex",
+      "headline": "Codex 0.169.0 keeps project settings and MCP disabled in untrusted directories during exec",
+      "summary": "Codex's release notes say version 0.169.0 keeps project configuration and MCP servers disabled for codex exec in untrusted directories, even with --sandbox workspace-write. The opt-in terminal workspace also supports multiple side-chat tabs and reopening saved local side chats after a restart.",
+      "impact": "Use --trust with codex exec or codex review to explicitly save project trust."
+    },
+    {
+      "id": "japan-72b26624d0f7",
+      "category": "japan",
+      "headline": "[Updated] M365 outage hits ChatGPT and Claude connectors, with most requests failing",
+      "summary": "ITmedia reports that a Microsoft 365 outage affected ChatGPT and Claude connectors, with both providers reporting recovery on November 14 in Japan. Microsoft attributed the outage to a network capacity expansion problem. Anthropic warned that intermittent errors or delays could continue while Microsoft restored service for some users."
+    },
+    {
+      "id": "japan-6da3451cbd87",
+      "category": "japan",
+      "headline": "Jensen Huang builds NVIDIA: from Denny's dishwasher to a leading figure in AI",
+      "summary": "ITmedia reports that NVIDIA co-founder Jensen Huang stepped down as CEO and director on November 12, with CFO Colette Kress appointed interim CEO. The article also traces his early life, from washing dishes and serving customers at Denny's as a teenager to graduating from Oregon State University in 1984."
+    }
+  ],
+  "ranking": [
+    {
+      "id": "trending-301f2d14985e",
+      "summary": "GoogleChrome's repository contains code and documentation for authoring, calibrating and evaluating Modern Web Guidance skills. According to the project, teams from Chrome, Edge, Firefox and MDN maintain the guidance with the community to give coding agents web platform and browser compatibility information."
+    },
+    {
+      "id": "trending-c489e6fb5feb",
+      "summary": "Alibaba's Open Code Review is an AI code review CLI that the project says originated as an internal company tool. It reviews Git diffs or entire files using a configured LLM and produces structured comments tied to individual lines."
+    },
+    {
+      "id": "trending-379642deb53f",
+      "summary": "ChromeDevTools' chrome-devtools-mcp provides an MCP server and CLI for coding agents to control and inspect a running Chrome browser. The project lists debugging and performance analysis among its uses, with official support limited to Google Chrome and Chrome for Testing."
+    },
+    {
+      "id": "trending-f9da1acd54ca",
+      "summary": "tradermonty's Claude Trading Skills is a set of Claude Code skills for individual investors. The project covers market review, risk management, trade planning and journaling, and states that it does not provide trading signals or promise profitability."
+    },
+    {
+      "id": "trending-d148e3d2c284",
+      "summary": "dream-num's Univer is an SDK for adding Office editing, calculation, collaboration and file processing to products. The project provides core features including Sheets and Docs editing under Apache-2.0, while commercial plugins and the Server SDK have separate licenses."
+    }
+  ]
+}

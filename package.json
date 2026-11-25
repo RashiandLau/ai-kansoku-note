@@ -11,5 +11,8 @@
     "validate": "node scripts/validate.mjs",
     "build": "node scripts/build.mjs",
     "test": "node --test"
+  },
+  "dependencies": {
+    "web-push": "3.6.7"
   }
 }

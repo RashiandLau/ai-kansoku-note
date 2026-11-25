@@ -42,6 +42,16 @@ test('fixture collect → text-only data → validate → build, missing and inv
     });
   }
   await writeJson(join(tempRoot, 'data', `${date}.json`), data);
+  const english = {
+    date,
+    articles: data.articles.map((article, index) => ({
+      id: article.id, category: article.category,
+      headline: `Project ${index + 1} updates its published software features`,
+      summary: 'The project describes its software changes in the collected source material. The report records the published details and their stated conditions.',
+    })),
+    ranking: data.ranking.map(({ id }) => ({ id, summary: 'The project provides software for developers working with AI tools. Its repository contains the source and documentation described in the collected material.' })),
+  };
+  await writeJson(join(tempRoot, 'data', `${date}.en.json`), english);
   assert.deepEqual(await validateFile(date, tempRoot), []);
   await buildSite({ root: tempRoot });
   let html = await readFile(join(tempRoot, 'site', 'index.html'), 'utf8');
@@ -53,6 +63,13 @@ test('fixture collect → text-only data → validate → build, missing and inv
   assert.ok(html.includes('元投稿'));
   assert.ok(!html.includes(notice));
   assert.equal(await readFile(join(tempRoot, 'site', `${date}.html`), 'utf8'), html);
+  const englishHtml = await readFile(join(tempRoot, 'site', 'en', 'index.html'), 'utf8');
+  assert.match(englishHtml, /<html lang="en">/);
+  for (const article of english.articles) assert.ok(englishHtml.includes(escapeHtml(article.headline)), article.id);
+  assert.equal(await readFile(join(tempRoot, 'site', 'en', `${date}.html`), 'utf8'), englishHtml);
+  assert.match(html, new RegExp(`href="en/${date}\\.html"`));
+  assert.match(englishHtml, new RegExp(`href="../${date}\\.html"`));
+  assert.ok((await readFile(join(tempRoot, 'site', 'sw.js'), 'utf8')).includes('notificationclick'));
   await rm(join(tempRoot, 'data', `${date}.json`));
   await buildSite({ root: tempRoot });
   html = await readFile(join(tempRoot, 'site', 'index.html'), 'utf8');

@@ -2,12 +2,13 @@ name: Collect sources
 
 on:
   schedule:
-    # 06:00 JST
-    - cron: '0 21 * * *'
+    # 05:17 JST: scheduled runs may be delayed.
+    - cron: '17 20 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: collect-main
@@ -23,12 +24,32 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Check whether today's raw is already on main
+        id: today
+        shell: bash
+        run: |
+          issue_date="$(TZ=Asia/Tokyo date +%F)"
+          echo "date=$issue_date" >> "$GITHUB_OUTPUT"
+          if [[ -f "raw/$issue_date.json" ]]; then
+            echo 'Raw facts already exist on main; nothing to collect.'
+            echo 'collect=false' >> "$GITHUB_OUTPUT"
+          else
+            echo 'collect=true' >> "$GITHUB_OUTPUT"
+          fi
       - name: Collect source facts
+        if: steps.today.outputs.collect == 'true'
+        shell: bash
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/collect.mjs
+          ISSUE_DATE: ${{ steps.today.outputs.date }}
+        run: node scripts/collect.mjs --date "$ISSUE_DATE"
       - name: Commit raw data and seen state
+        if: steps.today.outputs.collect == 'true'
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_DATE: ${{ steps.today.outputs.date }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898333+github-actions[bot]@users.noreply.github.com'
@@ -37,5 +58,7 @@ jobs:
             echo 'No new source data.'
             exit 0
           fi
-          git commit -m "data: collect $(TZ=Asia/Tokyo date +%F)"
+          git commit -m "data: collect $ISSUE_DATE"
           git push origin HEAD:main
+          # Token-authenticated pushes do not trigger another workflow.
+          gh workflow run publish.yml --ref main

@@ -67,6 +67,9 @@ footer{padding-block:22px 40px;font-size:.74rem;color:var(--sub);line-height:1.7
 footer p{margin:0 0 6px}
 .logo .date{display:flex;flex-direction:column;align-items:flex-end;gap:4px;font-size:.74rem;color:var(--sub)}
 .logo .date>a,footer a,.archive a{text-decoration:underline;text-underline-offset:3px}
+.logo .language{font-size:.72rem;white-space:nowrap}
+html[lang="en"] .logo h1{font-size:1.3rem;line-height:1.2}
+@media(max-width:420px){html[lang="en"] .logo{align-items:flex-start}html[lang="en"] .logo h1{max-width:145px}}
 .notice{background:var(--soft);border-left:3px solid var(--red);padding:12px;font-size:.86rem;margin:16px 0}
 .empty{padding-block:30px;color:var(--sub)}
 .hf{margin-top:20px}

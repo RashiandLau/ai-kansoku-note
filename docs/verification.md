@@ -1,33 +1,52 @@
 # 実装・検証記録
 
-実行環境はWindows PowerShell、Node.js v24.19.0。実装はNode.js 22以上の組み込み機能を使用し、依存パッケージは追加していない。ネットワークへの実リクエストとGitの状態変更コマンドは実行していない。fixtures/とref/は読み取りにのみ使用した。
+今回の対象は、日々の収集をGitHub Actionsに分離し、執筆PRを同じ日付の日本語・英語dataの2ファイルに戻す変更である。既存の英語版、Web Push、通知日付付き公開dispatch、service workerは維持する。ネットワークへの実リクエスト、依存パッケージの追加、Gitの状態変更コマンドは実行しない。fixtures/、ref/、raw/、state/、data/は変更しない。今回の統合検証結果を下表に記録する。
 
-## 作成したファイル
+## 今回の変更
 
-- `scripts/collect.mjs`, `scripts/validate.mjs`, `scripts/build.mjs`
-- `scripts/lib/core.mjs`, `scripts/lib/parsers.mjs`, `scripts/lib/selection.mjs`, `scripts/lib/render.mjs`, `scripts/lib/style.mjs`
-- `test/core.test.mjs`, `test/parsers.test.mjs`, `test/collect.test.mjs`, `test/validate.test.mjs`, `test/build.test.mjs`, `test/e2e.test.mjs`
-- `.github/workflows/collect.yml`, `.github/workflows/publish.yml`
-- `AGENTS.md`, `WRITING.md`, `README.md`, `package.json`, `.gitignore`
-- `raw/2026-11-15.json`, `data/2026-11-15.json`, `state/seen.json`
-- `docs/implementation-plan.md`, `docs/verification.md`
-- 生成物: `site/index.html`, `site/2026-11-15.html`, `site/archive.html`, `site/.nojekyll`, `site/manifest.webmanifest`, `site/icon.svg`
+- 執筆手順: JSTの今日を確定した後、チェックアウト済みのmainで最初に日英dataを確認する。両方あれば「本日分は作成済み」、次にrawがなければ「当日の raw がまだない」と報告し、PRを作らず終了する。執筆タスクで収集は実行せず、Codex cloudのインターネットアクセスはOFFにする。
+- 信頼境界: `scripts/validate.mjs`と`scripts/validate-writer-pr.mjs`で文章とPR変更範囲を検証する。変更は同じ日付の日英dataの通常ファイル2つだけに限定し、raw/state変更とsymlinkを拒否する。信頼済みベースのrawを直接読み、候補rawは使用しない。ベースrawがなければ検証は失敗する。
+- Actions: 05:17 JST（cron `17 20 * * *`）の収集、手動起動、既存rawのスキップ。数時間の遅延も許容する。マージ後の通知日付付きdispatchとPages公開成功後の通知は維持する。
+- Dot: 15:00と18:00 JSTの執筆依頼文をREADMEに記載する。作成済み・raw未着の終了は通知せず、失敗だけ通知する。Dotへの実登録は含まない。
+- 文書: raw/stateを執筆PRに追加できる例外と、候補rawの検証に関する説明を削除する。
 
 ## 実行結果
 
 | 実行 | 結果 |
 | --- | --- |
-| `node --test` | このsandboxで子プロセス起動が `spawn EPERM`。20回再試行しても実行できなかった。 |
-| `node --test --test-isolation=none` | 72 tests、72 pass、0 fail、0 skipped。 |
-| `node scripts/collect.mjs --fixtures fixtures --date 2026-11-15 --now 2026-11-15T03:00:00Z` | 14件選択、収集エラー0件。 |
-| `node scripts/validate.mjs 2026-11-15` | 検証成功、終了コード0。 |
-| `node scripts/build.mjs` | 1日分のページと共通ファイルを生成、終了コード0。 |
-| `--changed-files`へ有効なdataパスを標準入力 | 終了コード0。scriptsのパスは日本語・英語の理由付きで終了コード1。 |
-| `node scripts/validate.mjs 2026-02-30` | 不正日付の理由付きで終了コード1。 |
+| `node --test --test-isolation=none` | 236 tests、236 pass、0 fail、0 skipped。 |
+| `node scripts/validate.mjs 2026-11-15` | 日英両版の検証成功、終了コード0。 |
+| `node scripts/build.mjs` | 11日分を日英各版に生成、終了コード0。原稿のない11月16〜25日は両版とも想定どおり見出しのみ。 |
+| `node scripts/notify.mjs --date 2026-11-15 --dry-run` | 終了コード0。`VAPID_PRIVATE_KEY`または`PUSH_SUBSCRIPTIONS`がないため送信を省略。 |
+| CLIの変更範囲検証 | `validate.mjs --changed-files --root .`は保存済み11月15日の日英dataの組を受理。raw/stateを加えた4ファイルは拒否し、このコマンドから削除した`--base-root`は不明な引数として拒否。 |
+| 開始時とのSHA-256照合 | fixtures/、ref/、raw/、state/、data/、.git/と保持対象の英語版・通知・依存ファイルの計235ファイルが一致。追加・削除もなし。 |
 
-サンプルは記事9件、GitHubランキング5件、Hugging Faceモデル3件。元投稿ボタンは17個で、日本語記事の見出しがrawと一致することと、index.htmlと日付ページの一致を別途確認した。
+## 維持する機能と検証範囲
 
-E2Eでは一時ディレクトリへ収集し、rawのIDから検証用dataを作成、検証、ビルドまで実行した。dataの欠落、JSON構文エラー、記事欠落のそれぞれで見出しのみの表示を確認した。通信処理の並行数、タイムアウト、リダイレクト時のGitHubトークン制限、エラー応答のbody解放は、実通信せず応答を注入して確認した。
+英語サンプルは日本語と同じ記事6件、GitHubランキング5件。Hugging Faceのモデル3件はrawから描画する。英語版の執筆規約、日英レンダリングと同日言語リンク、両版の欠稿fallbackは維持する。
+
+E2Eの検証範囲はリポジトリ内の一時ディレクトリでのfixture収集、両言語dataの検証とビルド、両版の原稿、同日リンク、indexと日付ページの一致、service worker出力である。欠稿、JSON構文エラー、カテゴリ不一致などでは見出しのみを表示する。
+
+通知のテストは偽の送信器とNode.jsのVMを使い、実通信しない。対象はpayload、raw.top優先、12時間TTL、secret不足、dry-run、404/410、複数購読の送信継続、秘密情報を含む例外のログ抑制である。ブラウザAPIを模したVMではiPhoneのホーム画面案内、許可操作、既存購読の再表示、コピー・共有、拒否と失敗、通知クリックのfocus/navigationを扱う。実機のWeb Push成功を証明するテストではない。
+
+ワークフローは信頼済みベースの検証コード、イベント時点の不変な差分との照合、HEAD固定マージを維持する。通知日付は環境変数経由で渡し、形式をチェックしてから依存の準備・送信を行う。通知失敗は公開ジョブを失敗にしない。収集のGITHUB_TOKEN pushでは別ワークフローが起動しないため、変更がある場合だけ通知日付なしで公開を明示起動する。
+
+収集では既存rawを確認したJST日付を収集コマンドとコミットメッセージにも渡す。実行中に日付が変わって別の日のrawを上書きすることを防ぐ。PR検証の対象はdata2ファイルの変更範囲、日付一致、信頼済みベースrawの存在と直接参照、通常ファイル条件、symlink拒否である。候補側のrawとstateを追加・変更しても執筆PRの例外にはならない。
+
+## 今回の対象と保持する既存変更
+
+| 対象 | ファイル |
+| --- | --- |
+| ワークフロー | `.github/workflows/collect.yml`, `.github/workflows/publish.yml` |
+| 手順・記録 | `AGENTS.md`, `README.md`, `docs/implementation-plan.md`, `docs/verification.md` |
+| 検証 | `scripts/validate.mjs`, `scripts/validate-writer-pr.mjs` |
+| テスト | `test/validate.test.mjs`, `test/writer-workflow.test.mjs` |
+| 使用先がなくなったため削除 | `scripts/validate-raw.mjs`, `test/validate-raw.test.mjs` |
+| 既存の英語版を保持 | `WRITING.en.md`, `data/2026-11-15.en.json`, 日英レンダリング関連のコードとテスト |
+| 既存の通知を保持 | `config/push.json`, `scripts/notify.mjs`, `scripts/lib/push.mjs`, 通知UI・service worker関連のコードとテスト |
+| 開始時からあった依存変更を保持 | `package.json`, `package-lock.json`（今回手編集・再生成していない） |
+
+`site/`以下の生成物と`.tmp/`のテスト記録はGit対象外である。
 
 ## ソース別の解析上の注意
 
@@ -46,4 +65,4 @@ URLの重複判定は指定どおりquery/hash/末尾スラッシュを除くた
 
 ## 未実施の確認
 
-ライブ収集、GitHub上のActions実行、自動マージ、Pagesへの実デプロイ、Dotの登録、実ブラウザ・実機での表示確認は行っていない。ワークフローは目視確認であり、外部YAML検証ツールの導入はしていない。リポジトリのPages・権限設定とDotの登録方法はREADMEに記載した。
+ライブ収集、GitHub上のActions実行、自動マージ、Pagesへの実デプロイ、Dotの登録、secret登録、iPhone実機の購読・受信は行っていない。ネットワーク禁止のため外部YAML検証ツールの導入やブラウザでの外部画像・フォント読み込みも行っていない。ワークフロー内のスコープ処理はJSの動作テスト、YAMLの条件・引数・権限はローカルの静的テストとレビューで確認する。運用設定と通知登録手順はREADMEに記載する。

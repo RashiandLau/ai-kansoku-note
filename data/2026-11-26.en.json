@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-26",
+  "articles": [
+    {
+      "id": "hn-d0f423014258",
+      "category": "oss",
+      "headline": "GRH Lean project presents shorter proofs with only machine checks",
+      "summary": "The grh-lean repository presents shorter Lean 4 proofs of the Riemann Hypothesis and the Generalized Riemann Hypothesis for Dirichlet L-functions, produced with Anthropic colleagues and Claude. The project says the proofs have passed machine checks only; no mathematician has read them through, and no paper accompanies them. It requires Lean v4.35.0 and Mathlib at commit 56a00585 and is not maintained or accepting contributions."
+    },
+    {
+      "id": "official-88bd06d7e0e9",
+      "category": "industry",
+      "headline": "Ai2 examines scientists' limits on delegating research to AI agents",
+      "summary": "Ai2 says it interviewed 17 scientists to examine the responsibilities involved in using AI for research. Its post argues that researchers must scrutinize evidence, understand analysis methods and preserve reproducibility when delegating tasks. It also calls for safeguards covering physical safety and participant privacy, alongside institutional guidance on verifying and disclosing AI-assisted work."
+    },
+    {
+      "id": "official-0077e07924e4",
+      "category": "tools",
+      "headline": "IBM Research presents an Indic voice agent built with CUGA",
+      "summary": "IBM Research presents an Indic voice agent using CUGA in a Hugging Face post. It describes CUGA as a Configurable Generalist Agent."
+    },
+    {
+      "id": "official-df3be113c8ae",
+      "category": "tools",
+      "headline": "Hugging Face tests Inkling 2 Mini inference on a single RTX PRO 6000",
+      "summary": "Hugging Face describes an effort to optimize Inkling 2 Mini inference on a single NVIDIA RTX PRO 6000 with 96 GB of memory. The team gave a coding agent an inference-optimisation skill, the hf CLI and access to Hugging Face Jobs. Its post notes that vLLM and SGLang support the model in nightly builds, while published serving recipes target B200 and GB300 GPUs rather than sm120 cards such as the RTX PRO 6000."
+    },
+    {
+      "id": "official-6a28e842b3bf",
+      "category": "tools",
+      "headline": "NVIDIA outlines Microduck obstacle avoidance with Isaac Lab and Newton",
+      "summary": "NVIDIA presents a simulation-to-real workflow for Microduck obstacle avoidance in a Hugging Face post. The workflow uses Isaac Lab and Newton."
+    },
+    {
+      "id": "official-0d108e7b71c4",
+      "category": "tools",
+      "headline": "Google expands Gemini partnership with Golden State for fans and operations",
+      "summary": "Google says Gemini is becoming the Official AI Assistant Partner and Official Generative AI & Enterprise LLM Partner of the Warriors, Valkyries and Chase Center. The partnership includes interactive videoboard features at Chase Center and experiences across digital channels. Google also says Golden State is deploying Gemini for business to build custom AI agents for business and basketball operations."
+    },
+    {
+      "id": "hn-1bfb90103b3c",
+      "category": "industry",
+      "headline": "New York Times asks freelancers to avoid Photoshop update over AI metadata",
+      "summary": "The Verge reports that The New York Times has asked freelance photographers not to use the newest Adobe Photoshop version. An email from the newspaper's photography leaders says the 2027 update uses AI in ways that may be unclear to users and can add metadata identifying photos as AI-generated. The cited November update includes an AI Assisted Editor view, an editing assistant and AI upscaling options."
+    },
+    {
+      "id": "japan-7de168103f22",
+      "category": "japan",
+      "headline": "Anthropic CEO Amodei rejects surrendering human free will to AI as industry debate grows",
+      "summary": "ITmedia reports that Anthropic CEO Dario Amodei rejected an Axios report suggesting he favors handing human decision-making authority to superintelligent AI. In a November 25 post on X, he argued that the report conflates governing society with automating individual tasks. He said AI should be controlled through legitimate democratic processes, amid a broader debate involving executives at OpenAI and Meta."
+    },
+    {
+      "id": "japan-4910737bdead",
+      "category": "japan",
+      "headline": "AI transforms flaw discovery: annual total more than doubles, Microsoft rises from 100 to 1,000 a month",
+      "summary": "ITmedia reports that Microsoft fixed 1,093 vulnerabilities in its November monthly update, including 63 rated critical, compared with roughly 100 fixes a month a year earlier. The report cites Microsoft as attributing the rise in discoveries and fixes to advances in AI. Across vendors, vulnerabilities assigned CVE identifiers exceeded 100,000 by November 13, more than twice the full-year 2025 total, according to The Register as cited by ITmedia."
+    },
+    {
+      "id": "japan-ce0d9dd641f0",
+      "category": "japan",
+      "headline": "PR: Must all regression tests run on AI code? Test impact analysis targets changes",
+      "summary": "A sponsored @IT article describes two free テクマトリックス guides on quality assurance in AI-driven development and API testing. The quality guide covers generating tests and stubs through MCP, selecting tests affected by code changes through test impact analysis, and virtualizing external systems or unfinished APIs. The API guide explains eight testing perspectives and includes a checklist for assessing coverage."
+    },
+    {
+      "id": "japan-dd16aa4ee434",
+      "category": "japan",
+      "headline": "Obsidian launches official agent skills covering Vault operations and file formats",
+      "summary": "ITmedia reports that Obsidian's development team released an open-source skill collection covering Vault operations, extracting Markdown from web pages and file formats. The skills require the Obsidian desktop app with Obsidian CLI enabled. They operate on local Vaults; the documentation says headless access by the cloud-based Muse requires syncing the Vault to Meta's cloud."
+    },
+    {
+      "id": "japan-87c55725131d",
+      "category": "japan",
+      "headline": "空研工業 uses AI to shift time from drawing searches to passing on skills",
+      "summary": "ITmedia reports that 空研工業 and Recursive developed an AI knowledge system using the OpenAI API to extract and structure information from drawings and technical documents. The system supports drawing searches and consistency checks, with a trial-based estimate projecting up to about a 90% reduction in annual drawing-search work. It remained at the prototype and validation stage at the November 17 interview; the reported effects reflect trials before full operation."
+    }
+  ],
+  "ranking": [
+    {
+      "id": "trending-f6c3adbf52c7",
+      "summary": "Sachin Sharma's Claude-BugHunter is a Claude Code skill bundle for bug hunting and external red-team work. The project lists 85 skills, 16 slash commands and 681 disclosed-report patterns across 24 core vulnerability classes, along with Burp MCP integration."
+    },
+    {
+      "id": "trending-9c939c7199af",
+      "summary": "Cathryn Lavery's diagram-design is an agent skill that creates diagrams as a single self-contained HTML and SVG file. The project lists 52 diagram types and supports hosts that read Agent Skills, including Claude Code, Codex and Cursor."
+    },
+    {
+      "id": "trending-e9dbf459bd01",
+      "summary": "The firecrawl repository contains Firecrawl Local, a self-hosted server and SDKs. According to the project, Firecrawl Local scrapes, crawls and maps on the user's machine without a database, queue or container, while search and Alexandria requests use Firecrawl Cloud."
+    },
+    {
+      "id": "trending-5dd922e14c0c",
+      "summary": "HKUDS's CLI-Anything provides command-line interfaces for AI agents to use software. Its CLI-Hub lets users browse, install and manage community-built CLIs, and the project shows agents using generated CLIs to produce artifacts such as CAD builds, 3D scenes and diagrams."
+    },
+    {
+      "id": "trending-b88590c43555",
+      "summary": "mvanhorn's last30days-skill researches topics across services including Reddit, X, YouTube, Hacker News and Polymarket, then produces a summary. The project says it scores material by engagement and uses an AI agent to synthesize a brief."
+    }
+  ]
+}

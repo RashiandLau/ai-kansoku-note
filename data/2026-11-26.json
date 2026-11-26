@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-26",
+  "articles": [
+    {
+      "id": "hn-d0f423014258",
+      "category": "oss",
+      "headline": "lsernau/grh-lean、一般化リーマン予想の短縮版証明コードを公開",
+      "summary": "lsernau/grh-leanは、リーマン予想とDirichlet L関数の一般化リーマン予想の証明とするLean 4コードを公開している。作者はAnthropicの同僚やClaudeと共同で短縮版を作成したとしており、機械検証のみを通過し、数学者による通読や付随する論文はないと明記している。"
+    },
+    {
+      "id": "official-88bd06d7e0e9",
+      "category": "industry",
+      "headline": "Ai2、研究をAIエージェントに委ねる際の科学者の責任を論じる",
+      "summary": "Ai2は、研究をAIエージェントに委ねても科学者の責任は残るとし、引用の根拠や分析手法、結果の再現性を確認する必要性を論じた。17人の科学者に聞き取りを行ったと記し、研究の安全性や参加者のプライバシー保護、AI利用の検証と開示に関する機関の指針も課題に挙げている。"
+    },
+    {
+      "id": "official-0077e07924e4",
+      "category": "tools",
+      "headline": "IBM Research、CUGAを使うインド諸語向け音声エージェントを紹介",
+      "summary": "IBM Researchは、CUGAを使うインド諸語向け音声エージェントをHugging Faceのブログで紹介した。同記事では、CUGAをAppWorld BenchmarkをリードするConfigurable Generalist Agentと説明している。"
+    },
+    {
+      "id": "official-df3be113c8ae",
+      "category": "tools",
+      "headline": "Hugging Face、RTX PRO 6000 1基でInkling 2 Miniの推論最適化を試す",
+      "summary": "Hugging Faceは、96 GBのNVIDIA RTX PRO 6000 1基でInkling 2 Miniの推論を最適化する取り組みを紹介した。コーディングエージェントに推論最適化のスキルとhf CLI、Hugging Face Jobsへのアクセスを与えたという。既存のvLLMとSGLangの実行手順はB200やGB300向けで、RTX PRO 6000ではカーネルの互換性が異なり得ると説明している。"
+    },
+    {
+      "id": "official-6a28e842b3bf",
+      "category": "tools",
+      "headline": "NVIDIA、Isaac LabとNewtonを使うMicroduckの障害物回避手順を紹介",
+      "summary": "NVIDIAは、Microduckの障害物回避を扱うSim2RealワークフローをHugging Faceのブログで紹介した。Isaac LabとNewtonを用いる構成である。"
+    },
+    {
+      "id": "official-0d108e7b71c4",
+      "category": "tools",
+      "headline": "Google、Golden Stateとの提携を拡大しGeminiを公式AIパートナーに",
+      "summary": "Googleは、WarriorsとValkyries、Chase Centerの公式AIアシスタントなどのパートナーにGeminiを位置付けると発表した。会場の映像ボードやデジタルチャネルでファン向け機能を提供し、Golden StateはGemini for businessを使う業務用AIエージェントを構築するという。"
+    },
+    {
+      "id": "hn-1bfb90103b3c",
+      "category": "industry",
+      "headline": "The New York Times、AI機能を理由に写真家へPhotoshopの更新見送りを要請",
+      "summary": "The Vergeによると、The New York Timesはフリーランスの写真家にAdobe Photoshopの2027年版を使わないよう求めた。写真部門幹部のメールは、利用者が気付きにくい形でAIを使う機能により、写真がAI生成物と識別されるメタデータが付く可能性を理由に挙げている。"
+    },
+    {
+      "id": "japan-7de168103f22",
+      "category": "japan",
+      "headline": "AnthropicのアモデイCEO、「人間の自由意志をAIに明け渡す」考えを否定 AI企業間で議論",
+      "summary": "ITmediaによると、Anthropicのダリオ・アモデイCEOは、人間の意思決定権の一部を超知能AIに委ねるべきだと考えているとするAxiosの報道をXで否定した。同氏は社会の統治と個別タスクの自動化を混同していると反論し、AIは正当な民主的プロセスの下で管理されるべきだと主張した。"
+    },
+    {
+      "id": "japan-4910737bdead",
+      "category": "japan",
+      "headline": "脆弱性の発見数、1年で2倍超 Microsoft製品も月100件から1000件超に……AIで一変",
+      "summary": "ITmediaによると、Microsoftは11月の月例更新で1093件の脆弱性を修正し、うち63件が最も深刻な分類だった。全ベンダーで2026年にCVEが付いた脆弱性は11月13日時点で10万件を超え、前年の年間合計の2倍以上になったという。同記事は、AIの進化が大量の脆弱性の発見と修正を支えたとするMicrosoftの説明も伝えている。"
+    },
+    {
+      "id": "japan-ce0d9dd641f0",
+      "category": "japan",
+      "headline": "PR： AIが書いたコード、回帰テストは全部回しますか？ 変更の影響だけを見抜く「テスト影響分析」という解",
+      "summary": "＠ITのPR記事によると、テクマトリックスはAI駆動開発の品質保証戦略とAPIテストに関する2つの資料を無料公開した。資料はMCP経由のテスト生成や、変更の影響を受けるテストを選ぶテスト影響分析、外部システムの仮想化を解説する。APIテストのガイドには、8つの観点を確認するチェックシートも付属する。"
+    },
+    {
+      "id": "japan-dd16aa4ee434",
+      "category": "japan",
+      "headline": "Obsidian公式の「エージェント向け」スキル集が登場 Vault操作法とファイル形式をひとまとめに",
+      "summary": "ITmediaによると、Obsidian開発チームは、Vaultの操作方法やWebページからのテキスト抽出、ファイル形式をエージェントに伝えるスキル集をオープンソースで公開した。利用にはObsidian CLIを有効にしたデスクトップアプリが必要で、スキル集はローカルのVault操作を対象とする。"
+    },
+    {
+      "id": "japan-87c55725131d",
+      "category": "japan",
+      "headline": "図面を探す時間から技能を伝える時間へ、AI活用で業務効率化を進める空研工業",
+      "summary": "ITmediaによると、空研工業とRecursiveは、OpenAI APIを使って図面や技術資料の情報を抽出し、図面検索と整合確認を支援するAIナレッジ基盤システムを共同開発した。福岡工場の試行利用に基づく試算では、年間の図面検索工数を最大約90％削減できる見込みとしている。11月17日の取材時点では試作・検証段階であり、効果の説明は本格運用前の試行に基づく。"
+    }
+  ],
+  "ranking": [
+    {
+      "id": "trending-f6c3adbf52c7",
+      "summary": "Sachin Sharmaが作成した、Claude Codeでバグ探索や外部レッドチーム業務を行うためのスキル集である。85のスキルと16のコマンド、24の脆弱性分類にまたがる681の公開報告パターンを収録している。"
+    },
+    {
+      "id": "trending-9c939c7199af",
+      "summary": "cathrynlaveryのdiagram-designは、図を単一のHTMLとSVGのファイルとして作成するエージェント向けスキルである。52種類の図を扱い、Claude CodeやCodexなどAgent Skillsを読める環境に対応する。"
+    },
+    {
+      "id": "trending-e9dbf459bd01",
+      "summary": "Firecrawl Localとセルフホスト用サーバー、SDKを収めたリポジトリである。LocalはWebページの取得やクロールを端末上で行い、検索などにはFirecrawl Cloudを使う。"
+    },
+    {
+      "id": "trending-5dd922e14c0c",
+      "summary": "HKUDSのCLI-Anythingは、ソフトウェアをAIエージェントから扱うためのCLIを提供するプロジェクトである。CLI-Hubでコミュニティー製CLIを探し、インストールして管理できる。"
+    },
+    {
+      "id": "trending-b88590c43555",
+      "summary": "mvanhornのlast30days-skillは、RedditやX、YouTube、Hacker News、Polymarket、Webを調べて要約するAIエージェント向けスキルである。投稿への反応などで検索結果を評価し、AIエージェントがまとめる。"
+    }
+  ]
+}

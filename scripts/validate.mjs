@@ -2,7 +2,7 @@ import { readFile, lstat } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 import { isDate, isMain, todayJst, parseArgs } from './lib/core.mjs';
 
-export const CATEGORIES = Object.freeze(['claude-code', 'codex', 'models', 'tools', 'oss', 'japan', 'industry']);
+export const CATEGORIES = Object.freeze(['claude-code', 'codex', 'models', 'tools', 'oss', 'japan', 'industry', 'usage']);
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const emoji = /[\p{Extended_Pictographic}\p{Regional_Indicator}\u20e3\ufe0f]/u;
 const normalizeWhitespace = value => value.replace(/\s+/gu, ' ').trim();
@@ -42,12 +42,13 @@ export function validateData(raw, data, expectedDate = raw?.date, { language = '
     if (value.includes('**')) fail(`${label}に強調記号は書けません`, `Markdown emphasis forbidden in ${label}`);
     if (emoji.test(value)) fail(`${label}に絵文字は書けません`, `Emoji forbidden in ${label}`);
     if (/<\/?[a-z][^>]*>|<!--[^]*?-->/i.test(value)) fail(`${label}にHTMLタグは書けません`, `HTML tags forbidden in ${label}`);
+    if (/革新的|画期的|\brevolutionary\b/i.test(value)) fail(`${label}に誇張表現があります`, `Hype word forbidden in ${label}`);
     if (english && /\b(?:revolutionary|game[- ]changer|groundbreaking|seamless|delve|unleash|cutting[- ]edge)\b/i.test(value)) fail(`${label}に誇張表現があります`, `Hype word forbidden in ${label}`);
   };
-  const summary = (value, label, ranking = false) => {
+  const summary = (value, label, ranking = false, usage = false) => {
     text(value, english ? 80 : ranking ? 20 : 30, english ? 600 : ranking ? 200 : 260, label);
-    if (english && typeof value === 'string') {
-      const sentences = [...new Intl.Segmenter('en', { granularity: 'sentence' }).segment(value.trim())];
+    if ((english || usage) && typeof value === 'string') {
+      const sentences = [...new Intl.Segmenter(english ? 'en' : 'ja', { granularity: 'sentence' }).segment(value.trim())];
       if (sentences.length < 2 || sentences.length > 3) fail(`${label}は2〜3文で書いてください`, `${label} must contain 2-3 sentences`);
     }
   };
@@ -68,6 +69,8 @@ export function validateData(raw, data, expectedDate = raw?.date, { language = '
         if (!CATEGORIES.includes(entry.category)) fail(`${label}のカテゴリが不正です`, `Invalid category in ${label}`);
         if (item?.kind === 'claudecode' && entry.category !== 'claude-code') fail(`${id}はclaude-codeです`, `Claude Code category required for ${id}`);
         if (item?.kind === 'codex' && entry.category !== 'codex') fail(`${id}はcodexです`, `Codex category required for ${id}`);
+        if (item?.kind === 'usage' && entry.category !== 'usage') fail(`${id}はusageです`, `Usage category required for ${id}`);
+        if (item?.kind !== 'usage' && entry.category === 'usage') fail(`${id}はusageではありません`, `Usage category reserved for usage items: ${id}`);
         text(entry.headline, english ? 30 : 8, english ? 110 : 70, `${label}.headline`);
         if (typeof entry.headline === 'string') {
           const releaseOnly = english
@@ -81,10 +84,14 @@ export function validateData(raw, data, expectedDate = raw?.date, { language = '
             if (typeof item.title !== 'string' || normalizeWhitespace(entry.headline) !== normalizeWhitespace(item.title)) {
               fail(`${label}.headlineは空白の違いを除きrawの原見出しと一致させてください`, `Japan headline must match raw title after whitespace normalization in ${label}.headline`);
             }
-          } else if (entry.headline === item?.title) fail(`${label}.headlineはrawの原見出しから書き換えてください`, `Headline must differ from raw title in ${label}.headline`);
+          } else if (!english && item?.kind === 'usage' && item.language === 'ja') {
+            if (typeof item.title !== 'string' || entry.headline !== item.title) {
+              fail(`${label}.headlineはrawの日本語原見出しと完全に一致させてください`, `Usage headline must match raw title verbatim in ${label}.headline`);
+            }
+          } else if (!(english && item?.kind === 'usage' && item.language === 'en') && entry.headline === item?.title) fail(`${label}.headlineはrawの原見出しから書き換えてください`, `Headline must differ from raw title in ${label}.headline`);
           if (/^(Show|Ask|Launch|Tell) HN\b/i.test(entry.headline)) fail(`${label}.headlineの先頭にHNの投稿区分は書けません`, `HN prefix forbidden in ${label}.headline`);
         }
-        summary(entry.summary, `${label}.summary`);
+        summary(entry.summary, `${label}.summary`, false, item?.kind === 'usage');
         if (Object.hasOwn(entry, 'impact')) {
           if (!['claudecode', 'codex'].includes(item?.kind)) fail(`${id}にはimpactを書けません`, `Impact only allowed for Claude Code or Codex: ${id}`);
           text(entry.impact, 0, english ? 200 : 90, `${label}.impact`);

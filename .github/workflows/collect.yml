@@ -42,6 +42,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           ISSUE_DATE: ${{ steps.today.outputs.date }}
+        # This workflow owns state/usage.json; writer and publish jobs never update it.
+        # collect stages raw and state together and reuses an already fixed issue.
         run: node scripts/collect.mjs --date "$ISSUE_DATE"
       - name: Commit raw data and seen state
         if: steps.today.outputs.collect == 'true'

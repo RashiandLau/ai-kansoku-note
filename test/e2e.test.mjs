@@ -25,7 +25,14 @@ test('fixture collect → text-only data → validate → build, missing and inv
   const originalFetch = globalThis.fetch;
   globalThis.fetch = () => { throw new Error('Fixture tests must never fetch'); };
   try {
-    await collect({ date, fixtures: join(root, 'fixtures'), now: '2026-11-15T03:00:00Z', out: tempRoot, state: join(tempRoot, 'state', 'seen.json') });
+    await collect({ date, fixtures: join(root, 'fixtures'), now: '2026-11-15T03:00:00Z', out: tempRoot, state: join(tempRoot, 'state', 'seen.json'),
+      usageCollector: async () => ({ candidates: [{
+        url: 'https://zenn.dev/fixture/articles/usage', title: 'Claudeでテストを作成して実行した記録',
+        source: 'zenn', language: 'ja', author: 'fixture', publishedAt: '2026-11-14T03:00:00Z',
+        body: '<p>筆者は Claude を使ってテストを作成した。結果を確認した。</p><pre>run tests</pre><pre>save results</pre>' + '検証用の説明。'.repeat(220),
+        bodyAvailable: true, metrics: { hb: 12, observedAt: '2026-11-15T03:00:00Z' },
+      }], usageSources: { zenn: 'ok' }, errors: [] }),
+    });
   } finally { globalThis.fetch = originalFetch; }
   const raw = JSON.parse(await readFile(join(tempRoot, 'raw', `${date}.json`), 'utf8'));
   assert.ok(raw.selected.length > 5);
@@ -36,9 +43,9 @@ test('fixture collect → text-only data → validate → build, missing and inv
     const item = raw.items[id];
     if (item.kind === 'trending') data.ranking.push({ id, summary: 'AI関連の開発で使うソフトウェアを公開しているリポジトリである。' });
     else data.articles.push({
-      id, category: ({ claudecode: 'claude-code', codex: 'codex', japan: 'japan' })[item.kind] ?? 'tools',
-      headline: item.kind === 'japan' ? item.title : `統合テスト用の記事見出し${index + 1}`,
-      summary: '収集した資料に基づいて記事の内容を整理した。公開内容の詳細は元投稿で確認できる。',
+      id, category: ({ claudecode: 'claude-code', codex: 'codex', japan: 'japan', usage: 'usage' })[item.kind] ?? 'tools',
+      headline: ['japan', 'usage'].includes(item.kind) ? item.title : `統合テスト用の記事見出し${index + 1}`,
+      summary: item.kind === 'usage' ? '筆者はClaudeを使ってテストを作成したと報告している。実行結果を確認したという。' : '収集した資料に基づいて記事の内容を整理した。公開内容の詳細は元投稿で確認できる。',
     });
   }
   await writeJson(join(tempRoot, 'data', `${date}.json`), data);
@@ -61,6 +68,8 @@ test('fixture collect → text-only data → validate → build, missing and inv
     assert.ok(html.includes(`href="${url}"`), id);
   }
   assert.ok(html.includes('元投稿'));
+  assert.match(html, /id="usage"/);
+  assert.match(html, /議論 はてブ 12件/);
   assert.ok(!html.includes(notice));
   assert.equal(await readFile(join(tempRoot, 'site', `${date}.html`), 'utf8'), html);
   const englishHtml = await readFile(join(tempRoot, 'site', 'en', 'index.html'), 'utf8');

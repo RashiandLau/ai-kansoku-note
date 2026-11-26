@@ -50,10 +50,10 @@ test('release state suppresses already seen versions and never regresses', async
   const first = await collect({ fixtures: FIXTURES, now: NOW, out, state });
   assert.deepEqual(first.selected.map((id) => first.items[id]).filter((x) => x.kind === 'claudecode').map((x) => x.version), ['2.1.325']);
   assert.deepEqual(first.selected.map((id) => first.items[id]).filter((x) => x.kind === 'codex').map((x) => x.version), ['0.169.0', '0.168.0', '0.167.2']);
-  const second = await collect({ fixtures: FIXTURES, now: NOW, out, state });
+  const second = await collect({ fixtures: FIXTURES, now: '2026-11-16T03:00:00Z', out, state });
   assert.ok(Object.values(second.items).every((x) => !['claudecode', 'codex'].includes(x.kind)));
   await writeFile(state, JSON.stringify({ claudeCode: '99.0.0', codex: '99.0.0', custom: true }));
-  await collect({ fixtures: FIXTURES, now: NOW, out, state });
+  await collect({ fixtures: FIXTURES, now: '2026-11-17T03:00:00Z', out, state });
   assert.deepEqual(JSON.parse(await readFile(state, 'utf8')), { claudeCode: '99.0.0', codex: '99.0.0', custom: true });
 });
 
@@ -78,7 +78,7 @@ test('each missing or malformed source becomes a recorded error while healthy so
   await writeFile(path.join(fixtures, 'codex-releases.json'), '{invalid json');
   await writeFile(path.join(fixtures, 'openai-news.xml'), '<rss>truncated');
   const result = await collect({ fixtures, now: NOW, out });
-  assert.equal(result.errors.length, 9);
+  assert.equal(result.errors.filter(error => !error.source.startsWith('usage')).length, 9);
   assert.ok(result.errors.every((x) => typeof x.source === 'string' && typeof x.message === 'string'));
   assert.equal(result.items[result.top].objectID, '50497589');
 });
@@ -130,6 +130,63 @@ test('deduplication restores category ranking after replacing an earlier HN cand
   const oldHigh = { id: 'hn-old-high', kind: 'hn', url: 'https://example.com/old', points: 200, published: '2026-11-14T01:00:00Z' };
   const newHigh = { id: 'hn-new-high', kind: 'hn', url: 'https://example.com/new', points: 200, published: NOW };
   assert.deepEqual(deduplicateSelection([lowPoints, oldHigh, newHigh], null).selected, [newHigh.id, oldHigh.id, lowPoints.id]);
+});
+
+test('all-section URL dedupe retains meaningful sorted queries and HN item IDs', () => {
+  assert.equal(normalizeUrl('https://EXAMPLE.com/a/?z=2&a=1&utm_campaign=x&fbclid=y&gclid=z&ref_src=r#s'), 'https://example.com/a?a=1&z=2');
+  const result = deduplicateSelection([
+    { id: 'a', kind: 'hn', url: 'https://news.ycombinator.com/item?id=1' },
+    { id: 'b', kind: 'hn', url: 'https://news.ycombinator.com/item?id=2' },
+  ], null);
+  assert.deepEqual(result.selected, ['a', 'b']);
+});
+
+test('a same-issue rerun reuses fixed raw without fetching or advancing state', async t => {
+  const out = await scratch(t);
+  const original = await collect({ fixtures: FIXTURES, now: NOW, out });
+  const state = await readFile(path.join(out, 'state', 'usage.json'), 'utf8');
+  const again = await collect({ now: NOW, out, usageCollector: () => { throw new Error('must not run'); } });
+  assert.deepEqual(again, original);
+  assert.equal(await readFile(path.join(out, 'state', 'usage.json'), 'utf8'), state);
+});
+
+test('a malformed fixed issue fails explicitly without re-fetching or overwriting it', async t => {
+  const out = await scratch(t);
+  await mkdir(path.join(out, 'raw'));
+  const rawPath = path.join(out, 'raw', '2026-11-15.json');
+  for (const value of ['null', '{}', '{"date":"2026-11-16","selected":[],"items":{}}']) {
+    await writeFile(rawPath, value);
+    await assert.rejects(collect({ fixtures: FIXTURES, now: NOW, out }), /Invalid existing issue/);
+    assert.equal(await readFile(rawPath, 'utf8'), value);
+  }
+});
+
+test('usage collection failure is recorded and does not break existing sections', async t => {
+  const out = await scratch(t);
+  const result = await collect({ fixtures: FIXTURES, now: NOW, out,
+    usageCollector: async () => { throw new Error('fixture source unavailable'); } });
+  assert.ok(result.selected.length > 0);
+  assert.ok(Object.values(result.usageSources).every(status => status === 'missing'));
+  assert.ok(result.errors.some(error => error.source === 'usage' && /unavailable/.test(error.message)));
+});
+
+test('usage integration bootstraps other sections, selects once and never publishes full bodies', async t => {
+  const out = await scratch(t);
+  const publishedAt = '2026-11-14T00:00:00Z';
+  const body = '<p>私が Claude を使って構築した結果です。' + '検証の具体的な記録。'.repeat(180) + '</p><pre>run</pre><pre>save</pre>';
+  const make = (url, author) => ({ url, author, title: 'Claudeを使って構築した手順と結果', source: 'zenn', language: 'ja', publishedAt, body, bodyAvailable: true, metrics: { hb: 10, observedAt: NOW } });
+  const prior = make('https://zenn.dev/prior/articles/a', 'prior');
+  const fresh = make('https://zenn.dev/new/articles/b', 'new');
+  await mkdir(path.join(out, 'raw'));
+  await writeFile(path.join(out, 'raw', '2026-11-14.json'), JSON.stringify({ date: '2026-11-14', generatedAt: publishedAt, selected: ['other'], items: { other: { ...prior, kind: 'japan', body: undefined } } }));
+  const usageCollector = async () => ({ candidates: [prior, fresh], usageSources: { zenn: 'ok' }, errors: [] });
+  const result = await collect({ fixtures: FIXTURES, now: NOW, out, usageCollector });
+  const usage = result.selected.map(id => result.items[id]).filter(item => item.kind === 'usage');
+  assert.deepEqual(usage.map(item => item.url), [fresh.url]);
+  assert.equal(usage[0].route, 'A');
+  assert.ok([...usage[0].excerpt].length <= 600);
+  assert.equal(usage[0].body, undefined);
+  assert.doesNotMatch(await readFile(path.join(out, 'state', 'usage.json'), 'utf8'), /<pre>|<p>/);
 });
 
 test('Codex release wins over its HN duplicate and retains release content, discussion and top placement', () => {

@@ -1,0 +1,53 @@
+{
+  "testFixture": true,
+  "routes": [
+    {
+      "prefix": "https://zenn.dev/api/articles?",
+      "file": "zenn-list.json"
+    },
+    {
+      "prefix": "https://zenn.dev/api/articles/",
+      "file": "zenn-article.json"
+    },
+    {
+      "prefix": "https://qiita.com/api/v2/items?",
+      "file": "qiita-list.json"
+    },
+    {
+      "url": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "file": "hatena.xml"
+    },
+    {
+      "url": "https://b.hatena.ne.jp/hotentry.rss",
+      "file": "hatena.xml"
+    },
+    {
+      "prefix": "https://bookmark.hatenaapis.com/count/entries?",
+      "file": "hatena-count.json"
+    },
+    {
+      "prefix": "https://hn.algolia.com/api/v1/search_by_date?",
+      "file": "hn.json"
+    },
+    {
+      "url": "https://simonwillison.net/atom/entries/",
+      "file": "simon-entries.xml"
+    },
+    {
+      "url": "https://note.com/shikimi_crypto/n/n35d0bb54e6fb",
+      "file": "note.html"
+    },
+    {
+      "url": "https://blog.antonio.cx/running-agents-with-lend",
+      "file": "hn-article.html"
+    },
+    {
+      "url": "https://note.com/robots.txt",
+      "file": "robots.txt"
+    },
+    {
+      "url": "https://blog.antonio.cx/robots.txt",
+      "file": "robots.txt"
+    }
+  ]
+}

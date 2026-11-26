@@ -1,0 +1,35 @@
+[
+  {
+    "url": "https://qiita.com/inoyu-qiita/items/c073f8b67716610c738e",
+    "title": "Xでバズっている、AIに一文ごとの執筆意図を書かせる文章生成・校正スキル「tsuzuri」を普通の文章生成と比べてみた",
+    "created_at": "2026-11-25T18:59:17+09:00",
+    "likes_count": 3,
+    "stocks_count": 3,
+    "tags": [
+      {
+        "name": "ClaudeCode",
+        "versions": []
+      },
+      {
+        "name": "codex",
+        "versions": []
+      },
+      {
+        "name": "AI",
+        "versions": []
+      },
+      {
+        "name": "生成AI",
+        "versions": []
+      },
+      {
+        "name": "AI活用",
+        "versions": []
+      }
+    ],
+    "rendered_body": "<p>はじめに \n Xで見かけた こちらの投稿 で、新しい文章生成・校正スキル「 tsuzuri（つづり） 」が紹介されていました。一文ごとに「何を伝えるための文か」を先に記録し、本文と見比べながら修正できるスキルです。 \n yomiyasuの作者・大賀さん（ @oga_aiichiro ）も、imozuruの作者・いる科さん（ @iru_cection ）との </p>",
+    "user": {
+      "id": "inoyu-qiita"
+    }
+  }
+]

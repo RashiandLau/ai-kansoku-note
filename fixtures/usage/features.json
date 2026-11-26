@@ -1,0 +1,104 @@
+{
+  "note": "Test fixtures: small first-paragraph fragments only, stripped from saved research responses. Expected features are from research-analyze.py; these are not publishable article bodies.",
+  "cases": [
+    {
+      "sourceFixture": "research-zenn-07d9a0537db3bf.json",
+      "title": "AI Agentを用いたSCP観測日誌ベンチマークの自動作成（と検証）",
+      "tags": [
+        "scp",
+        "ベンチマーク",
+        "llm",
+        "ローカルllm",
+        "aiagent"
+      ],
+      "body": "<p data-line=\"2\" class=\"code-line\">AIが開発や業務のさまざまな場面で使われるようになり、モデルを選ぶためのベンチマークがこれまで以上に求められています。どのタスクでどのモデルがどれくらい通用するのか、そしてどれが最もコストパフォーマンスに優れているのかを見極める必要が出てきたからです。</p>",
+      "expected": {
+        "chars": 126,
+        "words": 4,
+        "codeBlocks": 0,
+        "orderedLists": 0,
+        "images": 0,
+        "quotes": 0,
+        "ai": true,
+        "practitioner": false,
+        "outcome": true,
+        "prompt": false,
+        "steps": false,
+        "artifact": false,
+        "actions": [],
+        "usageIntentTitle": true,
+        "usageClaim": false,
+        "usageEvidence": true,
+        "translationTitle": false,
+        "recipe": false,
+        "shift": true,
+        "textPreview": "AIが開発や業務のさまざまな場面で使われるようになり、モデルを選ぶためのベンチマークがこれまで以上に求められています。どのタスクでどのモデルがどれくらい通用するのか、そしてどれが最もコストパフォーマンスに優れているのかを見極める必要が出てきたからです。"
+      }
+    },
+    {
+      "sourceFixture": "research-qiita-list-1.json",
+      "title": "SBOMとは？自分のライブラリに導入してみた。",
+      "tags": [
+        "SBOM",
+        "Security"
+      ],
+      "body": "<p data-sourcepos=\"4:1-4:210\">近年、ソフトウェアサプライチェーンのセキュリティが重要視されるようになり、SBOM（Software Bill of Materials）という言葉を目にする機会が増えてきました。</p>",
+      "expected": {
+        "chars": 87,
+        "words": 8,
+        "codeBlocks": 0,
+        "orderedLists": 0,
+        "images": 0,
+        "quotes": 0,
+        "ai": false,
+        "practitioner": false,
+        "outcome": false,
+        "prompt": false,
+        "steps": false,
+        "artifact": false,
+        "actions": [],
+        "usageIntentTitle": true,
+        "usageClaim": false,
+        "usageEvidence": true,
+        "translationTitle": false,
+        "recipe": false,
+        "shift": false,
+        "textPreview": "近年、ソフトウェアサプライチェーンのセキュリティが重要視されるようになり、SBOM（Software Bill of Materials）という言葉を目にする機会が増えてきました。"
+      }
+    },
+    {
+      "sourceFixture": "en-body-candidates.json",
+      "title": "Quad9’s withdrawal from France: A canary in the coal mine",
+      "tags": [
+        "1.1.1.1",
+        "DNS",
+        "Policy & Legal",
+        "Privacy",
+        "Security"
+      ],
+      "body": "<p>Last month, the Swiss non-profit foundation Quad9 <a href=\"https://quad9.net/news/blog/au-revoir-france/\"><span style=\"text-decoration:underline\">announced</span></a> that it will withdraw its free public DNS resolver from France. This difficult decision followed months of litigation and a French court ruling that imposed daily financial penalties on Quad9 for failing to block domains associated with alleged copyright infringement.</p>",
+      "expected": {
+        "chars": 281,
+        "words": 48,
+        "codeBlocks": 0,
+        "orderedLists": 0,
+        "images": 0,
+        "quotes": 0,
+        "ai": false,
+        "practitioner": false,
+        "outcome": false,
+        "prompt": false,
+        "steps": false,
+        "artifact": false,
+        "actions": [],
+        "usageIntentTitle": false,
+        "usageClaim": false,
+        "usageEvidence": false,
+        "translationTitle": false,
+        "recipe": false,
+        "shift": false,
+        "textPreview": "Last month, the Swiss non-profit foundation Quad9 announced that it will withdraw its free public DNS resolver from France. This difficult decision followed months of litigation an"
+      }
+    }
+  ]
+}

@@ -300,6 +300,30 @@ test('English edition uses all translated category labels with the existing desi
   assert.match(html, /<ul class="brief">/);
 });
 
+test('build joins usage copy in both editions without requiring data metadata', async t => {
+  const raw = rawDay('2026-11-15', [item('usage-sample', 'usage', {
+    title: 'Claude Codeでテストを作った記録', language: 'ja', published: undefined,
+    publishedAt: '2026-11-14T16:30:00Z', source: 'Zenn',
+    metrics: { hb: 23, saves: 3 },
+    discussion: { source: 'hatena', url: 'https://b.hatena.ne.jp/entry/s/example.com/usage-sample', count: 23 },
+  })]);
+  const japanese = { date: raw.date, articles: [article('usage-sample', 'usage', {
+    headline: raw.items['usage-sample'].title,
+    summary: '筆者はClaude Codeでテストを書いたと報告している。生成したテストを実行した後、失敗した箇所を修正したという。',
+  })], ranking: [] };
+  const english = { date: raw.date, articles: [englishArticle('usage-sample', 'usage', {
+    headline: 'An author writes project tests with Claude Code',
+    summary: 'The author reports writing project tests with Claude Code. After running the generated tests, the author says they fixed the failures.',
+  })], ranking: [] };
+  const out = await run(await fixture(t, [[raw, japanese, english]]));
+  for (const [path, heading] of [['2026-11-15.html', '使い方'], ['en/2026-11-15.html', 'How people use AI']]) {
+    const html = await page(out, path);
+    assert.ok(html.includes(`<section class="sec usage" id="usage"><h2>${heading}</h2>`));
+    assert.match(html, /href="https:\/\/b\.hatena\.ne\.jp\/entry\/s\/example\.com\/usage-sample"/);
+    assert.doesNotMatch(html, /class="notice"/);
+  }
+});
+
 test('English fallback uses source headlines for missing, malformed or mismatched copy', async t => {
   const raw = rawDay('2026-11-15', [item('source', 'official', { title: 'Show HN: Source headline without a summary' })]);
   const japanese = { date: raw.date, articles: [article('source')], ranking: [] };

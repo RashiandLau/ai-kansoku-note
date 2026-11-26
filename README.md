@@ -19,7 +19,7 @@ node scripts/notify.mjs --date 2026-11-15 --dry-run
 
 `site/index.html` が最新号、`site/YYYY-MM-DD.html` が日別の紙面になる。英語版は `site/en/` 以下の同じ構成で、ヘッダーから同じ日付の別言語版へ移動できる。各言語の data が欠けるか不正なら、その版は raw の見出しのみを掲載する。両版とも検索エンジン向けの `noindex` を維持する。ライブ収集は `node scripts/collect.mjs`、npm を使う場合は `npm run collect`、`npm run validate -- 2026-11-15`、`npm run build`、`npm test` でも実行できる。
 
-fixture を使うとネットワークなしで収集を再現できる。基本のコマンドは次のとおりで、raw と state をリポジトリ内に書き出す。既存の `state/seen.json` に登録済みの記事は重複除外されるため、同梱データがある状態で実行すると記事数が初回と異なる。
+fixture を使うとネットワークなしで収集を再現できる。同じ日付の raw があれば固定済みの内容を返し、再取得・再選択・状態更新は行わない。`state/seen.json` は Claude Code/Codex のリリース版番号、`state/usage.json` は使い方候補と全欄の掲載済み URL を管理する。
 
 ```sh
 node scripts/collect.mjs --fixtures fixtures --date 2026-11-15 --now 2026-11-15T03:00:00Z
@@ -31,9 +31,19 @@ node scripts/collect.mjs --fixtures fixtures --date 2026-11-15 --now 2026-11-15T
 node scripts/collect.mjs --fixtures fixtures --date 2026-11-15 --now 2026-11-15T03:00:00Z --out .tmp/demo --state .tmp/demo/state/seen.json
 ```
 
-同じ出力先で再実行すると、その状態ファイルによる重複除外が働く。初回収集を再現するには新しい `.tmp/` 内の出力先と状態ファイルを使う。生成された raw を読んで `.tmp/demo/data/2026-11-15.json` と `.tmp/demo/data/2026-11-15.en.json` を執筆すれば、`node scripts/validate.mjs 2026-11-15 --root .tmp/demo` と `node scripts/build.mjs --root .tmp/demo` で確認できる。
+同じ日付・出力先で再実行すると固定済み raw を再利用する。初回収集を再現するには新しい `.tmp/` 内の出力先を使う。明示した独立出力先での fixture 実行はその下に検証用の usage 状態も保存する。生成された raw を読んで `.tmp/demo/data/2026-11-15.json` と `.tmp/demo/data/2026-11-15.en.json` を執筆すれば、`node scripts/validate.mjs 2026-11-15 --root .tmp/demo` と `node scripts/build.mjs --root .tmp/demo` で確認できる。
 
 fixtures は収集形式を検証するための保存済みスナップショットであり、現在のニュースの確認結果ではない。RSS、JSON、HTML の抽出を利用し、HTML は正規表現による抽出である。ブラウザで JavaScript を実行しないため、動的表示や配信元の構造変更によって取得できない情報がある。収集結果と失敗の記録を確認する。
+
+# 使い方 / How people use AI
+
+実践記事を既存の記事欄の後、ランキングの前に最大5件掲載する。日本語2件・英語1件を先に確保し、同一言語3件、掲載元2件、著者キー1件を上限とする。0〜2件の日はその件数のままにし、0件なら欄を表示しない。閾値の自動緩和や AI 執筆者による補充・選び直しは行わない。
+
+公開7日以内の記事について、v2 の本文条件と、A（はてブ10以上、または HN20点・3コメント以上）か B（Zenn/Qiita 保存10以上・いいね5以上・保存比率0.25以上）を満たしたものを採る。例外の C は Simon Willison の `/atom/entries/` の英語長文のみで、800語以上、指定された実践タグを含み、`llm-release` / `live-blog` を含まないことを条件とする。承認済み著者リストは [config/usage-rules.json](config/usage-rules.json) に固定し、**所有者の明示的な決定がある場合だけ変更する**。詳しい辞書、日付境界、順位、取得上限は [docs/usage.md](docs/usage.md) を参照。
+
+使い方欄の本番取得元は Zenn の12トピック、Qiita API v2 の日次最大2回の一覧、はてな IT/総合の現在の RSS と件数 API、日付分割した HN Algolia、Simon の entries Atom に限る。これは使い方欄の制限で、既存の公式ニュース・GitHub 急上昇欄の取得元は変えない。ソースの失敗は `raw.usageSources` に `missing` / `forbidden` / `truncated` として残し、他の収集を止めない。正常取得は `ok`。記事本文の全文は公開 raw に保存せず、筆者への帰属を明示した要約に使う600文字以内の平文抜粋とメタデータだけを残す。
+
+`state/usage.json` の pending は公開＋7日まで毎日再確認し、初合格時に `firstQualifiedAt` を記録する。seen は過去 raw の selected URL と当日の他欄から初期化・更新し、14日を超える記録を削除する。URL 正規化は追跡クエリと fragment を除き、意味のあるクエリは残す。本番 usage 状態を書き込むのは `collect.yml` だけで、執筆・検証・ビルドは書き込まない。ローカルのライブ収集は usage 状態を保存しない。raw と状態をステージしたうえで raw を最後に確定し、Actions は両方を同じコミットに含める。
 
 # GitHub と Dot の設定
 

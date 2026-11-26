@@ -1,11 +1,7 @@
-export function normalizeUrl(value) {
-  try {
-    const url = new URL(value);
-    url.search = '';
-    url.hash = '';
-    return url.href.replace(/\/+$/, '');
-  } catch { return String(value); }
-}
+import { normalizeUsageUrl } from './usage.mjs';
+
+// All sections share the research URL identity, including meaningful queries.
+export const normalizeUrl = normalizeUsageUrl;
 
 export function deduplicateSelection(candidates, topId, discussionCandidates = []) {
   const priority = { codex: 5, official: 4, japan: 3, trending: 2, hn: 1 };

@@ -42,12 +42,14 @@ img{display:block;max-width:100%}
 .item h3{font-size:1.02rem;font-weight:700;line-height:1.5;margin:0 0 4px}
 .item p{margin:0 0 6px;font-size:.86rem;line-height:1.65;color:var(--sub)}
 .item .txt{min-width:0}
+.usage .item{grid-template-columns:minmax(0,1fr)}
+.usage-metrics{margin-top:3px}
 .meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font-size:.74rem;color:var(--sub)}
 .meta .src{font-weight:700;color:var(--fg)}
 .impact{margin:4px 0 6px;font-size:.82rem;line-height:1.6;background:var(--soft);padding:6px 10px;border-left:3px solid var(--red)}
 
 .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.links a{font-size:.76rem;font-weight:700;line-height:1;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+.links a{font-size:.76rem;font-weight:700;line-height:1.35;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--bg);max-width:100%;box-sizing:border-box;overflow-wrap:anywhere}
 .links a::after{content:" ↗";font-weight:400}
 .links a.d{color:var(--red);border-color:var(--red)}
 

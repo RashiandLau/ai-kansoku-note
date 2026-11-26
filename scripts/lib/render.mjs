@@ -7,12 +7,12 @@ export const iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192
 const categories = [
   ['top', '総合'], ['claude-code', 'Claude Code'], ['codex', 'Codex'],
   ['models', 'モデル'], ['tools', 'ツール'], ['oss', 'OSS'],
-  ['japan', '国内'], ['ranking', '急上昇'], ['industry', '業界'],
+  ['japan', '国内'], ['industry', '業界'], ['usage', '使い方'], ['ranking', '急上昇'],
 ];
 const englishCategories = new Map([
   ['top', 'Top'], ['claude-code', 'Claude Code'], ['codex', 'Codex'],
   ['models', 'Models'], ['tools', 'Tools'], ['oss', 'OSS'],
-  ['japan', 'Japan'], ['ranking', 'Trending'], ['industry', 'Industry'],
+  ['japan', 'Japan'], ['industry', 'Industry'], ['usage', 'How people use AI'], ['ranking', 'Trending'],
 ]);
 const editions = {
   ja: {
@@ -21,6 +21,7 @@ const editions = {
     fallback: fallbackNotice, empty: 'まだ記事がありません。',
     models: 'Hugging Face の新着モデル', trending: '急上昇', githubTrending: 'GitHub急上昇（AI関連）',
     generated: '生成日時：', unknownDate: '取得日時不明',
+    usagePolicy: '使い方は公開7日以内のAI活用記事から内容と反応の条件または承認済み著者の条件を満たすものを最大5件掲載します。',
     policy: '掲載ルール：Claude Codeは初回2件・以後は新バージョンを最大5件、Codexは初回1件・以後は安定版の新リリースを最大3件掲載します。直近36時間のAI関連記事から、Hacker Newsの最多ポイント記事をトップにし、残りは100ポイント以上を最大8件、OpenAI・Google・Hugging Faceの公式発表を最大6件、ITmedia AI+・@ITの国内記事を最大5件掲載します。GitHub急上昇は当日のスター数でAI関連上位5件、Hugging Faceは公開14日以内の注目モデル上位3件を掲載し、画像と数値は取得時点の情報を使います。',
   },
   en: {
@@ -29,6 +30,7 @@ const editions = {
     fallback: 'Summaries are not ready yet. Only source headlines are shown.', empty: 'No articles yet.',
     models: 'New models on Hugging Face', trending: 'Trending', githubTrending: 'GitHub trending (AI)',
     generated: 'Generated: ', unknownDate: 'Collection time unknown',
+    usagePolicy: 'How people use AI includes up to five articles published within seven days that meet the content and reaction criteria or the approved author criteria.',
     policy: 'Selection: Claude Code starts with two releases, then up to five new versions; Codex starts with one release, then up to three new stable releases. From AI news in the past 36 hours, the Hacker News story with the most points leads, followed by up to eight other stories with at least 100 points, six official announcements from OpenAI, Google and Hugging Face, and five Japanese stories from ITmedia AI+ and @IT. GitHub trending includes the top five AI repositories by stars gained that day. Hugging Face includes three trending models published within 14 days. Images and counts reflect collection time.',
   },
 };
@@ -59,10 +61,14 @@ function longDate(value, ui = editions.ja) {
 
 function sourceLinks(item, ui) {
   const links = [];
-  if (safeUrl(item.url)) links.push(linked(ui.source, item.url));
+  const usage = item.kind === 'usage';
+  if (safeUrl(item.url)) links.push(linked(usage ? ui.lang === 'en' ? 'Original article' : '元記事' : ui.source, item.url));
   if (safeUrl(item.discussion?.url)) {
     const count = formatNumber(item.discussion.count ?? item.metrics?.num_comments, ui);
-    const label = ui.lang === 'en' ? `HN discussion${count === null ? '' : ` (${count})`}` : `議論 HN${count === null ? '' : ` ${count}件`}`;
+    const source = usage && item.discussion.source === 'hatena' ? ui.lang === 'en' ? 'Hatena' : 'はてブ' : 'HN';
+    const label = ui.lang === 'en'
+      ? `${usage ? `Discussion ${source}` : 'HN discussion'}${count === null ? '' : ` (${count})`}`
+      : `議論 ${source}${count === null ? '' : ` ${count}件`}`;
     links.push(linked(label, item.discussion.url, 'd'));
   }
   return links.length ? `<div class="links">${links.join('')}</div>` : '';
@@ -77,9 +83,14 @@ function image(item, ui, top = false) {
 }
 
 function metadata(item, date, ui) {
-  const pieces = [`<span class="src">${escape(item.source || '')}</span>`];
-  const published = jstParts(item.published, ui);
+  const source = item.kind === 'usage'
+    ? ({ zenn: 'Zenn', qiita: 'Qiita', simon: 'Simon Willison' })[item.source]
+      || (['hn', 'hatena'].includes(item.source) ? item.host : item.source)
+    : item.source;
+  const pieces = [`<span class="src">${escape(source || item.host || '')}</span>`];
+  const published = jstParts(item.publishedAt || item.published, ui);
   if (published) pieces.push(`<span>${ui.lang === 'en' ? `${published.month} ${published.day}` : `${published.month}月${published.day}日`}</span>`);
+  if (item.kind === 'usage') return `<div class="meta">${pieces.join('')}</div>`;
   if (item.version) pieces.push(`<span>${escape(item.version)}</span>`);
   const points = formatNumber(item.discussion?.points ?? item.metrics?.points, ui);
   if (points !== null) pieces.push(`<span>HN ${points}${ui.lang === 'en' ? ' points' : 'ポイント'}</span>`);
@@ -90,6 +101,19 @@ function metadata(item, date, ui) {
   return `<div class="meta">${pieces.join('')}</div>`;
 }
 
+function usageMetrics(item, ui) {
+  const pieces = [];
+  // Zero counts carry no signal for the reader; show only observed positive reactions.
+  const positive = value => (Number(value) > 0 ? formatNumber(value, ui) : null);
+  const hb = positive(item.metrics?.hb);
+  const hn = positive(item.metrics?.hnPoints);
+  const saves = positive(item.metrics?.saves);
+  if (hb !== null) pieces.push(`<span>${ui.lang === 'en' ? 'Hatena' : 'はてブ'} ${hb}</span>`);
+  if (hn !== null) pieces.push(`<span>HN ${hn}${ui.lang === 'en' ? ' points' : '点'}</span>`);
+  if (saves !== null) pieces.push(`<span>${ui.lang === 'en' ? 'Saves' : '保存'} ${saves}</span>`);
+  return pieces.length ? `<div class="meta usage-metrics">${pieces.join('')}</div>` : '';
+}
+
 function fallbackHeadline(item) {
   const title = typeof item.title === 'string' ? item.title.replace(/^(Show|Ask|Launch|Tell) HN\s*[:：]\s*/i, '') : item.title;
   return title || item.id;
@@ -98,9 +122,9 @@ function fallbackHeadline(item) {
 function article(item, copy, date, ui, { top = false, rank = null } = {}) {
   const headline = copy?.headline || fallbackHeadline(item);
   const text = `${copy?.summary ? `<p>${escape(copy.summary)}</p>` : ''}${copy?.impact ? `<p class="impact">${escape(copy.impact)}</p>` : ''}`;
-  const details = `${text}${metadata(item, date, ui)}${sourceLinks(item, ui)}`;
+  const details = `${text}${metadata(item, date, ui)}${item.kind === 'usage' ? usageMetrics(item, ui) : ''}${sourceLinks(item, ui)}`;
   if (top) return `<article class="top" id="top">${image(item, ui, true)}<h2>${linked(headline, item.url)}</h2>${details}</article>`;
-  return `<article class="item">${rank === null ? '' : `<span class="rk">${rank}</span>`}<div class="txt"><h3>${linked(headline, item.url)}</h3>${details}</div>${image(item, ui)}</article>`;
+  return `<article class="item">${rank === null ? '' : `<span class="rk">${rank}</span>`}<div class="txt"><h3>${linked(headline, item.url)}</h3>${details}</div>${item.kind === 'usage' ? '' : image(item, ui)}</article>`;
 }
 
 function brief(item, copy, date, ui) {
@@ -127,7 +151,7 @@ function hfModels(models, ui) {
 function footer(generatedAt, ui) {
   const generated = jstParts(generatedAt, ui);
   const timestamp = generated ? `${ui.lang === 'en' ? `${generated.month} ${generated.day}, ${generated.year}` : `${generated.year}年${generated.month}月${generated.day}日`} ${generated.hour}:${generated.minute} JST` : ui.unknownDate;
-  return `<footer>${ui.lang === 'ja' ? pushSection : ''}<p>${ui.policy}</p><p>${ui.generated}${escape(timestamp)}　<a href="${repository}">GitHub</a> · <a href="archive.html">${ui.archive}</a></p></footer>`;
+  return `<footer>${ui.lang === 'ja' ? pushSection : ''}<p>${ui.policy}${ui.lang === 'en' ? ' ' : ''}${ui.usagePolicy}</p><p>${ui.generated}${escape(timestamp)}　<a href="${repository}">GitHub</a> · <a href="archive.html">${ui.archive}</a></p></footer>`;
 }
 
 function shell({ date, title, content, tabs = [], generatedAt, ui, pageName = 'index.html' }) {
@@ -145,7 +169,7 @@ function shell({ date, title, content, tabs = [], generatedAt, ui, pageName = 'i
 ${nav}<main class="g"><div class="wrap">${content}${footer(generatedAt, ui)}</div></main><script>${tabScript}</script><script>${registrationScript}</script></body></html>\n`;
 }
 
-const fallbackCategory = kind => ({ claudecode: 'claude-code', codex: 'codex', japan: 'japan', official: 'models', hn: 'industry' })[kind] || 'tools';
+const fallbackCategory = kind => ({ claudecode: 'claude-code', codex: 'codex', japan: 'japan', official: 'models', hn: 'industry', usage: 'usage' })[kind] || 'tools';
 
 export function renderDay(raw, data, { language = 'ja' } = {}) {
   const ui = edition(language);
@@ -174,7 +198,7 @@ export function renderDay(raw, data, { language = 'ja' } = {}) {
     }
     if (!groups.has(id)) continue;
     const entries = groups.get(id);
-    content += `<section class="sec" id="${id}"><h2>${label}</h2>${id === 'industry' ? `<ul class="brief">${entries.map(([item, copy]) => brief(item, copy, raw.date, ui)).join('')}</ul>` : entries.map(([item, copy]) => article(item, copy, raw.date, ui)).join('')}</section>`;
+    content += `<section class="sec${id === 'usage' ? ' usage' : ''}" id="${id}"><h2>${label}</h2>${id === 'industry' ? `<ul class="brief">${entries.map(([item, copy]) => brief(item, copy, raw.date, ui)).join('')}</ul>` : entries.map(([item, copy]) => article(item, copy, raw.date, ui)).join('')}</section>`;
   }
   if (!items.length && !models.length) content += `<p class="empty">${ui.empty}</p>`;
   return shell({ date: raw.date, title: `${longDate(raw.date, ui)} | ${ui.name}`, content, tabs, generatedAt: raw.generatedAt, ui });

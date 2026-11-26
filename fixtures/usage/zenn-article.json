@@ -1,0 +1,31 @@
+{
+  "article": {
+    "slug": "73027ee36796dc",
+    "path": "/karamage/articles/73027ee36796dc",
+    "title": "【TLA+】AIにテストケースを書かせるな。ルールを書け",
+    "published_at": "2026-11-21T11:12:39.343+09:00",
+    "liked_count": 90,
+    "bookmarked_count": 41,
+    "user": {
+      "username": "karamage"
+    },
+    "topics": [
+      {
+        "name": "ai"
+      },
+      {
+        "name": "test"
+      },
+      {
+        "name": "claudecode"
+      },
+      {
+        "name": "quint"
+      },
+      {
+        "name": "formalmethods"
+      }
+    ],
+    "body_html": "<p>「はて、このテストケース、誰が考えたんだっけ？ ほんとにだいじょぶ？」  \n AIに頼めば、実装もテストも数秒で出て、CIが全部グリーンになって \nApproveボタンを押そうとしたとき、ふと背筋がゾッとして手が止まりました。 \n なんか嫌な予感。。。 \n 実装を書いたのはAI \nレビューしたのもAI \nテストを書いたのも同じAI \n ま、だいじょぶでしょ！</p>"
+  }
+}

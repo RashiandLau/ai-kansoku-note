@@ -1,12 +1,15 @@
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
-import { todayJst, isDate, isMain, parseArgs, writeJson } from './lib/core.mjs';
+import { todayJst, isDate, isMain, parseArgs } from './lib/core.mjs';
 import {
   compareVersions, httpUrl, inWindow, isAiTitle, parseClaudeChangelog,
   parseCodexReleases, parseHN, parseRss, parseTrending, parseHfModels, parsePageMetadata,
 } from './lib/parsers.mjs';
 import { deduplicateSelection } from './lib/selection.mjs';
+import { updateUsageState } from './lib/usage.mjs';
+import { collectUsageSources } from './lib/usage-sources.mjs';
+import { readUsageInputs, persistCollection, mayPersistUsage } from './lib/usage-store.mjs';
 
 export const USER_AGENT = 'ai-kansoku-note/1.0 (+https://github.com/RashiandLau/ai-kansoku-note)';
 const CLAUDE_URL = 'https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md';
@@ -142,6 +145,16 @@ export async function collect(options = {}) {
   const date = options.date ?? todayJst(now);
   if (!isDate(date)) throw new Error('--date must be a valid YYYY-MM-DD date');
   const out = path.resolve(options.out ?? '.');
+  const rawPath = path.join(out, 'raw', `${date}.json`);
+  // A rerun must not reselect articles or advance seen without a new issue.
+  try {
+    const existing = JSON.parse(await readFile(rawPath, 'utf8'));
+    if (!existing || existing.date !== date || !Array.isArray(existing.selected)
+      || !existing.items || typeof existing.items !== 'object' || Array.isArray(existing.items)
+      || existing.selected.some(id => typeof id !== 'string' || !existing.items[id])) throw new Error(`Invalid existing issue: ${rawPath}`);
+    return existing;
+  }
+  catch (error) { if (error.code !== 'ENOENT') throw error; }
   const stateFile = path.resolve(options.state ?? path.join(out, 'state', 'seen.json'));
   const state = await readState(stateFile);
   const nextState = { ...state };
@@ -205,10 +218,30 @@ export async function collect(options = {}) {
       }
     }));
   }
+  let usageSources = Object.fromEntries(['zenn', 'qiita', 'hatenaIt', 'hatenaGeneral', 'hatenaCount', 'hn', 'simon'].map(name => [name, 'missing']));
+  let usageState;
+  try {
+    const usageInputs = await readUsageInputs(out);
+    const usage = await (options.usageCollector ?? collectUsageSources)({
+      now: generatedAt, pending: Object.values(usageInputs.state.pending),
+      fixtures: options.fixtures ? path.resolve(options.fixtures, 'usage') : undefined,
+    });
+    usageSources = { ...usageSources, ...usage.usageSources };
+    errors.push(...(usage.errors ?? []).map(error => ({ ...error, source: `usage:${error.source}` })));
+    const assembled = updateUsageState({ ...usageInputs, candidates: usage.candidates,
+      otherItems: selection.selected.map(id => selection.items[id]), now: generatedAt });
+    usageState = assembled.state;
+    const rankingIndex = selection.selected.findIndex(id => selection.items[id].kind === 'trending');
+    selection.selected.splice(rankingIndex < 0 ? selection.selected.length : rankingIndex, 0, ...assembled.items.map(item => item.id));
+    for (const item of assembled.items) selection.items[item.id] = item;
+  } catch (error) {
+    errors.push({ source: 'usage', message: error.message });
+  }
   errors.sort((a, b) => a.source.localeCompare(b.source));
-  const result = { date, generatedAt, ...selection, hfmodels: fetched.hfmodels ?? [], errors };
-  await writeJson(path.join(out, 'raw', `${date}.json`), result);
-  await writeJson(stateFile, nextState);
+  const result = { date, generatedAt, ...selection, hfmodels: fetched.hfmodels ?? [], usageSources, errors };
+  const states = [[stateFile, nextState]];
+  if (usageState && mayPersistUsage(options)) states.push([path.join(out, 'state', 'usage.json'), usageState]);
+  await persistCollection({ rawPath, raw: result, states });
   return result;
 }
 

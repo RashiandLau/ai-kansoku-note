@@ -1,0 +1,133 @@
+{
+  "version": "usage-research-v2",
+  "ai_regex": "\\b(?:AI|LLMs?|GPT\\w*|ChatGPT|Claude|Codex|Gemini|Copilot|MCP|Cursor|agentic|vibe[- ]?coding|Stable Diffusion|Midjourney|ComfyUI)\\b|生成AI|人工知能|エージェント",
+  "practitioner_regex": "私|筆者|自分|弊社|社内|我々|当社|自社|チーム|試した|試して|使った|使って|作った|作って|\\b(?:I|we|my|our)\\b",
+  "outcome_regex": "結果|比較|計測|測定|改善|失敗|成功|削減|短縮|効果|精度|コスト|\\b(?:results?|measured|compared|failed|failure|saved|reduced|worked|accuracy|cost)\\b",
+  "prompt_regex": "プロンプト|指示文|\\bprompts?\\b",
+  "usage_title_regex": "使(?:う|い|っ|わせ)|活用|実践|試(?:す|し|した)|検証|構築|運用|導入|実装|自動|自作|内製|作(?:っ|る|成|り|曲)|書かせ|させ|にした|手順|やり方|ワークフロー|移行|捨て|残し方|\\b(?:how (?:i|we)|workflows?|built|building|using|used|with|made|making|running|run|testing|tested|benchmarks?|guides?|tutorials?|lessons|learned|reverse.engineer\\w*|porting|migrat\\w*|optimi\\w*|vibecoding|verification)\\b",
+  "action_regex": "入力|実行|設定|保存|貼り付|開く|選択|指定|インストール|起動|作成|変更|クリック|追加|渡す|\\b(?:install|run|open|paste|configure|save|select|enter|copy|create|edit|click|set)\\b",
+  "translation_title_reject_regex": "翻訳|\\btranslated|\\btranslation\\b",
+  "usage_claim_definition": "research-analyze.py features(): bounded first-person/action/AI co-occurrence",
+  "shift_regex_diagnostic_only": "従来|これまで|代わり|ではなく|やめ|不要|書かせるな|捨て|\\b(?:instead|rather than|stopped|replaced|no longer)\\b",
+  "body_min": {
+    "ja_nonspace_chars": 1500,
+    "en_words": 400
+  },
+  "recipe": "pre>=2 OR (steps AND >=3 distinct action cues AND (pre>=1 OR img>=1 OR artifact)) OR (prompt cue AND (blockquote>=1 OR img>=2))",
+  "reaction": {
+    "A": "HB>=10 OR (HN points>=20 AND comments>=3)",
+    "B": "Zenn/Qiita saves>=10 AND likes>=5 AND saves/max(likes,1)>=0.25"
+  },
+  "window_days": 7,
+  "maximum_items": 5,
+  "reserved": {
+    "ja": 2,
+    "en": 1
+  },
+  "maximum_per_language": 3,
+  "maximum_per_source": 2,
+  "maximum_per_author": 1,
+  "rank": [
+    "tier_A_before_B_before_C",
+    "first_qualified_asc",
+    "max_HB_div10_HN_div20_or_saves_div10_desc",
+    "published_desc",
+    "canonical_url_asc"
+  ],
+  "date_only": "earliest=UTC date-14h; latest=UTC date+36h; both age bounds must satisfy window",
+  "ruleVersion": "usage-v2-trusted-author-1",
+  "reaction_thresholds": {
+    "A": {
+      "hb": 10,
+      "hnPoints": 20,
+      "hnComments": 3
+    },
+    "B": {
+      "sources": [
+        "zenn",
+        "qiita"
+      ],
+      "saves": 10,
+      "likes": 5,
+      "saveRatio": 0.25
+    }
+  },
+  "recipe_thresholds": {
+    "codeBlocks": 2,
+    "distinctActions": 3,
+    "stepCodeBlocks": 1,
+    "stepImages": 1,
+    "promptQuotes": 1,
+    "promptImages": 2
+  },
+  "steps_regex": "(?:手順|ステップ|Step)\\s*[1１一]|(?:^|\\s)[1１][.．、)]\\s*\\S",
+  "artifact_regex": "github\\.com/[^/]+/[^/#?]+|gist.github.com/|huggingface.co/spaces/",
+  "usage_claim_regexes": [
+    "\\b(?:I|we)\\b.{0,100}\\b(?:use|used|using|built|build|made|make|ran|run|prompted|automated|ported)\\b.{0,160}(?:\\b(?:AI|LLMs?|GPT\\w*|ChatGPT|Claude|Codex|Gemini|Copilot|MCP|Cursor|agentic|vibe[- ]?coding|Stable Diffusion|Midjourney|ComfyUI)\\b|生成AI|人工知能|エージェント)",
+    "\\b(?:I|we)\\b.{0,100}(?:\\b(?:AI|LLMs?|GPT\\w*|ChatGPT|Claude|Codex|Gemini|Copilot|MCP|Cursor|agentic|vibe[- ]?coding|Stable Diffusion|Midjourney|ComfyUI)\\b|生成AI|人工知能|エージェント).{0,100}\\b(?:use|used|using|built|build|made|make|ran|run|prompted|automated|ported)\\b",
+    "(?:私|筆者|自分|弊社|社内|当社|自社).{0,80}(?:\\b(?:AI|LLMs?|GPT\\w*|ChatGPT|Claude|Codex|Gemini|Copilot|MCP|Cursor|agentic|vibe[- ]?coding|Stable Diffusion|Midjourney|ComfyUI)\\b|生成AI|人工知能|エージェント).{0,80}(?:使っ|使い|用い|任せ|活用|導入|実装|書かせ|作らせ|試し)"
+  ],
+  "trustedAuthors": [
+    {
+      "source": "simon",
+      "host": "simonwillison.net",
+      "author": "Simon Willison",
+      "feedUrl": "https://simonwillison.net/atom/entries/",
+      "language": "en",
+      "minimumWords": 800,
+      "requiredAnyTags": [
+        "coding-agents",
+        "ai-assisted-programming",
+        "vibe-coding",
+        "prompt-engineering"
+      ],
+      "excludedTags": [
+        "llm-release",
+        "live-blog"
+      ]
+    }
+  ],
+  "route_c_strength": 0,
+  "trusted_author_policy": "Changes require an explicit owner decision; never expand this list automatically.",
+  "excluded_article_hosts": [
+    "github.com",
+    "news.ycombinator.com",
+    "www.youtube.com",
+    "youtube.com",
+    "youtu.be"
+  ],
+  "state_retention_days": 14,
+  "excerpt_max_chars": 600,
+  "date_only_earliest_hours": -14,
+  "date_only_latest_hours": 36,
+  "collection": {
+    "zennTopics": [
+      "claudecode",
+      "codex",
+      "ai",
+      "aiagent",
+      "mcp",
+      "generativeai",
+      "llm",
+      "chatgpt",
+      "claude",
+      "gemini",
+      "cursor",
+      "vibecoding"
+    ],
+    "zennMaxPages": 100,
+    "zennMinimumLikes": 5,
+    "qiitaMaxPages": 2,
+    "qiitaPerPage": 100,
+    "qiitaMinimumStocks": 3,
+    "qiitaUnauthenticatedPerHour": 60,
+    "hnMaximumBodies": 20,
+    "timeoutMs": 25000,
+    "maximumBodyBytes": 16777216,
+    "sameHostDelayMs": 1000,
+    "hatenaDelayMs": 5000,
+    "hatenaCountBatchSize": 40,
+    "hnAiRegex": "\\b(?:ai|llms?|gpt|claude|codex|chatgpt|gemini|copilot|cursor|mcp|agentic|agents|vibecod\\w*|prompt\\w*|rag|ollama|aider|anthropic|openai|hugging\\s*face)\\b",
+    "hnPracticeRegex": "\\b(?:how|workflows?|built|building|using|used|with|made|making|i|we|my|our|running|run|testing|tested|benchmark\\w*|guides?|tutorial\\w*|lessons|learned|reverse.engineer\\w*|porting|migrat\\w*|improv\\w*|optimi\\w*|vibecoding|verification)\\b"
+  }
+}

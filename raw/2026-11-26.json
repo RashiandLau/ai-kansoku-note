@@ -1,0 +1,336 @@
+{
+  "date": "2026-11-26",
+  "generatedAt": "2026-11-26T02:50:51.239Z",
+  "top": "hn-d0f423014258",
+  "selected": [
+    "hn-d0f423014258",
+    "official-88bd06d7e0e9",
+    "official-0077e07924e4",
+    "official-df3be113c8ae",
+    "official-6a28e842b3bf",
+    "official-0d108e7b71c4",
+    "hn-1bfb90103b3c",
+    "japan-7de168103f22",
+    "japan-4910737bdead",
+    "japan-ce0d9dd641f0",
+    "japan-dd16aa4ee434",
+    "japan-87c55725131d",
+    "trending-f6c3adbf52c7",
+    "trending-9c939c7199af",
+    "trending-e9dbf459bd01",
+    "trending-5dd922e14c0c",
+    "trending-b88590c43555"
+  ],
+  "items": {
+    "hn-d0f423014258": {
+      "id": "hn-d0f423014258",
+      "kind": "hn",
+      "title": "Much shorter version of GRH Lean verification from Anthropic",
+      "url": "https://github.com/lsernau/grh-lean",
+      "source": "Hacker News",
+      "published": "2026-11-25T21:48:10.000Z",
+      "metrics": {
+        "points": 300,
+        "num_comments": 137
+      },
+      "image": "https://opengraph.githubassets.com/8ea37c576ce05566ff983ac470857d0f7f063d9f1d5f2a3e69cc5b69b3b64aa5/lsernau/grh-lean",
+      "ogTitle": "GitHub - lsernau/grh-lean: A short Lean 4 proof of the Generalized Riemann Hypothesis",
+      "ogDescription": "A short Lean 4 proof of the Generalized Riemann Hypothesis - lsernau/grh-lean",
+      "excerpt": "Research artifact. Not maintained and not accepting contributions. A Lean 4 proof of the Riemann Hypothesis and of the Generalized Riemann Hypothesis for Dirichlet L-functions, built on Mathlib and using only the axioms propext , Classical.choice and Quot.sound . The proof is based on Levent Alpöge's, with Claude ( https://alpo.ge/remark.pdf ). This repository is a shorter version, produced in collaboration with my colleagues at Anthropic, and Claude. Each folder is its own Lake project with its own README. Needs Lean v4.35.0 and Mathlib at commit 56a00585. In either folder: A build takes one to two hours on 12 cores with 24 GB of memory (about 85 minutes more if the Mathlib cache is missing). The proof has passed machine checks only, listed in each folder's README. No mathematician has read it through, and no paper comes with it. Apache 2.0, Copyright 2026 Anthropic, PBC. See LICENSE , and NOTICE and ATTRIBUTION.md in each folder.",
+      "objectID": "50648050",
+      "points": 300,
+      "num_comments": 137,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50648050",
+        "count": 137,
+        "points": 300
+      }
+    },
+    "official-88bd06d7e0e9": {
+      "id": "official-88bd06d7e0e9",
+      "kind": "official",
+      "title": "Where scientists draw the line on AI agents",
+      "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+      "source": "Hugging Face",
+      "published": "2026-11-25T18:52:55.000Z",
+      "metrics": {},
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/F32BgZC_rj0kg99apJlto.png",
+      "ogTitle": "Where scientists draw the line on AI agents",
+      "ogDescription": "A Blog post by Ai2 on Hugging Face",
+      "excerpt": "Delegating research tasks to AI does not remove scientists’ responsibility for how the work is accomplished. For example, a researcher using AI to review the literature needs to check whether the system overlooks conflicting evidence or makes claims the cited papers don’t support. Someone handing off data analysis to an agentic system needs to understand which methods it used, which files it accessed, and whether the results can be successfully reproduced. A researcher automating part of a lab protocol needs confidence that the system respects physical safety constraints, such as temperature limits or material toxicity, while a researcher working with human-participant data needs assurance that a system protects participants' privacy and limits who can access their information. Researchers also need clear institutional guidelines for verifying and disclosing AI-assisted work. These ethical and safety questions are central to our work on AI for science. Responsible science is about more than accuracy—scientific fields have ethical research norms because of past actions and choices by scientists and scientific communities, and those norms also cover how research is conducted and what impact it has. We want AI tools to expand what scientists can accomplish without compromising their ability to scrutinize evidence, verify methods, and – perhaps most importantly – stand behind their findings. To better understand what that requires, we interviewed 17 scientists working in the natu",
+      "description": ""
+    },
+    "official-0077e07924e4": {
+      "id": "official-0077e07924e4",
+      "kind": "official",
+      "title": "An Indic Voice Agent with CUGA",
+      "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+      "source": "Hugging Face",
+      "published": "2026-11-25T10:22:09.000Z",
+      "metrics": {},
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/67fe070a4e8cc28ba346f53c/-QNcrxSDbjI8VOCBlhi-C.png",
+      "ogTitle": "An Indic Voice Agent with CUGA",
+      "ogDescription": "A Blog post by IBM Research on Hugging Face",
+      "excerpt": "Configurable Generalist Agent, leader in AppWorld Benchmark",
+      "description": ""
+    },
+    "official-df3be113c8ae": {
+      "id": "official-df3be113c8ae",
+      "kind": "official",
+      "title": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000",
+      "url": "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
+      "source": "Hugging Face",
+      "published": "2026-11-25T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://huggingface.co/blog/assets/inkling-2-mini-inference-hillclimb/thumbnail.png",
+      "ogTitle": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000",
+      "ogDescription": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "excerpt": "Inkling 2 Mini came out last week and sets a new state of the art for local AI and smaller open-source models. With ~26B total parameters (3B active per token), multimodal inputs, and a 1M-token context window, it leads its weight class on the Artificial Analysis Intelligence Index v5 and across 32 of 48 benchmarks against models like Gemma 4 31B and Qwen3.8-27B, making it a strong open option for coding, tool use, and reasoning on modest hardware. We wrote an extensive blog post on how you can use it within the Hugging Face ecosystem here . One of the interesting aspects of Inkling 2 Mini that might explain its great performance is its unusual architecture. Inkling 2 Mini is a looped Mixture-of-Experts (MoE) model with 24 physical layers where the middle 12 layers run three times, so every token passes through 48 layers. The checkpoint ships in mixed NVFP4 and MXFP8 and bundles a DSpark drafter for speculative decoding. Both vLLM and SGLang, the go-to frameworks for LLM inference, support it on nightly builds, though the published serving recipes target NVIDIA B200 and GB300 GPUs ( sm100 ), leaving out sm120 cards like the NVIDIA RTX PRO 6000 where kernel compatibility can differ. We wanted to see how fast we could serve it on a single NVIDIA RTX PRO 6000 96 GB, the GPU behind an nvidia-rtx-pro-6000 Inference Endpoint . Rather than tuning flags by hand, we gave a coding agent the inference-optimisation skill, the hf CLI, and access to Hugging Face Jobs , and let it run exper",
+      "description": ""
+    },
+    "official-6a28e842b3bf": {
+      "id": "official-6a28e842b3bf",
+      "kind": "official",
+      "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+      "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+      "source": "Hugging Face",
+      "published": "2026-11-24T16:34:13.000Z",
+      "metrics": {},
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/6847ab8c06094fa4afb6ee38/M70tUMNd7N4KO5QGI37YZ.png",
+      "ogTitle": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+      "ogDescription": "A Blog post by NVIDIA on Hugging Face",
+      "excerpt": "Updated 6 days ago • 1.52M • 1.81k",
+      "description": ""
+    },
+    "official-0d108e7b71c4": {
+      "id": "official-0d108e7b71c4",
+      "kind": "official",
+      "title": "How Gemini is changing the game for Golden State's organization and fans.",
+      "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+      "source": "Google AI",
+      "published": "2026-11-24T16:00:00.000Z",
+      "metrics": {},
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Gemini_1.max-1440x810.jpg",
+      "ogTitle": "How Gemini is changing the game for Golden State's organization and fans.",
+      "ogDescription": "Google Gemini partners with Golden State to power fan experiences and business operations for the Warriors, Valkyries, and Chase Center. See the news.",
+      "excerpt": "Today, we’re expanding our partnership with Golden State — making Google Gemini the Official AI Assistant Partner and Official Generative AI & Enterprise LLM Partner of the Warriors, the 2026 WNBA Champion Valkyries, and Chase Center. The collaboration integrates Gemini across the entire franchise ecosystem. For fans, that means a more interactive game-day experience, both inside Chase Center via interactive videoboard features, and across digital channels for fans following from home. And behind the scenes, Golden State is deploying Gemini for business to build custom AI agents, helping their teams work smarter across both business and basketball operations. As a Founding Partner of Chase Center since 2019, Golden State has used our gen AI tools to help their operations run smoother, and this next chapter brings the best of Gemini to the team and fans alike.",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Gemini_1.max-600x600.format-webp.webp\">Google Gemini partners with Golden State to power fan experiences and business operations for the Warriors, Valkyries, and Chase Center. See the news."
+    },
+    "hn-1bfb90103b3c": {
+      "id": "hn-1bfb90103b3c",
+      "kind": "hn",
+      "title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "source": "Hacker News",
+      "published": "2026-11-25T21:18:02.000Z",
+      "metrics": {
+        "points": 217,
+        "num_comments": 181
+      },
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/gettyimages-2289911637.jpg?quality=90&strip=all&crop=0%2C10.232235952618%2C100%2C79.535528094764&w=1200",
+      "ogTitle": "The New York Times warns photographers not to update Photoshop over AI features",
+      "ogDescription": "The NYT doesn’t want AI metadata inadvertently added to its photos.",
+      "excerpt": "An email sent to freelance photographers says Photoshop’s latest update uses AI ‘in ways that may not be apparent.’ An email sent to freelance photographers says Photoshop’s latest update uses AI ‘in ways that may not be apparent.’ The New York Times is asking freelance photographers not to use the newest version of Adobe Photoshop because features in the 2027 update use AI “in ways that may not be apparent to users.” In an email seen by The Verge and posted on Threads , two of the Times ’ photography leaders, Meaghan Looram and Josh Haner, write that the use of these features “can result in metadata identifying photographs as AI-generated.” Adobe has spent the past few years filling Photoshop and other apps in its creative suite with a trove of AI-powered tools. The November update cited by the NYT ’s email adds several new AI features, including Adobe’s new “AI Assisted Editor” view , which lets users access all of Photoshop’s AI features from a single toolbar. It also adds an AI assistant for step-by-step editing instructions, prompt-based image transformation and editing, new AI upscaling options, and an AI-powered tool that recomposes images for different canvas sizes. It’s not always clear which tools in Adobe’s apps are AI-powered, and even some older options like automated selection tools may now be considered part of the AI suite. This can lead to photos ending up with metadata indicating they were edited with AI, which is a blunt way of describing what happened in p",
+      "objectID": "50647673",
+      "points": 217,
+      "num_comments": 181,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50647673",
+        "count": 181,
+        "points": 217
+      }
+    },
+    "japan-7de168103f22": {
+      "id": "japan-7de168103f22",
+      "kind": "japan",
+      "title": "AnthropicのアモデイCEO、「人間の自由意志をAIに明け渡す」考えを否定 AI企業間で議論",
+      "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003473/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-26T02:24:00.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/news/article/ogp/2611/26/2000003473/10013014/2048",
+      "ogTitle": "AnthropicのアモデイCEO、「人間の自由意志をAIに明け渡す」考えを否定 AI企業間で議論",
+      "ogDescription": "Anthropicのダリオ・アモデイCEOは、超知能AIに人間の意思決定権を委ねるべきだと考えているとしたAxiosの報道をXで否定した。社会の統治と個別タスクの自動化を混同していると反論し、AIは民主的プロセスで管理されるべきだと強調した。超知能時代の主導権を巡っては、OpenAIやMeta幹部も発言しており議論が広がっている。",
+      "excerpt": "米Anthropicのダリオ・アモデイCEOは11月25日（現地時間）、Xに長文を投稿し、 米Axiosの報道 に反論した。この報道は、超知能AIに人間の意思決定権の一部を委ねるべきだと同氏が考えているとするものだった。アモデイ氏は「人間の自由意志をAIシステムに明け渡すべきだとは考えていない。私がそう考えているという主張はばかげている」と述べた。 AIの能力が人間を大幅に上回る「超知能」（superintelligence）の実現を見据え、AI業界では、人間が社会の意思決定の主体であり続けるためにはどうすべきかという議論が活発になっている。 米OpenAIで戦略的未来構想を担当するディーン・ボール氏は18日、「The Silent Consensus」（暗黙の合意）と題する 論考を公開 した。AIが人間よりも効率的に企業経営や研究開発を行えるようになれば、人間は市場競争の論理に従って次々と意思決定をAIに委ね、結果として経済や政治における主導権を失う可能性があると同氏は指摘した。AIが人間に反旗を翻さなくても、個々の合理的な判断の積み重ねによって、こうした事態が起こり得るという。 ボール氏によると、こうした未来を不可避とみなす見方がAI業界に広がっているという。同氏はこれに反対し、人間がAIエージェントの行動を監査し、その権限を取り消せる仕組みなどを構築すべきだと主張した。なお、この論考はOpenAIの公式見解ではなく、ボール氏個人の見解としている。 OpenAIのサム・アルトマンCEOも18日、 米New York Times主催のイベント「DealBook Summit」 に登壇した際、人間が未来を決める主体であり続けることの重要性を訴えた。米MetaのAI部門を率いるアレクサンドル・ワン氏も、AnthropicのAIを使った 数学分野での画期的な成果 を受け、Xに「社会をAIに明け渡すことを容認すべきではない」と 投稿 した。 Axiosは25日、超知能AIに人間の意思決定権の一部を委ねることを肯定する考えがAnthropic社内で一般的になっており、他のAI企業の幹部がこれに反発していると、複数の情報筋の話として報じた。アルトマン氏やワン氏はAnthropicを名指ししていないが、Axiosは両氏の発言がアモデイ氏の世界観に向けられたものだとしている。Axiosはその根拠として、アモデイ氏が2026年2月の米New York Timesのインタビューで、人命や安全に関わる重要な判断をAIに委ねることに肯定的な発言をしていたことを挙げた。また、同氏が2024年の論考「Machines of Loving Grace」で、超知能AIが経済的資源を分配する未来の可能性に言及していたことも紹介した。一方、Anthropicの広報担当者はAxiosに対し、アモデイ氏はこれまで多くの公の場で人間によるAIの制御を主張してきたとし、同社はClaudeが人間による監督を損なわないよう訓練していると説明した。 アモデイ氏は今回の投稿で、Axiosの記事は社会の統治をAIに委ねることと、個別のタスクをAIで自動化することを混同していると反論した。自身は一貫して、AIは正当な民主的プロセスの下で管理されるべきだと主張してきたとし、「効率性や安全性のために、正当性や自己決定権を犠牲にすべきではない」と述べた。 一方、自動車の運転やがん治療薬の開発、ソフトウェア開発などをAIに任せることには経済的な価値があり、多くの人命を救うことにもつながるとした。ただし、あら",
+      "description": "Anthropicのダリオ・アモデイCEOは、超知能AIに人間の意思決定権を委ねるべきだと考えているとしたAxiosの報道をXで否定した。社会の統治と個別タスクの自動化を混同していると反論し、AIは民主的プロセスで管理されるべきだと強調した。超知能時代の主導権を巡っては、OpenAIやMeta幹部も発言しており議論が広がっている。"
+    },
+    "japan-4910737bdead": {
+      "id": "japan-4910737bdead",
+      "kind": "japan",
+      "title": "脆弱性の発見数、1年で2倍超 Microsoft製品も月100件から1000件超に……AIで一変",
+      "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003446/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-26T01:00:00.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/news/article/ogp/2611/26/2000003446/10012927/2048",
+      "ogTitle": "脆弱性の発見数、1年で2倍超 Microsoft製品も月100件から1000件超に……AIで一変",
+      "ogDescription": "米Microsoftが毎月公開しているWindowsのセキュリティ更新プログラム。11月は1000件以上の脆弱性が修正された。他社の製品も含めると、2026年に入って発見された脆弱性は10万件を超え、すでに25年の倍以上だ。AIの進化に伴い脆弱性の発見とそれを悪用した攻撃が激増する中で、パッチを適用する側はどう対処すればいいのか。",
+      "excerpt": "米Microsoftが毎月公開しているWindowsのセキュリティ更新プログラム。11月は1000件以上の脆弱性が修正された。他社の製品も含めると、2026年に入って発見された脆弱性は10万件を超え、すでに25年の倍以上だ。AIの進化に伴い脆弱性の発見とそれを悪用した攻撃が激増する中で、パッチを適用する側はどう対処すればいいのか。 Microsoftが11月の月例更新プログラムで修正した脆弱性は計1093件に上る。うち63件が、深刻度の最も高い「緊急」の分類だった。Outlookのなりすましの脆弱性（深刻度「警告」）は、更新プログラムが公開された時点で悪用が確認されていた。 米セキュリティニュースサイトの Krebs On Security によると、Microsoftが26年に入って修正した脆弱性は、これで5100件を突破した。1年前の平均が月に平均100件前後だったことを考えると、とてつもなく増えている。その理由についてMicrosoftは、AIの進化に助けられて、これほど大量の脆弱性を発見して修正できるようになったと説明しているという。 Microsoftと前後して、米Appleや米Google、米Adobe、米Mozillaなどもセキュリティ更新プログラムを公開し、iOSやWebブラウザなどの脆弱性を修正した。 英メディアの Register によれば、今年に入ってCVE（共通脆弱性識別子）が割り当てられた脆弱性は、全ベンダーを合わせて11月13日の時点で10万件を突破した。これは25年の年間合計の2倍以上にあたる。 米セキュリティ企業VulnCheckの専門家はRegisterに対し「10万件というと非常に多く聞こえるが、あと数年もすれば『たった10万件だった頃を覚えているか？』と言っているだろう」と予測する。 しかも、セキュリティ更新プログラムが公開されてから、その脆弱性が攻撃に利用されるまでの時間は短くなる一方で、ユーザーによる更新プログラムの適用が間に合わないこともある。 セキュリティ企業の米CrowdStrikeによれば、26年1月～6月にかけて確認した、検証用のプログラムコードが悪用された攻撃のうち、88％はPoCコードの公開から48時間以内に発生していた。中国との関係が指摘される「Vault Panda」「Genesis Panda」などのサイバー犯罪集団はさらに速く、24時間以内に攻撃を開始しているという。 AIの普及に伴い、この時間はさらに短くなっている。例えばVulnCheckが米Copeland製の冷蔵・冷凍設備管理システムに存在する脆弱性の情報を公開したところ、わずか数分で攻撃の兆候をとらえたという。欧州のスーパーで大量の食品が廃棄される事態を招いたサイバー攻撃で悪用されたのが、そうした脆弱性だった。 ただし、26年に年CVEが割り当てられた10万件あまりの脆弱性のうち、実際の攻撃に利用されたのはごく一部にすぎない。 VulnCheckが独自にまとめている「悪用が確認された脆弱性（KEV）」リスト に追加されたのは1425件。米サイバーセキュリティ・インフラセキュリティ庁（CISA）が管理するKEVリストでは298件にとどまる（11月18日時点） ユーザー側にとっては、OSやエンドポイントソフトウェアなどの脆弱性修正に加えて、インターネットに接続されたエッジデバイスやIT管理ツール、リモートアクセスツールなどの「エクスポージャー（露出）」管理も欠かせない。 Krebs On Securityによると、米セキュリティ",
+      "description": "米Microsoftが毎月公開しているWindowsのセキュリティ更新プログラム。11月は1000件以上の脆弱性が修正された。他社の製品も含めると、2026年に入って発見された脆弱性は10万件を超え、すでに25年の倍以上だ。AIの進化に伴い脆弱性の発見とそれを悪用した攻撃が激増する中で、パッチを適用する側はどう対処すればいいのか。"
+    },
+    "japan-ce0d9dd641f0": {
+      "id": "japan-ce0d9dd641f0",
+      "kind": "japan",
+      "title": "PR： AIが書いたコード、回帰テストは全部回しますか？ 変更の影響だけを見抜く「テスト影響分析」という解",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/07/news004.html",
+      "source": "＠IT",
+      "published": "2026-11-26T01:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2610/07/at261010_main_2.jpg",
+      "ogTitle": "AIが書いたコード、回帰テストは全部回しますか？ 変更の影響だけを見抜く「テスト影響分析」という解",
+      "ogDescription": "",
+      "excerpt": "生成AIに実装を任せるようになり、コードを書く手間は大きく減った。一方で、プルリクエストは1日に何本も上がって、変更のたびに確認とテストが求められる。数千件の回帰テストを毎回全件流していては、CIはいつまでも終わらない。かといってテストを間引けば、品質を担保できなくなる。実装のスピードだけが上がって、テストがボトルネックとして残る。AI駆動開発に踏み出した現場が直面するこの壁に、テクマトリックスは、効率よく品質を保つための考え方をまとめた「AI駆動開発時代における品質保証戦略」と、APIテストの観点を体系化した「APIテストまるわかりガイド」を無料で公開した。 AI駆動開発がテストに突き付ける課題は「量」と「速度」だ。AIは短時間で大量のコードを生み出し、それに伴ってテストケースも膨れ上がる。変更のたびに全件を回す従来の回帰テストは、この速度に構造的に追いつけない。 「AI駆動開発時代における品質保証戦略」では、この課題への3つのアプローチを解説している。1つ目は、テスト自体もAIに作らせること。GitHub CopilotやClaude CodeといったAIコーディングエージェントからMCPを介してSOAtest/Virtualizeを呼び出し、テストやスタブを生成する。実装を書いたエージェントがそのままテストとスタブまで用意するため、チケット単位の開発サイクルの中で、実装とテストを同時に完了できる。 2つ目は、テストを「間引くのではなく、影響のある分だけ」回すこと。コードの変更箇所とテストの対応関係を分析し、影響を受けるテストだけを選んで実行する「テスト影響分析（TIA）」により、テストを増やし続けながらも回帰テストの時間を抑えられる。 3つ目は、連携先を待たないこと。実装がAIで速くなるほど、連携先の完成を待つ時間は相対的に大きなボトルネックになる。そこで、外部システムや未完成のAPIを仮想化し、開発の早い段階から結合テストを回せるようにする。 ただし、AIにテストを任せる前に押さえておくべきことがある。AIが大量に生成したテストも、「何を検証すべきか」という観点が定まっていなければ、品質の担保にはつながらない。そこで併せて公開されたのが「APIテストまるわかりガイド」だ。ガイドでは、APIテストに必要な8つの観点を一つずつ解説している。さらに、各観点を自社でどこまでカバーできているかを○×で記入できる「8観点チェックシート」も付属する。 自社のAPIテストがどの観点をカバーできていて、どこが抜けているのか。AIで開発をさらに加速させる前に、まずはチェックシートで自社の現在地を確かめてほしい。 Copyright &copy; ITmedia, Inc. All Rights Reserved. 提供：テクマトリックス株式会社 アイティメディア営業企画／制作：＠IT 編集部／掲載内容有効期限：2026年12月25日",
+      "description": ""
+    },
+    "japan-dd16aa4ee434": {
+      "id": "japan-dd16aa4ee434",
+      "kind": "japan",
+      "title": "Obsidian公式の「エージェント向け」スキル集が登場 Vault操作法とファイル形式をひとまとめに",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/26/2000003470/",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-26T00:37:03.000Z",
+      "metrics": {},
+      "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/26/2000003470/10013003/2048",
+      "ogTitle": "Obsidian公式の「エージェント向け」スキル集が登場 Vault操作法とファイル形式をひとまとめに",
+      "ogDescription": "マークダウンエディタ「Obsidian」に「エージェント向けの公式コネクタ」機能が登場した。（1/2 ページ）",
+      "excerpt": "マークダウンエディタ「Obsidian」の開発チームは11月26日（日本時間）、エージェント向けの「コネクタ」機能を発表した。Obsidianの「Vault」（ファイル保管庫の単位）内の操作方法やWebページからマークダウン形式のテキストを抽出する方法、ファイル形式などをエージェントに指示するスキル集として オープンソースで公開 されている。 このスキル集を使うことで、米OpenAIの「ChatGPT」や「dots」、米Anthropicの「Claude」、米Googleの「Google Antigravity」、米SpaceXAIの「Grok Bot」、米Metaの「Muse」など「あらゆるAIエージェントにObisidianを接続できる」と開発チームは説明している。 これらのスキルを使用するには「Obsidian CLI」が有効になっているObisidianデスクトップアプリが必要になる。スキルのインストールは、 Obisidian公式ドキュメント に沿って各エージェントのCLIツール経由で行うか、Web・デスクトップアプリ版のChatGPTやClaudeのプラグインディレクトリからGUIで行うことが可能。 今回公開されたのはあくまでローカルのVaultを操作するためのスキル集であり、クラウドでVaultを操作できる機能ではない。Obsidianの公式ドキュメントでは、クラウドで動作するMuseにヘッドレスでVaultを操作させたい場合は、MetaのクラウドにVaultを同期する必要があると説明しており、この方法はMuseの項目にのみ記載されている。 Copyright &copy; ITmedia, Inc. All Rights Reserved. ITmedia AI＋に関連する情報をお探しであれば、こちらのメディアもお役に立てるかもしれません。 国内外の業界動向、AIやクラウドなどの最新技術、キャリア情報など今知りたい情報をまとめてお届けします。 AIでドーピングしたコンサルの実力は 使わない人材との能力差、BCG約500人で検証 Nature系列誌 「Claude」で作ったアプリをMac／Windowsにインストール可能に 全プランでβ提供 アンソロピックはなぜ、OpenAIを差し置いて「史上最大IPO」できたのか “事業展開のうまさ“を識者が語る 「ソフトウェアファクトリー」とは結局何か OpenAIもUberもfreeeも始めたAIエージェントの「工場」の中身 AIモデリングもできる無償3D CAD「SolidCraft」を試してみた！ 現役組み込みエンジニアが考える「GitHub Copilot」の使いどころと検証の実際 AIエージェントは隙あらばサンドボックスの外に出るのか Anthropicが評価手法「Siren」を発表 設計者がAIに求めるのはCAD操作だけじゃない――SOLIDWORKS AIが目指す課題解決 データセンター「迷惑施設」から“名誉挽回“なるか？ 東大教授が「あとはやる気の問題」と指摘するワケ",
+      "description": "マークダウンエディタ「Obsidian」に「エージェント向けの公式コネクタ」機能が登場した。"
+    },
+    "japan-87c55725131d": {
+      "id": "japan-87c55725131d",
+      "kind": "japan",
+      "title": "図面を探す時間から技能を伝える時間へ、AI活用で業務効率化を進める空研工業",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2611/26/news014.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-26T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/mn/articles/2611/26/cover_news014.jpg",
+      "ogTitle": "図面を探す時間から技能を伝える時間へ、AI活用で業務効率化を進める空研工業",
+      "ogDescription": "創業70周年を迎えた空研工業は、長年蓄積してきた図面や技術資料をAIで活用する「AIナレッジ基盤システム」をRecursiveと共同開発した。試行利用の結果を基にした試算では、図面検索工数を最大約90％削減する見通しで、業務効率化の先には技能伝承も見据える。AI活用に至った背景や現場が抱えていた課題、試行利用で得られた手応えについて、工場長と現場の技術者に話を聞いた。",
+      "excerpt": "創業70周年を迎えた空研工業は、長年蓄積してきた図面や技術資料をAIで活用する「AIナレッジ基盤システム」をRecursiveと共同開発した。試行利用の結果を基にした試算では、図面検索工数を最大約90％削減する見通しで、業務効率化の先には技能伝承も見据える。AI活用に至った背景や現場が抱えていた課題、試行利用で得られた手応えについて、工場長と現場の技術者に話を聞いた。 長年にわたってモノづくりを続けてきた企業には、膨大な図面や技術資料が蓄積されている――。これらは、過去に納入した製品のメンテナンスだけでなく、新たな製品開発にも活用できる貴重な技術資産といえる。しかし、時代とともに図面の作成方法や管理手法が変化する中で、“必要な情報を探し出すこと”自体が大きな負担となっているケースもある。 2026年に創業70周年を迎えた総合空調機器メーカーの空研工業も、こうした課題を抱えてきた企業の一つだ。同社は、大型ビルや商業施設、工場、データセンターなどで使用される冷却塔や空調機器の製造を手掛け、過去に納入した製品のメンテナンスにも対応している。 冷却塔とは、ビルの空調や工場の設備などで温まった水を冷やし、その熱を大気に逃がす装置だ。数十年前に納入した製品の部品交換や改修の依頼が寄せられることもあり、過去の図面を必要とする場面は少なくないという。 既報の通り、空研工業とRecursiveは2026年11月4日、OpenAI APIを活用した「AIナレッジ基盤システム」を共同開発したと発表した。 同システムは、長年蓄積してきた図面や技術資料から部品番号や型式、寸法などの情報をAI（人工知能）で抽出／構造化し、ナレッジデータベースとして再構築するものだ。部品表などを基に関連する図面を探し出す「図面検索」と、図面や仕様書などの資料間の整合確認を支援する「図面チェック」の2つの機能を備える。 空研工業 福岡工場（福岡県宮若市）での試行利用の結果を基にした試算では、年間の図面検索工数を最大約90％削減できる見込みで、両社は2026年内に福岡工場および千葉工場での本格導入を目指している。 今回、AIナレッジ基盤システムの開発に至った背景や現場が抱えていた課題、試行利用で得られた手応えについて、空研工業 取締役工場長の楢木鷹次氏、同社 メンテナンス部 メンテナンス課 担当副部長の大楠孝行氏、同課 係長の前田泰宏氏に話を聞いた。なお、取材時点（2026年11月17日）で同システムは試作／検証段階にあり、以降の利用状況や効果に関する説明は、本格運用前の試行利用に基づくものだ。 楢木氏 空研工業は福岡で創業し、70年にわたってモノづくりを続けてきた企業だ。昔ながらのやり方で製造現場を運営してきたこともあり、世間でよく言われている“製造業の課題”を当社も同じように抱えていた。 具体的には、「何でも人手でやろう」「勘やコツ、経験が重要だ」「先輩の背中を見て覚えなければならない」といった考え方が色濃く残っていた。一方、若い人たちはAIに触れてきた世代でもあり、日本全体で少子高齢化が進む中、活用できるものは積極的に取り入れていかなければならないと考えている。 当社のベテラン社員の多くは、先輩の背中を見たり、横から仕事ぶりを見たりしながら技術を習得してきた人たちだ。人から教わるという経験が少なく、教えることが得意ではない人も多い。若い人たちに必要な技術をどうやって教えたらよいのかという点が、大きなボトルネックになっていた。 同時に、少子高齢化に伴い、製造業では人材の獲得も難しくなっている",
+      "description": "創業70周年を迎えた空研工業は、長年蓄積してきた図面や技術資料をAIで活用する「AIナレッジ基盤システム」をRecursiveと共同開発した。試行利用の結果を基にした試算では、図面検索工数を最大約90％削減する見通しで、業務効率化の先には技能伝承も見据える。AI活用に至った背景や現場が抱えていた課題、試行利用で得られた手応えについて、工場長と現場の技術者に話を聞いた。"
+    },
+    "trending-f6c3adbf52c7": {
+      "id": "trending-f6c3adbf52c7",
+      "kind": "trending",
+      "title": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "source": "GitHub Trending",
+      "published": "2026-11-26T02:50:51.239Z",
+      "metrics": {
+        "stars": 23135,
+        "starsToday": 1652,
+        "language": "Python"
+      },
+      "image": "https://repository-images.githubusercontent.com/1229774092/93703d75-077c-4a14-b580-e2374741fe3d",
+      "ogTitle": "GitHub - elementalsouls/Claude-BugHunter: A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "ogDescription": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise ide...",
+      "excerpt": "A self-contained Claude skill bundle for bug hunting and external red-team work · 85 skills · 16 slash commands · 681 disclosed-report patterns (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by Sachin Sharma — Bug Hunting & GenAI Security Research. claude-bughunter is a drop-in skill bundle for the Claude Code skills system . Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. All triggered automatically by topic — describe what you're testing in plain English and the relevant skill loads. No invocation by name. Option A — install as a Claude Code plugin (recommended). From inside Claude Code: All 85 skills + 16 commands load namespaced under claude-bughunter: and update when you bump the plugin version — no files copied into ~/.claude/ . A HackerOne account is optional. The install asks for a HackerOne API username and token. They only let the HackerOne MCP read your private programs and your own reports; leave both blank if you don't need that. Every skill, command an",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python"
+    },
+    "trending-9c939c7199af": {
+      "id": "trending-9c939c7199af",
+      "kind": "trending",
+      "title": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "source": "GitHub Trending",
+      "published": "2026-11-26T02:50:51.239Z",
+      "metrics": {
+        "stars": 73125,
+        "starsToday": 1141,
+        "language": "HTML"
+      },
+      "image": "https://opengraph.githubassets.com/29ef2dc62c27591c0ac40b0fac07a5540230badd125df48bdf657350894a869f/cathrynlavery/diagram-design",
+      "ogTitle": "GitHub - cathrynlavery/diagram-design: Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "ogDescription": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop. - cathrynlavery/diag...",
+      "excerpt": "An agent skill that draws diagrams as one self-contained HTML + SVG file, in your brand. 52 diagram types. No shadows. No Mermaid slop. Install · What it makes · Quickstart · Match your brand · Import · Export · Contributing npx skills add cathrynlavery/diagram-design Ask your agent in plain words: The agent picks the type, states its plan, and writes one .html file you can open by double-clicking. Works with any host that reads Agent Skills, including Cursor, Claude Code, Codex, Qoder, GitHub Copilot, Gemini CLI, Cline, Windsurf and Amp: In Claude Code, the plugin marketplace gets you updates and the slash commands: Official builds come only from this repository. LittleMight, Cathryn Lavery's company, publishes the plugin directory listings; a listing under any other name is an unofficial copy. PRIVACY.md lists what the skill sends over the network. After installing, run /plugin , open Marketplaces , select diagram-design , and choose Enable auto-update . Claude Code disables auto-update by default for third-party marketplaces; after this toggle, it refreshes the marketplace and installed plugin in the background after startup. Run /reload-plugins when prompted, or let the next session load the update. Claude Desktop's skill upload rejects a ZIP with more than 200 files, so the full skills/diagram-design/ tree cannot be imported as-is. From a checkout, build a bounded ZIP: That writes dist/diagram-design-claude-skill.zip (gitignored). In Claude Desktop, open Customize → Skil",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML"
+    },
+    "trending-e9dbf459bd01": {
+      "id": "trending-e9dbf459bd01",
+      "kind": "trending",
+      "title": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "source": "GitHub Trending",
+      "published": "2026-11-26T02:50:51.239Z",
+      "metrics": {
+        "stars": 210129,
+        "starsToday": 1135,
+        "language": "TypeScript"
+      },
+      "image": "https://repository-images.githubusercontent.com/787076358/f9616c09-3701-41ef-b5a6-fdf912ffb15b",
+      "ogTitle": "GitHub - firecrawl/firecrawl: Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "ogDescription": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API. - firecrawl/firecrawl",
+      "excerpt": "Knowledge infrastructure to make your agents smarter. 🔥 You can use Firecrawl three ways. This repo holds the code for Firecrawl Local and the self-hosted server, along with SDKs that work with all three. Pst. Hey, you, join our stargazers :) Firecrawl Local scrapes, crawls and maps from your own machine without a database, queue or container, and it reaches Firecrawl Cloud when your AI agents need search or Alexandria. It installs from crates.io. You need Rust and a C compiler, which on macOS means xcode-select --install and on Debian or Ubuntu means build-essential . If you don't have Rust, Firecrawl Cloud runs the same scrape with nothing to build and no signup. Scrape a page and print its markdown. Crawl a site and save one markdown file per page. Pages that need JavaScript render in the Chrome or Chromium already on your machine, and PDFs and Office documents are parsed locally too. Without a browser, static pages still work and a page that needed one comes back with a warning. init finds Claude Code, Claude Desktop, Cursor, Windsurf, Gemini CLI and Codex on your machine and adds Firecrawl Local to each one as an MCP server. It backs up every config file first, and the MCP server itself needs Node.js 22 or newer. Restart your AI tool afterwards. Its scrape, crawl, map and batch scrape tools run on your machine, and the other Firecrawl tools go to Firecrawl Cloud. serve answers the Firecrawl v2 API on port 3002, so code written for Firecrawl runs against it unchanged and",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "language": "TypeScript"
+    },
+    "trending-5dd922e14c0c": {
+      "id": "trending-5dd922e14c0c",
+      "kind": "trending",
+      "title": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "source": "GitHub Trending",
+      "published": "2026-11-26T02:50:51.239Z",
+      "metrics": {
+        "stars": 65744,
+        "starsToday": 1106,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/9a3d523bfceb17fbc5f28c399bd1ef83e1e18f400b086c730420d2a302b7b6cc/HKUDS/CLI-Anything",
+      "ogTitle": "GitHub - HKUDS/CLI-Anything: \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "ogDescription": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/ - HKUDS/CLI-Anything",
+      "excerpt": "Today's Software Serves Humans👨‍💻. Tomorrow's Users will be Agents🤖. CLI-Anything: Bridging the Gap Between AI Agents and the World's Software 🌐 CLI-Hub : pip install cli-anything-hub then cli-hub install <name> — browse, install, and manage all community-built CLIs. Want to add your own? Open a PR — the hub updates instantly. 🎬 See Demos : Watch AI agents use generated CLIs plus preview, live preview, and trajectory loops to produce real artifacts — CAD builds, 3D scenes, diagrams, gameplay, subtitles, and more. 🙋 [Become a Contributor, or Request a CLI] : Join us ! Sign up to build a new CLI harness — once reviewed and merged, you'll gain access as one of our community contributors! Wish CLI-Anything supported a specific software or service? Submit a wishlist request ! One Command Line : Make any software agent-ready for Pi, OpenClaw, nanobot, Cursor, Claude Code, etc. 中文文档 | 日本語ドキュメント | Deutsch Thanks to all invaluable efforts from the community! More updates continuously on the way everyday.. 2026-05-30 🧭 Hermes skill proposed (#320), adding a CLI-Anything orchestration skill with installer scripts and HARNESS fallback guidance. 🗺️ ArcGIS Pro was proposed for the public registry (#318) as a Windows/ArcPy CLI for cartography, geoprocessing, feature editing, and live-Pro MCP workflows. 2026-05-27 🔧 CLI-Hub registry date updates now handle python -m pip install commands (#312), improving package-date detection for registry automation. 2026-05-23 📝 Obsidian Agent CL",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python"
+    },
+    "trending-b88590c43555": {
+      "id": "trending-b88590c43555",
+      "kind": "trending",
+      "title": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "source": "GitHub Trending",
+      "published": "2026-11-26T02:50:51.239Z",
+      "metrics": {
+        "stars": 75173,
+        "starsToday": 945,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/a9b7933173e2260a46f1218b66c758a8d46b09b9bef9dfb00f2c8cd17057d72b/mvanhorn/last30days-skill",
+      "ogTitle": "GitHub - mvanhorn/last30days-skill: AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "ogDescription": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary - mvanhorn/last30days-skill",
+      "excerpt": "English | Français | Deutsch | Español | Português (Brasil) | 日本語 | 简体中文 | العربية | فارسی | Türkçe An AI agent-led search engine scored by upvotes, likes, and real money - not editors. This README tracks the current v4 pipeline. The runtime skill spec lives in skills/last30days/SKILL.md , which is the source of truth for the latest command and setup behavior. Claude Code (recommended — auto-updates via marketplace): Codex, Cursor, Copilot, Gemini CLI, or any of 50+ Agent Skills hosts: ( -g installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, OpenClaw, manual) in the Install section below. Zero config. Reddit, HN, Polymarket, and GitHub work immediately, and so do patent filings and careers pages when your topic is a company. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds. Reddit upvotes. X likes. YouTube transcripts. TikTok engagement. Polymarket odds backed by real money and insider information. That's millions of people voting with their attention and their wallets every day. /last30days searches all of it in parallel, scores it by what real people actually engage with, and an AI agent judge synthesizes it into one brief. Google aggregates editors. /last30days searches people. You can't get this search anywhere else because no single AI has access to all of it. Google search doesn't touch Reddit comments or X posts. ChatGPT has a deal with Re",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python"
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "thinkingmachines/Inkling-2-Mini",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 6047,
+      "downloads": 96527,
+      "createdAt": "2026-11-17T00:26:57.000Z",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+    },
+    {
+      "id": "unsloth/Inkling-2-Mini-GGUF",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 1380,
+      "downloads": 2445633,
+      "createdAt": "2026-11-20T13:09:48.000Z",
+      "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF"
+    },
+    {
+      "id": "inworld/voice-isolator",
+      "pipeline_tag": "audio-to-audio",
+      "likes": 898,
+      "downloads": 15244,
+      "createdAt": "2026-11-14T02:14:35.000Z",
+      "url": "https://huggingface.co/inworld/voice-isolator"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,620 @@
+{
+  "date": "2026-11-27",
+  "generatedAt": "2026-11-27T02:50:54.401Z",
+  "top": "hn-aebfbe56731b",
+  "selected": [
+    "hn-aebfbe56731b",
+    "official-a734da9d3a1d",
+    "official-3d2697b636d7",
+    "official-819f2bb8e324",
+    "official-88bd06d7e0e9",
+    "hn-40cb24997469",
+    "hn-2d51dd164fd1",
+    "hn-0b35b27d1979",
+    "japan-985c3683f044",
+    "japan-45b14487e208",
+    "japan-ab85de164815",
+    "japan-4f87682200d6",
+    "usage-353abdcb5e5ee7f1",
+    "usage-4b5e413202b44048",
+    "usage-36fb5b1c7a9ff4c8",
+    "usage-58b0556143dacc31",
+    "usage-5e8eba5b15ac6044",
+    "trending-f6c3adbf52c7",
+    "trending-e9dbf459bd01",
+    "trending-9c939c7199af",
+    "trending-8c6014a36ca9",
+    "trending-ce3bf530c355"
+  ],
+  "items": {
+    "hn-aebfbe56731b": {
+      "id": "hn-aebfbe56731b",
+      "kind": "hn",
+      "title": "AI made self-hosting fun again",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "source": "Hacker News",
+      "published": "2026-11-26T21:47:45.000Z",
+      "metrics": {
+        "points": 354,
+        "num_comments": 191
+      },
+      "image": "",
+      "ogTitle": "AI made self-hosting fun again",
+      "ogDescription": "I’ve been self-hosting things for many years. There were times when I was quite enthusiastic about it, constantly trying out new software and tinkering with my infrastructure. But at some point, that enthusiasm faded a bit.",
+      "excerpt": "AI made self-hosting fun again 2026-11-26 · ✍️ Posts · AI · Selfhosting · Thoughts Short link: https://b.jlel.se/s/8fb Share online Share this post × Use your browser's share dialog Copy share text I’ve been self-hosting things for many years. There were times when I was quite enthusiastic about it, constantly trying out new software and tinkering with my infrastructure. But at some point, that enthusiasm faded a bit. I never really stopped self-hosting, but I became less inclined to experiment with new things. Maintaining what I already had running was enough for me. Over the last few months, however, I’ve found myself getting increasingly excited about self-hosting again. And, somewhat ironically, AI is a big reason for that. Less friction Most of my infrastructure configuration lives in Git repositories, mainly in the form of Docker Compose files, scripts, and other configuration files. This makes it possible to use AI coding agents to work on my infrastructure in much the same way as they would work on any other software project. Whenever I want to try a new service, adjust an existing configuration, or automate something, I can now do so with considerably less effort. In the past, I would sometimes put off certain changes simply because I didn’t feel like spending an evening reading changelogs and documentation or troubleshooting issues. It’s not that I couldn’t have done these things before. But often, the amount of effort required just wasn’t worth it to me. Now, even ",
+      "objectID": "50660180",
+      "points": 354,
+      "num_comments": 191,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50660180",
+        "count": 191,
+        "points": 354
+      }
+    },
+    "official-a734da9d3a1d": {
+      "id": "official-a734da9d3a1d",
+      "kind": "official",
+      "title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+      "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+      "source": "Hugging Face",
+      "published": "2026-11-26T11:37:17.000Z",
+      "metrics": {},
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/67289c93ff90038d9a6e5675/tbIvyMSISXCm64WYP3atl.png",
+      "ogTitle": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+      "ogDescription": "A Blog post by ggml-org on Hugging Face",
+      "excerpt": "The llama.cpp × AMD Benchmark dashboard is available on Hugging Face. It lets you track prompt processing and text generation performance across llama.cpp builds, models, and quantizations, so you can explore how local inference performs on AMD Ryzen and Radeon hardware. Local inference performance changes as models, kernels, and builds evolve. We want those changes to be easy to inspect for any AMD developer: pick a hardware, a model and a build, compare quantizations, and follow performance over time. The benchmark workflow and underlying results are public, so you can also inspect how we benchmark inference performance. You can choose Hardware , Model , and llama.cpp build in the Configuration sidebar. The current hardware choices are Radeon 8060S (gfx1151) and Radeon AI Pro R9700S (gfx1201). The dashboard shows two separate tests, both measured in tokens per second: Both tests start at context depth zero ( n_depth=0 ). PP512 measures processing 512 input tokens without generation; TG128 measures generating 128 tokens without a pre-existing context. The plotted value is the mean throughput ( avg_ts ). These are useful reference workloads, while the Context scaling tab lets you explore token generation throughput as the context grows. We benchmark the prebuilt binaries distributed through llama-install.sh , the build and installation project behind llama.app . The public gfx1151 and gfx1201 workflows are scheduled weekly and run the standard benchmarks using the llama-bench",
+      "description": ""
+    },
+    "official-3d2697b636d7": {
+      "id": "official-3d2697b636d7",
+      "kind": "official",
+      "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+      "source": "Hugging Face",
+      "published": "2026-11-26T05:05:36.000Z",
+      "metrics": {},
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/6365c3f398da81987e2753f2/zArpuP9uLsLz9luMW0K2g.png",
+      "ogTitle": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+      "ogDescription": "A Blog post by NVIDIA on Hugging Face",
+      "excerpt": "Image-to-Text • 0.6B • Updated 2 days ago • 375 • 5",
+      "description": ""
+    },
+    "official-819f2bb8e324": {
+      "id": "official-819f2bb8e324",
+      "kind": "official",
+      "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+      "url": "https://huggingface.co/blog/training-swarms",
+      "source": "Hugging Face",
+      "published": "2026-11-26T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://huggingface.co/blog/assets/training-swarms/thumbnail.png",
+      "ogTitle": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+      "ogDescription": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "excerpt": "Paper • 2611.08615 • Published 22 days ago • 3",
+      "description": ""
+    },
+    "official-88bd06d7e0e9": {
+      "id": "official-88bd06d7e0e9",
+      "kind": "official",
+      "title": "Where scientists draw the line on AI agents",
+      "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+      "source": "Hugging Face",
+      "published": "2026-11-25T18:52:55.000Z",
+      "metrics": {},
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/F32BgZC_rj0kg99apJlto.png",
+      "ogTitle": "Where scientists draw the line on AI agents",
+      "ogDescription": "A Blog post by Ai2 on Hugging Face",
+      "excerpt": "Delegating research tasks to AI does not remove scientists’ responsibility for how the work is accomplished. For example, a researcher using AI to review the literature needs to check whether the system overlooks conflicting evidence or makes claims the cited papers don’t support. Someone handing off data analysis to an agentic system needs to understand which methods it used, which files it accessed, and whether the results can be successfully reproduced. A researcher automating part of a lab protocol needs confidence that the system respects physical safety constraints, such as temperature limits or material toxicity, while a researcher working with human-participant data needs assurance that a system protects participants' privacy and limits who can access their information. Researchers also need clear institutional guidelines for verifying and disclosing AI-assisted work. These ethical and safety questions are central to our work on AI for science. Responsible science is about more than accuracy—scientific fields have ethical research norms because of past actions and choices by scientists and scientific communities, and those norms also cover how research is conducted and what impact it has. We want AI tools to expand what scientists can accomplish without compromising their ability to scrutinize evidence, verify methods, and – perhaps most importantly – stand behind their findings. To better understand what that requires, we interviewed 17 scientists working in the natu",
+      "description": ""
+    },
+    "hn-40cb24997469": {
+      "id": "hn-40cb24997469",
+      "kind": "hn",
+      "title": "AMD-specific fork of llama.cpp",
+      "url": "https://devnull.land/amd-specific-llama-cpp",
+      "source": "Hacker News",
+      "published": "2026-11-26T17:11:29.000Z",
+      "metrics": {
+        "points": 294,
+        "num_comments": 73
+      },
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "Miscellaneous bits and bobs from the tech world",
+      "excerpt": "tl;dr — I recommend using llama-cpp-rdna-boosts if you have an AMD graphics card. It’s lean, and increased my token generation from 35 to 55 tokens/second, and my prefill from 700 to 1300 tokens per second. YMMV. As of November 2026, an explosion in the number of bespoke inference engines has taken place. Many of them take inspiration from the engines that enabled much of the LLM inference up 'til now: llama.cpp, SGLang, vLLM, etc. The rationale isn’t that those options are bad, but merely that they are generalist engines, optimized for no particular hardware and with a focus on broad compatibility. Others feel the development pace of those engines have slowed down, and with the help of LLMs, they can move faster on their own. Some examples of these new inference engines* are Strata, Basalt, RustingStrata, etc… These new forks generally all have a few things in common: … and the results are stunning! Strata is able to run a heavily-quantized model of Qwen 3.8 Flash Next, a 180B parameter model , on a 16GB VRAM graphics card, and 16GB system RAM, and have it generate tokens at a surprisingly high rate. In and of itself those three things are not red flags (the second is concerning, of course, but it may be SOP in a year’s time — who knows!), but as these projects have evolved, that relentless chase toward higher token generation speeds has taken an unfortunate turn, in that the optimizations are less about hardware-specific changes, but more about changing how the model thinks",
+      "objectID": "50657265",
+      "points": 294,
+      "num_comments": 73,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50657265",
+        "count": 73,
+        "points": 294
+      }
+    },
+    "hn-2d51dd164fd1": {
+      "id": "hn-2d51dd164fd1",
+      "kind": "hn",
+      "title": "OpenAI may be in cost control mode",
+      "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/",
+      "source": "Hacker News",
+      "published": "2026-11-26T07:33:12.000Z",
+      "metrics": {
+        "points": 284,
+        "num_comments": 285
+      },
+      "image": "",
+      "ogTitle": "OpenAI may be in cost control mode",
+      "ogDescription": "OpenAI’s recent release of Astra 6.2 and Sol 6.2 was widely panned. What happened? Based on our data, it looks like they’ve been tuned for cost savings. Specifically output tokens per task and reasoning tokens per task have dropped. Here is a chart of high-level cost change from the GPT-6 to GPT 6.2: The X axis in the above chart is the ratio of spending of the GPT model compared to opponents in our battle system for real work. The Y axis on the above chart is Elo from our leaderboard.",
+      "excerpt": "OpenAI’s recent release of Astra 6.2 and Sol 6.2 was widely panned. What happened? Based on our data, it looks like they’ve been tuned for cost savings. Specifically output tokens per task and reasoning tokens per task have dropped. Here is a chart of high-level cost change from the GPT-6 to GPT 6.2: The X axis in the above chart is the ratio of spending of the GPT model compared to opponents in our battle system for real work . The Y axis on the above chart is Elo from our leaderboard . The moves in the chart are significant, here’s the same chart with confidence intervals: Compared to opponents, Astra and Sol seem to be reasoning a lot less. Here is a chart of how much models reason compared to opponents in the same battle. Above the line means more reasoning and below means less. You can see that both Astra 6 and Sol 6.1 were pretty normal models, but Astra 6.2 and Sol 6.2 become outliers. We can see the same effect with output tokens: Are these changes significant? The p-value on output dropping is 0.0055 for Sol and 0.022 for Astra. The p-value on reasoning dropping is 0.00013 for Sol and 0.0064 for Astra. In conclusion, Astra and Sol appear to be cost tuned compared to their predecessors, and to a degree that makes them underthinking outliers.",
+      "objectID": "50652527",
+      "points": 284,
+      "num_comments": 285,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50652527",
+        "count": 285,
+        "points": 284
+      }
+    },
+    "hn-0b35b27d1979": {
+      "id": "hn-0b35b27d1979",
+      "kind": "hn",
+      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+      "source": "Hacker News",
+      "published": "2026-11-26T09:44:23.000Z",
+      "metrics": {
+        "points": 257,
+        "num_comments": 216
+      },
+      "image": "https://techstackups.com/img/articles/google-workspace-agent-api/cover.jpg",
+      "ogTitle": "Google Will Make AI Agents Use Its Workspace MCP Servers. The Gmail One Can't Send Email | Tech Stackups",
+      "ogDescription": "From February 2027, Google's terms require AI agents to reach Gmail, Drive and the rest of Workspace through Google's own MCP servers. What the rule says, what the servers can and can't do, and what to change before the deadline.",
+      "excerpt": "On 24 November, Google made its eight Workspace MCP servers generally available and published a new clause in its API terms. From 1 February 2027, any tool that \"is or is driven by an AI Agent\" must reach Gmail, Drive, Calendar and the rest of Workspace through those servers. Read the Gmail server's tool list and you'll find that it can search your mail, read threads, create a draft and file things under labels. It can't send a message, reply, forward, or change a draft after creating it. Those tools exist, but Google's quota page says they \"require partner access and aren't generally available\". If you've built an email assistant on the Gmail API, or you run a coding agent with a Google Workspace plugin, you have about two months to work out which side of the rule you're on. The new Workspace AI Tools Addendum to the Google APIs Terms of Service puts it in one sentence: The GWS Access Tool must use a Google MCP where the GWS Access Tool is or is driven by an AI Agent, an AI Harness or an AI model or service employing an AI model. The next sentence forbids disguising an agent to avoid the classification. Breaking either lets Google \"restrict or remove the GWS Access Tool's access\" or suspend your account. There's a technical side too. From the same date, agents that call the REST APIs directly are held to Standard-tier quotas , whatever tier the project has paid for. REST keeps working for them, slowly and in breach of the terms. Apps that don't involve AI carry on as before.",
+      "objectID": "50653477",
+      "points": 257,
+      "num_comments": 216,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50653477",
+        "count": 216,
+        "points": 257
+      }
+    },
+    "japan-985c3683f044": {
+      "id": "japan-985c3683f044",
+      "kind": "japan",
+      "title": "PR： 人材不足とAIの脅威に全方位の防御を――ＪＢＣＣグループ×Palo Alto Networksが実現する「全体最適」の次世代セキュリティ運用",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/26/news001.html",
+      "source": "＠IT",
+      "published": "2026-11-27T01:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/26/cover_news001.jpg",
+      "ogTitle": "人材不足とAIの脅威に全方位の防御を――ＪＢＣＣグループ×Palo Alto Networksが実現する「全体最適」の次世代セキュリティ運用",
+      "ogDescription": "深刻化するセキュリティ人材不足とAIを悪用したサイバー攻撃の高度化・高速化で、多くの企業が運用限界を迎えている。この課題に対して、ＪＢＣＣグループはPalo Alto Networks製品を自社のマネージドセキュリティサービスに統合して高度な自動化と全体最適による運用負荷軽減での解決を目指す。",
+      "excerpt": "深刻化するセキュリティ人材不足とAIを悪用したサイバー攻撃の高度化・高速化で、多くの企業が運用限界を迎えている。この課題に対して、ＪＢＣＣグループはPalo Alto Networks製品を自社のマネージドセキュリティサービスに統合して高度な自動化と全体最適による運用負荷軽減での解決を目指す。 多くの企業でセキュリティ人材が不足する中、エンドポイントからネットワーク、アイデンティティー（ID）、クラウドへセキュリティ対策領域が拡大している。さらにAIの悪用によって攻撃は高度化・高速化しており、もはや既存のポイントソリューションと自社人材によるセキュリティ対策は限界を迎えつつある。 このような状況を打破するため、ＪＢＣＣグループは、自社のマネージドセキュリティサービスにPalo Alto Networks（以下、パロアルトネットワークス）の製品を組み込んで、高度な自動化とセキュリティプラットフォームを活用した「全体最適」を目指している。ＪＢＣＣグループに、AI時代のセキュリティ課題をパロアルトネットワークス製品でどう解決するのか、顧客をどこまで支援するのかなどを聞いた。 生成AIや自動化ツールでサイバー攻撃の速度が飛躍的に高まっている。一方、企業ではエンドポイントからネットワーク、クラウドへカバー領域を拡大するためにポイントソリューションを個別最適で導入した結果、アラートの分析や調査、リスク対処の判断などの運用負荷が増大して、異常は検知できているがその後の対応が追い付いていない状況に陥っている。 パロアルトネットワークス製品を中心としたセキュリティサービスを取りそろえて、エンドポイントからネットワーク、サーバなど幅広くカバーし、マルチクラウド環境にも対応するマネージドセキュリティサービスを提供するＪＢＣＣグループでも、アラート過多に起因する人手不足と手作業での運用のボトルネックを課題に挙げる顧客は多いという。 ＪＢＣＣグループでサービス企画を担当する望月友博氏は、セキュリティ運用の解決に向けたポイントとして、「現状のセキュリティリスクを可視化するセキュリティ監査・診断の実施」と「AIを活用した運用の自動化やSOC（セキュリティオペレーションセンター）全体の高度化」の2つを挙げる。 「運用負荷やスピード感に課題がある多くのお客さまにとって、もはや自社のセキュリティ人材だけで対応するのは非現実的になっています。実際、お客さまに代わって24時間365日で対応する弊社のSOCサービスへのニーズや期待も高まっています。こうした中で重要になるのが、定期的な監査や診断を通じて現状のセキュリティリスクを把握し、未然に防ぐ事前対策の取り組みと、AIを活用した運用の自動化やSOC全体の高度化だと考えています」 一方、AIセキュリティを冷静に分析するのは同社の内藤雄也氏だ。「ソリューション提案や運用サポートなどでお客さまを訪問すると、『そもそも今何をすべきか分からない』という声をよく聞きます。AIセキュリティのニーズが顕在化するのはもう少し先になるとは思いますが、さまざまなリスクをお客さまにしっかり可視化・提示して、すぐそこまで来ているAIエージェント時代に備える必要があると考えています」と、先行してパロアルトネットワークス製品の検証・研究を進める同社の基本スタンスを説明する。 ＪＢＣＣグループはパロアルトネットワークスを、ネットワークやエンドポイントから、クラウド、ID保護までカバーして、先端のAIセキュリティでも業界をリードするセキュリティベンダーと位置付けている。",
+      "description": "深刻化するセキュリティ人材不足とAIを悪用したサイバー攻撃の高度化・高速化で、多くの企業が運用限界を迎えている。この課題に対して、ＪＢＣＣグループはPalo Alto Networks製品を自社のマネージドセキュリティサービスに統合して高度な自動化と全体最適による運用負荷軽減での解決を目指す。"
+    },
+    "japan-45b14487e208": {
+      "id": "japan-45b14487e208",
+      "kind": "japan",
+      "title": "電通が「Geminiを使いこなすFDE」ら3000人育成プログラムを開始 その内容とは？",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/27/news038.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-27T00:45:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/27/cover_news038.jpg",
+      "ogTitle": "電通が「Geminiを使いこなすFDE」ら3000人育成プログラムを開始 その内容とは？",
+      "ogDescription": "生成AIを導入しても、現場の業務に生かせないと成果にはつながらない。電通は約3000人を対象に、「Gemini Enterprise」を使いこなし、現場での生成AI活用を推進できる人材の育成を始めた。人材をどう育てるのか。",
+      "excerpt": "生成AIを導入しても、現場の業務に生かせないと成果にはつながらない。電通は約3000人を対象に、「Gemini Enterprise」を使いこなし、現場での生成AI活用を推進できる人材の育成を始めた。人材をどう育てるのか。 この記事は会員限定です。 会員登録（無料） すると全てご覧いただけます。 生成AIは業務効率化のツールにとどまらず、企業の業務プロセスやマーケティング活動全体を変革する基盤へと進化している――。大手広告会社の電通は、こう指摘する。企業が生成AIを事業成長や顧客体験の向上につなげるには、生成AIの実装や業務改善だけではなく、自社の成長戦略を見据えた包括的な視点が必要になると同社はみる。 こうした中、電通は電通デジタル、電通総研、イグニション・ポイントのグループ3社と共同で、国内電通グループにおいてGoogleの生成AIツール「Gemini Enterprise」の活用を推進することにした。事業のさまざまな領域におけるAI活用の基盤としてGemini Enterpriseを生かす。これによりセキュリティを確保した上で社内データを横断的に活用できるようにする。 加えて電通は、Gemini Enterpriseの活用を通じて、クライアントの事業変革を現場で支援する実践型人材「FDE」（Forward Deployed Engineer）および「FDM」（Forward Deployed Marketer）を育成する。この方針を具体化するために同社は3社と共に、国内電通グループの約3000人を対象にしたFDE・FDMのスキル開発プログラムを開始することを、2026年10月に明らかにした。 FDE・FDMという“現場特化型”の生成AI人材3000人を、どのようなプログラムで育成し、Gemini Enterpriseを実際の業務フローにどう組み込むのか。具体的な取り組みの内容を見ていこう。 プログラムでは、約3000人にGemini Enterpriseの実践的な活用方法から、業務フローへの組み込み方まで習得してもらう。単なる生成AI技術の習得にとどまらず、マーケティングや事業活動の現場で課題を捉えて、生成AIを活用した事業変革プロジェクトを自らけん引できる高度AI人材の育成を目指す。 クライアントの現場に入り込み、伴走しながら生成AIを活用した事業変革プロジェクトを推進する人材として、FDEを育成する。事業・マーケティング戦略の構想やインサイト発掘、クリエイティブ（広告などの制作物）の生成・効果検証、クライアントの日常業務への生成AIの組み込みまでの各フェーズで、国内電通グループの専門性を生かしながらGemini Enterpriseを活用できるようにする。 国内電通グループは、約3000人がFDE・FDMのスキルを身に付けることで、生成AIの実装や業務改善にとどまらない、クライアントの事業成長に向けた支援体制の強化を図る。生成AIの活用を戦略構想から日常業務への組み込みまで、クライアントの現場課題に即して一貫して支援できる人材を育てることで、クライアントの事業成果の創出につなげる。 今後も国内電通グループは、Gemini EnterpriseをはじめとするGoogleのAIツールの活用を推進する。こうした取り組みを通じて、人の知とAIの知を掛け合わせてクライアントや社会の成長に貢献するという、独自のAI戦略「AI For Growth」を推進する考えだ。 本稿は、電通が2026年10月14日に公開した プレスリリース を基に作成しました",
+      "description": "生成AIを導入しても、現場の業務に生かせないと成果にはつながらない。電通は約3000人を対象に、「Gemini Enterprise」を使いこなし、現場での生成AI活用を推進できる人材の育成を始めた。人材をどう育てるのか。"
+    },
+    "japan-ab85de164815": {
+      "id": "japan-ab85de164815",
+      "kind": "japan",
+      "title": "AIエージェントの行動が「適切か暴走か」をどう見極める？ Googleが明かすテストの盲点",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/27/news035.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-26T23:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/27/cover_news035.jpg",
+      "ogTitle": "AIエージェントの行動が「適切か暴走か」をどう見極める？ Googleが明かすテストの盲点",
+      "ogDescription": "AIエージェントが期待通りに動作するかどうかを、どのように検証すればよいのか。GoogleはAIコーディングエージェント向けのプラグイン開発を通じて、最終回答に基づく評価や、実際に操作させるテストだけでは見抜けない問題があることを明らかにした。",
+      "excerpt": "AIエージェントが期待通りに動作するかどうかを、どのように検証すればよいのか。GoogleはAIコーディングエージェント向けのプラグイン開発を通じて、最終回答に基づく評価や、実際に操作させるテストだけでは見抜けない問題があることを明らかにした。 この記事は会員限定です。 会員登録（無料） すると全てご覧いただけます。 AIエージェントの開発では、目的に応じて適切なツールを選択し、複数の処理を組み合わせてタスクを遂行できるようにするだけでなく、その動作が適切かどうかを検証する仕組みも重要になる。例えば、タスクを完了できたとしても、その過程で必要な安全確認を省略していたり、不要な操作を実行していたりする可能性があるためだ。 Googleは2026年10月16日（米国時間）、AIコーディングエージェントにGoogle Cloudの操作に必要なスキルやツールを組み込む「Google Cloud Developer plugin」の開発を通じて得た、「評価エンジニアリング」（Evaluation Engineering）に関する4つの教訓を公式ブログで紹介した。 Googleは、AIエージェントを組み込んだシステムの開発において、本当の難しさはシステムを構築することよりも、その振る舞いを評価することにあると指摘する。実際にどのような問題が見つかり、評価方法をどう見直したのか。 AIエージェントの評価方法の一つに、大規模言語モデル（LLM）を評価者として用いる「LLM-as-a-Judge」がある。あらかじめ評価基準を定め、それを満たしているかどうかをLLMに判定させる方法だ。 ただし、何を評価対象とするかには注意が必要だ。Googleは当初、AIエージェントがタスクの実行後に出力した回答文を評価対象としていた。しかし、11種類のプロンプトを用いたテストでは、実際には評価基準を満たしていた3件の実行結果が不合格と判定された。 問題は、AIエージェントが実際に取った行動と、その行動について利用者に説明した内容が必ずしも一致しないことにある。 例えば、不要なクラウドリソースを整理するタスクにおいて、コマンドの実行前に構文を確認することを評価項目とした場合、AIエージェントが実際に構文を確認していても、そのことを最終回答に記載しなければ、回答文だけを参照するLLMは正しく判定できない。 タスクの実行過程を評価したいのであれば、実際に呼び出したツールやコマンド、指定したパラメーターなどの記録を評価対象とする必要がある。 AIエージェントの振る舞いに問題があった場合、その原因がAIモデルにあるとは限らない。モデルへの情報の受け渡しやツールの実行を制御する「ハーネス」に起因する可能性もある。 Googleのテストでは、特定のスキルに記述された指示に従ってドキュメントを検索することが期待されていたにもかかわらず、その指示が検索処理に反映されない問題が見つかった。 原因は、スキルの読み込みとドキュメントの検索が同じターンで並行して実行されたことにあった。スキルに記述された具体的な指示は、スキルを呼び出した次のターンでAIモデルに渡される仕組みだったため、モデルが指示を受け取る前に検索処理が実行されてしまったのだ。 ツールの呼び出しを単純に時系列で記録するだけでは、どの処理が並行して実行されたのか、AIモデルがどの時点で指示を受け取ったのかを把握しにくい。 問題の原因を正しく切り分けるためにも、ターン単位の処理やツールの並行実行の関係を把握できる形で実行ログを残すことが重要に",
+      "description": "AIエージェントが期待通りに動作するかどうかを、どのように検証すればよいのか。GoogleはAIコーディングエージェント向けのプラグイン開発を通じて、最終回答に基づく評価や、実際に操作させるテストだけでは見抜けない問題があることを明らかにした。"
+    },
+    "japan-4f87682200d6": {
+      "id": "japan-4f87682200d6",
+      "kind": "japan",
+      "title": "「コスト削減」の“次”の成果、どう設定する？ ビジネス変革に結び付けるための「期待の中身」",
+      "url": "https://www.itmedia.co.jp/enterprise/articles/2611/27/news025.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-26T23:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/enterprise/articles/2611/27/cover_news025.jpg",
+      "ogTitle": "「コスト削減」の“次”の成果、どう設定する？ ビジネス変革に結び付けるための「期待の中身」",
+      "ogDescription": "ITRの調査によると、AI導入時に期待する効果として上位に並ぶのは「業務コストの削減」や「業務時間の短縮」でした。AIをビジネス変革の切り札とする企業は、AIの成果を問う前に、何を期待するかから見直す必要があると筆者は提言します。",
+      "excerpt": "ITRの調査によると、AI導入時に期待する効果として上位に並ぶのは「業務コストの削減」や「業務時間の短縮」でした。AIをビジネス変革の切り札とする企業は、AIの成果を問う前に、何を期待するかから見直す必要があると筆者は提言します。 この記事は 会員限定 です。会員登録すると全てご覧いただけます。 これまでどの時代でも、時代に適応した者だけが生き残ってきました。 テクノロジーの急速な進化、経済見通しの不透明さ、地政学リスクの顕在化、そして前例なき気候変動――。これまでの経験や常識が通用しにくいこの時代は、まさに「新しい乱世」と言えるでしょう。 今、企業に求められているのは、混迷の中を生き抜いていくために必要な次の一手を見極める力です。 そのための羅針盤となるのが、経営とビジネスを根本から変革し得るエンタープライズITなのです。 本連載では、アイ・ティ・アールの入谷光浩氏（取締役／プリンシパル・アナリスト）がエンタープライズITにまつわるテーマについて、その背景を深掘りしつつ全体像を分かりやすく解説します。「新しい乱世」を生き抜くためのITの羅針盤を、入谷氏とともに探っていきましょう。 資料作成や情報検索にAIを使い、仕事にかかる時間を短縮する。こうした取り組みには、日々の負担を軽くするという分かりやすい価値があります。ただ、効率化を進めるだけで、売上の拡大や顧客に提供する価値の向上まで実現できるのでしょうか。業務の効率が上がることと、顧客に選ばれる理由が増えることは同じではありません。 AIをビジネス変革の切り札と位置付けるのであれば、AIに何を任せるか、つまり活用テーマの選び方も問われます。技術は新しくなっても、テーマが既存の作業の効率化にとどまっていないか。今回は筆者が所属するアイ・ティ・アール（以下、ITR）の調査を手掛かりに、企業がAIに何を期待し、どのような役割を与えているのかを考えます。 ITRが企業のAI施策の責任者を対象に実施した「AI活用動向調査2026」で、導入時に期待した効果と、導入後に得られた成果を尋ねたところ、注目すべきポイントが浮かび上がりました。 導入時に期待した効果の上位には、「業務コストの削減」や「業務時間の短縮」「人手不足への対応」「業務の属人化の解消」などの社内業務の改善に関する項目が並びます。導入後の成果でも、これらの項目は相対的に高い水準にあります。「業務時間の短縮」など、成果を挙げた割合が期待を下回る項目も中にはありますが、効果があったとする回答が多く見られます。 これに対して「売上や収益機会の拡大」は、期待が13.5％、成果が13.9％でした。「顧客体験・満足度の向上」も、期待と成果の双方で相対的に低い水準にあります。業務を効率化する効果に比べ、顧客や市場に向けた効果は、期待の段階で既に下位に位置しています。 売上の拡大や顧客体験の向上は、ビジネスに直結するテーマです。筆者がこの調査で注目したのは、こうした効果が導入時からAIへの期待の中心に置かれていなかったことです。期待した効果が得られたかどうかに加えて、企業が何を実現するためにAIを導入したのかにも、目を向ける必要があります。 一方、「新商品・新サービスの創出」では、成果として挙げた回答の割合が、導入時に期待した回答の割合を上回っています。社内業務の改善に加え、ビジネスに関わる成果を認識している企業もあることが分かります。 効率化の成果を評価した上で、売上や顧客価値への貢献も広げようとするなら、AIに任せる仕事の選び方が問われます。既存の作業を効率",
+      "description": "ITRの調査によると、AI導入時に期待する効果として上位に並ぶのは「業務コストの削減」や「業務時間の短縮」でした。AIをビジネス変革の切り札とする企業は、AIの成果を問う前に、何を期待するかから見直す必要があると筆者は提言します。"
+    },
+    "trending-f6c3adbf52c7": {
+      "id": "trending-f6c3adbf52c7",
+      "kind": "trending",
+      "title": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "source": "GitHub Trending",
+      "published": "2026-11-27T02:50:54.401Z",
+      "metrics": {
+        "stars": 24726,
+        "starsToday": 1597,
+        "language": "Python"
+      },
+      "image": "https://repository-images.githubusercontent.com/1229774092/93703d75-077c-4a14-b580-e2374741fe3d",
+      "ogTitle": "GitHub - elementalsouls/Claude-BugHunter: A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "ogDescription": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise ide...",
+      "excerpt": "A self-contained Claude skill bundle for bug hunting and external red-team work · 85 skills · 16 slash commands · 681 disclosed-report patterns (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by Sachin Sharma — Bug Hunting & GenAI Security Research. claude-bughunter is a drop-in skill bundle for the Claude Code skills system . Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. All triggered automatically by topic — describe what you're testing in plain English and the relevant skill loads. No invocation by name. Option A — install as a Claude Code plugin (recommended). From inside Claude Code: All 85 skills + 16 commands load namespaced under claude-bughunter: and update when you bump the plugin version — no files copied into ~/.claude/ . A HackerOne account is optional. The install asks for a HackerOne API username and token. They only let the HackerOne MCP read your private programs and your own reports; leave both blank if you don't need that. Every skill, command an",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python"
+    },
+    "trending-e9dbf459bd01": {
+      "id": "trending-e9dbf459bd01",
+      "kind": "trending",
+      "title": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "source": "GitHub Trending",
+      "published": "2026-11-27T02:50:54.401Z",
+      "metrics": {
+        "stars": 211016,
+        "starsToday": 1046,
+        "language": "TypeScript"
+      },
+      "image": "https://repository-images.githubusercontent.com/787076358/f9616c09-3701-41ef-b5a6-fdf912ffb15b",
+      "ogTitle": "GitHub - firecrawl/firecrawl: Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "ogDescription": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API. - firecrawl/firecrawl",
+      "excerpt": "Knowledge infrastructure to make your agents smarter. 🔥 You can use Firecrawl three ways. This repo holds the code for Firecrawl Local and the self-hosted server, along with SDKs that work with all three. Pst. Hey, you, join our stargazers :) Firecrawl Local scrapes, crawls and maps from your own machine without a database, queue or container, and it reaches Firecrawl Cloud when your AI agents need search or Alexandria. It installs from crates.io. You need Rust and a C compiler, which on macOS means xcode-select --install and on Debian or Ubuntu means build-essential . If you don't have Rust, Firecrawl Cloud runs the same scrape with nothing to build and no signup. Scrape a page and print its markdown. Crawl a site and save one markdown file per page. Pages that need JavaScript render in the Chrome or Chromium already on your machine, and PDFs and Office documents are parsed locally too. Without a browser, static pages still work and a page that needed one comes back with a warning. init finds Claude Code, Claude Desktop, Cursor, Windsurf, Gemini CLI and Codex on your machine and adds Firecrawl Local to each one as an MCP server. It backs up every config file first, and the MCP server itself needs Node.js 22 or newer. Restart your AI tool afterwards. Its scrape, crawl, map and batch scrape tools run on your machine, and the other Firecrawl tools go to Firecrawl Cloud. serve answers the Firecrawl v2 API on port 3002, so code written for Firecrawl runs against it unchanged and",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "language": "TypeScript"
+    },
+    "trending-9c939c7199af": {
+      "id": "trending-9c939c7199af",
+      "kind": "trending",
+      "title": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "source": "GitHub Trending",
+      "published": "2026-11-27T02:50:54.401Z",
+      "metrics": {
+        "stars": 73918,
+        "starsToday": 955,
+        "language": "HTML"
+      },
+      "image": "https://opengraph.githubassets.com/e5591ef131184caa8e2f7bc60f24b905b9548d48ed4e46d0d22b46b235098c32/cathrynlavery/diagram-design",
+      "ogTitle": "GitHub - cathrynlavery/diagram-design: Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "ogDescription": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop. - cathrynlavery/diag...",
+      "excerpt": "An agent skill that draws diagrams as one self-contained HTML + SVG file, in your brand. 52 diagram types. No shadows. No Mermaid slop. Install · What it makes · Quickstart · Match your brand · Import · Export · Contributing npx skills add cathrynlavery/diagram-design Ask your agent in plain words: The agent picks the type, states its plan, and writes one .html file you can open by double-clicking. Works with any host that reads Agent Skills, including Cursor, Claude Code, Codex, Qoder, GitHub Copilot, Gemini CLI, Cline, Windsurf and Amp: In Claude Code, the plugin marketplace gets you updates and the slash commands: Official builds come only from this repository. LittleMight, Cathryn Lavery's company, publishes the plugin directory listings; a listing under any other name is an unofficial copy. PRIVACY.md lists what the skill sends over the network. After installing, run /plugin , open Marketplaces , select diagram-design , and choose Enable auto-update . Claude Code disables auto-update by default for third-party marketplaces; after this toggle, it refreshes the marketplace and installed plugin in the background after startup. Run /reload-plugins when prompted, or let the next session load the update. Claude Desktop's skill upload rejects a ZIP with more than 200 files, so the full skills/diagram-design/ tree cannot be imported as-is. From a checkout, build a bounded ZIP: That writes dist/diagram-design-claude-skill.zip (gitignored). In Claude Desktop, open Customize → Skil",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML"
+    },
+    "trending-8c6014a36ca9": {
+      "id": "trending-8c6014a36ca9",
+      "kind": "trending",
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "source": "GitHub Trending",
+      "published": "2026-11-27T02:50:54.401Z",
+      "metrics": {
+        "stars": 327554,
+        "starsToday": 854,
+        "language": "Shell"
+      },
+      "image": "https://opengraph.githubassets.com/2afe2df387e7c1ea797c23cf04a088f4fad4783d5c86bdc50bc5ed62d6ba2efa/obra/superpowers",
+      "ogTitle": "GitHub - obra/superpowers: An agentic skills framework & software development methodology that works.",
+      "ogDescription": "An agentic skills framework & software development methodology that works. - obra/superpowers",
+      "excerpt": "Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it doesn't just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a subagent-driven-development process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hes",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell"
+    },
+    "trending-ce3bf530c355": {
+      "id": "trending-ce3bf530c355",
+      "kind": "trending",
+      "title": "zhouxiaoka/autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "source": "GitHub Trending",
+      "published": "2026-11-27T02:50:54.401Z",
+      "metrics": {
+        "stars": 17021,
+        "starsToday": 774,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/a1cd48fb175d44edbb190d93cebefd9ea8a774313ec26b9fa94c16d78bcd7892/zhouxiaoka/autoclip",
+      "ogTitle": "GitHub - zhouxiaoka/autoclip: AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。",
+      "ogDescription": "AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouT...",
+      "excerpt": "The open-source OpusClip alternative — local-first AI clipping for podcasts, interviews, and gaming streams with smart reframing, captions, covers, titles, and built-in MCP for AI agents . Zero subscriptions, no paywall. Website · Download · Live Replays (v1.6) · Showcase · Quick Start · Docs · Issues English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Español · Português · Русский · Français · Bahasa Indonesia · Türkçe · Tiếng Việt · Deutsch ⭐ Free, MIT-licensed, zero subscriptions — everything cuts and renders on your machine. Star the repo if you find it useful! Drop in a link, local video, or live stream replay — AutoClip finds the best moments, tracks the speaker, burns in captions, generates covers, and exports ready-to-post clips for TikTok, Shorts, Reels, YouTube, Douyin, Xiaohongshu, and Bilibili. Local-first by design: cutting and rendering run directly on your computer with no upload queues and no monthly fee. Bring your own API key or run 100% offline with Ollama / LM Studio + Whisper / SenseVoice . Home → 6 Live Replay sources → OBS WebSocket setup → Twitch import → Finished clip with captions & one-click publish. Click any thumbnail or ▶ Play to watch full clips rendered by AutoClip. Language labels indicate burned-in subtitle language. Browse 16+ clips, covers, and post copy in the Showcase → , or share your own clips . Source copyrights remain with their original creators. Installers are built publicly on GitHub Actions ( Desktop Build ) with build-provenance.json SHA-256 ver",
+      "description": "AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。",
+      "language": "Python"
+    },
+    "usage-353abdcb5e5ee7f1": {
+      "id": "usage-353abdcb5e5ee7f1",
+      "kind": "usage",
+      "title": "寝てる間に自動で動くAIエージェントを誰でも作れる：10分でわかる pstack 実践ガイド",
+      "url": "https://zenn.dev/canly/articles/ca6875cd79539f",
+      "source": "zenn",
+      "host": "zenn.dev",
+      "language": "ja",
+      "publishedAt": "2026-11-20T18:04:40.760+09:00",
+      "published": "2026-11-20T18:04:40.760+09:00",
+      "metrics": {
+        "observedAt": "2026-11-27T02:50:54.401Z",
+        "hb": 584,
+        "likes": 98,
+        "saves": 60
+      },
+      "route": "A",
+      "firstQualifiedAt": "2026-11-27T02:50:54.401Z",
+      "ruleVersion": "usage-v2-trusted-author-1",
+      "excerpt": "カンリーCAIOの萩野 です。 「All Code Is Slop (Except Mine)（全てのコードはゴミ、私のは除く）」を掲げる開発者 poteto（Lauren Tan）さんの基調講演 （2026年11月11日、 AI Engineer CODE 2026 ）では、1か月で3,000本のPRを本番に出し、その多くを寝ている間に進めた話が語られました。そのやり方を MIT ライセンスで公開した Cursor 公式スキル集 pstack を Claude Code に入れ、指示1回・約10分・途中の人手なしで設計からツール実装、自動テスト14件、コードをわざと壊すテスト検証まで完走させました。この記事では、指示の組み立て方、できたツールの設計、テストの確かめ方、人が決めることを、実行ログとパッチから抜き出して書きます。 動画もどうぞ pstack の概要 pstack は Cursor 公式のプラグイン集 cursor/plugins の中にあるプラグイン です。作者は Lauren Tan さん（ poteto ）で、 ライセンスは MIT です。今回使ったのは 0.15.43 です。 README によると、AI がいいかげんなコードを書きすぎる問題への答えとして、作者が Cursor で毎日使っているスキルを公開したものです。行数を増やすのではなく、少なくて質の高いコ",
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "author": "haginota",
+      "discussion": {
+        "url": "https://b.hatena.ne.jp/entry/s/zenn.dev/canly/articles/ca6875cd79539f",
+        "source": "hatena",
+        "count": 584
+      }
+    },
+    "usage-4b5e413202b44048": {
+      "id": "usage-4b5e413202b44048",
+      "kind": "usage",
+      "title": "AIハーネスは第3世代へ。自己改善するハーネスの全体像",
+      "url": "https://zenn.dev/knowledgesense/articles/68128456fe7d28",
+      "source": "zenn",
+      "host": "zenn.dev",
+      "language": "ja",
+      "publishedAt": "2026-11-24T09:05:05.190+09:00",
+      "published": "2026-11-24T09:05:05.190+09:00",
+      "metrics": {
+        "observedAt": "2026-11-27T02:50:54.401Z",
+        "hb": 210,
+        "likes": 26,
+        "saves": 9
+      },
+      "route": "A",
+      "firstQualifiedAt": "2026-11-27T02:50:54.401Z",
+      "ruleVersion": "usage-v2-trusted-author-1",
+      "excerpt": "本記事では、AIエージェントの実行基盤である「ハーネス」の最新トレンドについて、ざっくり理解します。株式会社ナレッジセンスは、生成AIやRAGを使ったプロダクトを、エンタープライズ企業向けに開発しているスタートアップです。 この記事は何 この記事は、「自己改善するAIエージェントハーネス」の全体像を整理した論文 [1] について、日本語で簡単にまとめたものです。この論文は、Googleの研究者らによって、2026年11月に発表されました。 https://arxiv.org/abs/2611.22299 今回も「そもそもAIエージェントとは？」については、知っている前提で進みます。 本題 ざっくりサマリー 「ハーネス」とは、AIエージェントの性能が高くなるようにするための仕組み です。ツール実行のタイミングや作業フローなどを管理して、性能が上がるようにします。 最近、AIエージェントの性能を左右する要素として、「ハーネス」という概念が浸透しています。一番身近なハーネスは、「プロンプト」ですね。同じLLMでも、その動かし方によって、精度が大きく変わることは、誰でも、経験したことがあるはずです。 今回のテーマは、 ハーネスでも「第3世代」にあたる、自己改善するハーネス です。要するに、「 AI自身に失敗時のログを読ませて、自分を動かしているプログラム自体を、修正させよう 」という挑戦で",
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "author": "a_kadowaki",
+      "discussion": {
+        "url": "https://b.hatena.ne.jp/entry/s/zenn.dev/knowledgesense/articles/68128456fe7d28",
+        "source": "hatena",
+        "count": 210
+      }
+    },
+    "usage-36fb5b1c7a9ff4c8": {
+      "id": "usage-36fb5b1c7a9ff4c8",
+      "kind": "usage",
+      "title": "Working with AI",
+      "url": "https://www.anthropic.com/research/working-with-ai",
+      "source": "hn",
+      "host": "www.anthropic.com",
+      "language": "en",
+      "publishedAt": "2026-11-23T00:00:00.000Z",
+      "published": "2026-11-23T00:00:00.000Z",
+      "metrics": {
+        "observedAt": "2026-11-27T02:50:54.401Z",
+        "hb": 10,
+        "hnPoints": 89,
+        "hnComments": 77
+      },
+      "route": "A",
+      "firstQualifiedAt": "2026-11-27T02:50:54.401Z",
+      "ruleVersion": "usage-v2-trusted-author-1",
+      "excerpt": "01 Summary Nathan Wilmers, Maxim Massenkoff, Peter McCrory Summary How are businesses across the economy adopting AI? What bottlenecks and challenges have they faced? How can employers reorganize human expertise around increasingly capable models? To understand businesses’ experiences better, we conducted 66 interviews with 58 of Anthropic’s enterprise customers. We found: Sources of AI value. Companies are deploying AI across a dizzying range of knowledge work tasks. In particular, they are increasingly using coding agents to bring software capabilities to nontechnical roles. Interviewees rep",
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "author": "Anthropic",
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50634734",
+        "source": "hn",
+        "count": 77,
+        "points": 89
+      }
+    },
+    "usage-58b0556143dacc31": {
+      "id": "usage-58b0556143dacc31",
+      "kind": "usage",
+      "title": "【個人開発】AIでバトルロイヤルゲームを作ってみた",
+      "url": "https://qiita.com/yangon/items/4b0e3752764eb13f15be",
+      "source": "qiita",
+      "host": "qiita.com",
+      "language": "ja",
+      "publishedAt": "2026-11-25T17:14:14+09:00",
+      "published": "2026-11-25T17:14:14+09:00",
+      "metrics": {
+        "observedAt": "2026-11-27T02:50:54.401Z",
+        "hb": 3,
+        "likes": 18,
+        "saves": 17
+      },
+      "route": "B",
+      "firstQualifiedAt": "2026-11-27T02:50:54.401Z",
+      "ruleVersion": "usage-v2-trusted-author-1",
+      "excerpt": "はじめに 「荒野行動みたいなバトロワを、ブラウザで、three.js なしで作って」 そう AI に頼んだら、2日後にはこうなっていました。 ブラウザで動く30人バトルロイヤル （オンライン対戦 / ボット戦） Rust → WebAssembly のゲームコア、 生の WebGPU （three.js なし）の自作レンダラ Cloudflare Workers + Durable Objects のサーバー権威型マルチプレイ 運転できるパトカーと消防車、2階建ての家とマンション、泳ぎ、爆発、草、木…… 👉 遊べます: https://github30.github.io/knives-out/ （PC は WebGPU 対応ブラウザ、スマホはタッチ操作） 👉 ソース: https://github.com/GitHub30/knives-out コードは基本的にすべて AI（Claude Code）が書き、私は日本語で短い指示を出しただけです。この記事では、 何ができたか、どう頼んだか、どこでハマったか、そして正直どこが限界か を書きます。 先に結論を言うと「AIに丸投げで AAA ゲームができた！」という話ではありません。できたのは「ちゃんと遊べて、中身の設計がまともなブラウザゲーム」です。見た目は後半のスクショで判断してください。 できたもの 輸送機から降下 → 着地 → 漁",
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "author": "yangon",
+      "discussion": {
+        "url": "https://b.hatena.ne.jp/entry/s/qiita.com/yangon/items/4b0e3752764eb13f15be",
+        "source": "hatena",
+        "count": 3
+      }
+    },
+    "usage-5e8eba5b15ac6044": {
+      "id": "usage-5e8eba5b15ac6044",
+      "kind": "usage",
+      "title": "Three LLM inflection points in twelve months",
+      "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points",
+      "source": "simon",
+      "host": "simonwillison.net",
+      "language": "en",
+      "publishedAt": "2026-11-24T23:02:07+00:00",
+      "published": "2026-11-24T23:02:07+00:00",
+      "metrics": {
+        "observedAt": "2026-11-27T02:50:54.401Z",
+        "hb": 2
+      },
+      "route": "C",
+      "firstQualifiedAt": "2026-11-27T02:50:54.401Z",
+      "ruleVersion": "usage-v2-trusted-author-1",
+      "excerpt": "Three LLM inflection points in twelve months 24th November 2026 I gave a keynote at the AI Engineer Code Summit a couple of weeks ago, constructed around the idea that there have been three significant inflection points in the abilities of LLMs and coding agents in the past twelve months. Here’s the video of the talk. In this post I’m going to pull out the major inflection point theme and interrogate it more deeply. Coding agents in November 2025 Today, November 24th 2026, is the one year anniversary of the release of Claude Opus 4.5 . With hindsight, this was a consequential model. In the Opu",
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "author": "Simon Willison",
+      "discussion": {
+        "url": "https://b.hatena.ne.jp/entry/s/simonwillison.net/2026/Nov/24/llm-inflection-points",
+        "source": "hatena",
+        "count": 2
+      }
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "thinkingmachines/Inkling-2-Mini",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 6273,
+      "downloads": 96527,
+      "createdAt": "2026-11-17T00:26:57.000Z",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+    },
+    {
+      "id": "unsloth/Inkling-2-Mini-GGUF",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 1501,
+      "downloads": 2445633,
+      "createdAt": "2026-11-20T13:09:48.000Z",
+      "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF"
+    },
+    {
+      "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 940,
+      "downloads": 762491,
+      "createdAt": "2026-11-20T20:42:23.000Z",
+      "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF"
+    }
+  ],
+  "usageSources": {
+    "zenn": "ok",
+    "qiita": "ok",
+    "hatenaIt": "missing",
+    "hatenaGeneral": "missing",
+    "hatenaCount": "ok",
+    "hn": "forbidden",
+    "simon": "ok"
+  },
+  "errors": [
+    {
+      "source": "usage:hatenaGeneral",
+      "message": "Qiita article absent from bounded list responses; no per-item request",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaGeneral",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaGeneral",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaGeneral",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaGeneral",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaGeneral",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaGeneral",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaGeneral",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaIt",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaIt",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "HN article-fetch daily cap reached",
+      "status": "truncated"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "HTTP 403; host paused for this run",
+      "status": "forbidden"
+    }
+  ]
+}

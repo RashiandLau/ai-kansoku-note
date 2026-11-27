@@ -155,7 +155,7 @@ for (const [name, mutate, diagnostic] of [
   ['usage in ranking', data => { data.ranking.push({ id: data.articles[0].id, summary: data.articles[0].summary }); data.articles = []; }, /Wrong collection/],
   ['wrong usage category', data => { data.articles[0].category = 'tools'; }, /Usage category required/],
   ['usage impact', data => { data.articles[0].impact = '操作を確認する。'; }, /Impact only allowed/],
-  ['short usage headline', data => { data.articles[0].headline = '短い見出し'; }, /8-70/],
+  ['short usage headline', data => { data.articles[0].headline = '短い見出し'; }, /at least 8 characters/],
   ['long usage summary', data => { data.articles[0].summary = `${'あ'.repeat(260)}。報告している。`; }, /30-260/],
   ['one-sentence usage summary', data => { data.articles[0].summary = '筆者はClaude Codeでプロジェクトのテストを作成して実行したと報告している。'; }, /2-3 sentences/],
   ['four-sentence usage summary', data => { data.articles[0].summary = '筆者はClaude Codeを使った。テストを書いた。生成したテストを実行した。失敗した箇所を修正したと報告している。'; }, /2-3 sentences/],

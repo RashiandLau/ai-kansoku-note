@@ -99,6 +99,46 @@ test('uses raw kind rather than category for the japan headline rule', () => {
   assert.ok(validateData(raw, data).some(error => /Japan headline must match raw title/.test(error)));
 });
 
+test('allows a 74-character domestic source headline but not a rewrite', () => {
+  const { raw, data } = sample();
+  const entry = data.articles[2];
+  const title = `国内企業が開発ツールを公開　${'画像入力機能'.repeat(10)}`;
+  assert.equal(Array.from(title).length, 74);
+  raw.items[entry.id] = { kind: 'japan', title };
+  entry.category = 'japan';
+  entry.headline = title.replace('　', ' ');
+  assert.deepEqual(validateData(raw, data), []);
+  entry.headline = entry.headline.replace('公開', '発表');
+  assert.ok(validateData(raw, data).some(error => /Japan headline must match raw title/.test(error)));
+});
+
+test('only exempts original Japanese usage headlines, keeping exact match and bans', () => {
+  const { raw, data } = sample();
+  const entry = data.articles[2];
+  const title = `開発者がAIで画像を作成　${'画像入力機能'.repeat(10)}`;
+  const item = raw.items[entry.id] = { kind: 'usage', language: 'ja', title };
+  entry.category = 'usage';
+  entry.headline = title;
+  assert.deepEqual(validateData(raw, data), []);
+  entry.headline = title.replace('　', ' ');
+  assert.ok(validateData(raw, data).some(error => /Usage headline must match raw title verbatim/.test(error)));
+  item.language = 'en';
+  assert.ok(validateData(raw, data).some(error => /8-70 characters/.test(error)));
+  item.language = 'ja';
+  item.title = entry.headline = title + '—';
+  assert.ok(validateData(raw, data).some(error => /Forbidden dash/.test(error)));
+});
+
+test('retains the Japanese authored headline cap even in the Japan category', () => {
+  const { raw, data } = sample();
+  const entry = data.articles[2];
+  entry.category = 'japan';
+  entry.headline = '開'.repeat(70);
+  assert.deepEqual(validateData(raw, data), []);
+  entry.headline += '発';
+  assert.ok(validateData(raw, data).some(error => /8-70 characters/.test(error)));
+});
+
 test('rejects missing or nonstring japan raw titles without throwing', () => {
   for (const title of [undefined, null, 123]) {
     const { raw, data } = sample();
@@ -210,6 +250,16 @@ test('English translates Japan source headlines instead of preserving Japanese t
   input.data.articles[2].category = input.japaneseData.articles[2].category = 'japan';
   input.data.articles[2].headline = 'Japanese company introduces a model with image input';
   assert.deepEqual(validateEnglish(input), []);
+});
+
+test('retains the English headline cap for a Japanese source item', () => {
+  const input = englishSample();
+  input.raw.items['hn-c'] = { kind: 'japan', title: '国内企業、画像入力に対応するモデルを発表' };
+  input.data.articles[2].category = input.japaneseData.articles[2].category = 'japan';
+  input.data.articles[2].headline = 'A'.repeat(110);
+  assert.deepEqual(validateEnglish(input), []);
+  input.data.articles[2].headline += 'B';
+  assert.ok(validateEnglish(input).some(error => /30-110 characters/.test(error)));
 });
 
 for (const [label, mutate, diagnostic] of [

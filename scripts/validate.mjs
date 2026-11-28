@@ -35,7 +35,10 @@ export function validateData(raw, data, expectedDate = raw?.date, { language = '
   const text = (value, min, max, label) => {
     if (typeof value !== 'string') { fail(`${label}は文字列が必要です`, `${label} must be a string`); return; }
     const length = Array.from(value).length;
-    if (length < min || length > max || (min > 0 && !value.trim())) fail(`${label}は${min}〜${max}文字です`, `${label} must be ${min}-${max} characters`);
+    if (length < min || (max !== null && length > max) || (min > 0 && !value.trim())) {
+      if (max === null) fail(`${label}は${min}文字以上です`, `${label} must be at least ${min} characters`);
+      else fail(`${label}は${min}〜${max}文字です`, `${label} must be ${min}-${max} characters`);
+    }
     if (/http/i.test(value)) fail(`${label}にURLは書けません`, `URL forbidden in ${label}`);
     if (english && /\b(?:[a-z][a-z\d+.-]*:\/\/|www\.)/i.test(value)) fail(`${label}にURLは書けません`, `URL forbidden in ${label}`);
     if (/──|—/.test(value)) fail(`${label}に禁止ダッシュがあります`, `Forbidden dash in ${label}`);
@@ -71,7 +74,10 @@ export function validateData(raw, data, expectedDate = raw?.date, { language = '
         if (item?.kind === 'codex' && entry.category !== 'codex') fail(`${id}はcodexです`, `Codex category required for ${id}`);
         if (item?.kind === 'usage' && entry.category !== 'usage') fail(`${id}はusageです`, `Usage category required for ${id}`);
         if (item?.kind !== 'usage' && entry.category === 'usage') fail(`${id}はusageではありません`, `Usage category reserved for usage items: ${id}`);
-        text(entry.headline, english ? 30 : 8, english ? 110 : 70, `${label}.headline`);
+        const japanSourceHeadline = !english && item?.kind === 'japan';
+        const usageSourceHeadline = !english && item?.kind === 'usage' && item.language === 'ja';
+        const sourceHeadline = japanSourceHeadline || usageSourceHeadline;
+        text(entry.headline, english ? 30 : 8, sourceHeadline ? null : english ? 110 : 70, `${label}.headline`);
         if (typeof entry.headline === 'string') {
           const releaseOnly = english
             ? /^.+?\s+v?\d[\w.\-]*(?:\s+(?:(?:is|was|has been|gets)\s+)?(?:now\s+)?(?:released|available|out|launched|published)|\s+release)(?:\s+(?:now|today))?[.!]?$/i.test(entry.headline)
@@ -80,11 +86,11 @@ export function validateData(raw, data, expectedDate = raw?.date, { language = '
               || (entry.headline === item?.title && /^.+?\s+v?\d[\w.\-]*$/.test(entry.headline))
             : /^\S.*\d[\w.\-]*\s*を?リリース$/.test(entry.headline);
           if (releaseOnly) fail(`${label}.headlineはリリースの変更内容を書いてください`, `Release-only headline forbidden in ${label}.headline`);
-          if (!english && item?.kind === 'japan') {
+          if (japanSourceHeadline) {
             if (typeof item.title !== 'string' || normalizeWhitespace(entry.headline) !== normalizeWhitespace(item.title)) {
               fail(`${label}.headlineは空白の違いを除きrawの原見出しと一致させてください`, `Japan headline must match raw title after whitespace normalization in ${label}.headline`);
             }
-          } else if (!english && item?.kind === 'usage' && item.language === 'ja') {
+          } else if (usageSourceHeadline) {
             if (typeof item.title !== 'string' || entry.headline !== item.title) {
               fail(`${label}.headlineはrawの日本語原見出しと完全に一致させてください`, `Usage headline must match raw title verbatim in ${label}.headline`);
             }

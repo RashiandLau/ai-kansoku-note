@@ -1,0 +1,450 @@
+{
+  "date": "2026-11-28",
+  "generatedAt": "2026-11-28T02:40:26.007Z",
+  "top": "hn-411e8c8ccbe3",
+  "selected": [
+    "hn-411e8c8ccbe3",
+    "official-c2bd79531046",
+    "hn-990f58ceeb05",
+    "japan-5467237fac41",
+    "japan-985c3683f044",
+    "japan-45b14487e208",
+    "japan-ab85de164815",
+    "usage-aafa019874fb3a07",
+    "usage-1ddd6dbfd46e1f25",
+    "usage-981d6178a1cb2235",
+    "usage-d5e9524b7429a133",
+    "trending-f6c3adbf52c7",
+    "trending-8c6014a36ca9",
+    "trending-e9dbf459bd01",
+    "trending-9c939c7199af",
+    "trending-ce3bf530c355"
+  ],
+  "items": {
+    "hn-411e8c8ccbe3": {
+      "id": "hn-411e8c8ccbe3",
+      "kind": "hn",
+      "title": "Michael Nielsen took down his book on neural nets",
+      "url": "https://neuralnetworksanddeeplearning.com/",
+      "source": "Hacker News",
+      "published": "2026-11-27T19:31:01.000Z",
+      "metrics": {
+        "points": 395,
+        "num_comments": 263
+      },
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "excerpt": "I wrote this book between 2011 and 2015. At the time, I expected AGI systems based on neural networks to be many decades away, but to bring remarkable benefits for humanity. I also expected significant challenges, but believed it likely that, as with other technologies, those challenges would be addressed as the capabilities were developed. My views have changed. With the extraordinarily reckless behaviour of the frontier labs, the systems have raced ahead much faster than I expected 1 , giving humanity far too little time to meet the challenges. Although the systems genuinely will bring — indeed, already are bringing — many wonders, they also pose a significant risk of catastrophe. The frontier labs are knowingly endangering all of humanity. I've written about why I believe this at length , most recently in “Which Future?” . Two brief thoughts are below. I don't wish to help (even in a very small way) train people to contribute to this work, and so I've taken the book down. What follows are two brief remarks: one on the nature of the threat posed by ASI, and another on the ethical justification for working on frontier AI. The most common argument for AI existential risk, developed by Nick Bostrom and Eliezer Yudkowsky, is loss of control of the future to advanced AI systems 2 . I believe this concern should be understood as one instance of a more fundamental issue. That issue is whether we will discover technologies latent in nature which are easy and inexpensive to develop,",
+      "objectID": "50670757",
+      "points": 395,
+      "num_comments": 263,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50670757",
+        "count": 263,
+        "points": 395
+      }
+    },
+    "official-c2bd79531046": {
+      "id": "official-c2bd79531046",
+      "kind": "official",
+      "title": "Taking Trainium3 to the Track: Generating Videos with LTX-2.5",
+      "url": "https://huggingface.co/blog/video-trainium3",
+      "source": "Hugging Face",
+      "published": "2026-11-27T00:00:00.000Z",
+      "metrics": {},
+      "image": "https://huggingface.co/blog/assets/video-trainium3/thumbnail.jpg",
+      "ogTitle": "Taking Trainium3 to the Track: Generating Videos with LTX-2.5",
+      "ogDescription": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "excerpt": "Text-to-Video • 19B • Updated 1 day ago • 35.1k • 162",
+      "description": ""
+    },
+    "hn-990f58ceeb05": {
+      "id": "hn-990f58ceeb05",
+      "kind": "hn",
+      "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+      "source": "Hacker News",
+      "published": "2026-11-27T23:06:29.000Z",
+      "metrics": {
+        "points": 126,
+        "num_comments": 41
+      },
+      "image": "https://storage.googleapis.com/gweb-research2023-media/images/HO_previewImage1.width-800.format-jpeg.jpg",
+      "ogTitle": "Supercharging transformer residual connections",
+      "ogDescription": "",
+      "excerpt": "Kyriakos Axiotis, Staff Research Scientist, and Thomas Fu, Principal Engineer, Google Research We present DeepCrossAttention (DCA), an architecture that enhances transformer networks by using learnable weights and depth-wise cross-attention to dynamically combine outputs from previous layers, preventing the information dilution seen in traditional residual connections. Presented in our ICML 2025 paper, this architectural improvement allows models to achieve the same quality up to three times faster with a negligible increase in parameters. Think of a traditional deep learning model like a giant game of \"Telephone\": data passes through layer after layer, with each layer changing the information slightly. If a network has dozens or hundreds of layers, the original learning signal can become severely degraded or lost by the time it reaches all layers, which is known as the vanishing gradient problem in AI. To overcome this challenge and enable the training of networks with dozens or hundreds of layers, transformers rely heavily on residual connections , also known as “skip” connections, which act like an information highway or a shortcut. Instead of forcing the data to pass exclusively through the complicated layer, a duplicate copy of the original input skips right past this layer and is added directly to its output. This ensures that the model always has the original raw data to refer back to. The standard residual connection implements a simple operation: point-wise summation",
+      "objectID": "50672565",
+      "points": 126,
+      "num_comments": 41,
+      "discussion": {
+        "url": "https://news.ycombinator.com/item?id=50672565",
+        "count": 41,
+        "points": 126
+      }
+    },
+    "japan-5467237fac41": {
+      "id": "japan-5467237fac41",
+      "kind": "japan",
+      "title": "AIリスク監査の実施、わずか5.7％ 内部監査が追い付かない「もう一つのリスク」とは？",
+      "url": "https://www.itmedia.co.jp/enterprise/articles/2611/26/news037.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-27T01:50:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/enterprise/articles/2611/26/cover_news037.jpg",
+      "ogTitle": "AIリスク監査の実施、わずか5.7％ 内部監査が追い付かない「もう一つのリスク」とは？",
+      "ogDescription": "ある調査によると、今後重要性が高まるリスクとして「AI・生成AI」を挙げた回答は半数を超えた。一方、AIのリスクに関する内部監査を「すでに実施」を選んだ回答者は5.7％にとどまる。同調査からは、内部監査が追い切れていない、AI以外の領域も浮かび上がった。",
+      "excerpt": "ある調査によると、今後重要性が高まるリスクとして「AI・生成AI」を挙げた回答は半数を超えた。一方、AIのリスクに関する内部監査を「すでに実施」を選んだ回答者は5.7％にとどまる。同調査からは、内部監査が追い切れていない、AI以外の領域も浮かび上がった。 この記事は 会員限定 です。会員登録すると全てご覧いただけます。 生成AIの業務利用が進む一方で、そのリスクを内部監査で点検できている組織は多くないことを示す調査結果が出た。 金融庁と東京証券取引所が2026年7月に改訂した上場企業の企業統治の指針「コーポレートガバナンス・コード」（注1）は、取締役会がリスク管理体制を整備する際の考慮事項に、サイバーセキュリティリスクへの対応が含まれ得ると明記した。同コードは、取締役会が内部監査部門を活用し、リスク管理体制の運用状況を監督することを求めている。 国際資格の専門校を運営し、内部監査やAI監査の資格講座を手掛けるアビタスは2026年11月25日、「コーポレートガバナンス・内部監査に関する企業実態調査2026」の結果を発表した。今後3年間で重要性が高まると考えるリスクを最大5つまで尋ねた設問では、「AI・生成AI」が56.3％と半数を超えた。ところが、AI・生成AIのリスクを内部監査のテーマとしてどこまで取り上げているかを尋ねた設問で、「すでに実施」と答えたのは5.7％にとどまった。「1年以内に実施予定」（7.6％）と合わせても13.3％だった。 重要性が高まると考えられていながら、内部監査の関与が進んでいないリスクは、AIの他にもある。 同じ設問で最も多かったのは「サイバーセキュリティ」で、72.2％だった。「AI・生成AI」（56.3％）、「海外子会社・グループガバナンス」（36.7％）、「不正・コンプライアンス」（35.4％）、「組織風土・カルチャー」（32.9％）が続いた。 内部監査が現時点で「一定程度対応・関与できている領域」を尋ねた設問では、「内部統制」が55.1％、「不正・コンプライアンス」が46.2％だったのに対し、重要性が高まるリスクとして最も多く挙がった「サイバーセキュリティ」は20.3％にとどまった。 過去5年間でガバナンスへの関心・期待が高まったとの回答は84.2％だった。現在の内部監査部門の要員数を尋ねた設問では、「少ない」が34.2％、「やや少ない」が36.7％で、合わせて70.9％だった。「ちょうど良い」は17.7％だった。 内部監査を高度化する上での課題を最大3つまで尋ねた設問では、「内部監査の専門知識・スキル不足」が48.1％で最も多かった。「IT・システム監査人材不足」と「内部監査人の人数不足」がいずれも38.0％、「人材育成・キャリアパス」が31.6％、「AI・データ分析人材不足」が28.5％だった。「内部監査の専門知識・スキル不足」を挙げた回答の割合は、「内部監査人の人数不足」よりも10.1ポイント高かった。 アビタスの柳尾彰大氏（執行役員 ガバナンス事業部／法人営業部／キャリア事業部）は調査結果を受け、自社の事業やAIの利用状況を踏まえて重大なリスクの所在を整理し、監査計画に反映する必要があると指摘する。その上で、「内部監査部門とIT・セキュリティ部門などが知見を共有し、必要に応じて外部の専門家も活用しながら、対策の実効性を評価できる体制を整えることが重要だ」と述べた。 調査は2026年10月22日～11月4日、アビタスの顧客を中心とする企業の内部監査・内部統制・リスク管理などの担当者を対象に実施し、158件の",
+      "description": "ある調査によると、今後重要性が高まるリスクとして「AI・生成AI」を挙げた回答は半数を超えた。一方、AIのリスクに関する内部監査を「すでに実施」を選んだ回答者は5.7％にとどまる。同調査からは、内部監査が追い切れていない、AI以外の領域も浮かび上がった。"
+    },
+    "japan-985c3683f044": {
+      "id": "japan-985c3683f044",
+      "kind": "japan",
+      "title": "PR： 人材不足とAIの脅威に全方位の防御を――ＪＢＣＣグループ×Palo Alto Networksが実現する「全体最適」の次世代セキュリティ運用",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/26/news001.html",
+      "source": "＠IT",
+      "published": "2026-11-27T01:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/26/cover_news001.jpg",
+      "ogTitle": "人材不足とAIの脅威に全方位の防御を――ＪＢＣＣグループ×Palo Alto Networksが実現する「全体最適」の次世代セキュリティ運用",
+      "ogDescription": "深刻化するセキュリティ人材不足とAIを悪用したサイバー攻撃の高度化・高速化で、多くの企業が運用限界を迎えている。この課題に対して、ＪＢＣＣグループはPalo Alto Networks製品を自社のマネージドセキュリティサービスに統合して高度な自動化と全体最適による運用負荷軽減での解決を目指す。",
+      "excerpt": "深刻化するセキュリティ人材不足とAIを悪用したサイバー攻撃の高度化・高速化で、多くの企業が運用限界を迎えている。この課題に対して、ＪＢＣＣグループはPalo Alto Networks製品を自社のマネージドセキュリティサービスに統合して高度な自動化と全体最適による運用負荷軽減での解決を目指す。 多くの企業でセキュリティ人材が不足する中、エンドポイントからネットワーク、アイデンティティー（ID）、クラウドへセキュリティ対策領域が拡大している。さらにAIの悪用によって攻撃は高度化・高速化しており、もはや既存のポイントソリューションと自社人材によるセキュリティ対策は限界を迎えつつある。 このような状況を打破するため、ＪＢＣＣグループは、自社のマネージドセキュリティサービスにPalo Alto Networks（以下、パロアルトネットワークス）の製品を組み込んで、高度な自動化とセキュリティプラットフォームを活用した「全体最適」を目指している。ＪＢＣＣグループに、AI時代のセキュリティ課題をパロアルトネットワークス製品でどう解決するのか、顧客をどこまで支援するのかなどを聞いた。 生成AIや自動化ツールでサイバー攻撃の速度が飛躍的に高まっている。一方、企業ではエンドポイントからネットワーク、クラウドへカバー領域を拡大するためにポイントソリューションを個別最適で導入した結果、アラートの分析や調査、リスク対処の判断などの運用負荷が増大して、異常は検知できているがその後の対応が追い付いていない状況に陥っている。 パロアルトネットワークス製品を中心としたセキュリティサービスを取りそろえて、エンドポイントからネットワーク、サーバなど幅広くカバーし、マルチクラウド環境にも対応するマネージドセキュリティサービスを提供するＪＢＣＣグループでも、アラート過多に起因する人手不足と手作業での運用のボトルネックを課題に挙げる顧客は多いという。 ＪＢＣＣグループでサービス企画を担当する望月友博氏は、セキュリティ運用の解決に向けたポイントとして、「現状のセキュリティリスクを可視化するセキュリティ監査・診断の実施」と「AIを活用した運用の自動化やSOC（セキュリティオペレーションセンター）全体の高度化」の2つを挙げる。 「運用負荷やスピード感に課題がある多くのお客さまにとって、もはや自社のセキュリティ人材だけで対応するのは非現実的になっています。実際、お客さまに代わって24時間365日で対応する弊社のSOCサービスへのニーズや期待も高まっています。こうした中で重要になるのが、定期的な監査や診断を通じて現状のセキュリティリスクを把握し、未然に防ぐ事前対策の取り組みと、AIを活用した運用の自動化やSOC全体の高度化だと考えています」 一方、AIセキュリティを冷静に分析するのは同社の内藤雄也氏だ。「ソリューション提案や運用サポートなどでお客さまを訪問すると、『そもそも今何をすべきか分からない』という声をよく聞きます。AIセキュリティのニーズが顕在化するのはもう少し先になるとは思いますが、さまざまなリスクをお客さまにしっかり可視化・提示して、すぐそこまで来ているAIエージェント時代に備える必要があると考えています」と、先行してパロアルトネットワークス製品の検証・研究を進める同社の基本スタンスを説明する。 ＪＢＣＣグループはパロアルトネットワークスを、ネットワークやエンドポイントから、クラウド、ID保護までカバーして、先端のAIセキュリティでも業界をリードするセキュリティベンダーと位置付けている。",
+      "description": "深刻化するセキュリティ人材不足とAIを悪用したサイバー攻撃の高度化・高速化で、多くの企業が運用限界を迎えている。この課題に対して、ＪＢＣＣグループはPalo Alto Networks製品を自社のマネージドセキュリティサービスに統合して高度な自動化と全体最適による運用負荷軽減での解決を目指す。"
+    },
+    "japan-45b14487e208": {
+      "id": "japan-45b14487e208",
+      "kind": "japan",
+      "title": "電通が「Geminiを使いこなすFDE」ら3000人育成プログラムを開始 その内容とは？",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/27/news038.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-27T00:45:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/27/cover_news038.jpg",
+      "ogTitle": "電通が「Geminiを使いこなすFDE」ら3000人育成プログラムを開始 その内容とは？",
+      "ogDescription": "生成AIを導入しても、現場の業務に生かせないと成果にはつながらない。電通は約3000人を対象に、「Gemini Enterprise」を使いこなし、現場での生成AI活用を推進できる人材の育成を始めた。人材をどう育てるのか。",
+      "excerpt": "生成AIを導入しても、現場の業務に生かせないと成果にはつながらない。電通は約3000人を対象に、「Gemini Enterprise」を使いこなし、現場での生成AI活用を推進できる人材の育成を始めた。人材をどう育てるのか。 この記事は会員限定です。 会員登録（無料） すると全てご覧いただけます。 生成AIは業務効率化のツールにとどまらず、企業の業務プロセスやマーケティング活動全体を変革する基盤へと進化している――。大手広告会社の電通は、こう指摘する。企業が生成AIを事業成長や顧客体験の向上につなげるには、生成AIの実装や業務改善だけではなく、自社の成長戦略を見据えた包括的な視点が必要になると同社はみる。 こうした中、電通は電通デジタル、電通総研、イグニション・ポイントのグループ3社と共同で、国内電通グループにおいてGoogleの生成AIツール「Gemini Enterprise」の活用を推進することにした。事業のさまざまな領域におけるAI活用の基盤としてGemini Enterpriseを生かす。これによりセキュリティを確保した上で社内データを横断的に活用できるようにする。 加えて電通は、Gemini Enterpriseの活用を通じて、クライアントの事業変革を現場で支援する実践型人材「FDE」（Forward Deployed Engineer）および「FDM」（Forward Deployed Marketer）を育成する。この方針を具体化するために同社は3社と共に、国内電通グループの約3000人を対象にしたFDE・FDMのスキル開発プログラムを開始することを、2026年10月に明らかにした。 FDE・FDMという“現場特化型”の生成AI人材3000人を、どのようなプログラムで育成し、Gemini Enterpriseを実際の業務フローにどう組み込むのか。具体的な取り組みの内容を見ていこう。 プログラムでは、約3000人にGemini Enterpriseの実践的な活用方法から、業務フローへの組み込み方まで習得してもらう。単なる生成AI技術の習得にとどまらず、マーケティングや事業活動の現場で課題を捉えて、生成AIを活用した事業変革プロジェクトを自らけん引できる高度AI人材の育成を目指す。 クライアントの現場に入り込み、伴走しながら生成AIを活用した事業変革プロジェクトを推進する人材として、FDEを育成する。事業・マーケティング戦略の構想やインサイト発掘、クリエイティブ（広告などの制作物）の生成・効果検証、クライアントの日常業務への生成AIの組み込みまでの各フェーズで、国内電通グループの専門性を生かしながらGemini Enterpriseを活用できるようにする。 国内電通グループは、約3000人がFDE・FDMのスキルを身に付けることで、生成AIの実装や業務改善にとどまらない、クライアントの事業成長に向けた支援体制の強化を図る。生成AIの活用を戦略構想から日常業務への組み込みまで、クライアントの現場課題に即して一貫して支援できる人材を育てることで、クライアントの事業成果の創出につなげる。 今後も国内電通グループは、Gemini EnterpriseをはじめとするGoogleのAIツールの活用を推進する。こうした取り組みを通じて、人の知とAIの知を掛け合わせてクライアントや社会の成長に貢献するという、独自のAI戦略「AI For Growth」を推進する考えだ。 本稿は、電通が2026年10月14日に公開した プレスリリース を基に作成しました",
+      "description": "生成AIを導入しても、現場の業務に生かせないと成果にはつながらない。電通は約3000人を対象に、「Gemini Enterprise」を使いこなし、現場での生成AI活用を推進できる人材の育成を始めた。人材をどう育てるのか。"
+    },
+    "japan-ab85de164815": {
+      "id": "japan-ab85de164815",
+      "kind": "japan",
+      "title": "AIエージェントの行動が「適切か暴走か」をどう見極める？ Googleが明かすテストの盲点",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/27/news035.html",
+      "source": "ITmedia AI＋",
+      "published": "2026-11-26T23:00:00.000Z",
+      "metrics": {},
+      "image": "https://image.itmedia.co.jp/ait/articles/2611/27/cover_news035.jpg",
+      "ogTitle": "AIエージェントの行動が「適切か暴走か」をどう見極める？ Googleが明かすテストの盲点",
+      "ogDescription": "AIエージェントが期待通りに動作するかどうかを、どのように検証すればよいのか。GoogleはAIコーディングエージェント向けのプラグイン開発を通じて、最終回答に基づく評価や、実際に操作させるテストだけでは見抜けない問題があることを明らかにした。",
+      "excerpt": "AIエージェントが期待通りに動作するかどうかを、どのように検証すればよいのか。GoogleはAIコーディングエージェント向けのプラグイン開発を通じて、最終回答に基づく評価や、実際に操作させるテストだけでは見抜けない問題があることを明らかにした。 この記事は会員限定です。 会員登録（無料） すると全てご覧いただけます。 AIエージェントの開発では、目的に応じて適切なツールを選択し、複数の処理を組み合わせてタスクを遂行できるようにするだけでなく、その動作が適切かどうかを検証する仕組みも重要になる。例えば、タスクを完了できたとしても、その過程で必要な安全確認を省略していたり、不要な操作を実行していたりする可能性があるためだ。 Googleは2026年10月16日（米国時間）、AIコーディングエージェントにGoogle Cloudの操作に必要なスキルやツールを組み込む「Google Cloud Developer plugin」の開発を通じて得た、「評価エンジニアリング」（Evaluation Engineering）に関する4つの教訓を公式ブログで紹介した。 Googleは、AIエージェントを組み込んだシステムの開発において、本当の難しさはシステムを構築することよりも、その振る舞いを評価することにあると指摘する。実際にどのような問題が見つかり、評価方法をどう見直したのか。 AIエージェントの評価方法の一つに、大規模言語モデル（LLM）を評価者として用いる「LLM-as-a-Judge」がある。あらかじめ評価基準を定め、それを満たしているかどうかをLLMに判定させる方法だ。 ただし、何を評価対象とするかには注意が必要だ。Googleは当初、AIエージェントがタスクの実行後に出力した回答文を評価対象としていた。しかし、11種類のプロンプトを用いたテストでは、実際には評価基準を満たしていた3件の実行結果が不合格と判定された。 問題は、AIエージェントが実際に取った行動と、その行動について利用者に説明した内容が必ずしも一致しないことにある。 例えば、不要なクラウドリソースを整理するタスクにおいて、コマンドの実行前に構文を確認することを評価項目とした場合、AIエージェントが実際に構文を確認していても、そのことを最終回答に記載しなければ、回答文だけを参照するLLMは正しく判定できない。 タスクの実行過程を評価したいのであれば、実際に呼び出したツールやコマンド、指定したパラメーターなどの記録を評価対象とする必要がある。 AIエージェントの振る舞いに問題があった場合、その原因がAIモデルにあるとは限らない。モデルへの情報の受け渡しやツールの実行を制御する「ハーネス」に起因する可能性もある。 Googleのテストでは、特定のスキルに記述された指示に従ってドキュメントを検索することが期待されていたにもかかわらず、その指示が検索処理に反映されない問題が見つかった。 原因は、スキルの読み込みとドキュメントの検索が同じターンで並行して実行されたことにあった。スキルに記述された具体的な指示は、スキルを呼び出した次のターンでAIモデルに渡される仕組みだったため、モデルが指示を受け取る前に検索処理が実行されてしまったのだ。 ツールの呼び出しを単純に時系列で記録するだけでは、どの処理が並行して実行されたのか、AIモデルがどの時点で指示を受け取ったのかを把握しにくい。 問題の原因を正しく切り分けるためにも、ターン単位の処理やツールの並行実行の関係を把握できる形で実行ログを残すことが重要に",
+      "description": "AIエージェントが期待通りに動作するかどうかを、どのように検証すればよいのか。GoogleはAIコーディングエージェント向けのプラグイン開発を通じて、最終回答に基づく評価や、実際に操作させるテストだけでは見抜けない問題があることを明らかにした。"
+    },
+    "trending-f6c3adbf52c7": {
+      "id": "trending-f6c3adbf52c7",
+      "kind": "trending",
+      "title": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "source": "GitHub Trending",
+      "published": "2026-11-28T02:40:26.007Z",
+      "metrics": {
+        "stars": 26188,
+        "starsToday": 1608,
+        "language": "Python"
+      },
+      "image": "https://repository-images.githubusercontent.com/1229774092/93703d75-077c-4a14-b580-e2374741fe3d",
+      "ogTitle": "GitHub - elementalsouls/Claude-BugHunter: A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "ogDescription": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise ide...",
+      "excerpt": "A self-contained Claude skill bundle for bug hunting and external red-team work · 85 skills · 16 slash commands · 681 disclosed-report patterns (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by Sachin Sharma — Bug Hunting & GenAI Security Research. claude-bughunter is a drop-in skill bundle for the Claude Code skills system . Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. All triggered automatically by topic — describe what you're testing in plain English and the relevant skill loads. No invocation by name. Option A — install as a Claude Code plugin (recommended). From inside Claude Code: All 85 skills + 16 commands load namespaced under claude-bughunter: and update when you bump the plugin version — no files copied into ~/.claude/ . A HackerOne account is optional. The install asks for a HackerOne API username and token. They only let the HackerOne MCP read your private programs and your own reports; leave both blank if you don't need that. Every skill, command an",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python"
+    },
+    "trending-8c6014a36ca9": {
+      "id": "trending-8c6014a36ca9",
+      "kind": "trending",
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "source": "GitHub Trending",
+      "published": "2026-11-28T02:40:26.007Z",
+      "metrics": {
+        "stars": 328368,
+        "starsToday": 922,
+        "language": "Shell"
+      },
+      "image": "https://opengraph.githubassets.com/4c790349833cc94adb88aff9d54f7816c6c84d2ef4c4e16110cac792e073bd1e/obra/superpowers",
+      "ogTitle": "GitHub - obra/superpowers: An agentic skills framework & software development methodology that works.",
+      "ogDescription": "An agentic skills framework & software development methodology that works. - obra/superpowers",
+      "excerpt": "Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it doesn't just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a subagent-driven-development process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hes",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell"
+    },
+    "trending-e9dbf459bd01": {
+      "id": "trending-e9dbf459bd01",
+      "kind": "trending",
+      "title": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "source": "GitHub Trending",
+      "published": "2026-11-28T02:40:26.007Z",
+      "metrics": {
+        "stars": 211727,
+        "starsToday": 822,
+        "language": "TypeScript"
+      },
+      "image": "https://repository-images.githubusercontent.com/787076358/f9616c09-3701-41ef-b5a6-fdf912ffb15b",
+      "ogTitle": "GitHub - firecrawl/firecrawl: Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "ogDescription": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API. - firecrawl/firecrawl",
+      "excerpt": "Knowledge infrastructure to make your agents smarter. 🔥 You can use Firecrawl three ways. This repo holds the code for Firecrawl Local and the self-hosted server, along with SDKs that work with all three. Pst. Hey, you, join our stargazers :) Firecrawl Local scrapes, crawls and maps from your own machine without a database, queue or container, and it reaches Firecrawl Cloud when your AI agents need search or Alexandria. It installs from crates.io. You need Rust and a C compiler, which on macOS means xcode-select --install and on Debian or Ubuntu means build-essential . If you don't have Rust, Firecrawl Cloud runs the same scrape with nothing to build and no signup. Scrape a page and print its markdown. Crawl a site and save one markdown file per page. Pages that need JavaScript render in the Chrome or Chromium already on your machine, and PDFs and Office documents are parsed locally too. Without a browser, static pages still work and a page that needed one comes back with a warning. init finds Claude Code, Claude Desktop, Cursor, Windsurf, Gemini CLI and Codex on your machine and adds Firecrawl Local to each one as an MCP server. It backs up every config file first, and the MCP server itself needs Node.js 22 or newer. Restart your AI tool afterwards. Its scrape, crawl, map and batch scrape tools run on your machine, and the other Firecrawl tools go to Firecrawl Cloud. serve answers the Firecrawl v2 API on port 3002, so code written for Firecrawl runs against it unchanged and",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "language": "TypeScript"
+    },
+    "trending-9c939c7199af": {
+      "id": "trending-9c939c7199af",
+      "kind": "trending",
+      "title": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "source": "GitHub Trending",
+      "published": "2026-11-28T02:40:26.007Z",
+      "metrics": {
+        "stars": 74492,
+        "starsToday": 725,
+        "language": "HTML"
+      },
+      "image": "https://opengraph.githubassets.com/b010b69a56c3c40e5b939139699c0913237ffc38bb3ef9275a0165064c8cc9e4/cathrynlavery/diagram-design",
+      "ogTitle": "GitHub - cathrynlavery/diagram-design: Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "ogDescription": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop. - cathrynlavery/diag...",
+      "excerpt": "An agent skill that draws diagrams as one self-contained HTML + SVG file, in your brand. 52 diagram types. No shadows. No Mermaid slop. Install · What it makes · Quickstart · Match your brand · Import · Export · Contributing npx skills add cathrynlavery/diagram-design Ask your agent in plain words: The agent picks the type, states its plan, and writes one .html file you can open by double-clicking. Works with any host that reads Agent Skills, including Cursor, Claude Code, Codex, Qoder, GitHub Copilot, Gemini CLI, Cline, Windsurf and Amp: In Claude Code, the plugin marketplace gets you updates and the slash commands: Official builds come only from this repository. LittleMight, Cathryn Lavery's company, publishes the plugin directory listings; a listing under any other name is an unofficial copy. PRIVACY.md lists what the skill sends over the network. After installing, run /plugin , open Marketplaces , select diagram-design , and choose Enable auto-update . Claude Code disables auto-update by default for third-party marketplaces; after this toggle, it refreshes the marketplace and installed plugin in the background after startup. Run /reload-plugins when prompted, or let the next session load the update. Claude Desktop's skill upload rejects a ZIP with more than 200 files, so the full skills/diagram-design/ tree cannot be imported as-is. From a checkout, build a bounded ZIP: That writes dist/diagram-design-claude-skill.zip (gitignored). In Claude Desktop, open Customize → Skil",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML"
+    },
+    "trending-ce3bf530c355": {
+      "id": "trending-ce3bf530c355",
+      "kind": "trending",
+      "title": "zhouxiaoka/autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "source": "GitHub Trending",
+      "published": "2026-11-28T02:40:26.007Z",
+      "metrics": {
+        "stars": 17635,
+        "starsToday": 718,
+        "language": "Python"
+      },
+      "image": "https://opengraph.githubassets.com/57d6e1c67574324732b38b78abc8e1efcd2201de281203fb83bf4af99d061363/zhouxiaoka/autoclip",
+      "ogTitle": "GitHub - zhouxiaoka/autoclip: AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。",
+      "ogDescription": "AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouT...",
+      "excerpt": "The open-source OpusClip alternative — local-first AI clipping for podcasts, interviews, and gaming streams with smart reframing, captions, covers, titles, and built-in MCP for AI agents . Zero subscriptions, no paywall. Website · Download · Live Replays (v1.6) · Showcase · Quick Start · Docs · Issues English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Español · Português · Русский · Français · Bahasa Indonesia · Türkçe · Tiếng Việt · Deutsch ⭐ Free, MIT-licensed, zero subscriptions — everything cuts and renders on your machine. Star the repo if you find it useful! Drop in a link, local video, or live stream replay — AutoClip finds the best moments, tracks the speaker, burns in captions, generates covers, and exports ready-to-post clips for TikTok, Shorts, Reels, YouTube, Douyin, Xiaohongshu, and Bilibili. Local-first by design: cutting and rendering run directly on your computer with no upload queues and no monthly fee. Bring your own API key or run 100% offline with Ollama / LM Studio + Whisper / SenseVoice . Home → 6 Live Replay sources → OBS WebSocket setup → Twitch import → Finished clip with captions & one-click publish. Click any thumbnail or ▶ Play to watch full clips rendered by AutoClip. Language labels indicate burned-in subtitle language. Browse 16+ clips, covers, and post copy in the Showcase → , or share your own clips . Source copyrights remain with their original creators. Installers are built publicly on GitHub Actions ( Desktop Build ) with build-provenance.json SHA-256 ver",
+      "description": "AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。",
+      "language": "Python"
+    },
+    "usage-aafa019874fb3a07": {
+      "id": "usage-aafa019874fb3a07",
+      "kind": "usage",
+      "title": "マーダーミステリーのシナリオを形式手法で検証しようとしたら、バグと曖昧さが見つかった",
+      "url": "https://zenn.dev/henteko/articles/ed8d1458246d7a",
+      "source": "zenn",
+      "host": "zenn.dev",
+      "language": "ja",
+      "publishedAt": "2026-11-25T01:45:47.259+09:00",
+      "published": "2026-11-25T01:45:47.259+09:00",
+      "metrics": {
+        "observedAt": "2026-11-28T02:40:26.007Z",
+        "hb": 133,
+        "likes": 58,
+        "saves": 18
+      },
+      "route": "A",
+      "firstQualifiedAt": "2026-11-27T02:50:54.401Z",
+      "ruleVersion": "usage-v2-trusted-author-1",
+      "excerpt": "こちらのCLIを使ってソフトウェアファクトリーを作った記事も書いたのでよければご覧ください。 https://zenn.dev/henteko/articles/f1fd8ca5a30172 形式手法の勉強のために、マーダーミステリーのシナリオの矛盾を検出するCLIを開発しました。 https://github.com/henteko/murder-mystery-checker 決まった仕様(JSON)でシナリオを記述すると、到達しないエンディングがあるなど、矛盾を指摘してくれます。 $ mmcheck check --strict examples/hexagon-house/scenario.json warning H003 持っている物がハンドアウトに書かれていない shimeji / sleeping_pill warning H003 持っている物がハンドアウトに書かれていない ushirokawada / lip_cream error H006 盤面に置いた物が実際にはそこにない room_shimeji / sleeping_pill / character:shimeji error H006 盤面に置いた物が実際にはそこにない room_ushirokawada / lip_cream / character:ushirokawada error K005 ",
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "author": "henteko",
+      "discussion": {
+        "url": "https://b.hatena.ne.jp/entry/s/zenn.dev/henteko/articles/ed8d1458246d7a",
+        "source": "hatena",
+        "count": 133
+      }
+    },
+    "usage-1ddd6dbfd46e1f25": {
+      "id": "usage-1ddd6dbfd46e1f25",
+      "kind": "usage",
+      "title": "【自動化】Muse のサイドチャットへ Webhook を届ける MuseKnock の仕組み",
+      "url": "https://zenn.dev/codehex/articles/33bc6ee330b880",
+      "source": "zenn",
+      "host": "zenn.dev",
+      "language": "ja",
+      "publishedAt": "2026-11-25T15:12:03.837+09:00",
+      "published": "2026-11-25T15:12:03.837+09:00",
+      "metrics": {
+        "observedAt": "2026-11-28T02:40:26.007Z",
+        "hb": 66,
+        "likes": 36,
+        "saves": 10
+      },
+      "route": "A",
+      "firstQualifiedAt": "2026-11-27T02:50:54.401Z",
+      "ruleVersion": "usage-v2-trusted-author-1",
+      "excerpt": "Meta の個人向け AI エージェント「 Muse 」を使い込んでいくうちに、どうしても欲しくなった仕組みがあります。Slack でメンションされた瞬間や、GitHub でリリースが出た瞬間に、そのまま Muse を動かすことです。 執筆時点（2026 年 11 月）で僕が調べた範囲では、Muse を外部イベントで即座に動かす仕組みを公開している例は見当たりませんでした。（でもいつかはリリースされそう...?） そして、これを見てください！！ https://x.com/codehex/status/2125375389241675856?a=SmFmSPV7nT_lsgSAYbs&s=20 これまでは、みんな定期実行のタスクを組んで、10 分おきに Slack や GitHub を見に行かせています。これでも動くには動くんですが、最大 10 分のラグが出ますし、何も起きていない時間帯もずっと空回りし続けます。 そこで MuseKnock という OSS を作りました。Cloudflare Workers へデプロイし、Webhook を受け取って、Muse の既存のサイドチャットにそのままメッセージとして投稿するツールです。 たとえば、あるサイドチャットにあらかじめ「GitHub のリリース通知が届いたら、変更点を要約して Slack に共有して」と伝えておきます。あとはリリー",
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "author": "codehex",
+      "discussion": {
+        "url": "https://b.hatena.ne.jp/entry/s/zenn.dev/codehex/articles/33bc6ee330b880",
+        "source": "hatena",
+        "count": 66
+      }
+    },
+    "usage-981d6178a1cb2235": {
+      "id": "usage-981d6178a1cb2235",
+      "kind": "usage",
+      "title": "Ladybird’s first alpha release",
+      "url": "https://simonwillison.net/2026/Nov/23/ladybird",
+      "source": "simon",
+      "host": "simonwillison.net",
+      "language": "en",
+      "publishedAt": "2026-11-23T21:46:35+00:00",
+      "published": "2026-11-23T21:46:35+00:00",
+      "metrics": {
+        "observedAt": "2026-11-28T02:40:26.007Z",
+        "hb": 0
+      },
+      "route": "C",
+      "firstQualifiedAt": "2026-11-27T02:50:54.401Z",
+      "ruleVersion": "usage-v2-trusted-author-1",
+      "excerpt": "Ladybird’s first alpha release 23rd November 2026 Ladybird is an astonishingly ambitious project: a new browser, in 2026, with its own implementation of most of the key components—HTML parsing, CSS engine, layout, JavaScript, even WebAssembly. It still uses a few external components—things like HarfBuzz for text shaping, Skia for 2D graphics, ffmpeg for video, and SQLite for the things you do with SQLite. Everything else is part of Ladybird, or code brought in from Ladybird’s even more ambitious predecessor project SerenityOS . This morning the Ladybird project released their first alpha , whi",
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "author": "Simon Willison"
+    },
+    "usage-d5e9524b7429a133": {
+      "id": "usage-d5e9524b7429a133",
+      "kind": "usage",
+      "title": "さくさく作れる毎日を支える、AI 時代の開発環境 — 隔離・コンテキスト・ガードレール・検証の整理",
+      "url": "https://tech.dentsusoken.com/entry/2026/11/27/133501",
+      "source": "hatena",
+      "host": "tech.dentsusoken.com",
+      "language": "ja",
+      "publishedAt": "2026-11-27T13:35:01+09:00",
+      "published": "2026-11-27T13:35:01+09:00",
+      "metrics": {
+        "observedAt": "2026-11-28T02:40:26.007Z",
+        "hb": 33
+      },
+      "route": "A",
+      "firstQualifiedAt": "2026-11-28T02:40:26.007Z",
+      "ruleVersion": "usage-v2-trusted-author-1",
+      "excerpt": "共通CSS 共通JS 技術 ビジネス ソリューション 働き方 資格/スキル トップ > AI > さくさく作れる毎日を支える、AI 時代の開発環境 — 隔離・コンテキスト・ガードレール・検証の整理 2026/11/27 さくさく作れる毎日を支える、AI 時代の開発環境 — 隔離・コンテキスト・ガードレール・検証の整理 AI Xイノベーション本部 はじめに 1. どこで動かすか：隔離基盤 外部入力と並列実行が前提を変える ホスト端末から切り離す（microVM 隔離と最小露出） 認証情報を中に置かない（プロキシ注入と署名専用の鍵委譲） 外向き通信と取得元を絞る（Egress 制御と権限の分離） 作業空間どうしを分け切る（worktree 単位の DB・動的ポート・後始末） 2. 何を見せるか：コンテキスト設計 指示を書き足すほど効きにくくなる理由 入口は「地図」に留め、手順と詳細はあとから読む コマンドの長い出力を会話に入れない コメントの中身を、あるべき場所へ移す 推測の代わりに一次ソースへ届かせる 3. どう逸脱を止めるか：決定論的ガードレール 文章の約束と、機械で止める仕組みの違い 操作の前後で介入する（フックによる遮断と即時フィードバック） 検査と Git フックをひとつの定義にまとめる モジュール境界を依存解析で守る ツールと CI の版を固定し、手元と CI の差をなくす",
+      "image": "",
+      "ogTitle": "",
+      "ogDescription": "",
+      "discussion": {
+        "url": "https://b.hatena.ne.jp/entry/s/tech.dentsusoken.com/entry/2026/11/27/133501",
+        "source": "hatena",
+        "count": 33
+      }
+    }
+  },
+  "hfmodels": [
+    {
+      "id": "thinkingmachines/Inkling-2-Mini",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 6475,
+      "downloads": 155741,
+      "createdAt": "2026-11-17T00:26:57.000Z",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+    },
+    {
+      "id": "unsloth/Inkling-2-Mini-GGUF",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 1615,
+      "downloads": 3302340,
+      "createdAt": "2026-11-20T13:09:48.000Z",
+      "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF"
+    },
+    {
+      "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+      "pipeline_tag": "image-text-to-text",
+      "likes": 1042,
+      "downloads": 1059763,
+      "createdAt": "2026-11-20T20:42:23.000Z",
+      "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF"
+    }
+  ],
+  "usageSources": {
+    "zenn": "ok",
+    "qiita": "ok",
+    "hatenaIt": "missing",
+    "hatenaGeneral": "missing",
+    "hatenaCount": "ok",
+    "hn": "forbidden",
+    "simon": "ok"
+  },
+  "errors": [
+    {
+      "source": "usage:hatenaGeneral",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaIt",
+      "message": "Article body missing or excerpt-only",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaIt",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hatenaIt",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "HN article-fetch daily cap reached",
+      "status": "truncated"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "robots.txt forbids article fetch",
+      "status": "forbidden"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    },
+    {
+      "source": "usage:hn",
+      "message": "publication_unknown",
+      "status": "missing"
+    }
+  ]
+}
